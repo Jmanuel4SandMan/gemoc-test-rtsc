@@ -1,0 +1,18 @@
+package realtimestatechart.xdsml
+
+language RTSC {
+	syntax "platform:/resource/realtimestatechart.model/model/realtimestatechart.ecore"
+	with realtimestatechart.aspects.StatePointAspect
+	with realtimestatechart.aspects.TransitionAspect
+	with realtimestatechart.aspects.RealtimestatechartAspect
+	with realtimestatechart.aspects.NamedElementAspect
+	with realtimestatechart.aspects.BehaviorAspect
+	with realtimestatechart.aspects.BehavioralElementAspect
+	with realtimestatechart.aspects.StateAspect
+	with realtimestatechart.aspects.VertexAspect
+
+/*
+ *	with qualified.class.name
+ */
+
+}
