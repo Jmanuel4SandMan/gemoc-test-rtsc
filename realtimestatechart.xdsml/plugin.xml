@@ -2,6 +2,27 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="realtimestatechart.xdsml.RTSC" xdsmlFilePath="/realtimestatechart.xdsml/src/realtimestatechart/xdsml/realtimestatechart.melange" />
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="realtimestatechart.xdsml.XRTSC" xdsmlFilePath="/realtimestatechart.xdsml/bin/realtimestatechart/xdsml/realtimestatechart.melange" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated RTSCMT -->
+    <package class="realtimestatechart.xdsml.rtscmt.realtimestatechart.RealtimestatechartPackage" genModel="model-gen/RTSCMT.genmodel" uri="http://realtimestatechart.xdsml.rtscmt/realtimestatechart/" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated XRTSCMT -->
+    <package class="realtimestatechart.xdsml.xrtscmt.realtimestatechart.RealtimestatechartPackage" genModel="model-gen/XRTSCMT.genmodel" uri="http://realtimestatechart.xdsml.xrtscmt/realtimestatechart/" />
+  </extension>
+  <extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="realtimestatechart.xdsml.RTSCMT" uri="http://realtimestatechart.xdsml.rtscmt/" />
+    <modeltype id="realtimestatechart.xdsml.XRTSCMT" uri="http://realtimestatechart.xdsml.xrtscmt/">
+      <subtyping modeltypeId="realtimestatechart.xdsml.RTSCMT" />
+    </modeltype>
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="" entryPoints="" exactType="realtimestatechart.xdsml.RTSCMT" id="realtimestatechart.xdsml.RTSC" uri="http://rtsc" />
+    <language aspects="Vertex:realtimestatechart.xdsml.xrtsc.aspects.VertexAspect;BehavioralElement:realtimestatechart.xdsml.xrtsc.aspects.BehavioralElementAspect;StatePoint:realtimestatechart.xdsml.xrtsc.aspects.StatePointAspect;State:realtimestatechart.xdsml.xrtsc.aspects.StateAspect;Transition:realtimestatechart.xdsml.xrtsc.aspects.TransitionAspect;Realtimestatechart:realtimestatechart.xdsml.xrtsc.aspects.RealtimestatechartAspect;Behavior:realtimestatechart.xdsml.xrtsc.aspects.BehaviorAspect;NamedElement:realtimestatechart.xdsml.xrtsc.aspects.NamedElementAspect" entryPoints="realtimestatechart.xdsml.xrtsc.aspects.RealtimestatechartAspect.main(realtimestatechart.xdsml.xrtsc.realtimestatechart.Realtimestatechart)" exactType="realtimestatechart.xdsml.XRTSCMT" id="realtimestatechart.xdsml.XRTSC" uri="http://realtimestatechart.xdsml.xrtsc/realtimestatechart/">
+      <adapter class="realtimestatechart.xdsml.xrtsc.adapters.rtscmt.XRTSCAdapter" modeltypeId="realtimestatechart.xdsml.RTSCMT" />
+      <adapter class="realtimestatechart.xdsml.xrtsc.adapters.xrtscmt.XRTSCAdapter" modeltypeId="realtimestatechart.xdsml.XRTSCMT" />
+    </language>
   </extension>
 </plugin>

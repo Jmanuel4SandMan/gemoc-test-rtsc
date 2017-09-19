@@ -22,6 +22,7 @@ import fr.inria.diverse.k3.al.annotationprocessor.Main
 import fr.inria.diverse.k3.al.annotationprocessor.Step
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 import java.util.List
+import org.eclipse.emf.common.util.EList
 
 @Aspect(className=Behavior)
 abstract class BehaviorAspect {
@@ -46,7 +47,7 @@ class RealtimestatechartAspect extends BehaviorAspect {
 	
 	@Step
 	@InitializeModel
-	def public void initialize(List<String> args){
+	def public void initialize(EList<String> args){
 		println("Initializing " + _self.name)
 		// TODO
 		_self.states.findFirst[initial].active = true
@@ -57,7 +58,7 @@ class RealtimestatechartAspect extends BehaviorAspect {
 	def public void step(){
 		// TODO
 		println("Stepping " + _self.name)
-		_self.transitions.findFirst[canFire].fire()
+		_self.transitions.findFirst[canFire]?.fire()
 	}
 	/*
 	* BE CAREFUL :
@@ -86,16 +87,20 @@ class StateAspect extends VertexAspect {
 @Aspect(className=Transition)
 class TransitionAspect {
 	
+	public int hitCount = 0
+	
+	@Step
 	def public boolean canFire(){
 		_self.source.active
 	}
 	
 	@Step
-	def public Vertex fire(){
+	def public void fire(){
 		_self.source.active = false
 		_self.target.active = true
+		_self.hitCount = _self.hitCount+1
 		println("Firing "+ (_self.source as NamedElement).name  + " to " + (_self.target as NamedElement).name)
-		return _self.target
+		//return _self.target
 	}
 
 }

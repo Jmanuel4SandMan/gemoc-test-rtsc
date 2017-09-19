@@ -1,4 +1,5 @@
 Bundle-SymbolicName: realtimestatechart.xdsml; singleton:=true
+Export-Package: realtimestatechart.xdsml.xrtscmt.realtimestatechart,realtimestatechart.xdsml.xrtscmt.realtimestatechart.impl,realtimestatechart.xdsml.xrtscmt.realtimestatechart.util,realtimestatechart.xdsml.xrtsc.adapters.rtscmt,realtimestatechart.xdsml.xrtsc.adapters.xrtscmt.realtimestatechart,realtimestatechart.xdsml,realtimestatechart.xdsml.xrtsc.adapters.xrtscmt,realtimestatechart.xdsml.xrtsc.adapters.rtscmt.realtimestatechart
 Bundle-Name: realtimestatechart.xdsml
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
@@ -34,7 +35,9 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  
  org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
  
- realtimestatechart.xsdml.rtsc.k3dsa;bundle-version="0.0.0";visibility:="reexport"
+ realtimestatechart.xsdml.rtsc.k3dsa;bundle-version="0.0.0";visibility:="reexport",
+ 
+ realtimestatechart.xdsml.xrtsc
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Manifest-Version: 1.0

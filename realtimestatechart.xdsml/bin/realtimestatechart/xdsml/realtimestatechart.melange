@@ -1,7 +1,10 @@
 package realtimestatechart.xdsml
 
-language RTSC {
+external language RTSC {
 	syntax "platform:/resource/realtimestatechart.model/model/realtimestatechart.ecore"
+}
+
+language XRTSC inherits RTSC {
 	with realtimestatechart.aspects.StatePointAspect
 	with realtimestatechart.aspects.TransitionAspect
 	with realtimestatechart.aspects.RealtimestatechartAspect
