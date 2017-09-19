@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.muml.rtsc.design
+Bundle-SymbolicName: org.muml.rtsc.design;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.muml.rtsc.design.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.aql,
+ org.muml.rtsc.model;bundle-version="2.3.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.muml.rtsc.design.services
