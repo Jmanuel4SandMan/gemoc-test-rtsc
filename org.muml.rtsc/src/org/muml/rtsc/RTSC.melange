@@ -1,0 +1,6 @@
+package org.muml.rtsc
+
+external language RTSC {
+	syntax "platform:/resource/org.muml.rtsc.model/model/rtsc.ecore"
+
+}

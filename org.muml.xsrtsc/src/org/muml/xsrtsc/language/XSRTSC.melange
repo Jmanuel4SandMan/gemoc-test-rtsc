@@ -1,0 +1,9 @@
+package org.muml.xsrtsc
+	
+language XSRTSC inherits org.muml.rtsc.RTSC {
+	
+	with org.muml.rtsc.k3dsa.StateAspect
+	with org.muml.rtsc.k3dsa.RealtimestatechartAspect
+	with org.muml.rtsc.k3dsa.TransitionAspect
+
+}

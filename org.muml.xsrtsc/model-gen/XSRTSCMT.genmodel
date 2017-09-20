@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.xsrtsc/src-gen" modelPluginID="org.muml.xsrtsc" modelName="XSRTSCMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.muml.xsrtsc/model-gen/XSRTSCMT.ecore</foreignModel>
+  <genPackages prefix="Rtsc" basePackage="org.muml.xsrtsc.xsrtscmt" disposableProviderFactory="true">
+    <ecorePackage href="XSRTSCMT.ecore#/"/>
+    <genClasses image="false">
+      <ecoreClass href="XSRTSCMT.ecore#//Behavior"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSRTSCMT.ecore#//BehavioralElement"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//BehavioralElement/behavior"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Realtimestatechart"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/transitions"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/states"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/initialState"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/currentState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/unprocessedString"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/consummedString"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/producedString"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/main"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/initializeModel"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//Realtimestatechart/initializeModel/args"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//State"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/subStatecharts"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//State/initial"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//State/final"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/owningRTSC"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/incomingTransitions"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/outgoingTransitions"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//State/step"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//State/step/inputString"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Transition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/source"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/target"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/input"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/output"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Transition/fire"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSRTSCMT.ecore#//NamedElement"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//NamedElement/name"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSRTSCMT.ecore#//Vertex"/>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>
