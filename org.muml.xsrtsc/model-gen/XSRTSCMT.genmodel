@@ -23,26 +23,23 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/initialState"/>
       </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/currentState"/>
-      </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/unprocessedString"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/consummedString"/>
-      </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/producedString"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/rounds"/>
       </genFeatures>
       <genOperations>
         <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/main"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/initializeModel"/>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/initialize"/>
         <genParameters>
-          <ecoreParameter href="XSRTSCMT.ecore#//Realtimestatechart/initializeModel/args"/>
+          <ecoreParameter href="XSRTSCMT.ecore#//Realtimestatechart/initialize/args"/>
         </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/initRTSC"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/step"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -65,12 +62,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/outgoingTransitions"/>
       </genFeatures>
-      <genOperations>
-        <ecoreOperation href="XSRTSCMT.ecore#//State/step"/>
-        <genParameters>
-          <ecoreParameter href="XSRTSCMT.ecore#//State/step/inputString"/>
-        </genParameters>
-      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Transition"/>
@@ -86,6 +77,12 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/output"/>
       </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/hitCount"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Transition/canFire"/>
+      </genOperations>
       <genOperations>
         <ecoreOperation href="XSRTSCMT.ecore#//Transition/fire"/>
       </genOperations>
@@ -96,8 +93,11 @@
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//NamedElement/name"/>
       </genFeatures>
     </genClasses>
-    <genClasses image="false">
+    <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Vertex"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Vertex/active"/>
+      </genFeatures>
     </genClasses>
   </genPackages>
   <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>

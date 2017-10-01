@@ -36,10 +36,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getStates <em>States</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getInitialState <em>Initial State</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getCurrentState <em>Current State</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getUnprocessedString <em>Unprocessed String</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getConsummedString <em>Consummed String</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getProducedString <em>Produced String</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getRounds <em>Rounds</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,74 +93,24 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	protected State initialState;
 
 	/**
-	 * The cached value of the '{@link #getCurrentState() <em>Current State</em>}' reference.
+	 * The default value of the '{@link #getRounds() <em>Rounds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentState()
+	 * @see #getRounds()
 	 * @generated
 	 * @ordered
 	 */
-	protected State currentState;
+	protected static final int ROUNDS_EDEFAULT = 0;
 
 	/**
-	 * The default value of the '{@link #getUnprocessedString() <em>Unprocessed String</em>}' attribute.
+	 * The cached value of the '{@link #getRounds() <em>Rounds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnprocessedString()
+	 * @see #getRounds()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UNPROCESSED_STRING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUnprocessedString() <em>Unprocessed String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnprocessedString()
-	 * @generated
-	 * @ordered
-	 */
-	protected String unprocessedString = UNPROCESSED_STRING_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getConsummedString() <em>Consummed String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConsummedString()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONSUMMED_STRING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getConsummedString() <em>Consummed String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConsummedString()
-	 * @generated
-	 * @ordered
-	 */
-	protected String consummedString = CONSUMMED_STRING_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getProducedString() <em>Produced String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProducedString()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PRODUCED_STRING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getProducedString() <em>Produced String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProducedString()
-	 * @generated
-	 * @ordered
-	 */
-	protected String producedString = PRODUCED_STRING_EDEFAULT;
+	protected int rounds = ROUNDS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -272,16 +219,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getCurrentState() {
-		if (currentState != null && currentState.eIsProxy()) {
-			InternalEObject oldCurrentState = (InternalEObject)currentState;
-			currentState = (State)eResolveProxy(oldCurrentState);
-			if (currentState != oldCurrentState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RtscPackage.REALTIMESTATECHART__CURRENT_STATE, oldCurrentState, currentState));
-			}
-		}
-		return currentState;
+	public int getRounds() {
+		return rounds;
 	}
 
 	/**
@@ -289,83 +228,11 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State basicGetCurrentState() {
-		return currentState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentState(State newCurrentState) {
-		State oldCurrentState = currentState;
-		currentState = newCurrentState;
+	public void setRounds(int newRounds) {
+		int oldRounds = rounds;
+		rounds = newRounds;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.REALTIMESTATECHART__CURRENT_STATE, oldCurrentState, currentState));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUnprocessedString() {
-		return unprocessedString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnprocessedString(String newUnprocessedString) {
-		String oldUnprocessedString = unprocessedString;
-		unprocessedString = newUnprocessedString;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.REALTIMESTATECHART__UNPROCESSED_STRING, oldUnprocessedString, unprocessedString));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getConsummedString() {
-		return consummedString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConsummedString(String newConsummedString) {
-		String oldConsummedString = consummedString;
-		consummedString = newConsummedString;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.REALTIMESTATECHART__CONSUMMED_STRING, oldConsummedString, consummedString));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getProducedString() {
-		return producedString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProducedString(String newProducedString) {
-		String oldProducedString = producedString;
-		producedString = newProducedString;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.REALTIMESTATECHART__PRODUCED_STRING, oldProducedString, producedString));
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.REALTIMESTATECHART__ROUNDS, oldRounds, rounds));
 	}
 
 	/**
@@ -384,7 +251,29 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializeModel(EList<String> args) {
+	public void initialize(EList<String> args) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initRTSC() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void step() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -438,15 +327,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				if (resolve) return getInitialState();
 				return basicGetInitialState();
-			case RtscPackage.REALTIMESTATECHART__CURRENT_STATE:
-				if (resolve) return getCurrentState();
-				return basicGetCurrentState();
-			case RtscPackage.REALTIMESTATECHART__UNPROCESSED_STRING:
-				return getUnprocessedString();
-			case RtscPackage.REALTIMESTATECHART__CONSUMMED_STRING:
-				return getConsummedString();
-			case RtscPackage.REALTIMESTATECHART__PRODUCED_STRING:
-				return getProducedString();
+			case RtscPackage.REALTIMESTATECHART__ROUNDS:
+				return getRounds();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -474,17 +356,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				setInitialState((State)newValue);
 				return;
-			case RtscPackage.REALTIMESTATECHART__CURRENT_STATE:
-				setCurrentState((State)newValue);
-				return;
-			case RtscPackage.REALTIMESTATECHART__UNPROCESSED_STRING:
-				setUnprocessedString((String)newValue);
-				return;
-			case RtscPackage.REALTIMESTATECHART__CONSUMMED_STRING:
-				setConsummedString((String)newValue);
-				return;
-			case RtscPackage.REALTIMESTATECHART__PRODUCED_STRING:
-				setProducedString((String)newValue);
+			case RtscPackage.REALTIMESTATECHART__ROUNDS:
+				setRounds((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -510,17 +383,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				setInitialState((State)null);
 				return;
-			case RtscPackage.REALTIMESTATECHART__CURRENT_STATE:
-				setCurrentState((State)null);
-				return;
-			case RtscPackage.REALTIMESTATECHART__UNPROCESSED_STRING:
-				setUnprocessedString(UNPROCESSED_STRING_EDEFAULT);
-				return;
-			case RtscPackage.REALTIMESTATECHART__CONSUMMED_STRING:
-				setConsummedString(CONSUMMED_STRING_EDEFAULT);
-				return;
-			case RtscPackage.REALTIMESTATECHART__PRODUCED_STRING:
-				setProducedString(PRODUCED_STRING_EDEFAULT);
+			case RtscPackage.REALTIMESTATECHART__ROUNDS:
+				setRounds(ROUNDS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -542,14 +406,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 				return states != null && !states.isEmpty();
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				return initialState != null;
-			case RtscPackage.REALTIMESTATECHART__CURRENT_STATE:
-				return currentState != null;
-			case RtscPackage.REALTIMESTATECHART__UNPROCESSED_STRING:
-				return UNPROCESSED_STRING_EDEFAULT == null ? unprocessedString != null : !UNPROCESSED_STRING_EDEFAULT.equals(unprocessedString);
-			case RtscPackage.REALTIMESTATECHART__CONSUMMED_STRING:
-				return CONSUMMED_STRING_EDEFAULT == null ? consummedString != null : !CONSUMMED_STRING_EDEFAULT.equals(consummedString);
-			case RtscPackage.REALTIMESTATECHART__PRODUCED_STRING:
-				return PRODUCED_STRING_EDEFAULT == null ? producedString != null : !PRODUCED_STRING_EDEFAULT.equals(producedString);
+			case RtscPackage.REALTIMESTATECHART__ROUNDS:
+				return rounds != ROUNDS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -598,12 +456,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", unprocessedString: ");
-		result.append(unprocessedString);
-		result.append(", consummedString: ");
-		result.append(consummedString);
-		result.append(", producedString: ");
-		result.append(producedString);
+		result.append(", rounds: ");
+		result.append(rounds);
 		result.append(')');
 		return result.toString();
 	}

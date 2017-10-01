@@ -149,40 +149,13 @@ public interface RtscPackage extends EPackage {
 	int REALTIMESTATECHART__INITIAL_STATE = BEHAVIOR_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Current State</b></em>' reference.
+	 * The feature id for the '<em><b>Rounds</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REALTIMESTATECHART__CURRENT_STATE = BEHAVIOR_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Unprocessed String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REALTIMESTATECHART__UNPROCESSED_STRING = BEHAVIOR_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Consummed String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REALTIMESTATECHART__CONSUMMED_STRING = BEHAVIOR_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Produced String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REALTIMESTATECHART__PRODUCED_STRING = BEHAVIOR_FEATURE_COUNT + 7;
+	int REALTIMESTATECHART__ROUNDS = BEHAVIOR_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Realtimestatechart</em>' class.
@@ -191,7 +164,7 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REALTIMESTATECHART_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 8;
+	int REALTIMESTATECHART_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.VertexImpl <em>Vertex</em>}' class.
@@ -204,13 +177,22 @@ public interface RtscPackage extends EPackage {
 	int VERTEX = 6;
 
 	/**
+	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTEX__ACTIVE = 0;
+
+	/**
 	 * The number of structural features of the '<em>Vertex</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEX_FEATURE_COUNT = 0;
+	int VERTEX_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.StateImpl <em>State</em>}' class.
@@ -221,6 +203,15 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	int STATE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ACTIVE = VERTEX__ACTIVE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -378,13 +369,22 @@ public interface RtscPackage extends EPackage {
 	int TRANSITION__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Hit Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__HIT_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 
 	/**
@@ -462,48 +462,15 @@ public interface RtscPackage extends EPackage {
 	EReference getRealtimestatechart_InitialState();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getCurrentState <em>Current State</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getRounds <em>Rounds</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current State</em>'.
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getCurrentState()
+	 * @return the meta object for the attribute '<em>Rounds</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getRounds()
 	 * @see #getRealtimestatechart()
 	 * @generated
 	 */
-	EReference getRealtimestatechart_CurrentState();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getUnprocessedString <em>Unprocessed String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unprocessed String</em>'.
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getUnprocessedString()
-	 * @see #getRealtimestatechart()
-	 * @generated
-	 */
-	EAttribute getRealtimestatechart_UnprocessedString();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getConsummedString <em>Consummed String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Consummed String</em>'.
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getConsummedString()
-	 * @see #getRealtimestatechart()
-	 * @generated
-	 */
-	EAttribute getRealtimestatechart_ConsummedString();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getProducedString <em>Produced String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Produced String</em>'.
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getProducedString()
-	 * @see #getRealtimestatechart()
-	 * @generated
-	 */
-	EAttribute getRealtimestatechart_ProducedString();
+	EAttribute getRealtimestatechart_Rounds();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.xsrtsc.xsrtsc.rtsc.State <em>State</em>}'.
@@ -636,6 +603,17 @@ public interface RtscPackage extends EPackage {
 	EAttribute getTransition_Output();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hit Count</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_HitCount();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.xsrtsc.xsrtsc.rtsc.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -665,6 +643,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVertex();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Active</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive()
+	 * @see #getVertex()
+	 * @generated
+	 */
+	EAttribute getVertex_Active();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -751,36 +740,12 @@ public interface RtscPackage extends EPackage {
 		EReference REALTIMESTATECHART__INITIAL_STATE = eINSTANCE.getRealtimestatechart_InitialState();
 
 		/**
-		 * The meta object literal for the '<em><b>Current State</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Rounds</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REALTIMESTATECHART__CURRENT_STATE = eINSTANCE.getRealtimestatechart_CurrentState();
-
-		/**
-		 * The meta object literal for the '<em><b>Unprocessed String</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REALTIMESTATECHART__UNPROCESSED_STRING = eINSTANCE.getRealtimestatechart_UnprocessedString();
-
-		/**
-		 * The meta object literal for the '<em><b>Consummed String</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REALTIMESTATECHART__CONSUMMED_STRING = eINSTANCE.getRealtimestatechart_ConsummedString();
-
-		/**
-		 * The meta object literal for the '<em><b>Produced String</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REALTIMESTATECHART__PRODUCED_STRING = eINSTANCE.getRealtimestatechart_ProducedString();
+		EAttribute REALTIMESTATECHART__ROUNDS = eINSTANCE.getRealtimestatechart_Rounds();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.StateImpl <em>State</em>}' class.
@@ -883,6 +848,14 @@ public interface RtscPackage extends EPackage {
 		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
 
 		/**
+		 * The meta object literal for the '<em><b>Hit Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__HIT_COUNT = eINSTANCE.getTransition_HitCount();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.NamedElementImpl <em>Named Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -909,6 +882,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VERTEX = eINSTANCE.getVertex();
+
+		/**
+		 * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VERTEX__ACTIVE = eINSTANCE.getVertex_Active();
 
 	}
 

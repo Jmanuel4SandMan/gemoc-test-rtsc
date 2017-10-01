@@ -59,6 +59,7 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.REALTIMESTATECHART: return createRealtimestatechart();
 			case RtscPackage.STATE: return createState();
 			case RtscPackage.TRANSITION: return createTransition();
+			case RtscPackage.VERTEX: return createVertex();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -88,6 +89,15 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	 * @generated
 	 */
 	public Transition createTransition() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vertex createVertex() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

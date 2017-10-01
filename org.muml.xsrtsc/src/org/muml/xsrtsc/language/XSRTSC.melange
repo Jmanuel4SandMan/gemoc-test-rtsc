@@ -1,9 +1,10 @@
 package org.muml.xsrtsc
 	
-language XSRTSC inherits org.muml.rtsc.RTSC {
+language XSRTSC {
+	syntax "platform:/resource/org.muml.rtsc.model/model/rtsc.ecore"
 	
-	with org.muml.rtsc.k3dsa.StateAspect
-	with org.muml.rtsc.k3dsa.RealtimestatechartAspect
-	with org.muml.rtsc.k3dsa.TransitionAspect
+	with org.muml.rtsc.k3dsa.*
+	
+	ecl "/org.muml.xsrtsc.dse/ecl/XSRTSC.ecl"
 
 }

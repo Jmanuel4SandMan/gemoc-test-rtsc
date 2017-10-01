@@ -209,35 +209,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRealtimestatechart_CurrentState() {
-		return (EReference)realtimestatechartEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRealtimestatechart_UnprocessedString() {
-		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRealtimestatechart_ConsummedString() {
-		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRealtimestatechart_ProducedString() {
-		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(6);
+	public EAttribute getRealtimestatechart_Rounds() {
+		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -353,6 +326,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTransition_HitCount() {
+		return (EAttribute)transitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -373,6 +355,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 */
 	public EClass getVertex() {
 		return vertexEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVertex_Active() {
+		return (EAttribute)vertexEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -412,10 +403,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__TRANSITIONS);
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__STATES);
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__INITIAL_STATE);
-		createEReference(realtimestatechartEClass, REALTIMESTATECHART__CURRENT_STATE);
-		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__UNPROCESSED_STRING);
-		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__CONSUMMED_STRING);
-		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__PRODUCED_STRING);
+		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__ROUNDS);
 
 		stateEClass = createEClass(STATE);
 		createEReference(stateEClass, STATE__SUB_STATECHARTS);
@@ -430,11 +418,13 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(transitionEClass, TRANSITION__TARGET);
 		createEAttribute(transitionEClass, TRANSITION__INPUT);
 		createEAttribute(transitionEClass, TRANSITION__OUTPUT);
+		createEAttribute(transitionEClass, TRANSITION__HIT_COUNT);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		vertexEClass = createEClass(VERTEX);
+		createEAttribute(vertexEClass, VERTEX__ACTIVE);
 	}
 
 	/**
@@ -481,15 +471,16 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getRealtimestatechart_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_States(), this.getState(), this.getState_OwningRTSC(), "states", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_InitialState(), this.getState(), null, "initialState", null, 1, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRealtimestatechart_CurrentState(), this.getState(), null, "currentState", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRealtimestatechart_UnprocessedString(), ecorePackage.getEString(), "unprocessedString", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRealtimestatechart_ConsummedString(), ecorePackage.getEString(), "consummedString", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRealtimestatechart_ProducedString(), ecorePackage.getEString(), "producedString", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRealtimestatechart_Rounds(), ecorePackage.getEInt(), "rounds", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(realtimestatechartEClass, null, "main", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = addEOperation(realtimestatechartEClass, null, "initializeModel", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = addEOperation(realtimestatechartEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(realtimestatechartEClass, null, "initRTSC", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(realtimestatechartEClass, null, "step", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getState_SubStatecharts(), this.getRealtimestatechart(), null, "subStatecharts", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -499,21 +490,22 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getState_IncomingTransitions(), this.getTransition(), this.getTransition_Target(), "incomingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_OutgoingTransitions(), this.getTransition(), this.getTransition_Source(), "outgoingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = addEOperation(stateEClass, null, "step", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "inputString", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransition_Source(), this.getState(), this.getState_OutgoingTransitions(), "source", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Input(), ecorePackage.getEString(), "input", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Output(), ecorePackage.getEString(), "output", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransition_HitCount(), ecorePackage.getEInt(), "hitCount", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		addEOperation(transitionEClass, null, "fire", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "canFire", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(transitionEClass, this.getVertex(), "fire", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vertexEClass, Vertex.class, "Vertex", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vertexEClass, Vertex.class, "Vertex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVertex_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, Vertex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -542,32 +534,37 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getRealtimestatechart_CurrentState(), 
+		  (realtimestatechartEClass.getEOperations().get(2), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getRealtimestatechart_UnprocessedString(), 
+		  (realtimestatechartEClass.getEOperations().get(3), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getRealtimestatechart_ConsummedString(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getRealtimestatechart_ProducedString(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (stateEClass.getEOperations().get(0), 
+		  (getRealtimestatechart_Rounds(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (transitionEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (transitionEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getTransition_HitCount(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getVertex_Active(), 
 		   source, 
 		   new String[] {
 		   });

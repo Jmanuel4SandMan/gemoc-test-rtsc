@@ -1,0 +1,82 @@
+[comment encoding = UTF-8 /]
+
+[module generate('http://fr.inria.aoste.timemodel.ccslmodel.clockexpressionandrelation', 
+	'http://www.eclipse.org/emf/2002/Ecore', 
+	'http://org.gemoc.moccml/1.0', 
+	'http://fr.inria.aoste.timemodel',
+	'http://org.gemoc.moccml.fsmmodel/1.0',
+	) ]
+
+[template public generate(aRealtimestatechart : Realtimestatechart)]
+[comment @main/]
+[file (aRealtimestatechart.name+'_withMoC-.clocksystem', false, 'UTF-8')]
+
+"Some global constants"
+|system moccmllibs ccsllibs|
+"MoCCML librairies specifications" 
+
+	"CCSL librairies specifications"
+
+
+"Instanciation" 
+
+
+system := ClockSystem named: '[aRealtimestatechart.name/]_withMoC-'.
+system addLibrary:moccmllibs asDictionary.
+"system addLibs:ccsllibs asDictionary."
+
+[for (element : rtsc::Realtimestatechart| aRealtimestatechart.eAllContents(rtsc::Realtimestatechart))]
+"clocks for Realtimestatechart [element.name/]" 
+system addClocks: #(initIt[element.name/]).
+system addClocks: #(stepIt[element.name/]).
+
+"internal clocks for rtsc::Realtimestatechart [element.name/]" 
+	system addInternalClocks: #(firstInit[element.name/]).
+system addInternalClocks: #(allSteps[element.name/]).
+system addInternalClocks: #(firstOfAllSteps[element.name/]).
+system addInternalClocks: #(firstInit2[element.name/]).
+
+[/for]
+
+[for (element : rtsc::Realtimestatechart| aRealtimestatechart.eAllContents(rtsc::Realtimestatechart))]
+"expressions used by  Realtimestatechart [element.name/]" 
+
+	[if ( ->size()>1) ]
+	system allOneTickAndNoMore: #(initIt()self[element.name/]) named: #firstInit[element.name/]. 
+	[/if]
+ 
+
+	[if ( ->size()>1) ]
+	system allUnion: #(stepIt()self[element.name/]) named: #allSteps[element.name/]. 
+	[/if]
+ 
+
+	[if ( ->size()>1) ]
+	system allOneTickAndNoMore: #() named: #firstOfAllSteps[element.name/]. 
+	[/if]
+ 
+
+	[if ( ->size()>1) ]
+	system allOneTickAndNoMore: #(initIt()self[element.name/]) named: #firstInit2[element.name/]. 
+	[/if]
+ 
+"relations for Realtimestatechart [element.name/]" 
+	"initFirst in Realtimestatechart [element.name/]"
+		[if ( true) ]
+	system library: #Kernel relation: #Precedes clocks: #(firstInit[element.name/]  firstOfAllSteps[element.name/])  constants:{-1} .
+		[/if]
+	"onlyOneInit in Realtimestatechart [element.name/]"
+		[if ( true) ]
+	system library: #Kernel relation: #Coincides clocks: #(firstInit2[element.name/]) .
+		[/if]
+[/for]
+[/file]
+[file ('ClkSysFunctionTest.clocksystem', false, 'UTF-8')]
+SimpleSDF example1 system
+[/file]
+
+
+[/template]
+
+
+
