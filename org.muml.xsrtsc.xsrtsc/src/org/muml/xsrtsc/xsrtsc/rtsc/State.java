@@ -158,12 +158,4 @@ public interface State extends Vertex, NamedElement {
 	 */
 	EList<Transition> getOutgoingTransitions();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void step(String inputString);
-
 } // State

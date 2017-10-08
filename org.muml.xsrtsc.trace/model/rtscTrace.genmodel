@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.xsrtsc.trace/src" modelPluginID="org.muml.xsrtsc.trace" modelName="RtscTrace" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="8.0" copyrightFields="false" importOrganizing="true">
+  <foreignModel>platform:/resource/org.muml.xsrtsc.trace/model/rtscTrace.ecore</foreignModel>
+  <genPackages prefix="RtscTrace" disposableProviderFactory="true">
+    <ecorePackage href="rtscTrace.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="rtscTrace.ecore#//SpecificTrace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/Rtsc_Realtimestatechart_InitRTSC_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/Rtsc_Realtimestatechart_Initialize_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/Rtsc_Realtimestatechart_Step_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/Rtsc_Transition_CanFire_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/Rtsc_Transition_Fire_Sequence"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/rtsc_tracedRealtimestatecharts"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/rtsc_tracedStates"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/rtsc_tracedTransitions"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/rtsc_tracedVertexs"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//SpecificTrace/statesTrace"/>
+      </genFeatures>
+    </genClasses>
+    <nestedGenPackages prefix="Steps" disposableProviderFactory="true">
+      <ecorePackage href="rtscTrace.ecore#//Steps"/>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/RootImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_InitRTSC"/>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_InitRTSC/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Initialize"/>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Initialize/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Initialize_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Initialize_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Step"/>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Step/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Step_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Realtimestatechart_Step_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Transition_CanFire"/>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//Steps/Rtsc_Transition_CanFire/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//Steps/Rtsc_Transition_Fire"/>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//Steps/Rtsc_Transition_Fire/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="rtscTrace.ecore#//Steps/SpecificStep"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//Steps/SpecificStep/endingState"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//Steps/SpecificStep/startingState"/>
+        </genFeatures>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="States" disposableProviderFactory="true">
+      <ecorePackage href="rtscTrace.ecore#//States"/>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//States/Realtimestatechart_rounds_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Realtimestatechart_rounds_Value/parent"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="rtscTrace.ecore#//States/Realtimestatechart_rounds_Value/rounds"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Realtimestatechart_rounds_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//States/Realtimestatechart_rounds_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//States/State"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/State/endedSteps"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/State/realtimestatechart_rounds_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/State/startedSteps"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/State/transition_hitCount_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/State/vertex_active_Values"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//States/Transition_hitCount_Value"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="rtscTrace.ecore#//States/Transition_hitCount_Value/hitCount"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Transition_hitCount_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Transition_hitCount_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//States/Transition_hitCount_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="rtscTrace.ecore#//States/Value"/>
+        <genFeatures property="Readonly" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Value/statesNoOpposite"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="rtscTrace.ecore#//States/Vertex_active_Value"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="rtscTrace.ecore#//States/Vertex_active_Value/active"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Vertex_active_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/Vertex_active_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="rtscTrace.ecore#//States/Vertex_active_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Rtsc" disposableProviderFactory="true">
+        <ecorePackage href="rtscTrace.ecore#//States/rtsc"/>
+        <genClasses image="false">
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedBehavior"/>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedNamedElement"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedRealtimestatechart"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedRealtimestatechart/originalObject"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedRealtimestatechart/roundsSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedState"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedTransition"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedTransition/hitCountSequence"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedTransition/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="rtscTrace.ecore#//States/rtsc/TracedVertex"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedVertex/activeSequence"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="rtscTrace.ecore#//States/rtsc/TracedVertex/originalObject_Vertex"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+  <usedGenPackages href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.genmodel#//trace"/>
+  <usedGenPackages href="../../org.muml.xsrtsc.xsrtsc/model/XSRTSC.genmodel#//rtsc"/>
+</genmodel:GenModel>

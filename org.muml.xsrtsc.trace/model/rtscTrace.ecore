@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rtscTrace" nsURI="rtscTrace" nsPrefix="rtscTrace">
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificTrace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rtsc_Realtimestatechart_InitRTSC_Sequence" upperBound="-1" eType="//Steps/Rtsc_Realtimestatechart_InitRTSC"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rtsc_Realtimestatechart_Initialize_Sequence" upperBound="-1" eType="//Steps/Rtsc_Realtimestatechart_Initialize"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rtsc_Realtimestatechart_Step_Sequence" upperBound="-1" eType="//Steps/Rtsc_Realtimestatechart_Step"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rtsc_Transition_CanFire_Sequence" upperBound="-1" eType="//Steps/Rtsc_Transition_CanFire"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rtsc_Transition_Fire_Sequence" upperBound="-1" eType="//Steps/Rtsc_Transition_Fire"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rtsc_tracedRealtimestatecharts" ordered="false" upperBound="-1" eType="//States/rtsc/TracedRealtimestatechart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rtsc_tracedStates" ordered="false" upperBound="-1" eType="//States/rtsc/TracedState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rtsc_tracedTransitions" ordered="false" upperBound="-1" eType="//States/rtsc/TracedTransition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rtsc_tracedVertexs" ordered="false" upperBound="-1" eType="//States/rtsc/TracedVertex" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statesTrace" upperBound="-1" eType="//States/State" containment="true"/>
+    <eGenericSuperTypes>
+      <eTypeArguments>
+        <eTypeArguments eClassifier="//Steps/SpecificStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
+      </eTypeArguments>
+      <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//Trace"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eSubpackages name="Steps" nsURI="rtscTrace_Steps" nsPrefix="events">
+    <eClassifiers xsi:type="ecore:EClass" name="RootImplicitStep">
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_InitRTSC">
+      <eSuperTypes href="#//Steps/Rtsc_Realtimestatechart_Initialize_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/rtsc/TracedRealtimestatechart">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (rtscTrace.States.rtsc.TracedRealtimestatechart) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Initialize">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/rtsc/TracedRealtimestatechart">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (rtscTrace.States.rtsc.TracedRealtimestatechart) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Rtsc_Realtimestatechart_Initialize_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Initialize_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Initialize_ImplicitStep">
+      <eSuperTypes href="#//Steps/Rtsc_Realtimestatechart_Initialize_AbstractSubStep"/>
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Step">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/rtsc/TracedRealtimestatechart">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (rtscTrace.States.rtsc.TracedRealtimestatechart) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Rtsc_Realtimestatechart_Step_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Step_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Realtimestatechart_Step_ImplicitStep">
+      <eSuperTypes href="#//Steps/Rtsc_Realtimestatechart_Step_AbstractSubStep"/>
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Transition_CanFire">
+      <eSuperTypes href="#//Steps/Rtsc_Realtimestatechart_Step_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/rtsc/TracedTransition">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (rtscTrace.States.rtsc.TracedTransition) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Rtsc_Transition_Fire">
+      <eSuperTypes href="#//Steps/Rtsc_Realtimestatechart_Step_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/rtsc/TracedTransition">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (rtscTrace.States.rtsc.TracedTransition) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificStep" abstract="true" interface="true">
+      <eSuperTypes href="../../../plugin/fr.inria.diverse.trace.commons.model/model/GenericTrace.ecore#//Step"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endingState" eType="//States/State" eOpposite="//States/State/endedSteps"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startingState" lowerBound="1" eType="//States/State" eOpposite="//States/State/startedSteps"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="States" nsURI="rtscTrace_States" nsPrefix="tracedclasses">
+    <eClassifiers xsi:type="ecore:EClass" name="Realtimestatechart_rounds_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/rtsc/TracedRealtimestatechart" eOpposite="//States/rtsc/TracedRealtimestatechart/roundsSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rounds" unique="false">
+        <eAnnotations source="aspect"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/realtimestatechart_rounds_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="State">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endedSteps" upperBound="-1" eType="//Steps/SpecificStep" eOpposite="//Steps/SpecificStep/endingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="realtimestatechart_rounds_Values" ordered="false" upperBound="-1" eType="//States/Realtimestatechart_rounds_Value" eOpposite="//States/Realtimestatechart_rounds_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startedSteps" upperBound="-1" eType="//Steps/SpecificStep" eOpposite="//Steps/SpecificStep/startingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transition_hitCount_Values" ordered="false" upperBound="-1" eType="//States/Transition_hitCount_Value" eOpposite="//States/Transition_hitCount_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vertex_active_Values" ordered="false" upperBound="-1" eType="//States/Vertex_active_Value" eOpposite="//States/Vertex_active_Value/states"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Transition_hitCount_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hitCount" unique="false">
+        <eAnnotations source="aspect"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/rtsc/TracedTransition" eOpposite="//States/rtsc/TracedTransition/hitCountSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/transition_hitCount_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true" interface="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State" changeable="false" volatile="true" transient="true" derived="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Vertex_active_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" unique="false">
+        <eAnnotations source="aspect"/>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/rtsc/TracedVertex" eOpposite="//States/rtsc/TracedVertex/activeSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/vertex_active_Values"/>
+    </eClassifiers>
+    <eSubpackages name="rtsc" nsURI="rtscTrace_rtsc" nsPrefix="">
+      <eClassifiers xsi:type="ecore:EClass" name="TracedBehavior" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedNamedElement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedRealtimestatechart" eSuperTypes="//States/rtsc/TracedBehavior //States/rtsc/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.muml.xsrtsc.xsrtsc/model/XSRTSC.ecore#//Realtimestatechart"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="roundsSequence" upperBound="-1" eType="//States/Realtimestatechart_rounds_Value" containment="true" eOpposite="//States/Realtimestatechart_rounds_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedState" eSuperTypes="//States/rtsc/TracedVertex //States/rtsc/TracedNamedElement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedTransition" eSuperTypes="//States/rtsc/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hitCountSequence" upperBound="-1" eType="//States/Transition_hitCount_Value" containment="true" eOpposite="//States/Transition_hitCount_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.muml.xsrtsc.xsrtsc/model/XSRTSC.ecore#//Transition"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedVertex">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activeSequence" upperBound="-1" eType="//States/Vertex_active_Value" containment="true" eOpposite="//States/Vertex_active_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject_Vertex">
+          <eType xsi:type="ecore:EClass" href="../../org.muml.xsrtsc.xsrtsc/model/XSRTSC.ecore#//Vertex"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

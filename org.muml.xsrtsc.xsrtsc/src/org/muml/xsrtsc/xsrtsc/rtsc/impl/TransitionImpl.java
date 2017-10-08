@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
+import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +27,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +92,26 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * @ordered
 	 */
 	protected String output = OUTPUT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getHitCount() <em>Hit Count</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHitCount()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int HIT_COUNT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getHitCount() <em>Hit Count</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHitCount()
+	 * @generated
+	 * @ordered
+	 */
+	protected int hitCount = HIT_COUNT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -277,7 +299,39 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void fire() {
+	public int getHitCount() {
+		return hitCount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHitCount(int newHitCount) {
+		int oldHitCount = hitCount;
+		hitCount = newHitCount;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.TRANSITION__HIT_COUNT, oldHitCount, hitCount));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean canFire() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vertex fire() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -337,6 +391,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getInput();
 			case RtscPackage.TRANSITION__OUTPUT:
 				return getOutput();
+			case RtscPackage.TRANSITION__HIT_COUNT:
+				return getHitCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -360,6 +416,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return;
 			case RtscPackage.TRANSITION__OUTPUT:
 				setOutput((String)newValue);
+				return;
+			case RtscPackage.TRANSITION__HIT_COUNT:
+				setHitCount((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -385,6 +444,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__OUTPUT:
 				setOutput(OUTPUT_EDEFAULT);
 				return;
+			case RtscPackage.TRANSITION__HIT_COUNT:
+				setHitCount(HIT_COUNT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -405,6 +467,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
 			case RtscPackage.TRANSITION__OUTPUT:
 				return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
+			case RtscPackage.TRANSITION__HIT_COUNT:
+				return hitCount != HIT_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -423,6 +487,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 		result.append(input);
 		result.append(", output: ");
 		result.append(output);
+		result.append(", hitCount: ");
+		result.append(hitCount);
 		result.append(')');
 		return result.toString();
 	}

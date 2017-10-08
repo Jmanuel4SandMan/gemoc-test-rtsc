@@ -16,7 +16,7 @@
     </modeltype>
   </extension>
   <extension point="fr.inria.diverse.melange.language">
-    <language aspects="State:org.muml.xsrtsc.xsrtsc.aspects.StateAspect;Transition:org.muml.xsrtsc.xsrtsc.aspects.TransitionAspect;Realtimestatechart:org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect" entryPoints="org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.main(org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart)" exactType="org.muml.xsrtsc.XSRTSCMT" id="org.muml.xsrtsc.XSRTSC" uri="http://org.muml.xsrtsc.xsrtsc/rtsc/">
+    <language aspects="Vertex:org.muml.xsrtsc.xsrtsc.aspects.VertexAspect;BehavioralElement:org.muml.xsrtsc.xsrtsc.aspects.BehavioralElementAspect;State:org.muml.xsrtsc.xsrtsc.aspects.StateAspect;Transition:org.muml.xsrtsc.xsrtsc.aspects.TransitionAspect;Realtimestatechart:org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect;Behavior:org.muml.xsrtsc.xsrtsc.aspects.BehaviorAspect;NamedElement:org.muml.xsrtsc.xsrtsc.aspects.NamedElementAspect" entryPoints="org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.main(org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart)" exactType="org.muml.xsrtsc.XSRTSCMT" id="org.muml.xsrtsc.XSRTSC" uri="http://org.muml.xsrtsc.xsrtsc/rtsc/">
       <adapter class="org.muml.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter" modeltypeId="org.muml.rtsc.RTSCMT"/>
       <adapter class="org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCAdapter" modeltypeId="org.muml.xsrtsc.XSRTSCMT"/>
     </language>

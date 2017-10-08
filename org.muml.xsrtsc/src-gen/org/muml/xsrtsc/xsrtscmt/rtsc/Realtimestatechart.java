@@ -16,10 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getStates <em>States</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getInitialState <em>Initial State</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getCurrentState <em>Current State</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getUnprocessedString <em>Unprocessed String</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getConsummedString <em>Consummed String</em>}</li>
- *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getProducedString <em>Produced String</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getRounds <em>Rounds</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart()
@@ -88,108 +85,30 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	void setInitialState(State value);
 
 	/**
-	 * Returns the value of the '<em><b>Current State</b></em>' reference.
+	 * Returns the value of the '<em><b>Rounds</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Current State</em>' reference isn't clear,
+	 * If the meaning of the '<em>Rounds</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current State</em>' reference.
-	 * @see #setCurrentState(State)
-	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart_CurrentState()
-	 * @model
-	 * @generated
-	 */
-	State getCurrentState();
-
-	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getCurrentState <em>Current State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current State</em>' reference.
-	 * @see #getCurrentState()
-	 * @generated
-	 */
-	void setCurrentState(State value);
-
-	/**
-	 * Returns the value of the '<em><b>Unprocessed String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Unprocessed String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unprocessed String</em>' attribute.
-	 * @see #setUnprocessedString(String)
-	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart_UnprocessedString()
+	 * @return the value of the '<em>Rounds</em>' attribute.
+	 * @see #setRounds(int)
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart_Rounds()
 	 * @model unique="false"
 	 * @generated
 	 */
-	String getUnprocessedString();
+	int getRounds();
 
 	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getUnprocessedString <em>Unprocessed String</em>}' attribute.
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getRounds <em>Rounds</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unprocessed String</em>' attribute.
-	 * @see #getUnprocessedString()
+	 * @param value the new value of the '<em>Rounds</em>' attribute.
+	 * @see #getRounds()
 	 * @generated
 	 */
-	void setUnprocessedString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Consummed String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Consummed String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consummed String</em>' attribute.
-	 * @see #setConsummedString(String)
-	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart_ConsummedString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getConsummedString();
-
-	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getConsummedString <em>Consummed String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Consummed String</em>' attribute.
-	 * @see #getConsummedString()
-	 * @generated
-	 */
-	void setConsummedString(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Produced String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Produced String</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Produced String</em>' attribute.
-	 * @see #setProducedString(String)
-	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getRealtimestatechart_ProducedString()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getProducedString();
-
-	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart#getProducedString <em>Produced String</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Produced String</em>' attribute.
-	 * @see #getProducedString()
-	 * @generated
-	 */
-	void setProducedString(String value);
+	void setRounds(int value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +124,22 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * @model argsMany="true"
 	 * @generated
 	 */
-	void initializeModel(EList<String> args);
+	void initialize(EList<String> args);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initRTSC();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void step();
 
 } // Realtimestatechart

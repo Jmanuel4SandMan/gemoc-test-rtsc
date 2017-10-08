@@ -59,6 +59,7 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.REALTIMESTATECHART: return createRealtimestatechart();
 			case RtscPackage.STATE: return createState();
 			case RtscPackage.TRANSITION: return createTransition();
+			case RtscPackage.VERTEX: return createVertex();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +93,16 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vertex createVertex() {
+		VertexImpl vertex = new VertexImpl();
+		return vertex;
 	}
 
 	/**

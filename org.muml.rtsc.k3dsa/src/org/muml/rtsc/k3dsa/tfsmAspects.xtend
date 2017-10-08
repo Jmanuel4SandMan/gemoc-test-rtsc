@@ -13,85 +13,111 @@ import static extension org.muml.rtsc.k3dsa.StateAspect.*
 import static extension org.muml.rtsc.k3dsa.RealtimestatechartAspect.*
 import static extension org.muml.rtsc.k3dsa.TransitionAspect.*
 import org.eclipse.emf.common.util.EList
+import org.muml.rtsc.Behavior
+import org.muml.rtsc.BehavioralElement
+import org.muml.rtsc.Vertex
+import org.muml.rtsc.NamedElement
 
-@Aspect(className=Realtimestatechart)
-class RealtimestatechartAspect {
-
-	public State currentState
-	
-	public String unprocessedString
-	public String consummedString
-	public String producedString 
-	
-	
-	@Main
-    def public void main() {
-    	try{
-    		while (!_self.unprocessedString.isEmpty) {
-    			_self.currentState.step(_self.unprocessedString)
-    		}    		
-		} /* catch (NoTransition nt){
-			println("Stopped due to NoTransition"+nt.message)
-		} catch (NonDeterminism nt){
-			println("Stopped due to NonDeterminism"+nt.message)
-		} */ catch (Exception nt){
-			println("Stopped due to "+nt.message)
-		}
-		println("unprocessed string: "+_self.unprocessedString)
-		println("processed string: "+_self.consummedString)
-		println("produced string: "+_self.producedString)
-	}
-       
-      
-    @Step 
-	@InitializeModel
-	def public void initializeModel(EList<String> args){
-		_self.currentState = _self.initialState;
-		_self.unprocessedString = args.get(0)
-		_self.consummedString = ""
-		_self.producedString = ""
-	}
-	
+@Aspect(className=Behavior)
+abstract class BehaviorAspect {
 
 }
 
+@Aspect(className=BehavioralElement)
+abstract class BehavioralElementAspect {
+
+}
+
+@Aspect(className=Realtimestatechart)
+class RealtimestatechartAspect extends BehaviorAspect {
+	public int rounds;
+	@Main
+	def public void main(){
+		while (true)
+		{
+			_self.step();
+		}
+	}
+	
+	@Step
+	@InitializeModel
+	def public void initialize(EList<String> args){
+		_self.initRTSC
+	}
+	
+	@Step
+	def public void initRTSC(){
+		println("Initializing " + _self.name)
+		// TODO
+		_self.initialState.active = true
+	}
+	
+	
+	@Step
+	def public void step(){
+		// TODO
+		println("Stepping " + _self.name)
+		_self.rounds = _self.rounds +1;
+		_self.transitions.findFirst[canFire]?.fire()
+	}
+	/*
+	* BE CAREFUL :
+	*
+	* This class has more than one superclass
+	* please specify which parent you want with the 'super' expected calling
+	*
+	*/
+
+
+}
 
 @Aspect(className=State)
-class StateAspect {
-	@Step
-	def public void step(String inputString) {
-		// Get the valid transitions	
-		val validTransitions =  _self.outgoingTransitions.filter[t | inputString.startsWith(t.input)]
-		if(validTransitions.empty) {
-			//throw new NoTransition()
-			throw new Exception("No Transition")
-		}
-		if(validTransitions.size > 1) {
-			//throw new NonDeterminism()
-			throw new Exception("Non Determinism")
-			
-		}
-		// Fire transition
-		validTransitions.get(0).fire
-	}
+class StateAspect extends VertexAspect {
+	/*
+	* BE CAREFUL :
+	*
+	* This class has more than one superclass
+	* please specify which parent you want with the 'super' expected calling
+	*
+	*/
+
+
 }
 
 @Aspect(className=Transition)
 class TransitionAspect {
+	
+	public int hitCount = 0
+	
 	@Step
-	def public void fire() {
-		println("Firing " + _self.name + " and entering " + _self.target.name)
-		val rtsc = _self.source.owningRTSC
-		rtsc.currentState = _self.target
-		rtsc.producedString = rtsc.producedString + _self.output
-		rtsc.consummedString = rtsc.consummedString + _self.input
-		rtsc.unprocessedString = rtsc.unprocessedString.substring(_self.input.length)
+	def public boolean canFire(){
+		_self.source.active
 	}
-}
-/* need to be enabled when feature request  */
-class NoTransition extends Exception{
 	
+	@Step
+	def public Vertex fire(){
+		_self.source.active = false
+		_self.target.active = true
+		_self.hitCount = _self.hitCount+1
+		println("Firing "+ (_self.source as NamedElement).name  + " to " + (_self.target as NamedElement).name)
+		return _self.target
+	}
+
 }
-class NonDeterminism extends Exception{
+
+@Aspect(className=NamedElement)
+abstract class NamedElementAspect {
+
+}
+
+//@Aspect(className=StatePoint)
+//class StatePointAspect extends VertexAspect {
+//
+//}
+
+@Aspect(className=Vertex)
+abstract class VertexAspect {
 	
+	public boolean active = false
+
 }

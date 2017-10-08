@@ -16,6 +16,7 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getInput <em>Input</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getTransition()
@@ -132,11 +133,45 @@ public interface Transition extends NamedElement {
 	void setOutput(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Hit Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hit Count</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hit Count</em>' attribute.
+	 * @see #setHitCount(int)
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getTransition_HitCount()
+	 * @model unique="false"
+	 * @generated
+	 */
+	int getHitCount();
+
+	/**
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hit Count</em>' attribute.
+	 * @see #getHitCount()
+	 * @generated
+	 */
+	void setHitCount(int value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
-	void fire();
+	boolean canFire();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Vertex fire();
 
 } // Transition
