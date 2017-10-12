@@ -5,15 +5,11 @@ import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel;
 import fr.inria.diverse.k3.al.annotationprocessor.Main;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.InputOutput;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
-import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
 import org.muml.xsrtsc.xsrtsc.aspects.BehaviorAspect;
 import org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspectRealtimestatechartAspectProperties;
-import org.muml.xsrtsc.xsrtsc.aspects.TransitionAspect;
 import org.muml.xsrtsc.xsrtsc.aspects.VertexAspect;
 
 @Aspect(className = Realtimestatechart.class)
@@ -76,29 +72,10 @@ public class RealtimestatechartAspect extends BehaviorAspect {
 	;
 }
   
-  @Step
   public static void step(final Realtimestatechart _self) {
 	final org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspectRealtimestatechartAspectProperties _self_ = org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspectRealtimestatechartAspectContext
 			.getSelf(_self);
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
-		@Override
-		public void execute() {
-			_privk3_step(_self_, _self);
-		}
-	};
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
-			.getInstance().findStepManager(_self);
-	if (manager != null) {
-		manager.executeStep(_self, command, "Realtimestatechart", "step");
-	} else {
-		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(null);
-		if (eventManager != null) {
-			eventManager.manageEvents();
-		}
-		command.execute();
-	}
-	;
+	_privk3_step(_self_, _self);
 	;
 }
   
@@ -143,14 +120,6 @@ public class RealtimestatechartAspect extends BehaviorAspect {
     int _rounds = RealtimestatechartAspect.rounds(_self);
     int _plus_1 = (_rounds + 1);
     RealtimestatechartAspect.rounds(_self, _plus_1);
-    EList<Transition> _transitions = _self.getTransitions();
-    final Function1<Transition, Boolean> _function = (Transition it) -> {
-      return Boolean.valueOf(TransitionAspect.canFire(it));
-    };
-    Transition _findFirst = IterableExtensions.<Transition>findFirst(_transitions, _function);
-    if (_findFirst!=null) {
-      TransitionAspect.fire(_findFirst);
-    }
   }
   
   protected static int _privk3_rounds(final RealtimestatechartAspectRealtimestatechartAspectProperties _self_, final Realtimestatechart _self) {

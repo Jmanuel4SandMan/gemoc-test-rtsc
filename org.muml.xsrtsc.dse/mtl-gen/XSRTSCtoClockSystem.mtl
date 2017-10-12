@@ -27,47 +27,48 @@ system addLibrary:moccmllibs asDictionary.
 
 [for (element : rtsc::Realtimestatechart| aRealtimestatechart.eAllContents(rtsc::Realtimestatechart))]
 "clocks for Realtimestatechart [element.name/]" 
-system addClocks: #(initIt[element.name/]).
 system addClocks: #(stepIt[element.name/]).
 
-"internal clocks for rtsc::Realtimestatechart [element.name/]" 
-	system addInternalClocks: #(firstInit[element.name/]).
-system addInternalClocks: #(allSteps[element.name/]).
-system addInternalClocks: #(firstOfAllSteps[element.name/]).
-system addInternalClocks: #(firstInit2[element.name/]).
+[/for]
+[for (element : rtsc::Transition| aRealtimestatechart.eAllContents(rtsc::Transition))]
+"clocks for Transition [element.name/]" 
+system addClocks: #(fireIt[element.name/]).
+system addClocks: #(canFire[element.name/]).
+system addClocks: #(canFireTrue[element.name/]).
+system addClocks: #(canFireFalse[element.name/]).
 
 [/for]
 
 [for (element : rtsc::Realtimestatechart| aRealtimestatechart.eAllContents(rtsc::Realtimestatechart))]
-"expressions used by  Realtimestatechart [element.name/]" 
-
-	[if ( ->size()>1) ]
-	system allOneTickAndNoMore: #(initIt()self[element.name/]) named: #firstInit[element.name/]. 
-	[/if]
- 
-
-	[if ( ->size()>1) ]
-	system allUnion: #(stepIt()self[element.name/]) named: #allSteps[element.name/]. 
-	[/if]
- 
-
-	[if ( ->size()>1) ]
-	system allOneTickAndNoMore: #() named: #firstOfAllSteps[element.name/]. 
-	[/if]
- 
-
-	[if ( ->size()>1) ]
-	system allOneTickAndNoMore: #(initIt()self[element.name/]) named: #firstInit2[element.name/]. 
-	[/if]
- 
 "relations for Realtimestatechart [element.name/]" 
-	"initFirst in Realtimestatechart [element.name/]"
+	"evaluateSameTime in Realtimestatechart [element.name/]"
 		[if ( true) ]
-	system library: #Kernel relation: #Precedes clocks: #(firstInit[element.name/]  firstOfAllSteps[element.name/])  constants:{-1} .
+	system library: #Kernel relation: #Coincides clocks: #() .
 		[/if]
-	"onlyOneInit in Realtimestatechart [element.name/]"
+	"onlyOneFire in Realtimestatechart [element.name/]"
 		[if ( true) ]
-	system library: #Kernel relation: #Coincides clocks: #(firstInit2[element.name/]) .
+	system library: #Kernel relation: #Exclusion clocks: #() .
+		[/if]
+	"evaluateEachStep in Realtimestatechart [element.name/]"
+		[if ( true) ]
+	system library: #Kernel relation: #Coincides clocks: #() .
+		[/if]
+[/for]
+[for (element : rtsc::Transition| aRealtimestatechart.eAllContents(rtsc::Transition))]
+"relations for Transition [element.name/]" 
+	"evaluateCanfire in Transition [element.name/]"
+	[if ( true) ]
+	system
+		library: #rtsc
+		relation: #EvalBooleanDef
+		clocks: #(    )
+		constants: {}
+		variables: {}.
+	[/if]
+
+	"fireIfCanFire in Transition [element.name/]"
+		[if ( true) ]
+	system library: #Kernel relation: #Coincides clocks: #(  ) .
 		[/if]
 [/for]
 [/file]

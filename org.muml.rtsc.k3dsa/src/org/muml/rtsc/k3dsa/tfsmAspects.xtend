@@ -53,12 +53,11 @@ class RealtimestatechartAspect extends BehaviorAspect {
 	}
 	
 	
-	@Step
 	def public void step(){
 		// TODO
 		println("Stepping " + _self.name)
 		_self.rounds = _self.rounds +1;
-		_self.transitions.findFirst[canFire]?.fire()
+		//_self.transitions.findFirst[canFire]?.fire()
 	}
 	/*
 	* BE CAREFUL :
@@ -80,6 +79,14 @@ class StateAspect extends VertexAspect {
 	* please specify which parent you want with the 'super' expected calling
 	*
 	*/
+	
+	def public void entry(){
+		_self.active = true
+	}
+	
+	def public void exit(){
+		_self.active = false
+	}
 
 
 }
@@ -89,17 +96,15 @@ class TransitionAspect {
 	
 	public int hitCount = 0
 	
-	@Step
 	def public boolean canFire(){
 		_self.source.active
 	}
 	
-	@Step
 	def public Vertex fire(){
-		_self.source.active = false
-		_self.target.active = true
+		_self.source.exit
 		_self.hitCount = _self.hitCount+1
 		println("Firing "+ (_self.source as NamedElement).name  + " to " + (_self.target as NamedElement).name)
+		_self.target.entry
 		return _self.target
 	}
 

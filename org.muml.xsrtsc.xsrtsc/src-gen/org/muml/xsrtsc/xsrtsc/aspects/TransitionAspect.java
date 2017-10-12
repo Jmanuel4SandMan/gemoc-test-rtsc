@@ -1,72 +1,32 @@
 package org.muml.xsrtsc.xsrtsc.aspects;
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
-import fr.inria.diverse.k3.al.annotationprocessor.Step;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.muml.xsrtsc.xsrtsc.rtsc.NamedElement;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
 import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
+import org.muml.xsrtsc.xsrtsc.aspects.StateAspect;
 import org.muml.xsrtsc.xsrtsc.aspects.TransitionAspectTransitionAspectProperties;
 import org.muml.xsrtsc.xsrtsc.aspects.VertexAspect;
 
 @Aspect(className = Transition.class)
 @SuppressWarnings("all")
 public class TransitionAspect {
-  @Step
   public static boolean canFire(final Transition _self) {
 	final org.muml.xsrtsc.xsrtsc.aspects.TransitionAspectTransitionAspectProperties _self_ = org.muml.xsrtsc.xsrtsc.aspects.TransitionAspectTransitionAspectContext
 			.getSelf(_self);
 	Object result = null;
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
-		@Override
-		public void execute() {
-			addToResult(_privk3_canFire(_self_, _self));
-		}
-	};
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
-			.getInstance().findStepManager(_self);
-	if (manager != null) {
-		manager.executeStep(_self, command, "Transition", "canFire");
-	} else {
-		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(null);
-		if (eventManager != null) {
-			eventManager.manageEvents();
-		}
-		command.execute();
-	}
-	result = command.getResult();
-	;
+	result = _privk3_canFire(_self_, _self);
 	;
 	return (boolean) result;
 }
   
-  @Step
   public static Vertex fire(final Transition _self) {
 	final org.muml.xsrtsc.xsrtsc.aspects.TransitionAspectTransitionAspectProperties _self_ = org.muml.xsrtsc.xsrtsc.aspects.TransitionAspectTransitionAspectContext
 			.getSelf(_self);
 	Object result = null;
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
-		@Override
-		public void execute() {
-			addToResult(_privk3_fire(_self_, _self));
-		}
-	};
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
-			.getInstance().findStepManager(_self);
-	if (manager != null) {
-		manager.executeStep(_self, command, "Transition", "fire");
-	} else {
-		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IEventManager eventManager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.EventManagerRegistry
-				.getInstance().findEventManager(null);
-		if (eventManager != null) {
-			eventManager.manageEvents();
-		}
-		command.execute();
-	}
-	result = command.getResult();
-	;
+	result = _privk3_fire(_self_, _self);
 	;
 	return (org.muml.xsrtsc.xsrtsc.rtsc.Vertex) result;
 }
@@ -94,9 +54,7 @@ public class TransitionAspect {
   
   protected static Vertex _privk3_fire(final TransitionAspectTransitionAspectProperties _self_, final Transition _self) {
     State _source = _self.getSource();
-    VertexAspect.active(_source, false);
-    State _target = _self.getTarget();
-    VertexAspect.active(_target, true);
+    StateAspect.exit(_source);
     int _hitCount = TransitionAspect.hitCount(_self);
     int _plus = (_hitCount + 1);
     TransitionAspect.hitCount(_self, _plus);
@@ -104,10 +62,12 @@ public class TransitionAspect {
     String _name = ((NamedElement) _source_1).getName();
     String _plus_1 = ("Firing " + _name);
     String _plus_2 = (_plus_1 + " to ");
-    State _target_1 = _self.getTarget();
-    String _name_1 = ((NamedElement) _target_1).getName();
+    State _target = _self.getTarget();
+    String _name_1 = ((NamedElement) _target).getName();
     String _plus_3 = (_plus_2 + _name_1);
     InputOutput.<String>println(_plus_3);
+    State _target_1 = _self.getTarget();
+    StateAspect.entry(_target_1);
     return _self.getTarget();
   }
   

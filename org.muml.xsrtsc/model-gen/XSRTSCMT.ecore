@@ -29,6 +29,12 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="//Vertex //NamedElement">
+    <eOperations name="entry">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eOperations name="exit">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subStatecharts" upperBound="-1" eType="//Realtimestatechart" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

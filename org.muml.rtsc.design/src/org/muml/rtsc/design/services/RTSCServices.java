@@ -1,6 +1,6 @@
 package org.muml.rtsc.design.services;
 
-import org.muml.rtsc.Transition;
+import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
 
 /** RTSC services.
  * 

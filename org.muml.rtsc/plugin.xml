@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.muml.rtsc.RTSC" xdsmlFilePath="/org.muml.rtsc/bin/org/muml/rtsc/RTSC.melange" />
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.muml.rtsc.RTSC" xdsmlFilePath="/org.muml.rtsc/src/org/muml/rtsc/RTSC.melange" />
   </extension>
   <extension point="fr.inria.diverse.melange.modeltype">
     <modeltype id="org.muml.rtsc.RTSCMT" uri="http://org.muml.rtsc.rtscmt/" />

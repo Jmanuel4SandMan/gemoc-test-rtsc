@@ -62,6 +62,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//State/outgoingTransitions"/>
       </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//State/entry"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//State/exit"/>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSC.ecore#//Transition"/>

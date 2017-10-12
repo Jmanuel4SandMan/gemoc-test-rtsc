@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Vertex extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Active</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,4 +46,5 @@ public interface Vertex extends EObject {
 	 * @generated
 	 */
 	void setActive(boolean value);
+
 } // Vertex

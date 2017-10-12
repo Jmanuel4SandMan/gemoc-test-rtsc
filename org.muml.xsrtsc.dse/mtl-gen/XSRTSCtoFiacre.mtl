@@ -25,31 +25,48 @@ const NUMBER_Vertexs : int is [aRealtimestatechart.eAllContents(Vertex)->size()/
 /*********************************************************************
 Defining the Functions for : Realtimestatechart
 **********************************************************************/
+/*********************************************************************
+Defining the Functions for : Transition
+**********************************************************************/
 /************************* Realtimestatechart Process Instances***************************/
 [for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-process p[element.name/] ['['/][element.name/]_initIt:in none,[element.name/]_stepIt:in none[']'/](&global : SystemDataRoot, id : read int) is
+process p[element.name/] ['['/][element.name/]_stepIt:in none[']'/](&global : SystemDataRoot, id : read int) is
 	states s0
 	var _self:Realtimestatechart
-    from s0  [element.name/]_initIt; global:=Realtimestatechart_initRTSC( global , global.refToElement_id) ;  to s0
     from s0  [element.name/]_stepIt; global:=Realtimestatechart_step( global , global.refToElement_id) ;  to s0
 [/for]
+/************************* Transition Process Instances***************************/
+[for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+process p[element.name/] ['['/][element.name/]_fireIt:in none[element.name/]_canFire:in none,[element.name/]_canFireTrue:in none,[element.name/]_canFireFalse:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:Transition
+    from s0  [element.name/]_fireIt; global:=Transition_fire( global , global.refToElement_id) ;  to s0
+[/for]
 process pUnConstrainedSemantics['['/][for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-[element.name/]_initIt:out none,[element.name/]_stepIt:out none,[/for][']'/] is
+[element.name/]_stepIt:out none,[/for][for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+[element.name/]_fireIt:out none,[element.name/]_canFire:out none,[element.name/]_canFireTrue:out none,[element.name/]_canFireFalse:out none,[/for][']'/] is
 	states s0
 [for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-    from s0  [element.name/]_initIt;  to s0
     from s0  [element.name/]_stepIt;  to s0
+
+[/for]
+[for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+    from s0  [element.name/]_fireIt;  to s0
 
 [/for]
 
 [file ('pUnConstrainedSemantics.fcr', false, 'UTF-8')]
 process pUnConstrainedSemantics['['/][for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-[element.name/]_initIt:out none,[element.name/]_stepIt:out none,[/for][']'/] is
+[element.name/]_stepIt:out none,[/for][for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+[element.name/]_fireIt:out none,[element.name/]_canFire:out none,[element.name/]_canFireTrue:out none,[element.name/]_canFireFalse:out none,[/for][']'/] is
 	
 	states s0
 [for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-    from s0  [element.name/]_initIt;  to s0
     from s0  [element.name/]_stepIt;  to s0
+
+[/for]
+[for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+    from s0  [element.name/]_fireIt;  to s0
 
 [/for]
 [/file]
@@ -63,16 +80,24 @@ var
 
 port
 [for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-[element.name/]_initIt: none,[element.name/]_stepIt: none,
+[element.name/]_stepIt: none,
+
+[/for][for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+[element.name/]_fireIt: none,
+[element.name/]_canFire: none,[element.name/]_canFireTrue: none,[element.name/]_canFireFalse: none,
 
 [/for]
 
 par
 
 pUnConstrainedSemantics['['/][for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-[element.name/]_initIt,[element.name/]_stepIt,[/for][']'/]
+[element.name/]_stepIt,[/for][for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+[element.name/]_fireIt[element.name/]_canFire,[element.name/]_canFireTrue,[element.name/]_canFireFalse,[/for][']'/]
 [for (element : Realtimestatechart| aRealtimestatechart.eAllContents(Realtimestatechart))]
-|| p[element.name/] ['['/][element.name/]_initIt,[element.name/]_stepIt[']'/] (&global, ID)
+|| p[element.name/] ['['/][element.name/]_stepIt[']'/] (&global, ID)
+[/for]
+[for (element : Transition| aRealtimestatechart.eAllContents(Transition))]
+|| p[element.name/] ['['/][element.name/]_fireIt[element.name/]_canFire,[element.name/]_canFireTrue,[element.name/]_canFireFalse[']'/] (&global, ID)
 [/for]
 end par
 sys 

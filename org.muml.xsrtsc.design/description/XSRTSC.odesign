@@ -21,19 +21,12 @@
         </toolSections>
         <decorationDescriptionsSet>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Enabled breakpoint" position="WEST" decoratorPath="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint_enabled.gif" preconditionExpression="service:self.hasEnabledBreakpoint">
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='GlobalClock']"/>
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='Local%20Clock']"/>
             <mappings xsi:type="description_1:ContainerMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-            <mappings xsi:type="description_1:EdgeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='EventTransition']"/>
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='LocalEvents']"/>
+            <mappings xsi:type="description_1:EdgeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
           </decorationDescriptions>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Disabled breakpoint" position="WEST" decoratorPath="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint_disabled.gif" preconditionExpression="service:self.hasDisabledBreakpoint">
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='Event']"/>
-            <mappings xsi:type="description_1:EdgeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='EventTransition']"/>
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='GlobalClock']"/>
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='Local%20Clock']"/>
-            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='LocalEvents']"/>
             <mappings xsi:type="description_1:ContainerMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+            <mappings xsi:type="description_1:EdgeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
           </decorationDescriptions>
         </decorationDescriptionsSet>
         <customization>
@@ -45,15 +38,15 @@
         </customization>
       </layers>
       <layers name="Animation">
-        <containerMappings semanticCandidatesExpression="[self/]" domainClass="RealtimeStatechart" childrenPresentation="List">
-          <subNodeMappings name="StringToProcess" semanticCandidatesExpression="[self/]" domainClass="RealtimeStatechart">
+        <containerMappings semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart" childrenPresentation="List">
+          <subNodeMappings name="StringToProcess" semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart">
             <style xsi:type="style:BundledImageDescription" showIcon="false" labelExpression="aql:' string to process: '+self.unprocessedString" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="ProducedString" semanticCandidatesExpression="[self/]" domainClass="RealtimeStatechart">
+          <subNodeMappings name="ProducedString" semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart">
             <style xsi:type="style:BundledImageDescription" showIcon="false" labelExpression="aql: ' produced String: '+self.producedString" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -75,23 +68,11 @@
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:self.hasBeenActivated">
             <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="strokeColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='EventTransition']/@style"/>
+              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
             </featureCustomizations>
             <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="borderColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@style"/>
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='RTSC']/@style"/>
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='GlobalClock']/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='Local%20Clock']/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='LocalEvents']/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='Event']/@style"/>
-            </featureCustomizations>
-          </vsmElementCustomizations>
-          <vsmElementCustomizations xsi:type="description:VSMElementCustomization">
-            <featureCustomizations xsi:type="description:EAttributeCustomization" attributeName="labelExpression" value="service:self.getClockLabel">
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@nodeMappings[name='Local%20Clock']/@style"/>
-              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subNodeMappings[name='GlobalClock']/@style"/>
             </featureCustomizations>
           </vsmElementCustomizations>
         </customization>

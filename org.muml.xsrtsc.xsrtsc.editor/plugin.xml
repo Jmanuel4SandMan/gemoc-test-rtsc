@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated XSRTSC -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.muml.xsrtsc.xsrtsc.rtsc.presentation.RtscModelWizardID"
+            name="%_UI_RtscModelWizard_label"
+            class="org.muml.xsrtsc.xsrtsc.rtsc.presentation.RtscModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RtscModelFile.gif">
+         <description>%_UI_RtscModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated XSRTSC -->
+      <editor
+            id="org.muml.xsrtsc.xsrtsc.rtsc.presentation.RtscEditorID"
+            name="%_UI_RtscEditor_label"
+            icon="icons/full/obj16/RtscModelFile.gif"
+            extensions="xsrtsc"
+            class="org.muml.xsrtsc.xsrtsc.rtsc.presentation.RtscEditor"
+            contributorClass="org.muml.xsrtsc.xsrtsc.rtsc.presentation.RtscActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
