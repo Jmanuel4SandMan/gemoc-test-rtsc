@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rtsc:Realtimestatechart xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rtsc="http://org.muml.xsrtsc.xsrtsc/rtsc/" initialState="//@states.0">
+  <transitions name="itsState1_to_itsState2" source="//@states.0" target="//@states.2" input="" output=""/>
+  <transitions name="itsState2_to_itsState3" source="//@states.2" target="//@states.1" input="" output=""/>
+  <transitions name="itsState3_to_itsState1" source="//@states.1" target="//@states.0" input="" output=""/>
+  <states name="itsState1" incomingTransitions="//@transitions.2" outgoingTransitions="//@transitions.0"/>
+  <states name="itsState3" incomingTransitions="//@transitions.1" outgoingTransitions="//@transitions.2"/>
+  <states name="itsState2" incomingTransitions="//@transitions.0" outgoingTransitions="//@transitions.1"/>
+</rtsc:Realtimestatechart>
