@@ -3,3 +3,5 @@ realtimestatechart.xdsml.debug.design/bin/realtimestatechart/xdsml/debug/design/
 realtimestatechart.xdsml/bin/realtimestatechart/xdsml/.RTSC.java._trace
 realtimestatechart.xdsml/bin/
 *._trace
+org.muml.xsrtsc/src-gen/
+org.muml.rtsc.k3dsa/xtend-gen/
