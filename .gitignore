@@ -9,3 +9,4 @@ org.muml.xsrtsc.xsrtsc.edit/bin/
 org.muml.xsrtsc.xsrtsc.editor/bin/
 org.muml.xsrtsc/src-gen/
 test/gemoc-gen/
+org.muml.xsrtsc/model-gen/
