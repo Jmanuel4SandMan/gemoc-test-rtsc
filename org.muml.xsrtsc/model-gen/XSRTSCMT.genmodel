@@ -5,10 +5,13 @@
     <ecorePackage href="XSRTSCMT.ecore#/"/>
     <genClasses image="false">
       <ecoreClass href="XSRTSCMT.ecore#//Behavior"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Behavior/behaviouralElement"/>
+      </genFeatures>
     </genClasses>
     <genClasses image="false">
       <ecoreClass href="XSRTSCMT.ecore#//BehavioralElement"/>
-      <genFeatures property="None" children="true" createChild="true">
+      <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//BehavioralElement/behavior"/>
       </genFeatures>
     </genClasses>
@@ -23,6 +26,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/initialState"/>
       </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/variables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Realtimestatechart/clocks"/>
+      </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Realtimestatechart/rounds"/>
       </genFeatures>
@@ -36,10 +45,10 @@
         </genParameters>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/initRTSC"/>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/step"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/step"/>
+        <ecoreOperation href="XSRTSCMT.ecore#//Realtimestatechart/sequentialStep"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -71,11 +80,17 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/target"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/input"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/guards"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/output"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/clockConstraints"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/statechart"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/triggerMessage"/>
       </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Transition/hitCount"/>
@@ -86,6 +101,15 @@
       <genOperations>
         <ecoreOperation href="XSRTSCMT.ecore#//Transition/fire"/>
       </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Transition/guardsHold"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Transition/clocksHold"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Transition/checkMessages"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false">
       <ecoreClass href="XSRTSCMT.ecore#//NamedElement"/>
@@ -95,8 +119,92 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Vertex"/>
+      <genFeatures property="Readonly" createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Vertex/unchangeableTest"/>
+      </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Vertex/active"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Guard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Guard/variable"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Guard/value"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//Guard/evaluate"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//ClockConstraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//ClockConstraint/clock"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//ClockConstraint/bound"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//ClockConstraint/evaluate"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//ClockConstraint/apply"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Variable"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Variable/statechart"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Variable/runtimeValue"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Clock"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Clock/statechart"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Port"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Port/behaviour"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Port/incomingBuffer"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//MessageBuffer"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//MessageBuffer/port"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Connector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Connector/endpoints"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//CoordinationProtocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//CoordinationProtocol/ports"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//CoordinationProtocol/connector"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//MessageType"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//Message"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Message/type"/>
       </genFeatures>
     </genClasses>
   </genPackages>

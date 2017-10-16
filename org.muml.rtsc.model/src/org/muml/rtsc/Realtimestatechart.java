@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.muml.rtsc.Realtimestatechart#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.muml.rtsc.Realtimestatechart#getStates <em>States</em>}</li>
  *   <li>{@link org.muml.rtsc.Realtimestatechart#getInitialState <em>Initial State</em>}</li>
+ *   <li>{@link org.muml.rtsc.Realtimestatechart#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.muml.rtsc.Realtimestatechart#getClocks <em>Clocks</em>}</li>
  * </ul>
  *
  * @see org.muml.rtsc.RtscPackage#getRealtimestatechart()
@@ -26,6 +28,7 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.rtsc.Transition}.
+	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Transition#getStatechart <em>Statechart</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transitions</em>' containment reference list isn't clear,
@@ -34,7 +37,8 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transitions</em>' containment reference list.
 	 * @see org.muml.rtsc.RtscPackage#getRealtimestatechart_Transitions()
-	 * @model containment="true"
+	 * @see org.muml.rtsc.Transition#getStatechart
+	 * @model opposite="statechart" containment="true"
 	 * @generated
 	 */
 	EList<Transition> getTransitions();
@@ -82,5 +86,41 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * @generated
 	 */
 	void setInitialState(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.rtsc.Variable}.
+	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Variable#getStatechart <em>Statechart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variables</em>' containment reference list.
+	 * @see org.muml.rtsc.RtscPackage#getRealtimestatechart_Variables()
+	 * @see org.muml.rtsc.Variable#getStatechart
+	 * @model opposite="statechart" containment="true"
+	 * @generated
+	 */
+	EList<Variable> getVariables();
+
+	/**
+	 * Returns the value of the '<em><b>Clocks</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.rtsc.Clock}.
+	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Clock#getStatechart <em>Statechart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Clocks</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Clocks</em>' containment reference list.
+	 * @see org.muml.rtsc.RtscPackage#getRealtimestatechart_Clocks()
+	 * @see org.muml.rtsc.Clock#getStatechart
+	 * @model opposite="statechart" containment="true"
+	 * @generated
+	 */
+	EList<Clock> getClocks();
 
 } // Realtimestatechart

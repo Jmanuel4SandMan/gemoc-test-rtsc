@@ -96,6 +96,46 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 				return createVertexAdapter();
 			}
 			@Override
+			public Adapter caseGuard(Guard object) {
+				return createGuardAdapter();
+			}
+			@Override
+			public Adapter caseClockConstraint(ClockConstraint object) {
+				return createClockConstraintAdapter();
+			}
+			@Override
+			public Adapter caseVariable(Variable object) {
+				return createVariableAdapter();
+			}
+			@Override
+			public Adapter caseClock(Clock object) {
+				return createClockAdapter();
+			}
+			@Override
+			public Adapter casePort(Port object) {
+				return createPortAdapter();
+			}
+			@Override
+			public Adapter caseMessageBuffer(MessageBuffer object) {
+				return createMessageBufferAdapter();
+			}
+			@Override
+			public Adapter caseConnector(Connector object) {
+				return createConnectorAdapter();
+			}
+			@Override
+			public Adapter caseCoordinationProtocol(CoordinationProtocol object) {
+				return createCoordinationProtocolAdapter();
+			}
+			@Override
+			public Adapter caseMessageType(MessageType object) {
+				return createMessageTypeAdapter();
+			}
+			@Override
+			public Adapter caseMessage(Message object) {
+				return createMessageAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -210,6 +250,146 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVertexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Guard <em>Guard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Guard
+	 * @generated
+	 */
+	public Adapter createGuardAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.ClockConstraint <em>Clock Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.ClockConstraint
+	 * @generated
+	 */
+	public Adapter createClockConstraintAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Variable
+	 * @generated
+	 */
+	public Adapter createVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Clock <em>Clock</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Clock
+	 * @generated
+	 */
+	public Adapter createClockAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Port <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Port
+	 * @generated
+	 */
+	public Adapter createPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.MessageBuffer <em>Message Buffer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.MessageBuffer
+	 * @generated
+	 */
+	public Adapter createMessageBufferAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Connector <em>Connector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Connector
+	 * @generated
+	 */
+	public Adapter createConnectorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.CoordinationProtocol <em>Coordination Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.CoordinationProtocol
+	 * @generated
+	 */
+	public Adapter createCoordinationProtocolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.MessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.MessageType
+	 * @generated
+	 */
+	public Adapter createMessageTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Message
+	 * @generated
+	 */
+	public Adapter createMessageAdapter() {
 		return null;
 	}
 

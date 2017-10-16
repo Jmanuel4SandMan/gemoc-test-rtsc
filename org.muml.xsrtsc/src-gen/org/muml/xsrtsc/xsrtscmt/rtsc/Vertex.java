@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Vertex#isUnchangeableTest <em>Unchangeable Test</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtscmt.rtsc.Vertex#isActive <em>Active</em>}</li>
  * </ul>
  *
@@ -21,6 +22,22 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Vertex extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Unchangeable Test</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unchangeable Test</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unchangeable Test</em>' attribute.
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getVertex_UnchangeableTest()
+	 * @model default="false" required="true" transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	boolean isUnchangeableTest();
+
 	/**
 	 * Returns the value of the '<em><b>Active</b></em>' attribute.
 	 * <!-- begin-user-doc -->

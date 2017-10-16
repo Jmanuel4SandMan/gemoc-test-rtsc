@@ -112,6 +112,8 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(RtscPackage.Literals.REALTIMESTATECHART__TRANSITIONS);
 			childrenFeatures.add(RtscPackage.Literals.REALTIMESTATECHART__STATES);
+			childrenFeatures.add(RtscPackage.Literals.REALTIMESTATECHART__VARIABLES);
+			childrenFeatures.add(RtscPackage.Literals.REALTIMESTATECHART__CLOCKS);
 		}
 		return childrenFeatures;
 	}
@@ -172,6 +174,8 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 				return;
 			case RtscPackage.REALTIMESTATECHART__TRANSITIONS:
 			case RtscPackage.REALTIMESTATECHART__STATES:
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,6 +202,16 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 			(createChildParameter
 				(RtscPackage.Literals.REALTIMESTATECHART__STATES,
 				 RtscFactory.eINSTANCE.createState()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.REALTIMESTATECHART__VARIABLES,
+				 RtscFactory.eINSTANCE.createVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.REALTIMESTATECHART__CLOCKS,
+				 RtscFactory.eINSTANCE.createClock()));
 	}
 
 }

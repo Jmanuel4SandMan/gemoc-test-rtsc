@@ -7,17 +7,37 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.BehaviorAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.BehavioralElementAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockConstraintAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ConnectorAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.CoordinationProtocolAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.GuardAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageBufferAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageTypeAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.NamedElementAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.PortAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.RealtimestatechartAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.StateAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.TransitionAdapter;
+import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VariableAdapter;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VertexAdapter;
 import org.muml.xsrtsc.xsrtsc.rtsc.Behavior;
 import org.muml.xsrtsc.xsrtsc.rtsc.BehavioralElement;
+import org.muml.xsrtsc.xsrtsc.rtsc.Clock;
+import org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint;
+import org.muml.xsrtsc.xsrtsc.rtsc.Connector;
+import org.muml.xsrtsc.xsrtsc.rtsc.CoordinationProtocol;
+import org.muml.xsrtsc.xsrtsc.rtsc.Guard;
+import org.muml.xsrtsc.xsrtsc.rtsc.Message;
+import org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer;
+import org.muml.xsrtsc.xsrtsc.rtsc.MessageType;
 import org.muml.xsrtsc.xsrtsc.rtsc.NamedElement;
+import org.muml.xsrtsc.xsrtsc.rtsc.Port;
 import org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
+import org.muml.xsrtsc.xsrtsc.rtsc.Variable;
 import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
 
 @SuppressWarnings("all")
@@ -49,6 +69,36 @@ public class XSRTSCMTAdaptersFactory implements AdaptersFactory {
     }
     if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Vertex){
     	return createVertexAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Vertex) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Guard){
+    	return createGuardAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Guard) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint){
+    	return createClockConstraintAdapter((org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Variable){
+    	return createVariableAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Variable) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Clock){
+    	return createClockAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Clock) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Port){
+    	return createPortAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Port) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer){
+    	return createMessageBufferAdapter((org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Connector){
+    	return createConnectorAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Connector) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.CoordinationProtocol){
+    	return createCoordinationProtocolAdapter((org.muml.xsrtsc.xsrtsc.rtsc.CoordinationProtocol) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.MessageType){
+    	return createMessageTypeAdapter((org.muml.xsrtsc.xsrtsc.rtsc.MessageType) o, res);
+    }
+    if (o instanceof org.muml.xsrtsc.xsrtsc.rtsc.Message){
+    	return createMessageAdapter((org.muml.xsrtsc.xsrtsc.rtsc.Message) o, res);
     }
     
     return null;
@@ -156,6 +206,156 @@ public class XSRTSCMTAdaptersFactory implements AdaptersFactory {
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
     	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VertexAdapter) adapter;
+    }
+  }
+  
+  public GuardAdapter createGuardAdapter(final Guard adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.GuardAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.GuardAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.GuardAdapter) adapter;
+    }
+  }
+  
+  public ClockConstraintAdapter createClockConstraintAdapter(final ClockConstraint adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockConstraintAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockConstraintAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockConstraintAdapter) adapter;
+    }
+  }
+  
+  public VariableAdapter createVariableAdapter(final Variable adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VariableAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VariableAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.VariableAdapter) adapter;
+    }
+  }
+  
+  public ClockAdapter createClockAdapter(final Clock adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ClockAdapter) adapter;
+    }
+  }
+  
+  public PortAdapter createPortAdapter(final Port adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.PortAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.PortAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.PortAdapter) adapter;
+    }
+  }
+  
+  public MessageBufferAdapter createMessageBufferAdapter(final MessageBuffer adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageBufferAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageBufferAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageBufferAdapter) adapter;
+    }
+  }
+  
+  public ConnectorAdapter createConnectorAdapter(final Connector adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ConnectorAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ConnectorAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.ConnectorAdapter) adapter;
+    }
+  }
+  
+  public CoordinationProtocolAdapter createCoordinationProtocolAdapter(final CoordinationProtocol adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.CoordinationProtocolAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.CoordinationProtocolAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.CoordinationProtocolAdapter) adapter;
+    }
+  }
+  
+  public MessageTypeAdapter createMessageTypeAdapter(final MessageType adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageTypeAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageTypeAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageTypeAdapter) adapter;
+    }
+  }
+  
+  public MessageAdapter createMessageAdapter(final Message adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageAdapter) adapter;
+    else {
+    	adapter = new org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.MessageAdapter) adapter;
     }
   }
 }

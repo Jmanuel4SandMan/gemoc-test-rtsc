@@ -7,7 +7,25 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.muml.rtsc.*;
+import org.muml.rtsc.Behavior;
+import org.muml.rtsc.BehavioralElement;
+import org.muml.rtsc.Clock;
+import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.Connector;
+import org.muml.rtsc.CoordinationProtocol;
+import org.muml.rtsc.Guard;
+import org.muml.rtsc.Message;
+import org.muml.rtsc.MessageBuffer;
+import org.muml.rtsc.MessageType;
+import org.muml.rtsc.MessageTypeRepository;
+import org.muml.rtsc.NamedElement;
+import org.muml.rtsc.Port;
+import org.muml.rtsc.Realtimestatechart;
+import org.muml.rtsc.RtscPackage;
+import org.muml.rtsc.State;
+import org.muml.rtsc.Transition;
+import org.muml.rtsc.Variable;
+import org.muml.rtsc.Vertex;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,6 +93,7 @@ public class RtscSwitch<T> extends Switch<T> {
 			case RtscPackage.BEHAVIORAL_ELEMENT: {
 				BehavioralElement behavioralElement = (BehavioralElement)theEObject;
 				T result = caseBehavioralElement(behavioralElement);
+				if (result == null) result = caseNamedElement(behavioralElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,6 +129,83 @@ public class RtscSwitch<T> extends Switch<T> {
 			case RtscPackage.VERTEX: {
 				Vertex vertex = (Vertex)theEObject;
 				T result = caseVertex(vertex);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.GUARD: {
+				Guard guard = (Guard)theEObject;
+				T result = caseGuard(guard);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.CLOCK_CONSTRAINT: {
+				ClockConstraint clockConstraint = (ClockConstraint)theEObject;
+				T result = caseClockConstraint(clockConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.VARIABLE: {
+				Variable variable = (Variable)theEObject;
+				T result = caseVariable(variable);
+				if (result == null) result = caseNamedElement(variable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.CLOCK: {
+				Clock clock = (Clock)theEObject;
+				T result = caseClock(clock);
+				if (result == null) result = caseNamedElement(clock);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.PORT: {
+				Port port = (Port)theEObject;
+				T result = casePort(port);
+				if (result == null) result = caseBehavioralElement(port);
+				if (result == null) result = caseNamedElement(port);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.MESSAGE_BUFFER: {
+				MessageBuffer messageBuffer = (MessageBuffer)theEObject;
+				T result = caseMessageBuffer(messageBuffer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.CONNECTOR: {
+				Connector connector = (Connector)theEObject;
+				T result = caseConnector(connector);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.COORDINATION_PROTOCOL: {
+				CoordinationProtocol coordinationProtocol = (CoordinationProtocol)theEObject;
+				T result = caseCoordinationProtocol(coordinationProtocol);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.MESSAGE_TYPE: {
+				MessageType messageType = (MessageType)theEObject;
+				T result = caseMessageType(messageType);
+				if (result == null) result = caseNamedElement(messageType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.MESSAGE: {
+				Message message = (Message)theEObject;
+				T result = caseMessage(message);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.SYSTEM: {
+				org.muml.rtsc.System system = (org.muml.rtsc.System)theEObject;
+				T result = caseSystem(system);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.MESSAGE_TYPE_REPOSITORY: {
+				MessageTypeRepository messageTypeRepository = (MessageTypeRepository)theEObject;
+				T result = caseMessageTypeRepository(messageTypeRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -219,6 +315,186 @@ public class RtscSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVertex(Vertex object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Guard</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Guard</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGuard(Guard object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Clock Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Clock Constraint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClockConstraint(ClockConstraint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Clock</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Clock</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClock(Clock object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePort(Port object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Buffer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Buffer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageBuffer(MessageBuffer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnector(Connector object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Coordination Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Coordination Protocol</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCoordinationProtocol(CoordinationProtocol object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageType(MessageType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessage(Message object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystem(org.muml.rtsc.System object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Type Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Type Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageTypeRepository(MessageTypeRepository object) {
 		return null;
 	}
 

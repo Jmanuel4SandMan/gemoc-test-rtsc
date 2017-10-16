@@ -2,6 +2,8 @@
  */
 package org.muml.rtsc;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Transition</b></em>'.
@@ -13,8 +15,10 @@ package org.muml.rtsc;
  * <ul>
  *   <li>{@link org.muml.rtsc.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link org.muml.rtsc.Transition#getTarget <em>Target</em>}</li>
- *   <li>{@link org.muml.rtsc.Transition#getInput <em>Input</em>}</li>
- *   <li>{@link org.muml.rtsc.Transition#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.rtsc.Transition#getGuards <em>Guards</em>}</li>
+ *   <li>{@link org.muml.rtsc.Transition#getClockConstraints <em>Clock Constraints</em>}</li>
+ *   <li>{@link org.muml.rtsc.Transition#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.rtsc.Transition#getTriggerMessage <em>Trigger Message</em>}</li>
  * </ul>
  *
  * @see org.muml.rtsc.RtscPackage#getTransition()
@@ -79,55 +83,79 @@ public interface Transition extends NamedElement {
 	void setTarget(State value);
 
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' attribute.
+	 * Returns the value of the '<em><b>Guards</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.rtsc.Guard}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Guards</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' attribute.
-	 * @see #setInput(String)
-	 * @see org.muml.rtsc.RtscPackage#getTransition_Input()
-	 * @model
+	 * @return the value of the '<em>Guards</em>' containment reference list.
+	 * @see org.muml.rtsc.RtscPackage#getTransition_Guards()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getInput();
+	EList<Guard> getGuards();
 
 	/**
-	 * Sets the value of the '{@link org.muml.rtsc.Transition#getInput <em>Input</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input</em>' attribute.
-	 * @see #getInput()
-	 * @generated
-	 */
-	void setInput(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Output</b></em>' attribute.
+	 * Returns the value of the '<em><b>Clock Constraints</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.rtsc.ClockConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Clock Constraints</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output</em>' attribute.
-	 * @see #setOutput(String)
-	 * @see org.muml.rtsc.RtscPackage#getTransition_Output()
-	 * @model
+	 * @return the value of the '<em>Clock Constraints</em>' containment reference list.
+	 * @see org.muml.rtsc.RtscPackage#getTransition_ClockConstraints()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getOutput();
+	EList<ClockConstraint> getClockConstraints();
 
 	/**
-	 * Sets the value of the '{@link org.muml.rtsc.Transition#getOutput <em>Output</em>}' attribute.
+	 * Returns the value of the '<em><b>Statechart</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Realtimestatechart#getTransitions <em>Transitions</em>}'.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Statechart</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output</em>' attribute.
-	 * @see #getOutput()
+	 * @return the value of the '<em>Statechart</em>' container reference.
+	 * @see #setStatechart(Realtimestatechart)
+	 * @see org.muml.rtsc.RtscPackage#getTransition_Statechart()
+	 * @see org.muml.rtsc.Realtimestatechart#getTransitions
+	 * @model opposite="transitions" required="true" transient="false"
 	 * @generated
 	 */
-	void setOutput(String value);
+	Realtimestatechart getStatechart();
+
+	/**
+	 * Sets the value of the '{@link org.muml.rtsc.Transition#getStatechart <em>Statechart</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Statechart</em>' container reference.
+	 * @see #getStatechart()
+	 * @generated
+	 */
+	void setStatechart(Realtimestatechart value);
+
+	/**
+	 * Returns the value of the '<em><b>Trigger Message</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.rtsc.MessageType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Trigger Message</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Trigger Message</em>' containment reference list.
+	 * @see org.muml.rtsc.RtscPackage#getTransition_TriggerMessage()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MessageType> getTriggerMessage();
 
 } // Transition

@@ -9,8 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.muml.rtsc.Behavior;
 import org.muml.rtsc.BehavioralElement;
 import org.muml.rtsc.RtscPackage;
@@ -28,17 +27,7 @@ import org.muml.rtsc.RtscPackage;
  *
  * @generated
  */
-public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container implements BehavioralElement {
-	/**
-	 * The cached value of the '{@link #getBehavior() <em>Behavior</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBehavior()
-	 * @generated
-	 * @ordered
-	 */
-	protected Behavior behavior;
-
+public abstract class BehavioralElementImpl extends NamedElementImpl implements BehavioralElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,7 +53,8 @@ public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public Behavior getBehavior() {
-		return behavior;
+		if (eContainerFeatureID() != RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR) return null;
+		return (Behavior)eInternalContainer();
 	}
 
 	/**
@@ -73,12 +63,7 @@ public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public NotificationChain basicSetBehavior(Behavior newBehavior, NotificationChain msgs) {
-		Behavior oldBehavior = behavior;
-		behavior = newBehavior;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR, oldBehavior, newBehavior);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newBehavior, RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR, msgs);
 		return msgs;
 	}
 
@@ -88,17 +73,35 @@ public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public void setBehavior(Behavior newBehavior) {
-		if (newBehavior != behavior) {
+		if (newBehavior != eInternalContainer() || (eContainerFeatureID() != RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR && newBehavior != null)) {
+			if (EcoreUtil.isAncestor(this, newBehavior))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (behavior != null)
-				msgs = ((InternalEObject)behavior).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR, null, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newBehavior != null)
-				msgs = ((InternalEObject)newBehavior).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR, null, msgs);
+				msgs = ((InternalEObject)newBehavior).eInverseAdd(this, RtscPackage.BEHAVIOR__BEHAVIOURAL_ELEMENT, Behavior.class, msgs);
 			msgs = basicSetBehavior(newBehavior, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR, newBehavior, newBehavior));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetBehavior((Behavior)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -113,6 +116,20 @@ public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container
 				return basicSetBehavior(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
+				return eInternalContainer().eInverseRemove(this, RtscPackage.BEHAVIOR__BEHAVIOURAL_ELEMENT, Behavior.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -168,7 +185,7 @@ public abstract class BehavioralElementImpl extends MinimalEObjectImpl.Container
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
-				return behavior != null;
+				return getBehavior() != null;
 		}
 		return super.eIsSet(featureID);
 	}

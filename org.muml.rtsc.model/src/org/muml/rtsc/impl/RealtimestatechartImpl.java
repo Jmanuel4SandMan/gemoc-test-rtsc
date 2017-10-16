@@ -13,16 +13,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.muml.rtsc.Clock;
 import org.muml.rtsc.NamedElement;
 import org.muml.rtsc.Realtimestatechart;
 import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.State;
 import org.muml.rtsc.Transition;
+import org.muml.rtsc.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +36,8 @@ import org.muml.rtsc.Transition;
  *   <li>{@link org.muml.rtsc.impl.RealtimestatechartImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link org.muml.rtsc.impl.RealtimestatechartImpl#getStates <em>States</em>}</li>
  *   <li>{@link org.muml.rtsc.impl.RealtimestatechartImpl#getInitialState <em>Initial State</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.RealtimestatechartImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.RealtimestatechartImpl#getClocks <em>Clocks</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,6 +94,26 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	protected State initialState;
 
 	/**
+	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVariables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Variable> variables;
+
+	/**
+	 * The cached value of the '{@link #getClocks() <em>Clocks</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClocks()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Clock> clocks;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -138,7 +160,7 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 */
 	public EList<Transition> getTransitions() {
 		if (transitions == null) {
-			transitions = new EObjectContainmentEList<Transition>(Transition.class, this, RtscPackage.REALTIMESTATECHART__TRANSITIONS);
+			transitions = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, RtscPackage.TRANSITION__STATECHART);
 		}
 		return transitions;
 	}
@@ -198,12 +220,42 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Variable> getVariables() {
+		if (variables == null) {
+			variables = new EObjectContainmentWithInverseEList<Variable>(Variable.class, this, RtscPackage.REALTIMESTATECHART__VARIABLES, RtscPackage.VARIABLE__STATECHART);
+		}
+		return variables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Clock> getClocks() {
+		if (clocks == null) {
+			clocks = new EObjectContainmentWithInverseEList<Clock>(Clock.class, this, RtscPackage.REALTIMESTATECHART__CLOCKS, RtscPackage.CLOCK__STATECHART);
+		}
+		return clocks;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case RtscPackage.REALTIMESTATECHART__TRANSITIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTransitions()).basicAdd(otherEnd, msgs);
 			case RtscPackage.REALTIMESTATECHART__STATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVariables()).basicAdd(otherEnd, msgs);
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getClocks()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -220,6 +272,10 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
 			case RtscPackage.REALTIMESTATECHART__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				return ((InternalEList<?>)getClocks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -241,6 +297,10 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				if (resolve) return getInitialState();
 				return basicGetInitialState();
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				return getVariables();
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				return getClocks();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -268,6 +328,14 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				setInitialState((State)newValue);
 				return;
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				getVariables().clear();
+				getVariables().addAll((Collection<? extends Variable>)newValue);
+				return;
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				getClocks().clear();
+				getClocks().addAll((Collection<? extends Clock>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -292,6 +360,12 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				setInitialState((State)null);
 				return;
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				getVariables().clear();
+				return;
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				getClocks().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -312,6 +386,10 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 				return states != null && !states.isEmpty();
 			case RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
 				return initialState != null;
+			case RtscPackage.REALTIMESTATECHART__VARIABLES:
+				return variables != null && !variables.isEmpty();
+			case RtscPackage.REALTIMESTATECHART__CLOCKS:
+				return clocks != null && !clocks.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

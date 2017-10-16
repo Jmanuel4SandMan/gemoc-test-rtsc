@@ -58,6 +58,96 @@ public interface RtscFactory extends EFactory {
 	Vertex createVertex();
 
 	/**
+	 * Returns a new object of class '<em>Guard</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Guard</em>'.
+	 * @generated
+	 */
+	Guard createGuard();
+
+	/**
+	 * Returns a new object of class '<em>Clock Constraint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Clock Constraint</em>'.
+	 * @generated
+	 */
+	ClockConstraint createClockConstraint();
+
+	/**
+	 * Returns a new object of class '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable</em>'.
+	 * @generated
+	 */
+	Variable createVariable();
+
+	/**
+	 * Returns a new object of class '<em>Clock</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Clock</em>'.
+	 * @generated
+	 */
+	Clock createClock();
+
+	/**
+	 * Returns a new object of class '<em>Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Port</em>'.
+	 * @generated
+	 */
+	Port createPort();
+
+	/**
+	 * Returns a new object of class '<em>Message Buffer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message Buffer</em>'.
+	 * @generated
+	 */
+	MessageBuffer createMessageBuffer();
+
+	/**
+	 * Returns a new object of class '<em>Connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connector</em>'.
+	 * @generated
+	 */
+	Connector createConnector();
+
+	/**
+	 * Returns a new object of class '<em>Coordination Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Coordination Protocol</em>'.
+	 * @generated
+	 */
+	CoordinationProtocol createCoordinationProtocol();
+
+	/**
+	 * Returns a new object of class '<em>Message Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message Type</em>'.
+	 * @generated
+	 */
+	MessageType createMessageType();
+
+	/**
+	 * Returns a new object of class '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message</em>'.
+	 * @generated
+	 */
+	Message createMessage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

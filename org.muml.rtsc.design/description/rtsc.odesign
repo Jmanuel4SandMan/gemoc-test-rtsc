@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="rtsc" version="11.1.1.201610211630">
   <ownedViewpoints name="RTSC_ViewPoint">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="RTSC" titleExpression="feature:name" initialisation="true" showOnStartup="true" domainClass="Realtimestatechart">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="RTSC" titleExpression="feature:name" initialisation="true" showOnStartup="true" domainClass="rtsc.Realtimestatechart">
       <metamodel href="../../org.muml.rtsc.model/model/rtsc.ecore#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="EventTransition" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="Transition" useDomainElement="true">
+        <edgeMappings name="Transition" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="rtsc.Transition" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="aql:self.getLabel()">
@@ -12,7 +12,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="State" labelDirectEdit="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.states/]" domainClass="State">
+        <containerMappings name="State" labelDirectEdit="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.states/]" domainClass="rtsc.State">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="50" arcHeight="50" borderSizeComputationExpression="1" showIcon="false" roundedCorner="true" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -30,30 +30,75 @@
             </style>
           </conditionnalStyles>
         </containerMappings>
+        <containerMappings name="Overview" semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart" childrenPresentation="List">
+          <subNodeMappings name="Variable" semanticCandidatesExpression="[self.variables/]" domainClass="rtsc.Variable">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Clock" semanticCandidatesExpression="[self.clocks/]" domainClass="rtsc.Clock">
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="Clocks" semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart" childrenPresentation="List">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:'Clocks'">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Variables" semanticCandidatesExpression="[self/]" domainClass="rtsc.Realtimestatechart" childrenPresentation="List">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'Variables'">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'Overview: '+self.name" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
         <toolSections name="Node">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="State" containerMappings="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" iconPath="/org.muml.rtsc.design/icons/state_small.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="State" referenceName="states" variableName="itsState">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="itsState"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="rtsc.State" referenceName="states" variableName="itsState">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'State'+container.states->size()"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Transition" edgeMappings="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='EventTransition']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Transition" edgeMappings="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="Transition" referenceName="transitions">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="rtsc.Transition" referenceName="transitions">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:source.name+'_to_'+target.name"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="aql:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="aql:target"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="input" valueExpression="aql:''"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="output" valueExpression="aql:''"/>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Clock" nodeMappings="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subNodeMappings[name='Clock']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="rtsc.Clock" referenceName="clocks">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'c'+container.->size()"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -66,6 +111,40 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Protocol" domainClass="rtsc.CoordinationProtocol" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="RealtimeStatechart" semanticCandidatesExpression="[self.ports.behavior/]" domainClass="rtsc.Realtimestatechart">
+          <style xsi:type="style:EllipseNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Port" semanticCandidatesExpression="[self.ports/]" domainClass="rtsc.Port">
+          <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Connector" domainClass="rtsc.Connector" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.muml.rtsc.design.services.RTSCServices"/>

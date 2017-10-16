@@ -1,13 +1,12 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: org.muml.xsrtsc;singleton:=true
-Export-Package: org.muml.xsrtsc.xsrtscmt.rtsc.util,
+Export-Package: org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt,
+ org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc,
  org.muml.xsrtsc.xsrtscmt.rtsc,
  org.muml.xsrtsc.xsrtscmt.rtsc.impl,
- org.muml.xsrtsc,
- org.muml.xsrtsc.xsrtsc.adapters.rtscmt,
- org.muml.xsrtsc.xsrtsc.adapters.rtscmt.rtsc,
- org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc,
- org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt
+ org.muml.xsrtsc.xsrtscmt.rtsc.util,
+ xsrtsc.xdsml.api.impl,
+ org.muml.xsrtsc
 Bundle-Name: org.muml.xsrtsc
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
@@ -22,12 +21,14 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  fr.inria.diverse.melange.adapters;bundle-version="0.1.0";visibility:="reexport",
  fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="0.0.0";visibility:="reexport",
  org.gemoc.xdsmlframework.api;bundle-version="0.0.0";visibility:="reexport",
- org.gemoc.execution.sequential.javaxdsml.api;bundle-version="0.0.0";visibility:="reexport",
  org.gemoc.executionframework.engine;bundle-version="0.0.0";visibility:="reexport",
- org.muml.rtsc.model;bundle-version="0.0.0";visibility:="private",
+ org.muml.rtsc.model;bundle-version="0.0.0";visibility:="reexport",
  org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
- org.muml.rtsc;bundle-version="1.0.0",
- org.muml.rtsc.k3dsa;bundle-version="1.0.0",
+ org.muml.rtsc.k3dsa;bundle-version="0.0.0";visibility:="reexport",
+ org.gemoc.execution.concurrent.ccsljavaxdsml.api;bundle-version="0.0.0";visibility:="reexport",
+ org.gemoc.execution.concurrent.ccsljavaengine;bundle-version="0.0.0";visibility:="reexport",
+ org.gemoc.execution.concurrent.ccsljavaengine.extensions.k3;bundle-version="0.0.0";visibility:="reexport",
+ org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare;bundle-version="0.0.0";visibility:="reexport",
  org.muml.xsrtsc.xsrtsc
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

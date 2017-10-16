@@ -10,7 +10,22 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.muml.rtsc.*;
+import org.muml.rtsc.Clock;
+import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.Connector;
+import org.muml.rtsc.CoordinationProtocol;
+import org.muml.rtsc.Guard;
+import org.muml.rtsc.Message;
+import org.muml.rtsc.MessageBuffer;
+import org.muml.rtsc.MessageType;
+import org.muml.rtsc.MessageTypeRepository;
+import org.muml.rtsc.Port;
+import org.muml.rtsc.Realtimestatechart;
+import org.muml.rtsc.RtscFactory;
+import org.muml.rtsc.RtscPackage;
+import org.muml.rtsc.State;
+import org.muml.rtsc.Transition;
+import org.muml.rtsc.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,6 +74,18 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.REALTIMESTATECHART: return createRealtimestatechart();
 			case RtscPackage.STATE: return createState();
 			case RtscPackage.TRANSITION: return createTransition();
+			case RtscPackage.GUARD: return createGuard();
+			case RtscPackage.CLOCK_CONSTRAINT: return createClockConstraint();
+			case RtscPackage.VARIABLE: return createVariable();
+			case RtscPackage.CLOCK: return createClock();
+			case RtscPackage.PORT: return createPort();
+			case RtscPackage.MESSAGE_BUFFER: return createMessageBuffer();
+			case RtscPackage.CONNECTOR: return createConnector();
+			case RtscPackage.COORDINATION_PROTOCOL: return createCoordinationProtocol();
+			case RtscPackage.MESSAGE_TYPE: return createMessageType();
+			case RtscPackage.MESSAGE: return createMessage();
+			case RtscPackage.SYSTEM: return createSystem();
+			case RtscPackage.MESSAGE_TYPE_REPOSITORY: return createMessageTypeRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +119,126 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Guard createGuard() {
+		GuardImpl guard = new GuardImpl();
+		return guard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClockConstraint createClockConstraint() {
+		ClockConstraintImpl clockConstraint = new ClockConstraintImpl();
+		return clockConstraint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Variable createVariable() {
+		VariableImpl variable = new VariableImpl();
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Clock createClock() {
+		ClockImpl clock = new ClockImpl();
+		return clock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Port createPort() {
+		PortImpl port = new PortImpl();
+		return port;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageBuffer createMessageBuffer() {
+		MessageBufferImpl messageBuffer = new MessageBufferImpl();
+		return messageBuffer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connector createConnector() {
+		ConnectorImpl connector = new ConnectorImpl();
+		return connector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CoordinationProtocol createCoordinationProtocol() {
+		CoordinationProtocolImpl coordinationProtocol = new CoordinationProtocolImpl();
+		return coordinationProtocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageType createMessageType() {
+		MessageTypeImpl messageType = new MessageTypeImpl();
+		return messageType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message createMessage() {
+		MessageImpl message = new MessageImpl();
+		return message;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public org.muml.rtsc.System createSystem() {
+		SystemImpl system = new SystemImpl();
+		return system;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageTypeRepository createMessageTypeRepository() {
+		MessageTypeRepositoryImpl messageTypeRepository = new MessageTypeRepositoryImpl();
+		return messageTypeRepository;
 	}
 
 	/**

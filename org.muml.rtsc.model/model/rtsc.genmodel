@@ -5,6 +5,9 @@
     <ecorePackage href="rtsc.ecore#/"/>
     <genClasses image="false">
       <ecoreClass href="rtsc.ecore#//Behavior"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Behavior/behaviouralElement"/>
+      </genFeatures>
     </genClasses>
     <genClasses image="false">
       <ecoreClass href="rtsc.ecore#//BehavioralElement"/>
@@ -22,6 +25,12 @@
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Realtimestatechart/initialState"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Realtimestatechart/variables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Realtimestatechart/clocks"/>
       </genFeatures>
     </genClasses>
     <genClasses>
@@ -53,11 +62,17 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/target"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="rtsc.ecore#//Transition/input"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/guards"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="rtsc.ecore#//Transition/output"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/clockConstraints"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/statechart"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/triggerMessage"/>
       </genFeatures>
     </genClasses>
     <genClasses>
@@ -68,6 +83,93 @@
     </genClasses>
     <genClasses image="false">
       <ecoreClass href="rtsc.ecore#//Vertex"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Guard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Guard/variable"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="rtsc.ecore#//Guard/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//ClockConstraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//ClockConstraint/clock"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="rtsc.ecore#//ClockConstraint/bound"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Variable"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Variable/statechart"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Clock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Clock/statechart"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Port"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Port/behaviour"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Port/incomingBuffer"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//MessageBuffer"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//MessageBuffer/port"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Connector"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Connector/endpoints"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//CoordinationProtocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//CoordinationProtocol/ports"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//CoordinationProtocol/connector"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//MessageType"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//Message"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Message/type"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//System"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//System/statecharts"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//System/protocol"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//System/messageTypeRepo"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="rtsc.ecore#//MessageTypeRepository"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//MessageTypeRepository/messageTypes"/>
+      </genFeatures>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

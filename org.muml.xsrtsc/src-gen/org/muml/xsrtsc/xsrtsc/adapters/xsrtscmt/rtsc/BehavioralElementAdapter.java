@@ -16,6 +16,16 @@ public class BehavioralElementAdapter extends EObjectAdapter<BehavioralElement> 
   }
   
   @Override
+  public String getName() {
+    return adaptee.getName();
+  }
+  
+  @Override
+  public void setName(final String o) {
+    adaptee.setName(o);
+  }
+  
+  @Override
   public Behavior getBehavior() {
     return (Behavior) adaptersFactory.createAdapter(adaptee.getBehavior(), eResource);
   }
@@ -27,6 +37,8 @@ public class BehavioralElementAdapter extends EObjectAdapter<BehavioralElement> 
     else adaptee.setBehavior(null);
   }
   
+  protected final static String NAME_EDEFAULT = null;
+  
   @Override
   public EClass eClass() {
     return org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.eINSTANCE.getBehavioralElement();
@@ -35,6 +47,8 @@ public class BehavioralElementAdapter extends EObjectAdapter<BehavioralElement> 
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__NAME:
+    		return getName();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
     		return getBehavior();
     }
@@ -45,6 +59,8 @@ public class BehavioralElementAdapter extends EObjectAdapter<BehavioralElement> 
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__NAME:
+    		return getName() != NAME_EDEFAULT;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
     		return getBehavior() != null;
     }
@@ -55,6 +71,11 @@ public class BehavioralElementAdapter extends EObjectAdapter<BehavioralElement> 
   @Override
   public void eSet(final int featureID, final Object newValue) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__NAME:
+    		setName(
+    		(java.lang.String)
+    		 newValue);
+    		return;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.BEHAVIORAL_ELEMENT__BEHAVIOR:
     		setBehavior(
     		(org.muml.xsrtsc.xsrtscmt.rtsc.Behavior)

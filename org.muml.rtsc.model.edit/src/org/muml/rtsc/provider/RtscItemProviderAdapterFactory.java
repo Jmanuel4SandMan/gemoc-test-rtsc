@@ -141,6 +141,282 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Guard} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GuardItemProvider guardItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Guard}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGuardAdapter() {
+		if (guardItemProvider == null) {
+			guardItemProvider = new GuardItemProvider(this);
+		}
+
+		return guardItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.ClockConstraint} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ClockConstraintItemProvider clockConstraintItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.ClockConstraint}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createClockConstraintAdapter() {
+		if (clockConstraintItemProvider == null) {
+			clockConstraintItemProvider = new ClockConstraintItemProvider(this);
+		}
+
+		return clockConstraintItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Variable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableItemProvider variableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableAdapter() {
+		if (variableItemProvider == null) {
+			variableItemProvider = new VariableItemProvider(this);
+		}
+
+		return variableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Clock} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ClockItemProvider clockItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Clock}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createClockAdapter() {
+		if (clockItemProvider == null) {
+			clockItemProvider = new ClockItemProvider(this);
+		}
+
+		return clockItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Port} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PortItemProvider portItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Port}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPortAdapter() {
+		if (portItemProvider == null) {
+			portItemProvider = new PortItemProvider(this);
+		}
+
+		return portItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.MessageBuffer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageBufferItemProvider messageBufferItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.MessageBuffer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageBufferAdapter() {
+		if (messageBufferItemProvider == null) {
+			messageBufferItemProvider = new MessageBufferItemProvider(this);
+		}
+
+		return messageBufferItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Connector} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConnectorItemProvider connectorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Connector}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConnectorAdapter() {
+		if (connectorItemProvider == null) {
+			connectorItemProvider = new ConnectorItemProvider(this);
+		}
+
+		return connectorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.CoordinationProtocol} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CoordinationProtocolItemProvider coordinationProtocolItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.CoordinationProtocol}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCoordinationProtocolAdapter() {
+		if (coordinationProtocolItemProvider == null) {
+			coordinationProtocolItemProvider = new CoordinationProtocolItemProvider(this);
+		}
+
+		return coordinationProtocolItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.MessageType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageTypeItemProvider messageTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.MessageType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageTypeAdapter() {
+		if (messageTypeItemProvider == null) {
+			messageTypeItemProvider = new MessageTypeItemProvider(this);
+		}
+
+		return messageTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.Message} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageItemProvider messageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.Message}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageAdapter() {
+		if (messageItemProvider == null) {
+			messageItemProvider = new MessageItemProvider(this);
+		}
+
+		return messageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.System} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemItemProvider systemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.System}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemAdapter() {
+		if (systemItemProvider == null) {
+			systemItemProvider = new SystemItemProvider(this);
+		}
+
+		return systemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.MessageTypeRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageTypeRepositoryItemProvider messageTypeRepositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.MessageTypeRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageTypeRepositoryAdapter() {
+		if (messageTypeRepositoryItemProvider == null) {
+			messageTypeRepositoryItemProvider = new MessageTypeRepositoryItemProvider(this);
+		}
+
+		return messageTypeRepositoryItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +518,18 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 		if (realtimestatechartItemProvider != null) realtimestatechartItemProvider.dispose();
 		if (stateItemProvider != null) stateItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
+		if (guardItemProvider != null) guardItemProvider.dispose();
+		if (clockConstraintItemProvider != null) clockConstraintItemProvider.dispose();
+		if (variableItemProvider != null) variableItemProvider.dispose();
+		if (clockItemProvider != null) clockItemProvider.dispose();
+		if (portItemProvider != null) portItemProvider.dispose();
+		if (messageBufferItemProvider != null) messageBufferItemProvider.dispose();
+		if (connectorItemProvider != null) connectorItemProvider.dispose();
+		if (coordinationProtocolItemProvider != null) coordinationProtocolItemProvider.dispose();
+		if (messageTypeItemProvider != null) messageTypeItemProvider.dispose();
+		if (messageItemProvider != null) messageItemProvider.dispose();
+		if (systemItemProvider != null) systemItemProvider.dispose();
+		if (messageTypeRepositoryItemProvider != null) messageTypeRepositoryItemProvider.dispose();
 	}
 
 }

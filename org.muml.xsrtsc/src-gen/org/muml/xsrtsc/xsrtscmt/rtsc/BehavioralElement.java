@@ -20,28 +20,30 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface BehavioralElement extends EObject {
+public interface BehavioralElement extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Behavior</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Behavior</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.muml.xsrtsc.xsrtscmt.rtsc.Behavior#getBehaviouralElement <em>Behavioural Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Behavior</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Behavior</em>' containment reference.
+	 * @return the value of the '<em>Behavior</em>' container reference.
 	 * @see #setBehavior(Behavior)
 	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage#getBehavioralElement_Behavior()
-	 * @model containment="true"
+	 * @see org.muml.xsrtsc.xsrtscmt.rtsc.Behavior#getBehaviouralElement
+	 * @model opposite="behaviouralElement" transient="false"
 	 * @generated
 	 */
 	Behavior getBehavior();
 
 	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.BehavioralElement#getBehavior <em>Behavior</em>}' containment reference.
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtscmt.rtsc.BehavioralElement#getBehavior <em>Behavior</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Behavior</em>' containment reference.
+	 * @param value the new value of the '<em>Behavior</em>' container reference.
 	 * @see #getBehavior()
 	 * @generated
 	 */

@@ -15,6 +15,11 @@ public class VertexAdapter extends EObjectAdapter<Vertex> implements org.muml.xs
   }
   
   @Override
+  public boolean isUnchangeableTest() {
+    return adaptee.isUnchangeableTest();
+  }
+  
+  @Override
   public boolean isActive() {
     return org.muml.xsrtsc.xsrtsc.aspects.VertexAspect.active(adaptee);
   }
@@ -24,6 +29,8 @@ public class VertexAdapter extends EObjectAdapter<Vertex> implements org.muml.xs
     org.muml.xsrtsc.xsrtsc.aspects.VertexAspect.active(adaptee, active
     );
   }
+  
+  protected final static boolean UNCHANGEABLE_TEST_EDEFAULT = false;
   
   protected final static boolean ACTIVE_EDEFAULT = false;
   
@@ -35,6 +42,8 @@ public class VertexAdapter extends EObjectAdapter<Vertex> implements org.muml.xs
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.VERTEX__UNCHANGEABLE_TEST:
+    		return isUnchangeableTest() ? Boolean.TRUE : Boolean.FALSE;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.VERTEX__ACTIVE:
     		return isActive() ? Boolean.TRUE : Boolean.FALSE;
     }
@@ -45,6 +54,8 @@ public class VertexAdapter extends EObjectAdapter<Vertex> implements org.muml.xs
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.VERTEX__UNCHANGEABLE_TEST:
+    		return isUnchangeableTest() != UNCHANGEABLE_TEST_EDEFAULT;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.VERTEX__ACTIVE:
     		return isActive() != ACTIVE_EDEFAULT;
     }

@@ -2,13 +2,22 @@
  */
 package org.muml.rtsc.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.Guard;
+import org.muml.rtsc.MessageType;
+import org.muml.rtsc.Realtimestatechart;
 import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.State;
 import org.muml.rtsc.Transition;
@@ -23,8 +32,10 @@ import org.muml.rtsc.Transition;
  * <ul>
  *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getInput <em>Input</em>}</li>
- *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getGuards <em>Guards</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getClockConstraints <em>Clock Constraints</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getTriggerMessage <em>Trigger Message</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,44 +62,34 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	protected State target;
 
 	/**
-	 * The default value of the '{@link #getInput() <em>Input</em>}' attribute.
+	 * The cached value of the '{@link #getGuards() <em>Guards</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getGuards()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INPUT_EDEFAULT = null;
+	protected EList<Guard> guards;
 
 	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' attribute.
+	 * The cached value of the '{@link #getClockConstraints() <em>Clock Constraints</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getClockConstraints()
 	 * @generated
 	 * @ordered
 	 */
-	protected String input = INPUT_EDEFAULT;
+	protected EList<ClockConstraint> clockConstraints;
 
 	/**
-	 * The default value of the '{@link #getOutput() <em>Output</em>}' attribute.
+	 * The cached value of the '{@link #getTriggerMessage() <em>Trigger Message</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput()
+	 * @see #getTriggerMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OUTPUT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getOutput() <em>Output</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput()
-	 * @generated
-	 * @ordered
-	 */
-	protected String output = OUTPUT_EDEFAULT;
+	protected EList<MessageType> triggerMessage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -234,8 +235,11 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInput() {
-		return input;
+	public EList<Guard> getGuards() {
+		if (guards == null) {
+			guards = new EObjectContainmentEList<Guard>(Guard.class, this, RtscPackage.TRANSITION__GUARDS);
+		}
+		return guards;
 	}
 
 	/**
@@ -243,11 +247,11 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInput(String newInput) {
-		String oldInput = input;
-		input = newInput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.TRANSITION__INPUT, oldInput, input));
+	public EList<ClockConstraint> getClockConstraints() {
+		if (clockConstraints == null) {
+			clockConstraints = new EObjectContainmentEList<ClockConstraint>(ClockConstraint.class, this, RtscPackage.TRANSITION__CLOCK_CONSTRAINTS);
+		}
+		return clockConstraints;
 	}
 
 	/**
@@ -255,8 +259,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOutput() {
-		return output;
+	public Realtimestatechart getStatechart() {
+		if (eContainerFeatureID() != RtscPackage.TRANSITION__STATECHART) return null;
+		return (Realtimestatechart)eInternalContainer();
 	}
 
 	/**
@@ -264,11 +269,42 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutput(String newOutput) {
-		String oldOutput = output;
-		output = newOutput;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.TRANSITION__OUTPUT, oldOutput, output));
+	public NotificationChain basicSetStatechart(Realtimestatechart newStatechart, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newStatechart, RtscPackage.TRANSITION__STATECHART, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatechart(Realtimestatechart newStatechart) {
+		if (newStatechart != eInternalContainer() || (eContainerFeatureID() != RtscPackage.TRANSITION__STATECHART && newStatechart != null)) {
+			if (EcoreUtil.isAncestor(this, newStatechart))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newStatechart != null)
+				msgs = ((InternalEObject)newStatechart).eInverseAdd(this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, Realtimestatechart.class, msgs);
+			msgs = basicSetStatechart(newStatechart, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.TRANSITION__STATECHART, newStatechart, newStatechart));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MessageType> getTriggerMessage() {
+		if (triggerMessage == null) {
+			triggerMessage = new EObjectContainmentEList<MessageType>(MessageType.class, this, RtscPackage.TRANSITION__TRIGGER_MESSAGE);
+		}
+		return triggerMessage;
 	}
 
 	/**
@@ -287,6 +323,10 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				if (target != null)
 					msgs = ((InternalEObject)target).eInverseRemove(this, RtscPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
 				return basicSetTarget((State)otherEnd, msgs);
+			case RtscPackage.TRANSITION__STATECHART:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetStatechart((Realtimestatechart)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -303,8 +343,30 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return basicSetSource(null, msgs);
 			case RtscPackage.TRANSITION__TARGET:
 				return basicSetTarget(null, msgs);
+			case RtscPackage.TRANSITION__GUARDS:
+				return ((InternalEList<?>)getGuards()).basicRemove(otherEnd, msgs);
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				return ((InternalEList<?>)getClockConstraints()).basicRemove(otherEnd, msgs);
+			case RtscPackage.TRANSITION__STATECHART:
+				return basicSetStatechart(null, msgs);
+			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
+				return ((InternalEList<?>)getTriggerMessage()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case RtscPackage.TRANSITION__STATECHART:
+				return eInternalContainer().eInverseRemove(this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, Realtimestatechart.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -321,10 +383,14 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case RtscPackage.TRANSITION__INPUT:
-				return getInput();
-			case RtscPackage.TRANSITION__OUTPUT:
-				return getOutput();
+			case RtscPackage.TRANSITION__GUARDS:
+				return getGuards();
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				return getClockConstraints();
+			case RtscPackage.TRANSITION__STATECHART:
+				return getStatechart();
+			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
+				return getTriggerMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -334,6 +400,7 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -343,11 +410,20 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__TARGET:
 				setTarget((State)newValue);
 				return;
-			case RtscPackage.TRANSITION__INPUT:
-				setInput((String)newValue);
+			case RtscPackage.TRANSITION__GUARDS:
+				getGuards().clear();
+				getGuards().addAll((Collection<? extends Guard>)newValue);
 				return;
-			case RtscPackage.TRANSITION__OUTPUT:
-				setOutput((String)newValue);
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				getClockConstraints().clear();
+				getClockConstraints().addAll((Collection<? extends ClockConstraint>)newValue);
+				return;
+			case RtscPackage.TRANSITION__STATECHART:
+				setStatechart((Realtimestatechart)newValue);
+				return;
+			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
+				getTriggerMessage().clear();
+				getTriggerMessage().addAll((Collection<? extends MessageType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -367,11 +443,17 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__TARGET:
 				setTarget((State)null);
 				return;
-			case RtscPackage.TRANSITION__INPUT:
-				setInput(INPUT_EDEFAULT);
+			case RtscPackage.TRANSITION__GUARDS:
+				getGuards().clear();
 				return;
-			case RtscPackage.TRANSITION__OUTPUT:
-				setOutput(OUTPUT_EDEFAULT);
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				getClockConstraints().clear();
+				return;
+			case RtscPackage.TRANSITION__STATECHART:
+				setStatechart((Realtimestatechart)null);
+				return;
+			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
+				getTriggerMessage().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -389,30 +471,16 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return source != null;
 			case RtscPackage.TRANSITION__TARGET:
 				return target != null;
-			case RtscPackage.TRANSITION__INPUT:
-				return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
-			case RtscPackage.TRANSITION__OUTPUT:
-				return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
+			case RtscPackage.TRANSITION__GUARDS:
+				return guards != null && !guards.isEmpty();
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				return clockConstraints != null && !clockConstraints.isEmpty();
+			case RtscPackage.TRANSITION__STATECHART:
+				return getStatechart() != null;
+			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
+				return triggerMessage != null && !triggerMessage.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (input: ");
-		result.append(input);
-		result.append(", output: ");
-		result.append(output);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TransitionImpl

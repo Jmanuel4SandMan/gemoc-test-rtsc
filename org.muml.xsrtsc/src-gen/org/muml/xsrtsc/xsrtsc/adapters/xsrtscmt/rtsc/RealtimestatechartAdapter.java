@@ -6,8 +6,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCMTAdaptersFactory;
 import org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
+import org.muml.xsrtsc.xsrtscmt.rtsc.BehavioralElement;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Clock;
 import org.muml.xsrtsc.xsrtscmt.rtsc.State;
 import org.muml.xsrtsc.xsrtscmt.rtsc.Transition;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Variable;
 
 @SuppressWarnings("all")
 public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart> implements org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart {
@@ -26,6 +29,18 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
   @Override
   public void setName(final String o) {
     adaptee.setName(o);
+  }
+  
+  @Override
+  public BehavioralElement getBehaviouralElement() {
+    return (BehavioralElement) adaptersFactory.createAdapter(adaptee.getBehaviouralElement(), eResource);
+  }
+  
+  @Override
+  public void setBehaviouralElement(final BehavioralElement o) {
+    if (o != null)
+    	adaptee.setBehaviouralElement(((org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.rtsc.BehavioralElementAdapter) o).getAdaptee());
+    else adaptee.setBehaviouralElement(null);
   }
   
   private EList<Transition> transitions_;
@@ -58,9 +73,22 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
     else adaptee.setInitialState(null);
   }
   
+  private EList<Variable> variables_;
+  
   @Override
-  public void initRTSC() {
-    org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.initRTSC(adaptee);
+  public EList<Variable> getVariables() {
+    if (variables_ == null)
+    	variables_ = fr.inria.diverse.melange.adapters.EListAdapter.newInstance(adaptee.getVariables(), adaptersFactory, eResource);
+    return variables_;
+  }
+  
+  private EList<Clock> clocks_;
+  
+  @Override
+  public EList<Clock> getClocks() {
+    if (clocks_ == null)
+    	clocks_ = fr.inria.diverse.melange.adapters.EListAdapter.newInstance(adaptee.getClocks(), adaptersFactory, eResource);
+    return clocks_;
   }
   
   @Override
@@ -86,6 +114,11 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
   }
   
   @Override
+  public void sequentialStep() {
+    org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.sequentialStep(adaptee);
+  }
+  
+  @Override
   public void step() {
     org.muml.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.step(adaptee);
   }
@@ -102,6 +135,8 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__BEHAVIOURAL_ELEMENT:
+    		return getBehaviouralElement();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__NAME:
     		return getName();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__TRANSITIONS:
@@ -110,6 +145,10 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
     		return getStates();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
     		return getInitialState();
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__VARIABLES:
+    		return getVariables();
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__CLOCKS:
+    		return getClocks();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__ROUNDS:
     		return new java.lang.Integer(getRounds());
     }
@@ -120,6 +159,8 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__BEHAVIOURAL_ELEMENT:
+    		return getBehaviouralElement() != null;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__NAME:
     		return getName() != NAME_EDEFAULT;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__TRANSITIONS:
@@ -128,6 +169,10 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
     		return getStates() != null && !getStates().isEmpty();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__INITIAL_STATE:
     		return getInitialState() != null;
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__VARIABLES:
+    		return getVariables() != null && !getVariables().isEmpty();
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__CLOCKS:
+    		return getClocks() != null && !getClocks().isEmpty();
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__ROUNDS:
     		return getRounds() != ROUNDS_EDEFAULT;
     }
@@ -138,6 +183,11 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
   @Override
   public void eSet(final int featureID, final Object newValue) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__BEHAVIOURAL_ELEMENT:
+    		setBehaviouralElement(
+    		(org.muml.xsrtsc.xsrtscmt.rtsc.BehavioralElement)
+    		 newValue);
+    		return;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__NAME:
     		setName(
     		(java.lang.String)
@@ -155,6 +205,14 @@ public class RealtimestatechartAdapter extends EObjectAdapter<Realtimestatechart
     		setInitialState(
     		(org.muml.xsrtsc.xsrtscmt.rtsc.State)
     		 newValue);
+    		return;
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__VARIABLES:
+    		getVariables().clear();
+    		getVariables().addAll((Collection) newValue);
+    		return;
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__CLOCKS:
+    		getClocks().clear();
+    		getClocks().addAll((Collection) newValue);
     		return;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.REALTIMESTATECHART__ROUNDS:
     		setRounds(((java.lang.Integer) newValue).intValue());

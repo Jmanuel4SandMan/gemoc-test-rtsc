@@ -8,10 +8,14 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.muml.rtsc.RtscFactory;
 import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.Transition;
 
@@ -21,8 +25,7 @@ import org.muml.rtsc.Transition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransitionItemProvider 
-	extends NamedElementItemProvider {
+public class TransitionItemProvider extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,8 +49,7 @@ public class TransitionItemProvider
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
-			addInputPropertyDescriptor(object);
-			addOutputPropertyDescriptor(object);
+			addTriggerMessagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -97,47 +99,56 @@ public class TransitionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Input feature.
+	 * This adds a property descriptor for the Trigger Message feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputPropertyDescriptor(Object object) {
+	protected void addTriggerMessagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Transition_input_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_input_feature", "_UI_Transition_type"),
-				 RtscPackage.Literals.TRANSITION__INPUT,
+				 getString("_UI_Transition_triggerMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_triggerMessage_feature", "_UI_Transition_type"),
+				 RtscPackage.Literals.TRANSITION__TRIGGER_MESSAGE,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Output feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOutputPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Transition_output_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_output_feature", "_UI_Transition_type"),
-				 RtscPackage.Literals.TRANSITION__OUTPUT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(RtscPackage.Literals.TRANSITION__GUARDS);
+			childrenFeatures.add(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -178,9 +189,9 @@ public class TransitionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Transition.class)) {
-			case RtscPackage.TRANSITION__INPUT:
-			case RtscPackage.TRANSITION__OUTPUT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			case RtscPackage.TRANSITION__GUARDS:
+			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -196,6 +207,16 @@ public class TransitionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.TRANSITION__GUARDS,
+				 RtscFactory.eINSTANCE.createGuard()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS,
+				 RtscFactory.eINSTANCE.createClockConstraint()));
 	}
 
 }

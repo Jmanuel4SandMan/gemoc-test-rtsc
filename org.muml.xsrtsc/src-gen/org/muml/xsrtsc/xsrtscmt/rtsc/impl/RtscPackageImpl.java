@@ -13,12 +13,22 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.muml.xsrtsc.xsrtscmt.rtsc.Behavior;
 import org.muml.xsrtsc.xsrtscmt.rtsc.BehavioralElement;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Clock;
+import org.muml.xsrtsc.xsrtscmt.rtsc.ClockConstraint;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Connector;
+import org.muml.xsrtsc.xsrtscmt.rtsc.CoordinationProtocol;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Guard;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Message;
+import org.muml.xsrtsc.xsrtscmt.rtsc.MessageBuffer;
+import org.muml.xsrtsc.xsrtscmt.rtsc.MessageType;
 import org.muml.xsrtsc.xsrtscmt.rtsc.NamedElement;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Port;
 import org.muml.xsrtsc.xsrtscmt.rtsc.Realtimestatechart;
 import org.muml.xsrtsc.xsrtscmt.rtsc.RtscFactory;
 import org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage;
 import org.muml.xsrtsc.xsrtscmt.rtsc.State;
 import org.muml.xsrtsc.xsrtscmt.rtsc.Transition;
+import org.muml.xsrtsc.xsrtscmt.rtsc.Variable;
 import org.muml.xsrtsc.xsrtscmt.rtsc.Vertex;
 
 /**
@@ -76,6 +86,76 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * @generated
 	 */
 	private EClass vertexEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass guardEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass clockConstraintEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass variableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass clockEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass portEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageBufferEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coordinationProtocolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -155,6 +235,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBehavior_BehaviouralElement() {
+		return (EReference)behaviorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBehavioralElement() {
 		return behavioralElementEClass;
 	}
@@ -209,8 +298,26 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRealtimestatechart_Variables() {
+		return (EReference)realtimestatechartEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRealtimestatechart_Clocks() {
+		return (EReference)realtimestatechartEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getRealtimestatechart_Rounds() {
-		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)realtimestatechartEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -308,8 +415,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransition_Input() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(2);
+	public EReference getTransition_Guards() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -317,8 +424,26 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransition_Output() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(3);
+	public EReference getTransition_ClockConstraints() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransition_Statechart() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransition_TriggerMessage() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -327,7 +452,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * @generated
 	 */
 	public EAttribute getTransition_HitCount() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)transitionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -362,8 +487,233 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVertex_Active() {
+	public EAttribute getVertex_UnchangeableTest() {
 		return (EAttribute)vertexEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVertex_Active() {
+		return (EAttribute)vertexEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGuard() {
+		return guardEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGuard_Variable() {
+		return (EReference)guardEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGuard_Value() {
+		return (EAttribute)guardEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClockConstraint() {
+		return clockConstraintEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getClockConstraint_Clock() {
+		return (EReference)clockConstraintEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClockConstraint_Bound() {
+		return (EAttribute)clockConstraintEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVariable() {
+		return variableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariable_Statechart() {
+		return (EReference)variableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_RuntimeValue() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClock() {
+		return clockEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getClock_Statechart() {
+		return (EReference)clockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPort() {
+		return portEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPort_Behaviour() {
+		return (EReference)portEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPort_IncomingBuffer() {
+		return (EReference)portEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessageBuffer() {
+		return messageBufferEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageBuffer_Port() {
+		return (EReference)messageBufferEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnector() {
+		return connectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnector_Endpoints() {
+		return (EReference)connectorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCoordinationProtocol() {
+		return coordinationProtocolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCoordinationProtocol_Ports() {
+		return (EReference)coordinationProtocolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCoordinationProtocol_Connector() {
+		return (EReference)coordinationProtocolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessageType() {
+		return messageTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessage() {
+		return messageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessage_Type() {
+		return (EReference)messageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -395,6 +745,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		// Create classes and their features
 		behaviorEClass = createEClass(BEHAVIOR);
+		createEReference(behaviorEClass, BEHAVIOR__BEHAVIOURAL_ELEMENT);
 
 		behavioralElementEClass = createEClass(BEHAVIORAL_ELEMENT);
 		createEReference(behavioralElementEClass, BEHAVIORAL_ELEMENT__BEHAVIOR);
@@ -403,6 +754,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__TRANSITIONS);
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__STATES);
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__INITIAL_STATE);
+		createEReference(realtimestatechartEClass, REALTIMESTATECHART__VARIABLES);
+		createEReference(realtimestatechartEClass, REALTIMESTATECHART__CLOCKS);
 		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__ROUNDS);
 
 		stateEClass = createEClass(STATE);
@@ -416,15 +769,52 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		transitionEClass = createEClass(TRANSITION);
 		createEReference(transitionEClass, TRANSITION__SOURCE);
 		createEReference(transitionEClass, TRANSITION__TARGET);
-		createEAttribute(transitionEClass, TRANSITION__INPUT);
-		createEAttribute(transitionEClass, TRANSITION__OUTPUT);
+		createEReference(transitionEClass, TRANSITION__GUARDS);
+		createEReference(transitionEClass, TRANSITION__CLOCK_CONSTRAINTS);
+		createEReference(transitionEClass, TRANSITION__STATECHART);
+		createEReference(transitionEClass, TRANSITION__TRIGGER_MESSAGE);
 		createEAttribute(transitionEClass, TRANSITION__HIT_COUNT);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		vertexEClass = createEClass(VERTEX);
+		createEAttribute(vertexEClass, VERTEX__UNCHANGEABLE_TEST);
 		createEAttribute(vertexEClass, VERTEX__ACTIVE);
+
+		guardEClass = createEClass(GUARD);
+		createEReference(guardEClass, GUARD__VARIABLE);
+		createEAttribute(guardEClass, GUARD__VALUE);
+
+		clockConstraintEClass = createEClass(CLOCK_CONSTRAINT);
+		createEReference(clockConstraintEClass, CLOCK_CONSTRAINT__CLOCK);
+		createEAttribute(clockConstraintEClass, CLOCK_CONSTRAINT__BOUND);
+
+		variableEClass = createEClass(VARIABLE);
+		createEReference(variableEClass, VARIABLE__STATECHART);
+		createEAttribute(variableEClass, VARIABLE__RUNTIME_VALUE);
+
+		clockEClass = createEClass(CLOCK);
+		createEReference(clockEClass, CLOCK__STATECHART);
+
+		portEClass = createEClass(PORT);
+		createEReference(portEClass, PORT__BEHAVIOUR);
+		createEReference(portEClass, PORT__INCOMING_BUFFER);
+
+		messageBufferEClass = createEClass(MESSAGE_BUFFER);
+		createEReference(messageBufferEClass, MESSAGE_BUFFER__PORT);
+
+		connectorEClass = createEClass(CONNECTOR);
+		createEReference(connectorEClass, CONNECTOR__ENDPOINTS);
+
+		coordinationProtocolEClass = createEClass(COORDINATION_PROTOCOL);
+		createEReference(coordinationProtocolEClass, COORDINATION_PROTOCOL__PORTS);
+		createEReference(coordinationProtocolEClass, COORDINATION_PROTOCOL__CONNECTOR);
+
+		messageTypeEClass = createEClass(MESSAGE_TYPE);
+
+		messageEClass = createEClass(MESSAGE);
+		createEReference(messageEClass, MESSAGE__TYPE);
 	}
 
 	/**
@@ -455,22 +845,30 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		behavioralElementEClass.getESuperTypes().add(this.getNamedElement());
 		realtimestatechartEClass.getESuperTypes().add(this.getBehavior());
 		realtimestatechartEClass.getESuperTypes().add(this.getNamedElement());
 		stateEClass.getESuperTypes().add(this.getVertex());
 		stateEClass.getESuperTypes().add(this.getNamedElement());
 		transitionEClass.getESuperTypes().add(this.getNamedElement());
+		variableEClass.getESuperTypes().add(this.getNamedElement());
+		clockEClass.getESuperTypes().add(this.getNamedElement());
+		portEClass.getESuperTypes().add(this.getBehavioralElement());
+		messageTypeEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(behaviorEClass, Behavior.class, "Behavior", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBehavior_BehaviouralElement(), this.getBehavioralElement(), this.getBehavioralElement_Behavior(), "behaviouralElement", null, 0, 1, Behavior.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(behavioralElementEClass, BehavioralElement.class, "BehavioralElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBehavioralElement_Behavior(), this.getBehavior(), null, "behavior", null, 0, 1, BehavioralElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBehavioralElement_Behavior(), this.getBehavior(), this.getBehavior_BehaviouralElement(), "behavior", null, 0, 1, BehavioralElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(realtimestatechartEClass, Realtimestatechart.class, "Realtimestatechart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRealtimestatechart_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealtimestatechart_Transitions(), this.getTransition(), this.getTransition_Statechart(), "transitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_States(), this.getState(), this.getState_OwningRTSC(), "states", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_InitialState(), this.getState(), null, "initialState", null, 1, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealtimestatechart_Variables(), this.getVariable(), this.getVariable_Statechart(), "variables", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealtimestatechart_Clocks(), this.getClock(), this.getClock_Statechart(), "clocks", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRealtimestatechart_Rounds(), ecorePackage.getEInt(), "rounds", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(realtimestatechartEClass, null, "main", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -478,9 +876,9 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		EOperation op = addEOperation(realtimestatechartEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(realtimestatechartEClass, null, "initRTSC", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		addEOperation(realtimestatechartEClass, null, "step", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(realtimestatechartEClass, null, "sequentialStep", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getState_SubStatecharts(), this.getRealtimestatechart(), null, "subStatecharts", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -493,19 +891,68 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransition_Source(), this.getState(), this.getState_OutgoingTransitions(), "source", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransition_Input(), ecorePackage.getEString(), "input", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransition_Output(), ecorePackage.getEString(), "output", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Guards(), this.getGuard(), null, "guards", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_ClockConstraints(), this.getClockConstraint(), null, "clockConstraints", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Transitions(), "statechart", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_TriggerMessage(), this.getMessageType(), null, "triggerMessage", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_HitCount(), ecorePackage.getEInt(), "hitCount", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "canFire", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(transitionEClass, this.getVertex(), "fire", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "guardsHold", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "clocksHold", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "checkMessages", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vertexEClass, Vertex.class, "Vertex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVertex_UnchangeableTest(), ecorePackage.getEBoolean(), "unchangeableTest", "false", 1, 1, Vertex.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVertex_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, Vertex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(guardEClass, Guard.class, "Guard", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGuard_Variable(), this.getVariable(), null, "variable", null, 0, 1, Guard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGuard_Value(), ecorePackage.getEString(), "value", "", 0, 1, Guard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(guardEClass, ecorePackage.getEBoolean(), "evaluate", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(clockConstraintEClass, ClockConstraint.class, "ClockConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getClockConstraint_Clock(), this.getClock(), null, "clock", null, 1, 1, ClockConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClockConstraint_Bound(), ecorePackage.getEInt(), "bound", "0", 1, 1, ClockConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(clockConstraintEClass, ecorePackage.getEBoolean(), "evaluate", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(clockConstraintEClass, null, "apply", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVariable_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Variables(), "statechart", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_RuntimeValue(), ecorePackage.getEString(), "runtimeValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(clockEClass, Clock.class, "Clock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getClock_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Clocks(), "statechart", null, 1, 1, Clock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPort_Behaviour(), this.getBehavior(), null, "behaviour", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPort_IncomingBuffer(), this.getMessageBuffer(), this.getMessageBuffer_Port(), "incomingBuffer", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(messageBufferEClass, MessageBuffer.class, "MessageBuffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMessageBuffer_Port(), this.getPort(), this.getPort_IncomingBuffer(), "port", null, 1, 1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(connectorEClass, Connector.class, "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnector_Endpoints(), this.getPort(), null, "endpoints", null, 2, 2, Connector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(coordinationProtocolEClass, CoordinationProtocol.class, "CoordinationProtocol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCoordinationProtocol_Ports(), this.getPort(), null, "ports", null, 2, 2, CoordinationProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCoordinationProtocol_Connector(), this.getConnector(), null, "connector", null, 1, 1, CoordinationProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(messageTypeEClass, MessageType.class, "MessageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMessage_Type(), this.getMessageType(), null, "type", null, 1, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -559,12 +1006,47 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (transitionEClass.getEOperations().get(2), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (transitionEClass.getEOperations().get(3), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (transitionEClass.getEOperations().get(4), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getTransition_HitCount(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (getVertex_Active(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (guardEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (clockConstraintEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (clockConstraintEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getVariable_RuntimeValue(), 
 		   source, 
 		   new String[] {
 		   });

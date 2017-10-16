@@ -19,6 +19,11 @@ public class StateAdapter extends EObjectAdapter<State> implements org.muml.xsrt
   }
   
   @Override
+  public boolean isUnchangeableTest() {
+    return adaptee.isUnchangeableTest();
+  }
+  
+  @Override
   public String getName() {
     return adaptee.getName();
   }
@@ -98,6 +103,8 @@ public class StateAdapter extends EObjectAdapter<State> implements org.muml.xsrt
     );
   }
   
+  protected final static boolean UNCHANGEABLE_TEST_EDEFAULT = false;
+  
   protected final static boolean ACTIVE_EDEFAULT = false;
   
   protected final static String NAME_EDEFAULT = null;
@@ -114,6 +121,8 @@ public class StateAdapter extends EObjectAdapter<State> implements org.muml.xsrt
   @Override
   public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__UNCHANGEABLE_TEST:
+    		return isUnchangeableTest() ? Boolean.TRUE : Boolean.FALSE;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__ACTIVE:
     		return isActive() ? Boolean.TRUE : Boolean.FALSE;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__NAME:
@@ -138,6 +147,8 @@ public class StateAdapter extends EObjectAdapter<State> implements org.muml.xsrt
   @Override
   public boolean eIsSet(final int featureID) {
     switch (featureID) {
+    	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__UNCHANGEABLE_TEST:
+    		return isUnchangeableTest() != UNCHANGEABLE_TEST_EDEFAULT;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__ACTIVE:
     		return isActive() != ACTIVE_EDEFAULT;
     	case org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage.STATE__NAME:
