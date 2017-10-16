@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.xsrtsc/src-gen" modelPluginID="org.muml.xsrtsc" modelName="XSRTSCMT" complianceLevel="7.0" copyrightFields="false">
-  <foreignModel>platform:/resource/org.muml.xsrtsc/model-gen/XSRTSCMT.ecore</foreignModel>
-  <genPackages prefix="Rtsc" basePackage="org.muml.xsrtsc.xsrtscmt" disposableProviderFactory="true">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.muml.seq.xsrtsc/src-gen" modelPluginID="org.muml.seq.xsrtsc" modelName="XSRTSCMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.muml.seq.xsrtsc/model-gen/XSRTSCMT.ecore</foreignModel>
+  <genPackages prefix="Rtsc" basePackage="org.muml.seq.xsrtsc.xsrtscmt" disposableProviderFactory="true">
     <ecorePackage href="XSRTSCMT.ecore#/"/>
     <genClasses image="false">
       <ecoreClass href="XSRTSCMT.ecore#//Behavior"/>
@@ -71,6 +71,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//State/outgoingTransitions"/>
       </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//State/entry"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//State/exit"/>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Transition"/>
@@ -89,7 +95,7 @@
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/statechart"/>
       </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+      <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Transition/triggerMessage"/>
       </genFeatures>
       <genFeatures createChild="false">
@@ -119,9 +125,6 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Vertex"/>
-      <genFeatures property="Readonly" createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Vertex/unchangeableTest"/>
-      </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSCMT.ecore#//Vertex/active"/>
       </genFeatures>
@@ -182,6 +185,24 @@
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//MessageBuffer/port"/>
       </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//MessageBuffer/getMessage"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//MessageBuffer/getMessage/type"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//MessageBuffer/hasMessage"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//MessageBuffer/hasMessage/type"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//MessageBuffer/addMessage"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//MessageBuffer/addMessage/message"/>
+        </genParameters>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//Connector"/>
@@ -197,6 +218,15 @@
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//CoordinationProtocol/connector"/>
       </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//CoordinationProtocol/main"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSCMT.ecore#//CoordinationProtocol/initialize"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSCMT.ecore#//CoordinationProtocol/initialize/arguments"/>
+        </genParameters>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSCMT.ecore#//MessageType"/>
@@ -205,6 +235,24 @@
       <ecoreClass href="XSRTSCMT.ecore#//Message"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//Message/type"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//System"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//System/statecharts"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//System/protocol"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//System/messageTypeRepo"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSCMT.ecore#//MessageTypeRepository"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSCMT.ecore#//MessageTypeRepository/messageTypes"/>
       </genFeatures>
     </genClasses>
   </genPackages>

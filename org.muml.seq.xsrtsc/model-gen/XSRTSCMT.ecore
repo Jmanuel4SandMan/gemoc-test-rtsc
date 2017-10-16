@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rtsc" nsURI="http://org.muml.xsrtsc.xsrtscmt/rtsc/" nsPrefix="rtsc">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rtsc" nsURI="http://org.muml.seq.xsrtsc.xsrtscmt/rtsc/" nsPrefix="rtsc">
   <eClassifiers xsi:type="ecore:EClass" name="Behavior" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="behaviouralElement" eType="//BehavioralElement" containment="true" eOpposite="//BehavioralElement/behavior"/>
   </eClassifiers>
@@ -33,6 +33,12 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="//Vertex //NamedElement">
+    <eOperations name="entry">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eOperations name="exit">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subStatecharts" upperBound="-1" eType="//Realtimestatechart" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initial">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -69,7 +75,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="guards" upperBound="-1" eType="//Guard" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clockConstraints" upperBound="-1" eType="//ClockConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/transitions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hitCount" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -81,9 +87,6 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vertex">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unchangeableTest" lowerBound="1" changeable="false" volatile="true" transient="true" defaultValueLiteral="false" derived="true">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -127,17 +130,47 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingBuffer" eType="//MessageBuffer" containment="true" eOpposite="//MessageBuffer/port"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageBuffer">
+    <eOperations name="getMessage" eType="//Message">
+      <eAnnotations source="aspect"/>
+      <eParameters name="type" eType="//MessageType"/>
+    </eOperations>
+    <eOperations name="hasMessage">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="type" eType="//MessageType"/>
+    </eOperations>
+    <eOperations name="addMessage">
+      <eAnnotations source="aspect"/>
+      <eParameters name="message" eType="//Message"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="//Port" eOpposite="//Port/incomingBuffer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol">
+    <eOperations name="main">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eOperations name="initialize">
+      <eAnnotations source="aspect"/>
+      <eParameters name="arguments" upperBound="-1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ports" lowerBound="2" upperBound="2" eType="//Port"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connector" lowerBound="1" eType="//Connector" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageType" eSuperTypes="//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="//MessageType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="System">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statecharts" upperBound="-1" eType="//Realtimestatechart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="protocol" upperBound="-1" eType="//CoordinationProtocol" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypeRepo" lowerBound="1" eType="//MessageTypeRepository" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageTypeRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1" eType="//MessageType" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
