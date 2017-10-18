@@ -19,6 +19,7 @@ public class XsrtscDebugServices extends AbstractGemocDebuggerServices {
 	
 	@Override
 	public String getModelIdentifier() {
-		return org.gemoc.execution.concurrent.ccsljavaengine.ui.Activator.PLUGIN_ID+".debugModel";
+		//return org.gemoc.execution.concurrent.ccsljavaengine.ui.Activator.PLUGIN_ID+".debugModel";
+		return org.gemoc.execution.sequential.javaengine.ui.Activator.DEBUG_MODEL_ID;
 	}
 }

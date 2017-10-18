@@ -2,6 +2,7 @@
  */
 package org.muml.rtsc;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Behavioral Element</b></em>'.
@@ -24,7 +25,7 @@ public interface BehavioralElement extends NamedElement {
 	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Behavior#getBehaviouralElement <em>Behavioural Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Behavior</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Behavior</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

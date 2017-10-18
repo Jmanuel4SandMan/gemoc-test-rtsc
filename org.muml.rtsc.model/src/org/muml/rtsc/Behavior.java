@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Behavior extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Behavioural Element</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.BehavioralElement#getBehavior <em>Behavior</em>}'.
@@ -49,4 +48,5 @@ public interface Behavior extends EObject {
 	 * @generated
 	 */
 	void setBehaviouralElement(BehavioralElement value);
+
 } // Behavior

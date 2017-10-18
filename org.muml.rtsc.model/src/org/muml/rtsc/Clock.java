@@ -25,7 +25,7 @@ public interface Clock extends NamedElement {
 	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Realtimestatechart#getClocks <em>Clocks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Statechart</em>' reference isn't clear,
+	 * If the meaning of the '<em>Statechart</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

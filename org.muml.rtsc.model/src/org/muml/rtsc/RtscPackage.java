@@ -94,56 +94,6 @@ public interface RtscPackage extends EPackage {
 	int BEHAVIOR_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.muml.rtsc.impl.BehavioralElementImpl <em>Behavioral Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.rtsc.impl.BehavioralElementImpl
-	 * @see org.muml.rtsc.impl.RtscPackageImpl#getBehavioralElement()
-	 * @generated
-	 */
-	int BEHAVIORAL_ELEMENT = 1;
-
-	/**
-	 * The meta object id for the '{@link org.muml.rtsc.impl.RealtimestatechartImpl <em>Realtimestatechart</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.rtsc.impl.RealtimestatechartImpl
-	 * @see org.muml.rtsc.impl.RtscPackageImpl#getRealtimestatechart()
-	 * @generated
-	 */
-	int REALTIMESTATECHART = 2;
-
-	/**
-	 * The meta object id for the '{@link org.muml.rtsc.impl.VertexImpl <em>Vertex</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.rtsc.impl.VertexImpl
-	 * @see org.muml.rtsc.impl.RtscPackageImpl#getVertex()
-	 * @generated
-	 */
-	int VERTEX = 6;
-
-	/**
-	 * The meta object id for the '{@link org.muml.rtsc.impl.StateImpl <em>State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.rtsc.impl.StateImpl
-	 * @see org.muml.rtsc.impl.RtscPackageImpl#getState()
-	 * @generated
-	 */
-	int STATE = 3;
-
-	/**
-	 * The meta object id for the '{@link org.muml.rtsc.impl.TransitionImpl <em>Transition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.muml.rtsc.impl.TransitionImpl
-	 * @see org.muml.rtsc.impl.RtscPackageImpl#getTransition()
-	 * @generated
-	 */
-	int TRANSITION = 4;
-
-	/**
 	 * The meta object id for the '{@link org.muml.rtsc.impl.NamedElementImpl <em>Named Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +131,16 @@ public interface RtscPackage extends EPackage {
 	int NAMED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.BehavioralElementImpl <em>Behavioral Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.BehavioralElementImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getBehavioralElement()
+	 * @generated
+	 */
+	int BEHAVIORAL_ELEMENT = 1;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -215,6 +175,16 @@ public interface RtscPackage extends EPackage {
 	 * @ordered
 	 */
 	int BEHAVIORAL_ELEMENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.RealtimestatechartImpl <em>Realtimestatechart</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.RealtimestatechartImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getRealtimestatechart()
+	 * @generated
+	 */
+	int REALTIMESTATECHART = 2;
 
 	/**
 	 * The feature id for the '<em><b>Behavioural Element</b></em>' containment reference.
@@ -298,6 +268,16 @@ public interface RtscPackage extends EPackage {
 	int REALTIMESTATECHART_OPERATION_COUNT = BEHAVIOR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.VertexImpl <em>Vertex</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.VertexImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getVertex()
+	 * @generated
+	 */
+	int VERTEX = 6;
+
+	/**
 	 * The number of structural features of the '<em>Vertex</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +294,16 @@ public interface RtscPackage extends EPackage {
 	 * @ordered
 	 */
 	int VERTEX_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.StateImpl <em>State</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.StateImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getState()
+	 * @generated
+	 */
+	int STATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -395,6 +385,16 @@ public interface RtscPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATE_OPERATION_COUNT = VERTEX_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.TransitionImpl <em>Transition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.TransitionImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getTransition()
+	 * @generated
+	 */
+	int TRANSITION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1010,6 +1010,7 @@ public interface RtscPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_TYPE_REPOSITORY_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.Behavior <em>Behavior</em>}'.

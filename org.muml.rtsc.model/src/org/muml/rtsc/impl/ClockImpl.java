@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import org.muml.rtsc.Clock;
 import org.muml.rtsc.Realtimestatechart;
 import org.muml.rtsc.RtscPackage;

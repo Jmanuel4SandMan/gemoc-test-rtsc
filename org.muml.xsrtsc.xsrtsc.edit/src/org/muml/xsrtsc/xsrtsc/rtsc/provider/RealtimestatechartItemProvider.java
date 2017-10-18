@@ -50,7 +50,6 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addInitialStatePropertyDescriptor(object);
-			addRoundsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,28 +94,6 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Rounds feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRoundsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Realtimestatechart_rounds_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Realtimestatechart_rounds_feature", "_UI_Realtimestatechart_type"),
-				 RtscPackage.Literals.REALTIMESTATECHART__ROUNDS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -193,7 +170,6 @@ public class RealtimestatechartItemProvider extends BehaviorItemProvider {
 
 		switch (notification.getFeatureID(Realtimestatechart.class)) {
 			case RtscPackage.REALTIMESTATECHART__NAME:
-			case RtscPackage.REALTIMESTATECHART__ROUNDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case RtscPackage.REALTIMESTATECHART__TRANSITIONS:

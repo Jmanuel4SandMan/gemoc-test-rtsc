@@ -3,7 +3,9 @@
 package org.muml.rtsc.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.Vertex;
 

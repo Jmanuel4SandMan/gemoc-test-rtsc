@@ -8,9 +8,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common.acceleo.aql,
  org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
  org.muml.rtsc.design;bundle-version="1.0.0",
- org.gemoc.execution.sequential.javaengine.ui;bundle-version="2.2.0",
- org.muml.xsrtsc.xsrtsc;bundle-version="0.1.0",
- org.muml.rtsc.model;bundle-version="2.3.0"
+ org.gemoc.execution.concurrent.ccsljavaengine.ui,
+ org.muml.xsrtsc.xsrtsc;bundle-version="0.1.0"
 Bundle-ManifestVersion: 2
 Bundle-Activator: org.muml.xsrtsc.design.Activator
 Bundle-ActivationPolicy: lazy

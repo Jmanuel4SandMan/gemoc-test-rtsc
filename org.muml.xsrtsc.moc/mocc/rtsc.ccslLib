@@ -1,0 +1,31 @@
+/* CCSL Library 
+ *
+ *@author:  Jonas
+ * date :  Mi Oktober 11 2017  06:05:53 MESZ 
+ */
+Library rtsc {
+	imports {
+		 // import statements
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib" as lib0; 
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib" as lib1; 
+
+	}
+	RelationLibrary usefulRelations{
+	
+		RelationDefinition MyEvalBooleanDef[EvalBoolean]{
+	      Expression  ResEvalGuard = Union(Clock1->resTrue, Clock2->resFalse)
+	      Relation EitherFalseOrTrue[Exclusion (Clock2->resTrue, Clock1->resFalse)
+	      Relation evalCausesResult[Alternates (AlternatesLeftClock->evaluateGuard,AlternatesRightClock->ResEvalGuard)
+	    }
+	    
+	    RelationDeclaration EvalBoolean(evaluateGuard:clock, resTrue:clock, resFalse:clock)	
+	}
+	
+}
+	
+	
+	
+	
+	
+	
+	

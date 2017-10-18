@@ -2,9 +2,6 @@ package org.muml.xsrtsc
 	
 language XSRTSC {
 	syntax "platform:/resource/org.muml.rtsc.model/model/rtsc.ecore"
-	
 	with org.muml.rtsc.k3dsa.*
-	
 	ecl "/org.muml.xsrtsc.dse/ecl/XSRTSC.ecl"
-
 }

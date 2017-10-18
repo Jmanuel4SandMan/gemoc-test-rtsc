@@ -5,8 +5,6 @@ bin/
 *.tests/
 model-gen/
 mtl-gen/
-.classpath
-.project
 .settings/
 qvto-gen/
 gemoc-gen/
