@@ -1,7 +1,11 @@
-realtimestatechart.xdsml.xrtsc/bin/
-realtimestatechart.xdsml.debug.design/bin/realtimestatechart/xdsml/debug/design/Activator.class
-realtimestatechart.xdsml/bin/realtimestatechart/xdsml/.RTSC.java._trace
-realtimestatechart.xdsml/bin/
 *._trace
-org.muml.xsrtsc/src-gen/
-org.muml.rtsc.k3dsa/xtend-gen/
+src-gen/
+xtend-gen/
+bin/
+*.tests/
+model-gen/
+mtl-gen/
+.classpath
+.project
+.settings/
+qvto-gen/
