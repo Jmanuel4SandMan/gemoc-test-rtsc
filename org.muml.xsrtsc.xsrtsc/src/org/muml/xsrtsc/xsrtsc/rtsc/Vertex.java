@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive <em>Active</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isIsActive <em>Is Active</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getVertex()
@@ -22,29 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Vertex extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Active</b></em>' attribute.
+	 * Returns the value of the '<em><b>Is Active</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Active</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Is Active</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Active</em>' attribute.
-	 * @see #setActive(boolean)
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getVertex_Active()
+	 * @return the value of the '<em>Is Active</em>' attribute.
+	 * @see #setIsActive(boolean)
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getVertex_IsActive()
 	 * @model unique="false"
 	 * @generated
 	 */
-	boolean isActive();
+	boolean isIsActive();
 
 	/**
-	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive <em>Active</em>}' attribute.
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isIsActive <em>Is Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Active</em>' attribute.
-	 * @see #isActive()
+	 * @param value the new value of the '<em>Is Active</em>' attribute.
+	 * @see #isIsActive()
 	 * @generated
 	 */
-	void setActive(boolean value);
+	void setIsActive(boolean value);
 
 } // Vertex

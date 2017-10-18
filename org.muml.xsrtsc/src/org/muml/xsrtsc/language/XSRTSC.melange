@@ -3,7 +3,14 @@ package org.muml.xsrtsc
 language XSRTSC {
 	syntax "platform:/resource/org.muml.rtsc.model/model/rtsc.ecore"
 	
-	with org.muml.rtsc.k3dsa.*
+	with org.muml.rtsc.k3dsa.BehavioralElementAspect
+	with org.muml.rtsc.k3dsa.BehaviorAspect
+	with org.muml.rtsc.k3dsa.NamedElementAspect
+	with org.muml.rtsc.k3dsa.TransitionAspect
+	with org.muml.rtsc.k3dsa.RealtimestatechartAspect
+	with org.muml.rtsc.k3dsa.StateAspect
+	with org.muml.rtsc.k3dsa.VertexAspect
+ 
 	
 	ecl "/org.muml.xsrtsc.dse/ecl/XSRTSC.ecl"
 

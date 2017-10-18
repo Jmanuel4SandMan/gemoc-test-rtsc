@@ -59,6 +59,9 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="rtsc.ecore#//Transition/output"/>
       </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="rtsc.ecore#//Transition/owningRTSC"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="rtsc.ecore#//NamedElement"/>

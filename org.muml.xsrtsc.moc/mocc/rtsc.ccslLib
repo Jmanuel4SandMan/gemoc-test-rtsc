@@ -12,7 +12,7 @@ Library rtsc {
 	}
 	RelationLibrary usefulRelations{
 	
-		RelationDefinition EvalBooleanDef[EvalBoolean]{
+		RelationDefinition MyEvalBooleanDef[EvalBoolean]{
 	      Expression  ResEvalGuard = Union(Clock1->resTrue, Clock2->resFalse)
 	      Relation EitherFalseOrTrue[Exclusion (Clock2->resTrue, Clock1->resFalse)
 	      Relation evalCausesResult[Alternates (AlternatesLeftClock->evaluateGuard,AlternatesRightClock->ResEvalGuard)

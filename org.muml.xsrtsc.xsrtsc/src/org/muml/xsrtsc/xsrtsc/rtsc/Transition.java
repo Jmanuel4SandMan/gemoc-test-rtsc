@@ -16,6 +16,7 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTarget <em>Target</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getInput <em>Input</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC <em>Owning RTSC</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
@@ -131,6 +132,34 @@ public interface Transition extends NamedElement {
 	 * @generated
 	 */
 	void setOutput(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Owning RTSC</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getTransitions <em>Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owning RTSC</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owning RTSC</em>' container reference.
+	 * @see #setOwningRTSC(Realtimestatechart)
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getTransition_OwningRTSC()
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getTransitions
+	 * @model opposite="transitions" required="true" transient="false"
+	 * @generated
+	 */
+	Realtimestatechart getOwningRTSC();
+
+	/**
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC <em>Owning RTSC</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owning RTSC</em>' container reference.
+	 * @see #getOwningRTSC()
+	 * @generated
+	 */
+	void setOwningRTSC(Realtimestatechart value);
 
 	/**
 	 * Returns the value of the '<em><b>Hit Count</b></em>' attribute.

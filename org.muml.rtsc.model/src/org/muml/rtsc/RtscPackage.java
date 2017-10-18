@@ -397,13 +397,22 @@ public interface RtscPackage extends EPackage {
 	int TRANSITION__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Owning RTSC</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__OWNING_RTSC = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -617,6 +626,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTransition_Output();
+
+	/**
+	 * Returns the meta object for the container reference '{@link org.muml.rtsc.Transition#getOwningRTSC <em>Owning RTSC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owning RTSC</em>'.
+	 * @see org.muml.rtsc.Transition#getOwningRTSC()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_OwningRTSC();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.NamedElement <em>Named Element</em>}'.
@@ -833,6 +853,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Owning RTSC</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__OWNING_RTSC = eINSTANCE.getTransition_OwningRTSC();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.rtsc.impl.NamedElementImpl <em>Named Element</em>}' class.

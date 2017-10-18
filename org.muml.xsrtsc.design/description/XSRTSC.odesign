@@ -67,10 +67,10 @@
         </decorationDescriptionsSet>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:self.hasBeenActivated">
-            <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="strokeColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="strokeColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
             </featureCustomizations>
-            <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="borderColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="borderColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
             </featureCustomizations>

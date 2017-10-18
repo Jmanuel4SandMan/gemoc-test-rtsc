@@ -22,9 +22,9 @@ public class RTSCServices {
 		res.append(transition.getName());
 		res.append("\n");	
 		res.append("");
-		res.append(transition.getInput());
-		res.append(" / ");
-		res.append(transition.getOutput());	
+//		res.append(transition.getInput());
+//		res.append(" / ");
+//		res.append(transition.getOutput());	
 		return res.toString();
 	}
 

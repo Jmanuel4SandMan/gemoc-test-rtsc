@@ -13,8 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -138,7 +136,7 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 */
 	public EList<Transition> getTransitions() {
 		if (transitions == null) {
-			transitions = new EObjectContainmentEList<Transition>(Transition.class, this, RtscPackage.REALTIMESTATECHART__TRANSITIONS);
+			transitions = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, RtscPackage.TRANSITION__OWNING_RTSC);
 		}
 		return transitions;
 	}
@@ -202,6 +200,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case RtscPackage.REALTIMESTATECHART__TRANSITIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTransitions()).basicAdd(otherEnd, msgs);
 			case RtscPackage.REALTIMESTATECHART__STATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
 		}

@@ -4,7 +4,6 @@ package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -322,8 +321,17 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTransition_OwningRTSC() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getTransition_HitCount() {
-		return (EAttribute)transitionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)transitionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -358,7 +366,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVertex_Active() {
+	public EAttribute getVertex_IsActive() {
 		return (EAttribute)vertexEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -414,13 +422,14 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(transitionEClass, TRANSITION__TARGET);
 		createEAttribute(transitionEClass, TRANSITION__INPUT);
 		createEAttribute(transitionEClass, TRANSITION__OUTPUT);
+		createEReference(transitionEClass, TRANSITION__OWNING_RTSC);
 		createEAttribute(transitionEClass, TRANSITION__HIT_COUNT);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		vertexEClass = createEClass(VERTEX);
-		createEAttribute(vertexEClass, VERTEX__ACTIVE);
+		createEAttribute(vertexEClass, VERTEX__IS_ACTIVE);
 	}
 
 	/**
@@ -464,15 +473,12 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getBehavioralElement_Behavior(), this.getBehavior(), null, "behavior", null, 0, 1, BehavioralElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(realtimestatechartEClass, Realtimestatechart.class, "Realtimestatechart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRealtimestatechart_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealtimestatechart_Transitions(), this.getTransition(), this.getTransition_OwningRTSC(), "transitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_States(), this.getState(), this.getState_OwningRTSC(), "states", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_InitialState(), this.getState(), null, "initialState", null, 1, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRealtimestatechart_Rounds(), ecorePackage.getEInt(), "rounds", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(realtimestatechartEClass, null, "main", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		EOperation op = addEOperation(realtimestatechartEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(realtimestatechartEClass, null, "initRTSC", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -495,6 +501,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Input(), ecorePackage.getEString(), "input", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_Output(), ecorePackage.getEString(), "output", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_OwningRTSC(), this.getRealtimestatechart(), this.getRealtimestatechart_Transitions(), "owningRTSC", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_HitCount(), ecorePackage.getEInt(), "hitCount", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "canFire", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -505,7 +512,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vertexEClass, Vertex.class, "Vertex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVertex_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, Vertex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVertex_IsActive(), ecorePackage.getEBoolean(), "isActive", null, 0, 1, Vertex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -535,11 +542,6 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   });	
 		addAnnotation
 		  (realtimestatechartEClass.getEOperations().get(2), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (realtimestatechartEClass.getEOperations().get(3), 
 		   source, 
 		   new String[] {
 		   });	
@@ -574,7 +576,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getVertex_Active(), 
+		  (getVertex_IsActive(), 
 		   source, 
 		   new String[] {
 		   });

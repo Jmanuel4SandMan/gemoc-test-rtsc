@@ -8,10 +8,12 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.Transition;
 
@@ -21,8 +23,7 @@ import org.muml.rtsc.Transition;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TransitionItemProvider 
-	extends NamedElementItemProvider {
+public class TransitionItemProvider extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

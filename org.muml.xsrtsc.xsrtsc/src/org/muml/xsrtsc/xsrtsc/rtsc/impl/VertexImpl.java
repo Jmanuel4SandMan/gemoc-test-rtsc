@@ -20,31 +20,31 @@ import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.VertexImpl#isActive <em>Active</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.VertexImpl#isIsActive <em>Is Active</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VertexImpl extends EObjectImpl implements Vertex {
 	/**
-	 * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
+	 * The default value of the '{@link #isIsActive() <em>Is Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isActive()
+	 * @see #isIsActive()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ACTIVE_EDEFAULT = false;
+	protected static final boolean IS_ACTIVE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
+	 * The cached value of the '{@link #isIsActive() <em>Is Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isActive()
+	 * @see #isIsActive()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean active = ACTIVE_EDEFAULT;
+	protected boolean isActive = IS_ACTIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isActive() {
-		return active;
+	public boolean isIsActive() {
+		return isActive;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActive(boolean newActive) {
-		boolean oldActive = active;
-		active = newActive;
+	public void setIsActive(boolean newIsActive) {
+		boolean oldIsActive = isActive;
+		isActive = newIsActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.VERTEX__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.VERTEX__IS_ACTIVE, oldIsActive, isActive));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RtscPackage.VERTEX__ACTIVE:
-				return isActive();
+			case RtscPackage.VERTEX__IS_ACTIVE:
+				return isIsActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RtscPackage.VERTEX__ACTIVE:
-				setActive((Boolean)newValue);
+			case RtscPackage.VERTEX__IS_ACTIVE:
+				setIsActive((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RtscPackage.VERTEX__ACTIVE:
-				setActive(ACTIVE_EDEFAULT);
+			case RtscPackage.VERTEX__IS_ACTIVE:
+				setIsActive(IS_ACTIVE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RtscPackage.VERTEX__ACTIVE:
-				return active != ACTIVE_EDEFAULT;
+			case RtscPackage.VERTEX__IS_ACTIVE:
+				return isActive != IS_ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -154,8 +154,8 @@ public class VertexImpl extends EObjectImpl implements Vertex {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (active: ");
-		result.append(active);
+		result.append(" (isActive: ");
+		result.append(isActive);
 		result.append(')');
 		return result.toString();
 	}

@@ -39,17 +39,17 @@ class RealtimestatechartAspect extends BehaviorAspect {
 		}
 	}
 	
-	@Step
-	@InitializeModel
-	def public void initialize(EList<String> args){
-		_self.initRTSC
-	}
+//	@Step
+//	@InitializeModel
+//	def public void initialize(EList<String> args){
+//		_self.initRTSC
+//	}
 	
 	@Step
 	def public void initRTSC(){
 		println("Initializing " + _self.name)
 		// TODO
-		_self.initialState.active = true
+		_self.initialState.isActive = true
 	}
 	
 	
@@ -79,13 +79,14 @@ class StateAspect extends VertexAspect {
 	* please specify which parent you want with the 'super' expected calling
 	*
 	*/
+//	public boolean active = false
 	
 	def public void entry(){
-		_self.active = true
+		_self.isActive = true
 	}
 	
 	def public void exit(){
-		_self.active = false
+		_self.isActive = false
 	}
 
 
@@ -97,7 +98,7 @@ class TransitionAspect {
 	public int hitCount = 0
 	
 	def public boolean canFire(){
-		_self.source.active
+		return _self.source.isActive
 	}
 	
 	def public Vertex fire(){
@@ -123,6 +124,6 @@ abstract class NamedElementAspect {
 @Aspect(className=Vertex)
 abstract class VertexAspect {
 	
-	public boolean active = false
+	public boolean isActive = false
 
 }

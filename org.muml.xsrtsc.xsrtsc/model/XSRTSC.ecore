@@ -8,19 +8,13 @@
     <eOperations name="main">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="initialize">
-      <eAnnotations source="aspect"/>
-      <eParameters name="args" upperBound="-1">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
     <eOperations name="initRTSC">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="step">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1" eType="//Transition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1" eType="//Transition" containment="true" eOpposite="//Transition/owningRTSC"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1" eType="//State" containment="true" eOpposite="//State/owningRTSC"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialState" lowerBound="1" eType="//State"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rounds" unique="false">
@@ -62,6 +56,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="output">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningRTSC" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/transitions"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hitCount" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -73,7 +68,7 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vertex">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" unique="false">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isActive" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>

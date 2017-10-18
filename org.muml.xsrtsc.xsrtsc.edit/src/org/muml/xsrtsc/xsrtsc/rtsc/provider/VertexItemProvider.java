@@ -60,25 +60,25 @@ public class VertexItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addActivePropertyDescriptor(object);
+			addIsActivePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Active feature.
+	 * This adds a property descriptor for the Is Active feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addActivePropertyDescriptor(Object object) {
+	protected void addIsActivePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Vertex_active_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Vertex_active_feature", "_UI_Vertex_type"),
-				 RtscPackage.Literals.VERTEX__ACTIVE,
+				 getString("_UI_Vertex_isActive_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vertex_isActive_feature", "_UI_Vertex_type"),
+				 RtscPackage.Literals.VERTEX__IS_ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -107,7 +107,7 @@ public class VertexItemProvider
 	@Override
 	public String getText(Object object) {
 		Vertex vertex = (Vertex)object;
-		return getString("_UI_Vertex_type") + " " + vertex.isActive();
+		return getString("_UI_Vertex_type") + " " + vertex.isIsActive();
 	}
 	
 
@@ -123,7 +123,7 @@ public class VertexItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Vertex.class)) {
-			case RtscPackage.VERTEX__ACTIVE:
+			case RtscPackage.VERTEX__IS_ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

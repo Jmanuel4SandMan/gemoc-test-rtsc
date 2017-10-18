@@ -177,13 +177,13 @@ public interface RtscPackage extends EPackage {
 	int VERTEX = 6;
 
 	/**
-	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Active</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VERTEX__ACTIVE = 0;
+	int VERTEX__IS_ACTIVE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Vertex</em>' class.
@@ -205,13 +205,13 @@ public interface RtscPackage extends EPackage {
 	int STATE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Active</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__ACTIVE = VERTEX__ACTIVE;
+	int STATE__IS_ACTIVE = VERTEX__IS_ACTIVE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -369,13 +369,22 @@ public interface RtscPackage extends EPackage {
 	int TRANSITION__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Owning RTSC</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__OWNING_RTSC = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Hit Count</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__HIT_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int TRANSITION__HIT_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -384,7 +393,7 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 
 	/**
@@ -603,6 +612,17 @@ public interface RtscPackage extends EPackage {
 	EAttribute getTransition_Output();
 
 	/**
+	 * Returns the meta object for the container reference '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC <em>Owning RTSC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owning RTSC</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_OwningRTSC();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -645,15 +665,15 @@ public interface RtscPackage extends EPackage {
 	EClass getVertex();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive <em>Active</em>}'.
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isIsActive <em>Is Active</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Active</em>'.
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isActive()
+	 * @return the meta object for the attribute '<em>Is Active</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Vertex#isIsActive()
 	 * @see #getVertex()
 	 * @generated
 	 */
-	EAttribute getVertex_Active();
+	EAttribute getVertex_IsActive();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -848,6 +868,14 @@ public interface RtscPackage extends EPackage {
 		EAttribute TRANSITION__OUTPUT = eINSTANCE.getTransition_Output();
 
 		/**
+		 * The meta object literal for the '<em><b>Owning RTSC</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__OWNING_RTSC = eINSTANCE.getTransition_OwningRTSC();
+
+		/**
 		 * The meta object literal for the '<em><b>Hit Count</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -884,12 +912,12 @@ public interface RtscPackage extends EPackage {
 		EClass VERTEX = eINSTANCE.getVertex();
 
 		/**
-		 * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Is Active</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VERTEX__ACTIVE = eINSTANCE.getVertex_Active();
+		EAttribute VERTEX__IS_ACTIVE = eINSTANCE.getVertex_IsActive();
 
 	}
 

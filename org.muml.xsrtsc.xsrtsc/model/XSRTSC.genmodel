@@ -30,12 +30,6 @@
         <ecoreOperation href="XSRTSC.ecore#//Realtimestatechart/main"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XSRTSC.ecore#//Realtimestatechart/initialize"/>
-        <genParameters>
-          <ecoreParameter href="XSRTSC.ecore#//Realtimestatechart/initialize/args"/>
-        </genParameters>
-      </genOperations>
-      <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//Realtimestatechart/initRTSC"/>
       </genOperations>
       <genOperations>
@@ -83,6 +77,9 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Transition/output"/>
       </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Transition/owningRTSC"/>
+      </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Transition/hitCount"/>
       </genFeatures>
@@ -102,7 +99,7 @@
     <genClasses>
       <ecoreClass href="XSRTSC.ecore#//Vertex"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Vertex/active"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Vertex/isActive"/>
       </genFeatures>
     </genClasses>
   </genPackages>

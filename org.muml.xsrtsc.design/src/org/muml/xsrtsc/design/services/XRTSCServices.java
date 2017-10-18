@@ -38,7 +38,7 @@ public class XRTSCServices {
 	
 	public boolean isCurrentState(EObject o){
 		if(o instanceof State){
-			return ((State)o).isActive();
+			return ((State)o).isIsActive();
 		} else {
 			return false;
 		}

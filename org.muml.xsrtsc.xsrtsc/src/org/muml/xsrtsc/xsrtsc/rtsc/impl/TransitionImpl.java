@@ -10,6 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+import org.muml.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
 import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
@@ -27,6 +30,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getOwningRTSC <em>Owning RTSC</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
@@ -299,6 +303,47 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Realtimestatechart getOwningRTSC() {
+		if (eContainerFeatureID() != RtscPackage.TRANSITION__OWNING_RTSC) return null;
+		return (Realtimestatechart)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwningRTSC(Realtimestatechart newOwningRTSC, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwningRTSC, RtscPackage.TRANSITION__OWNING_RTSC, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwningRTSC(Realtimestatechart newOwningRTSC) {
+		if (newOwningRTSC != eInternalContainer() || (eContainerFeatureID() != RtscPackage.TRANSITION__OWNING_RTSC && newOwningRTSC != null)) {
+			if (EcoreUtil.isAncestor(this, newOwningRTSC))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwningRTSC != null)
+				msgs = ((InternalEObject)newOwningRTSC).eInverseAdd(this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, Realtimestatechart.class, msgs);
+			msgs = basicSetOwningRTSC(newOwningRTSC, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.TRANSITION__OWNING_RTSC, newOwningRTSC, newOwningRTSC));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getHitCount() {
 		return hitCount;
 	}
@@ -353,6 +398,10 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				if (target != null)
 					msgs = ((InternalEObject)target).eInverseRemove(this, RtscPackage.STATE__INCOMING_TRANSITIONS, State.class, msgs);
 				return basicSetTarget((State)otherEnd, msgs);
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwningRTSC((Realtimestatechart)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -369,8 +418,24 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return basicSetSource(null, msgs);
 			case RtscPackage.TRANSITION__TARGET:
 				return basicSetTarget(null, msgs);
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				return basicSetOwningRTSC(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				return eInternalContainer().eInverseRemove(this, RtscPackage.REALTIMESTATECHART__TRANSITIONS, Realtimestatechart.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -391,6 +456,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getInput();
 			case RtscPackage.TRANSITION__OUTPUT:
 				return getOutput();
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				return getOwningRTSC();
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				return getHitCount();
 		}
@@ -416,6 +483,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return;
 			case RtscPackage.TRANSITION__OUTPUT:
 				setOutput((String)newValue);
+				return;
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				setOwningRTSC((Realtimestatechart)newValue);
 				return;
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				setHitCount((Integer)newValue);
@@ -444,6 +514,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__OUTPUT:
 				setOutput(OUTPUT_EDEFAULT);
 				return;
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				setOwningRTSC((Realtimestatechart)null);
+				return;
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				setHitCount(HIT_COUNT_EDEFAULT);
 				return;
@@ -467,6 +540,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return INPUT_EDEFAULT == null ? input != null : !INPUT_EDEFAULT.equals(input);
 			case RtscPackage.TRANSITION__OUTPUT:
 				return OUTPUT_EDEFAULT == null ? output != null : !OUTPUT_EDEFAULT.equals(output);
+			case RtscPackage.TRANSITION__OWNING_RTSC:
+				return getOwningRTSC() != null;
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				return hitCount != HIT_COUNT_EDEFAULT;
 		}

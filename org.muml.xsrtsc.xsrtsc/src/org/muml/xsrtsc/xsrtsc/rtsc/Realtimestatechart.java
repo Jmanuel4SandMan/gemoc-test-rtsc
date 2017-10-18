@@ -27,6 +27,7 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
 	 * The list contents are of type {@link org.muml.xsrtsc.xsrtsc.rtsc.Transition}.
+	 * It is bidirectional and its opposite is '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC <em>Owning RTSC</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Transitions</em>' containment reference list isn't clear,
@@ -35,7 +36,8 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transitions</em>' containment reference list.
 	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getRealtimestatechart_Transitions()
-	 * @model containment="true"
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Transition#getOwningRTSC
+	 * @model opposite="owningRTSC" containment="true"
 	 * @generated
 	 */
 	EList<Transition> getTransitions();
@@ -117,14 +119,6 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * @generated
 	 */
 	void main();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model argsMany="true"
-	 * @generated
-	 */
-	void initialize(EList<String> args);
 
 	/**
 	 * <!-- begin-user-doc -->
