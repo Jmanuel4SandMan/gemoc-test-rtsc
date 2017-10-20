@@ -7,4 +7,11 @@
 	       name="XRTSC">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="org.muml.seq.xsrtsc.design.AddMessageAction"
+           id="org.muml.seq.xsrtsc.design.addMessageAction">
+     </javaActions>
+  </extension>
 </plugin>

@@ -141,6 +141,29 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VertexItemProvider vertexItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVertexAdapter() {
+		if (vertexItemProvider == null) {
+			vertexItemProvider = new VertexItemProvider(this);
+		}
+
+		return vertexItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.muml.xsrtsc.xsrtsc.rtsc.Guard} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,6 +541,7 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 		if (realtimestatechartItemProvider != null) realtimestatechartItemProvider.dispose();
 		if (stateItemProvider != null) stateItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
+		if (vertexItemProvider != null) vertexItemProvider.dispose();
 		if (guardItemProvider != null) guardItemProvider.dispose();
 		if (clockConstraintItemProvider != null) clockConstraintItemProvider.dispose();
 		if (variableItemProvider != null) variableItemProvider.dispose();

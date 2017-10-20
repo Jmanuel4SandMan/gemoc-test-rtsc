@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.muml.xsrtsc.xsrtsc.rtsc.RtscFactory;
@@ -49,6 +50,7 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addHitCountPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,6 +95,28 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Hit Count feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHitCountPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transition_hitCount_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_hitCount_feature", "_UI_Transition_type"),
+				 RtscPackage.Literals.TRANSITION__HIT_COUNT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -167,6 +191,9 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Transition.class)) {
+			case RtscPackage.TRANSITION__HIT_COUNT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case RtscPackage.TRANSITION__GUARDS:
 			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:

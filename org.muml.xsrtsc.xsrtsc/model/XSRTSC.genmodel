@@ -3,6 +3,9 @@
   <foreignModel>platform:/resource/org.muml.xsrtsc.xsrtsc/model/XSRTSC.ecore</foreignModel>
   <genPackages prefix="Rtsc" basePackage="org.muml.xsrtsc.xsrtsc" disposableProviderFactory="true" fileExtensions="xsrtsc">
     <ecorePackage href="XSRTSC.ecore#/"/>
+    <genDataTypes>
+      <ecoreDataType href="XSRTSC.ecore#//Iterable"/>
+    </genDataTypes>
     <genClasses image="false">
       <ecoreClass href="XSRTSC.ecore#//Behavior"/>
       <genFeatures property="None" children="true" createChild="true">
@@ -95,7 +98,7 @@
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Transition/statechart"/>
       </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Transition/triggerMessage"/>
       </genFeatures>
       <genFeatures createChild="false">
@@ -115,6 +118,9 @@
       </genOperations>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//Transition/checkMessages"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//Transition/consumeMessages"/>
       </genOperations>
     </genClasses>
     <genClasses image="false">
@@ -185,11 +191,17 @@
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//MessageBuffer/port"/>
       </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//MessageBuffer/types"/>
+      </genFeatures>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//MessageBuffer/getMessage"/>
         <genParameters>
           <ecoreParameter href="XSRTSC.ecore#//MessageBuffer/getMessage/type"/>
         </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//MessageBuffer/getAllMessages"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//MessageBuffer/hasMessage"/>

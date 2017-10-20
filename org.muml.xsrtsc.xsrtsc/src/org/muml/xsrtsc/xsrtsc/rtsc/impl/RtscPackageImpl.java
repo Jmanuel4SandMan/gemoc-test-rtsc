@@ -2,8 +2,11 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
+import java.lang.Iterable;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -170,6 +173,13 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * @generated
 	 */
 	private EClass messageTypeRepositoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iterableEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -651,6 +661,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMessageBuffer_Types() {
+		return (EReference)messageBufferEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConnector() {
 		return connectorEClass;
 	}
@@ -777,6 +796,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getIterable() {
+		return iterableEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RtscFactory getRtscFactory() {
 		return (RtscFactory)getEFactoryInstance();
 	}
@@ -858,6 +886,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		messageBufferEClass = createEClass(MESSAGE_BUFFER);
 		createEReference(messageBufferEClass, MESSAGE_BUFFER__PORT);
+		createEReference(messageBufferEClass, MESSAGE_BUFFER__TYPES);
 
 		connectorEClass = createEClass(CONNECTOR);
 		createEReference(connectorEClass, CONNECTOR__ENDPOINTS);
@@ -878,6 +907,9 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		messageTypeRepositoryEClass = createEClass(MESSAGE_TYPE_REPOSITORY);
 		createEReference(messageTypeRepositoryEClass, MESSAGE_TYPE_REPOSITORY__MESSAGE_TYPES);
+
+		// Create data types
+		iterableEDataType = createEDataType(ITERABLE);
 	}
 
 	/**
@@ -917,6 +949,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		variableEClass.getESuperTypes().add(this.getNamedElement());
 		clockEClass.getESuperTypes().add(this.getNamedElement());
 		portEClass.getESuperTypes().add(this.getBehavioralElement());
+		coordinationProtocolEClass.getESuperTypes().add(this.getNamedElement());
 		messageTypeEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes and features; add operations and parameters
@@ -961,7 +994,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getTransition_Guards(), this.getGuard(), null, "guards", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_ClockConstraints(), this.getClockConstraint(), null, "clockConstraints", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Transitions(), "statechart", null, 1, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransition_TriggerMessage(), this.getMessageType(), null, "triggerMessage", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_TriggerMessage(), this.getMessageType(), null, "triggerMessage", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTransition_HitCount(), ecorePackage.getEInt(), "hitCount", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "canFire", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -973,6 +1006,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "clocksHold", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(transitionEClass, ecorePackage.getEBoolean(), "checkMessages", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(transitionEClass, null, "consumeMessages", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1007,9 +1042,12 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		initEClass(messageBufferEClass, MessageBuffer.class, "MessageBuffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageBuffer_Port(), this.getPort(), this.getPort_IncomingBuffer(), "port", null, 1, 1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageBuffer_Types(), this.getMessageType(), null, "types", null, 1, -1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(messageBufferEClass, this.getMessage(), "getMessage", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMessageType(), "type", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(messageBufferEClass, this.getIterable(), "getAllMessages", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(messageBufferEClass, ecorePackage.getEBoolean(), "hasMessage", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMessageType(), "type", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1041,6 +1079,9 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		initEClass(messageTypeRepositoryEClass, MessageTypeRepository.class, "MessageTypeRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageTypeRepository_MessageTypes(), this.getMessageType(), null, "messageTypes", null, 0, -1, MessageTypeRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize data types
+		initEDataType(iterableEDataType, Iterable.class, "Iterable", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1119,6 +1160,11 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (transitionEClass.getEOperations().get(5), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getTransition_HitCount(), 
 		   source, 
 		   new String[] {
@@ -1164,12 +1210,22 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (messageBufferEClass.getEOperations().get(3), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (coordinationProtocolEClass.getEOperations().get(0), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (coordinationProtocolEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (iterableEDataType, 
 		   source, 
 		   new String[] {
 		   });

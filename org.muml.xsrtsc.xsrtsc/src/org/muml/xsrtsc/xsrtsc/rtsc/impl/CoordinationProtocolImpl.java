@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
@@ -36,7 +35,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
  *
  * @generated
  */
-public class CoordinationProtocolImpl extends EObjectImpl implements CoordinationProtocol {
+public class CoordinationProtocolImpl extends NamedElementImpl implements CoordinationProtocol {
 	/**
 	 * The cached value of the '{@link #getPorts() <em>Ports</em>}' reference list.
 	 * <!-- begin-user-doc -->

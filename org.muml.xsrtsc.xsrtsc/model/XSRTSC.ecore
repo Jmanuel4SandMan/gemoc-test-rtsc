@@ -70,12 +70,15 @@
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
+    <eOperations name="consumeMessages">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1" eType="//State" eOpposite="//State/outgoingTransitions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1" eType="//State" eOpposite="//State/incomingTransitions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="guards" upperBound="-1" eType="//Guard" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clockConstraints" upperBound="-1" eType="//ClockConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/transitions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hitCount" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -134,6 +137,9 @@
       <eAnnotations source="aspect"/>
       <eParameters name="type" eType="//MessageType"/>
     </eOperations>
+    <eOperations name="getAllMessages" eType="//Iterable">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eOperations name="hasMessage">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -144,11 +150,12 @@
       <eParameters name="message" eType="//Message"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="//Port" eOpposite="//Port/incomingBuffer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" lowerBound="1" upperBound="-1" eType="//MessageType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol">
+  <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol" eSuperTypes="//NamedElement">
     <eOperations name="main">
       <eAnnotations source="aspect"/>
     </eOperations>
@@ -172,5 +179,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageTypeRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1" eType="//MessageType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Iterable" instanceClassName="java.lang.Iterable">
+    <eAnnotations source="aspect"/>
   </eClassifiers>
 </ecore:EPackage>

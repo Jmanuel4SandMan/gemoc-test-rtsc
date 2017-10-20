@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="XSRTSC" version="11.1.1.201610211630">
-  <ownedViewpoints name="RTSC_XRTSC_Viewpoint">
-    <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="RTSC_XRTSC" viewpointURI="viewpoint:/org.muml.rtsc.design/RTSC_ViewPoint" representationName="RTSC">
-      <metamodel href="../../org.muml.xsrtsc.xsrtsc/model/XSRTSC.ecore#/"/>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="XSRTSC" version="11.1.1.201610211630">
+  <ownedViewpoints name="RTSC_SEQ_XRTSC_Viewpoint">
+    <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="RTSC_SEQ_XRTSC" viewpointURI="viewpoint:/org.muml.rtsc.design/RTSC_ViewPoint" representationName="RTSC">
+      <metamodel href="../../org.muml.rtsc.model/model/rtsc.ecore#/"/>
       <layers name="Debug" activeByDefault="true">
         <toolSections name="Debug">
           <ownedTools xsi:type="tool:PopupMenu" name="Gemoc">
@@ -18,6 +18,14 @@
                 <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Toggle Gemoc breakpoint" icon="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint.gif" id="org.gemoc.execution.sequential.javaengine.ui.debug.sirius.action.GemocSequentialToggleBreakpointAction"/>
               </initialOperation>
             </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DoubleClickDescription" name="addMessage" forceRefresh="true">
+            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ExternalJavaActionCall" name="addMessage" action="//@ownedViewpoints[name='RTSC_SEQ_XRTSC_Viewpoint']/@ownedRepresentationExtensions[name='PROT_SEQ_XSRTSC']/@layers[name='Manipulation']/@toolSections.0/@ownedTools[name='Add%20Message']"/>
+            </initialOperation>
           </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>
@@ -39,6 +47,21 @@
         </customization>
       </layers>
       <layers name="Animation">
+        <containerMappings name="MessageBuffer" semanticCandidatesExpression="[behaviouralElement.oclAsType(Port).incomingBuffer/]" domainClass="rtsc.MessageBuffer" childrenPresentation="List">
+          <subNodeMappings name="Message" semanticCandidatesExpression="[self.allMessages/]" domainClass="rtsc.Message">
+            <style xsi:type="style:BundledImageDescription" labelExpression="[self.type.name+'-instance'/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'MessageBuffer-Runtime'" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
         <decorationDescriptionsSet>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Current State" position="SOUTH_EAST" decoratorPath="/org.muml.xsrtsc.design/icons/cursor-3-24.png" preconditionExpression="service:self.isCurrentState">
             <mappings xsi:type="description_1:ContainerMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -57,9 +80,28 @@
         </customization>
       </layers>
     </ownedRepresentationExtensions>
-    <ownedJavaExtensions qualifiedClassName="org.muml.xsrtsc.design.services.XsrtscDebugServices"/>
-    <ownedJavaExtensions qualifiedClassName="org.muml.xsrtsc.design.services.XsrtscAnimatorServices"/>
-    <ownedJavaExtensions qualifiedClassName="org.muml.xsrtsc.design.services.XRTSCServices"/>
+    <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="PROT_SEQ_XSRTSC" viewpointURI="viewpoint:/org.muml.rtsc.design/RTSC_ViewPoint" representationName="Protocol">
+      <metamodel href="../../org.muml.rtsc.model/model/rtsc.ecore#/"/>
+      <layers name="Manipulation" activeByDefault="true">
+        <toolSections name="Debug">
+          <ownedTools xsi:type="tool_1:DoubleClickDescription">
+            <mappings xsi:type="description_1:NodeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subNodeMappings[name='type']"/>
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ExternalJavaActionCall" name="addMessage" action="//@ownedViewpoints[name='RTSC_SEQ_XRTSC_Viewpoint']/@ownedRepresentationExtensions[name='PROT_SEQ_XSRTSC']/@layers[name='Manipulation']/@toolSections.0/@ownedTools[name='Add%20Message']"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ExternalJavaAction" name="Add Message" id="org.muml.seq.xsrtsc.design.addMessageAction">
+            <parameters name="type" value="[element/]"/>
+            <parameters name="buffer" value="[self.eContainer()/]"/>
+          </ownedTools>
+        </toolSections>
+      </layers>
+    </ownedRepresentationExtensions>
+    <ownedJavaExtensions qualifiedClassName="org.muml.seq.xsrtsc.design.services.XsrtscDebugServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.muml.seq.xsrtsc.design.services.XsrtscAnimatorServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.muml.seq.xsrtsc.design.services.XRTSCServices"/>
     <ownedJavaExtensions qualifiedClassName="org.muml.rtsc.design.services.RTSCServices"/>
   </ownedViewpoints>
   <userColorsPalettes name="XRTSC Palette">

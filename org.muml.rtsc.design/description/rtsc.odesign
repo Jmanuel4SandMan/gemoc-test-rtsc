@@ -68,6 +68,45 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
+        <containerMappings name="MessageBuffer" semanticCandidatesExpression="[behaviouralElement.oclAsType(Port).incomingBuffer/]" domainClass="rtsc.MessageBuffer" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Messages" semanticCandidatesExpression="[self/]" domainClass="rtsc.MessageBuffer" childrenPresentation="List">
+            <subNodeMappings name="Message" semanticCandidatesExpression="[self.allMessages/]" domainClass="rtsc.Message">
+              <style xsi:type="style:BundledImageDescription" labelExpression="[self.type.name+'-instance'/]" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'RuntimeMessages'" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="Types" semanticCandidatesExpression="[self/]" domainClass="rtsc.MessageBuffer" childrenPresentation="List">
+            <subNodeMappings name="type" semanticCandidatesExpression="[self.types/]" domainClass="rtsc.MessageType">
+              <doubleClickDescription href="../../org.muml.seq.xsrtsc.design/description/XSRTSC.odesign#//@ownedViewpoints[name='RTSC_SEQ_XRTSC_Viewpoint']/@ownedRepresentationExtensions[name='RTSC_SEQ_XRTSC']/@layers[name='Debug']/@toolSections.0/@ownedTools[name='addMessage']"/>
+              <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'MessageTypes'" backgroundStyle="Liquid">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'MessageBuffer'" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
         <toolSections name="Node">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="State" containerMappings="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']" iconPath="/org.muml.rtsc.design/icons/state_small.gif">
             <variable name="container"/>
@@ -129,7 +168,38 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="Connector" domainClass="rtsc.Connector" useDomainElement="true">
+        <nodeMappings name="Protocol" semanticCandidatesExpression="[self/]" domainClass="rtsc.CoordinationProtocol">
+          <style xsi:type="style:EllipseNodeDescription" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Connector" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetFinderExpression="[endpoints->last()/]" sourceFinderExpression="[endpoints->first()/]" domainClass="rtsc.Connector" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="portRtsc" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']" targetFinderExpression="[self.behavior/]">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="protocolPorts" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Protocol']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetFinderExpression="[self.ports/]">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="portBuffer" sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']" targetFinderExpression="[incomingBuffer/]">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -137,14 +207,22 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
+        <containerMappings name="MessageBuffer" semanticCandidatesExpression="[ports.incomingBuffer/]" domainClass="rtsc.MessageBuffer" childrenPresentation="List">
+          <subNodeMappings name="type" semanticCandidatesExpression="[self.types/]" domainClass="rtsc.MessageType">
+            <doubleClickDescription href="../../org.muml.seq.xsrtsc.design/description/XSRTSC.odesign#//@ownedViewpoints[name='RTSC_SEQ_XRTSC_Viewpoint']/@ownedRepresentationExtensions[name='PROT_SEQ_XSRTSC']/@layers[name='Manipulation']/@toolSections.0/@ownedTools[name='']"/>
+            <style xsi:type="style:BundledImageDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.eContainer().name+':MessageBuffer'" backgroundStyle="Liquid">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
-        </edgeMappings>
+        </containerMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.muml.rtsc.design.services.RTSCServices"/>

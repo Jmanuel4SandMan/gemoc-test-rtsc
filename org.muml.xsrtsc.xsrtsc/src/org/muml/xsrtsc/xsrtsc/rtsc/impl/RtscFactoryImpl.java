@@ -2,7 +2,10 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
+import java.lang.Iterable;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -90,6 +93,36 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.MESSAGE_TYPE_REPOSITORY: return createMessageTypeRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case RtscPackage.ITERABLE:
+				return createIterableFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case RtscPackage.ITERABLE:
+				return convertIterableToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -251,6 +284,24 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	public MessageTypeRepository createMessageTypeRepository() {
 		MessageTypeRepositoryImpl messageTypeRepository = new MessageTypeRepositoryImpl();
 		return messageTypeRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Iterable createIterableFromString(EDataType eDataType, String initialValue) {
+		return (Iterable)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIterableToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

@@ -33,6 +33,7 @@ import org.muml.rtsc.MessageType
 import java.util.HashMap
 import java.util.Map
 import org.muml.rtsc.CoordinationProtocol
+import org.eclipse.emf.common.util.BasicEList
 
 @Aspect(className=Behavior)
 abstract class BehaviorAspect {
@@ -44,7 +45,7 @@ abstract class BehavioralElementAspect {
 
 }
 
-@Aspect(className= ClockConstraint)
+@Aspect(className= ClockConstraint) 
 class ClockConstraintAspect{
 
 	def public boolean evaluate(/*Federation checkFederation*/){
@@ -98,7 +99,7 @@ class RealtimestatechartAspect extends BehaviorAspect {
 		//_self.clocks.forEach[TimeKeeper.addClock(_self.name, it.name)]
 	}
 	
-	
+	@Step
 	def public void step(){
 		println("Stepping " + _self.name)
 		_self.rounds = _self.rounds +1;
@@ -152,10 +153,12 @@ class TransitionAspect {
 		_self.source.active && _self.guardsHold && _self.clocksHold && _self.checkMessages
 	}
 	
+	@Step
 	def public Vertex fire(){
 		_self.source.exit
 		_self.hitCount = _self.hitCount+1
 		println("Firing "+ (_self.source as NamedElement).name  + " to " + (_self.target as NamedElement).name)
+		_self.consumeMessages
 		_self.target.entry
 		return _self.target
 	}
@@ -178,6 +181,13 @@ class TransitionAspect {
 			val port = _self.statechart.behaviouralElement as Port
 			port.incomingBuffer.hasMessage(it)
 		] 
+	}
+	
+	def public void consumeMessages(){
+		_self.triggerMessage.forEach[
+			val port = _self.statechart.behaviouralElement as Port
+			port.incomingBuffer.getMessage(it)
+		]
 	}
 
 }
@@ -204,11 +214,16 @@ abstract class MessageBufferAspect {
 	
 	private Map<MessageType, List<Message>> messages = new HashMap
 	
+	//attribute to display messages in animation
+	public EList<Message> allMessages = new BasicEList
+	
 	def public Message getMessage(MessageType type){
 		if (_self.messages.containsKey(type)){
 			val list = _self.messages.get(type)
 			if (!list.empty){
-				list.remove(0)
+				val message = list.remove(0)
+				_self.allMessages.remove(message)
+				return message
 			}
 		}
 		return null
@@ -223,6 +238,7 @@ abstract class MessageBufferAspect {
 			_self.messages.put(message.type, new ArrayList)
 		}
 		_self.messages.get(message.type) += message
+		_self.allMessages += message
 	}
 }
 
@@ -234,7 +250,7 @@ class CoordinationProtocolAspect {
 	def public void main(){
 		val stateCharts = _self.ports.map[behavior as Realtimestatechart]
 		while (true){
-			stateCharts.forEach[step]
+			stateCharts.forEach[sequentialStep]
 		}
 	}
 	

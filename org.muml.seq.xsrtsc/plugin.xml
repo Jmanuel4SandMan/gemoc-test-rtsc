@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
-<plugin>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
   <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.muml.seq.xsrtsc.XSRTSC" xdsmlFilePath="/org.muml.seq.xsrtsc/src/org/muml/seq/xsrtsc/xsrtsc.melange" />
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.muml.seq.xsrtsc.XSRTSC" xdsmlFilePath="/org.muml.seq.xsrtsc/src/org/muml/seq/xsrtsc/xsrtsc.melange"/>
   </extension>
   <extension point="org.eclipse.emf.ecore.generated_package">
     <!-- @generated XSRTSCMT -->
-    <package class="org.muml.seq.xsrtsc.xsrtscmt.rtsc.RtscPackage" genModel="model-gen/XSRTSCMT.genmodel" uri="http://org.muml.seq.xsrtsc.xsrtscmt/rtsc/" />
+    <package class="org.muml.seq.xsrtsc.xsrtscmt.rtsc.RtscPackage" genModel="model-gen/XSRTSCMT.genmodel" uri="http://org.muml.seq.xsrtsc.xsrtscmt/rtsc/"/>
   </extension>
-  <extension point="fr.inria.diverse.melange.modeltype">
+  
+<extension point="fr.inria.diverse.melange.modeltype">
     <modeltype id="org.muml.seq.xsrtsc.XSRTSCMT" uri="http://org.muml.seq.xsrtsc.xsrtscmt/">
-      <subtyping modeltypeId="org.muml.rtsc.RTSCMT" />
+      <subtyping modeltypeId="org.muml.rtsc.RTSCMT"/>
     </modeltype>
   </extension>
   <extension point="fr.inria.diverse.melange.language">
     <language aspects="MessageBuffer:org.muml.seq.xsrtsc.xsrtsc.aspects.MessageBufferAspect;Vertex:org.muml.seq.xsrtsc.xsrtsc.aspects.VertexAspect;Variable:org.muml.seq.xsrtsc.xsrtsc.aspects.VariableAspect;BehavioralElement:org.muml.seq.xsrtsc.xsrtsc.aspects.BehavioralElementAspect;State:org.muml.seq.xsrtsc.xsrtsc.aspects.StateAspect;Transition:org.muml.seq.xsrtsc.xsrtsc.aspects.TransitionAspect;Realtimestatechart:org.muml.seq.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect;Guard:org.muml.seq.xsrtsc.xsrtsc.aspects.GuardAspect;ClockConstraint:org.muml.seq.xsrtsc.xsrtsc.aspects.ClockConstraintAspect;Behavior:org.muml.seq.xsrtsc.xsrtsc.aspects.BehaviorAspect;NamedElement:org.muml.seq.xsrtsc.xsrtsc.aspects.NamedElementAspect;CoordinationProtocol:org.muml.seq.xsrtsc.xsrtsc.aspects.CoordinationProtocolAspect" entryPoints="org.muml.seq.xsrtsc.xsrtsc.aspects.CoordinationProtocolAspect.main(org.muml.seq.xsrtsc.xsrtsc.rtsc.CoordinationProtocol);org.muml.seq.xsrtsc.xsrtsc.aspects.RealtimestatechartAspect.main(org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart)" exactType="org.muml.seq.xsrtsc.XSRTSCMT" id="org.muml.seq.xsrtsc.XSRTSC" uri="http://org.muml.seq.xsrtsc.xsrtsc/rtsc/">
-      <adapter class="org.muml.seq.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter" modeltypeId="org.muml.rtsc.RTSCMT" />
-      <adapter class="org.muml.seq.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCAdapter" modeltypeId="org.muml.seq.xsrtsc.XSRTSCMT" />
+      <adapter class="org.muml.seq.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter" modeltypeId="org.muml.rtsc.RTSCMT"/>
+      <adapter class="org.muml.seq.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCAdapter" modeltypeId="org.muml.seq.xsrtsc.XSRTSCMT"/>
     </language>
   </extension>
 </plugin>

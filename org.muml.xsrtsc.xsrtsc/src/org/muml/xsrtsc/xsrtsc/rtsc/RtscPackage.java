@@ -4,6 +4,7 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -423,7 +424,7 @@ public interface RtscPackage extends EPackage {
 	int TRANSITION__STATECHART = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Trigger Message</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Trigger Message</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -681,13 +682,22 @@ public interface RtscPackage extends EPackage {
 	int MESSAGE_BUFFER__PORT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_BUFFER__TYPES = 1;
+
+	/**
 	 * The number of structural features of the '<em>Message Buffer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_BUFFER_FEATURE_COUNT = 1;
+	int MESSAGE_BUFFER_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.ConnectorImpl <em>Connector</em>}' class.
@@ -728,13 +738,22 @@ public interface RtscPackage extends EPackage {
 	int COORDINATION_PROTOCOL = 14;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COORDINATION_PROTOCOL__NAME = NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Ports</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATION_PROTOCOL__PORTS = 0;
+	int COORDINATION_PROTOCOL__PORTS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Connector</b></em>' containment reference.
@@ -743,7 +762,7 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATION_PROTOCOL__CONNECTOR = 1;
+	int COORDINATION_PROTOCOL__CONNECTOR = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Coordination Protocol</em>' class.
@@ -752,7 +771,7 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COORDINATION_PROTOCOL_FEATURE_COUNT = 2;
+	int COORDINATION_PROTOCOL_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageTypeImpl <em>Message Type</em>}' class.
@@ -883,6 +902,16 @@ public interface RtscPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_TYPE_REPOSITORY_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '<em>Iterable</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.Iterable
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getIterable()
+	 * @generated
+	 */
+	int ITERABLE = 19;
 
 
 	/**
@@ -1145,10 +1174,10 @@ public interface RtscPackage extends EPackage {
 	EReference getTransition_Statechart();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTriggerMessage <em>Trigger Message</em>}'.
+	 * Returns the meta object for the reference list '{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTriggerMessage <em>Trigger Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Trigger Message</em>'.
+	 * @return the meta object for the reference list '<em>Trigger Message</em>'.
 	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTriggerMessage()
 	 * @see #getTransition()
 	 * @generated
@@ -1379,6 +1408,17 @@ public interface RtscPackage extends EPackage {
 	EReference getMessageBuffer_Port();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getTypes <em>Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Types</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getTypes()
+	 * @see #getMessageBuffer()
+	 * @generated
+	 */
+	EReference getMessageBuffer_Types();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.xsrtsc.xsrtsc.rtsc.Connector <em>Connector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1525,6 +1565,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageTypeRepository_MessageTypes();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.Iterable <em>Iterable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Iterable</em>'.
+	 * @see java.lang.Iterable
+	 * @model instanceClass="java.lang.Iterable"
+	 * @generated
+	 */
+	EDataType getIterable();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1751,7 +1802,7 @@ public interface RtscPackage extends EPackage {
 		EReference TRANSITION__STATECHART = eINSTANCE.getTransition_Statechart();
 
 		/**
-		 * The meta object literal for the '<em><b>Trigger Message</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Trigger Message</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1943,6 +1994,14 @@ public interface RtscPackage extends EPackage {
 		EReference MESSAGE_BUFFER__PORT = eINSTANCE.getMessageBuffer_Port();
 
 		/**
+		 * The meta object literal for the '<em><b>Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_BUFFER__TYPES = eINSTANCE.getMessageBuffer_Types();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.ConnectorImpl <em>Connector</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2065,6 +2124,16 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_TYPE_REPOSITORY__MESSAGE_TYPES = eINSTANCE.getMessageTypeRepository_MessageTypes();
+
+		/**
+		 * The meta object literal for the '<em>Iterable</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.Iterable
+		 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getIterable()
+		 * @generated
+		 */
+		EDataType ITERABLE = eINSTANCE.getIterable();
 
 	}
 

@@ -4,8 +4,6 @@ package org.muml.rtsc;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Coordination Protocol</b></em>'.
@@ -23,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CoordinationProtocol extends EObject {
+public interface CoordinationProtocol extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Ports</b></em>' reference list.
 	 * The list contents are of type {@link org.muml.rtsc.Port}.

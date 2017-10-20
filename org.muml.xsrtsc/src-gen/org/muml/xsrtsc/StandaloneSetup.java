@@ -35,6 +35,7 @@ public class StandaloneSetup {
     MelangeRegistry.LanguageDescriptor xSRTSC = new MelangeRegistryImpl.LanguageDescriptorImpl(
     	"org.muml.xsrtsc.XSRTSC", "", "http://org.muml.xsrtsc.xsrtsc/rtsc/", "org.muml.xsrtsc.XSRTSCMT"
     );
+    xSRTSC.addAdapter("org.muml.rtsc.RTSCMT", org.muml.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter.class);
     xSRTSC.addAdapter("org.muml.xsrtsc.XSRTSCMT", org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCAdapter.class);
     MelangeRegistry.INSTANCE.getLanguageMap().put(
     	"org.muml.xsrtsc.XSRTSC",
@@ -43,6 +44,7 @@ public class StandaloneSetup {
     MelangeRegistry.ModelTypeDescriptor xSRTSCMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
     	"org.muml.xsrtsc.XSRTSCMT", "", "http://org.muml.xsrtsc.xsrtscmt/"
     );
+    xSRTSCMT.addSuperType("org.muml.rtsc.RTSCMT");
     MelangeRegistry.INSTANCE.getModelTypeMap().put(
     	"org.muml.xsrtsc.XSRTSCMT",
     	xSRTSCMT

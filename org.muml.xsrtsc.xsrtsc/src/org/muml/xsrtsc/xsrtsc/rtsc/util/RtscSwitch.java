@@ -181,6 +181,7 @@ public class RtscSwitch<T> extends Switch<T> {
 			case RtscPackage.COORDINATION_PROTOCOL: {
 				CoordinationProtocol coordinationProtocol = (CoordinationProtocol)theEObject;
 				T result = caseCoordinationProtocol(coordinationProtocol);
+				if (result == null) result = caseNamedElement(coordinationProtocol);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

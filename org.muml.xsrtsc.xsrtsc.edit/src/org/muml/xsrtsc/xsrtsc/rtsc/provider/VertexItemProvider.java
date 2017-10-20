@@ -11,13 +11,18 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
+import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
 
 /**
  * This is the item provider adapter for a {@link org.muml.xsrtsc.xsrtsc.rtsc.Vertex} object.
@@ -54,8 +59,42 @@ public class VertexItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActivePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Active feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActivePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Vertex_active_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vertex_active_feature", "_UI_Vertex_type"),
+				 RtscPackage.Literals.VERTEX__ACTIVE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Vertex.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Vertex"));
 	}
 
 	/**
@@ -66,7 +105,8 @@ public class VertexItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Vertex_type");
+		Vertex vertex = (Vertex)object;
+		return getString("_UI_Vertex_type") + " " + vertex.isActive();
 	}
 	
 
@@ -80,6 +120,12 @@ public class VertexItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Vertex.class)) {
+			case RtscPackage.VERTEX__ACTIVE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -2,8 +2,14 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
+import java.lang.Iterable;
+
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,6 +17,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import org.muml.xsrtsc.xsrtsc.rtsc.Message;
@@ -28,11 +35,22 @@ import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
  * </p>
  * <ul>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageBufferImpl#getPort <em>Port</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageBufferImpl#getTypes <em>Types</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
+	/**
+	 * The cached value of the '{@link #getTypes() <em>Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MessageType> types;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,7 +116,30 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<MessageType> getTypes() {
+		if (types == null) {
+			types = new EObjectResolvingEList<MessageType>(MessageType.class, this, RtscPackage.MESSAGE_BUFFER__TYPES);
+		}
+		return types;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Message getMessage(MessageType type) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Iterable getAllMessages() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -180,6 +221,8 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 		switch (featureID) {
 			case RtscPackage.MESSAGE_BUFFER__PORT:
 				return getPort();
+			case RtscPackage.MESSAGE_BUFFER__TYPES:
+				return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -189,11 +232,16 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RtscPackage.MESSAGE_BUFFER__PORT:
 				setPort((Port)newValue);
+				return;
+			case RtscPackage.MESSAGE_BUFFER__TYPES:
+				getTypes().clear();
+				getTypes().addAll((Collection<? extends MessageType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,6 +258,9 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 			case RtscPackage.MESSAGE_BUFFER__PORT:
 				setPort((Port)null);
 				return;
+			case RtscPackage.MESSAGE_BUFFER__TYPES:
+				getTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -224,6 +275,8 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 		switch (featureID) {
 			case RtscPackage.MESSAGE_BUFFER__PORT:
 				return getPort() != null;
+			case RtscPackage.MESSAGE_BUFFER__TYPES:
+				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

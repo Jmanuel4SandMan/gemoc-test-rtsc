@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -86,7 +87,7 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	protected EList<ClockConstraint> clockConstraints;
 
 	/**
-	 * The cached value of the '{@link #getTriggerMessage() <em>Trigger Message</em>}' containment reference list.
+	 * The cached value of the '{@link #getTriggerMessage() <em>Trigger Message</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggerMessage()
@@ -306,7 +307,7 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 */
 	public EList<MessageType> getTriggerMessage() {
 		if (triggerMessage == null) {
-			triggerMessage = new EObjectContainmentEList<MessageType>(MessageType.class, this, RtscPackage.TRANSITION__TRIGGER_MESSAGE);
+			triggerMessage = new EObjectResolvingEList<MessageType>(MessageType.class, this, RtscPackage.TRANSITION__TRIGGER_MESSAGE);
 		}
 		return triggerMessage;
 	}
@@ -353,8 +354,6 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return ((InternalEList<?>)getClockConstraints()).basicRemove(otherEnd, msgs);
 			case RtscPackage.TRANSITION__STATECHART:
 				return basicSetStatechart(null, msgs);
-			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
-				return ((InternalEList<?>)getTriggerMessage()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

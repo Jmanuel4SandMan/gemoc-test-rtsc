@@ -143,7 +143,7 @@ public interface Transition extends NamedElement {
 	void setStatechart(Realtimestatechart value);
 
 	/**
-	 * Returns the value of the '<em><b>Trigger Message</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Trigger Message</b></em>' reference list.
 	 * The list contents are of type {@link org.muml.rtsc.MessageType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -151,9 +151,9 @@ public interface Transition extends NamedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trigger Message</em>' containment reference list.
+	 * @return the value of the '<em>Trigger Message</em>' reference list.
 	 * @see org.muml.rtsc.RtscPackage#getTransition_TriggerMessage()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<MessageType> getTriggerMessage();

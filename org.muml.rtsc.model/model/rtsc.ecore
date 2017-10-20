@@ -31,7 +31,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="guards" upperBound="-1" eType="//Guard" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clockConstraints" upperBound="-1" eType="//ClockConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/transitions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
@@ -63,11 +63,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageBuffer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="//Port" eOpposite="//Port/incomingBuffer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" lowerBound="1" upperBound="-1" eType="//MessageType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol">
+  <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol" eSuperTypes="//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ports" lowerBound="2" upperBound="2" eType="//Port"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connector" lowerBound="1" eType="//Connector" containment="true"/>
   </eClassifiers>

@@ -8,19 +8,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.muml.rtsc.CoordinationProtocol;
@@ -34,13 +25,7 @@ import org.muml.rtsc.RtscPackage;
  * @generated
  */
 public class CoordinationProtocolItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -138,7 +123,10 @@ public class CoordinationProtocolItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CoordinationProtocol_type");
+		String label = ((CoordinationProtocol)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CoordinationProtocol_type") :
+			getString("_UI_CoordinationProtocol_type") + " " + label;
 	}
 	
 
@@ -176,17 +164,6 @@ public class CoordinationProtocolItemProvider
 			(createChildParameter
 				(RtscPackage.Literals.COORDINATION_PROTOCOL__CONNECTOR,
 				 RtscFactory.eINSTANCE.createConnector()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return RtscEditPlugin.INSTANCE;
 	}
 
 }

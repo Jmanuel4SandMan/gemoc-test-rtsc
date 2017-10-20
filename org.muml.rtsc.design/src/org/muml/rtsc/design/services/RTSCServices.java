@@ -33,8 +33,8 @@ public class RTSCServices {
 			}).collect(Collectors.joining(" && ")));
 			res.append("]");
 		}
-		res.append("\n");	
 		if (!transition.getClockConstraints().isEmpty()){
+			res.append("\n");	
 			res.append("[");
 			res.append(transition.getClockConstraints().stream().map(cc->{
 				String s = cc.getClock().getName();
@@ -43,6 +43,12 @@ public class RTSCServices {
 				return s;
 			}).collect(Collectors.joining(" && ")));
 			res.append("]");
+		}
+		if (!transition.getTriggerMessage().isEmpty()){
+			res.append("\n");	
+			res.append(transition.getTriggerMessage().stream().map(tm->{
+				return tm.getName()+"?";
+			}).collect(Collectors.joining(" ")));
 		}
 		return res.toString();
 	}

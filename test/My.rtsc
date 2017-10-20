@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rtsc:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rtsc="http://www.muml.org/rtsc">
-  <statecharts name="red" initialState="//@statecharts.0/@states.0">
-    <behaviouralElement xsi:type="rtsc:Port" name="red" behaviour="//@statecharts.0">
-      <incomingBuffer/>
+  <statecharts name="rtsc1" initialState="//@statecharts.0/@states.0">
+    <behaviouralElement xsi:type="rtsc:Port" name="port1" behaviour="//@statecharts.0">
+      <incomingBuffer types="//@messageTypeRepo/@messageTypes.0"/>
     </behaviouralElement>
-    <transitions name="State1_to_State2" source="//@statecharts.0/@states.0" target="//@statecharts.0/@states.1">
-      <triggerMessage name="reeed"/>
-    </transitions>
-    <transitions name="State2_to_State3" source="//@statecharts.0/@states.1" target="//@statecharts.0/@states.2"/>
+    <transitions name="State1_to_State2" source="//@statecharts.0/@states.0" target="//@statecharts.0/@states.1" triggerMessage="//@messageTypeRepo/@messageTypes.0"/>
+    <transitions name="State2_to_State3" source="//@statecharts.0/@states.1" target="//@statecharts.0/@states.2" triggerMessage="//@messageTypeRepo/@messageTypes.0"/>
     <transitions name="State3_to_State1" source="//@statecharts.0/@states.2" target="//@statecharts.0/@states.0"/>
     <states name="State1" incomingTransitions="//@statecharts.0/@transitions.2" outgoingTransitions="//@statecharts.0/@transitions.0"/>
     <states name="State2" incomingTransitions="//@statecharts.0/@transitions.0" outgoingTransitions="//@statecharts.0/@transitions.1"/>
     <states name="State3" incomingTransitions="//@statecharts.0/@transitions.1" outgoingTransitions="//@statecharts.0/@transitions.2"/>
   </statecharts>
-  <statecharts name="blue" initialState="//@statecharts.1/@states.0">
-    <behaviouralElement xsi:type="rtsc:Port" name="blue" behaviour="//@statecharts.1">
-      <incomingBuffer/>
+  <statecharts name="rtsc2" initialState="//@statecharts.1/@states.0">
+    <behaviouralElement xsi:type="rtsc:Port" name="port2" behaviour="//@statecharts.1">
+      <incomingBuffer types="//@messageTypeRepo/@messageTypes.0"/>
     </behaviouralElement>
     <transitions name="State1_to_State2" source="//@statecharts.1/@states.0" target="//@statecharts.1/@states.1"/>
-    <transitions name="State2_to_State3" source="//@statecharts.1/@states.1" target="//@statecharts.1/@states.2">
-      <triggerMessage name="okaaay"/>
-    </transitions>
+    <transitions name="State2_to_State3" source="//@statecharts.1/@states.1" target="//@statecharts.1/@states.2"/>
     <transitions name="State3_to_State1" source="//@statecharts.1/@states.2" target="//@statecharts.1/@states.0"/>
     <states name="State1" incomingTransitions="//@statecharts.1/@transitions.2" outgoingTransitions="//@statecharts.1/@transitions.0"/>
     <states name="State2" incomingTransitions="//@statecharts.1/@transitions.0" outgoingTransitions="//@statecharts.1/@transitions.1"/>
     <states name="State3" incomingTransitions="//@statecharts.1/@transitions.1" outgoingTransitions="//@statecharts.1/@transitions.2"/>
   </statecharts>
-  <protocol>
+  <protocol name="prot1" ports="//@statecharts.0/@behaviouralElement //@statecharts.1/@behaviouralElement">
     <connector endpoints="//@statecharts.0/@behaviouralElement //@statecharts.1/@behaviouralElement"/>
   </protocol>
-  <messageTypeRepo/>
+  <messageTypeRepo>
+    <messageTypes name="type2"/>
+  </messageTypeRepo>
 </rtsc:System>
