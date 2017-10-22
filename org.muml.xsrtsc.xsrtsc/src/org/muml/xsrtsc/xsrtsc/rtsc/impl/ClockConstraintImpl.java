@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.muml.udbm.Federation;
+
 import org.muml.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint;
 import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
@@ -142,7 +144,7 @@ public class ClockConstraintImpl extends EObjectImpl implements ClockConstraint 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean evaluate() {
+	public boolean evaluate(Federation checkFederation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -153,7 +155,7 @@ public class ClockConstraintImpl extends EObjectImpl implements ClockConstraint 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void apply() {
+	public void apply(Federation federation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

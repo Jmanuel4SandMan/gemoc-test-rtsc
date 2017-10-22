@@ -2,8 +2,6 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
-import java.lang.Iterable;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,6 +34,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
  * <ul>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageBufferImpl#getPort <em>Port</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageBufferImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.MessageBufferImpl#getAllMessages <em>All Messages</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +49,16 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 	 * @ordered
 	 */
 	protected EList<MessageType> types;
+
+	/**
+	 * The cached value of the '{@link #getAllMessages() <em>All Messages</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllMessages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Message> allMessages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,10 +137,11 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Message getMessage(MessageType type) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<Message> getAllMessages() {
+		if (allMessages == null) {
+			allMessages = new EObjectResolvingEList<Message>(Message.class, this, RtscPackage.MESSAGE_BUFFER__ALL_MESSAGES);
+		}
+		return allMessages;
 	}
 
 	/**
@@ -139,7 +149,7 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Iterable getAllMessages() {
+	public Message getMessage(MessageType type) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -223,6 +233,8 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 				return getPort();
 			case RtscPackage.MESSAGE_BUFFER__TYPES:
 				return getTypes();
+			case RtscPackage.MESSAGE_BUFFER__ALL_MESSAGES:
+				return getAllMessages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,6 +255,10 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 				getTypes().clear();
 				getTypes().addAll((Collection<? extends MessageType>)newValue);
 				return;
+			case RtscPackage.MESSAGE_BUFFER__ALL_MESSAGES:
+				getAllMessages().clear();
+				getAllMessages().addAll((Collection<? extends Message>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -261,6 +277,9 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 			case RtscPackage.MESSAGE_BUFFER__TYPES:
 				getTypes().clear();
 				return;
+			case RtscPackage.MESSAGE_BUFFER__ALL_MESSAGES:
+				getAllMessages().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -277,6 +296,8 @@ public class MessageBufferImpl extends EObjectImpl implements MessageBuffer {
 				return getPort() != null;
 			case RtscPackage.MESSAGE_BUFFER__TYPES:
 				return types != null && !types.isEmpty();
+			case RtscPackage.MESSAGE_BUFFER__ALL_MESSAGES:
+				return allMessages != null && !allMessages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

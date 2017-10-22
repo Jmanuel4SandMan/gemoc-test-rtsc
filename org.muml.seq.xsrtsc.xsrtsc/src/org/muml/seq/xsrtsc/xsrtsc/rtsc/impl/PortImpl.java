@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Behavior;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Connector;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageBuffer;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Port;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
@@ -25,6 +26,7 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
  * <ul>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.PortImpl#getBehaviour <em>Behaviour</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.PortImpl#getIncomingBuffer <em>Incoming Buffer</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.PortImpl#getConnector <em>Connector</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +51,16 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 	 * @ordered
 	 */
 	protected MessageBuffer incomingBuffer;
+
+	/**
+	 * The cached value of the '{@link #getConnector() <em>Connector</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnector()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connector connector;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,6 +167,66 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Connector getConnector() {
+		if (connector != null && connector.eIsProxy()) {
+			InternalEObject oldConnector = (InternalEObject)connector;
+			connector = (Connector)eResolveProxy(oldConnector);
+			if (connector != oldConnector) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RtscPackage.PORT__CONNECTOR, oldConnector, connector));
+			}
+		}
+		return connector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connector basicGetConnector() {
+		return connector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConnector(Connector newConnector, NotificationChain msgs) {
+		Connector oldConnector = connector;
+		connector = newConnector;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RtscPackage.PORT__CONNECTOR, oldConnector, newConnector);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConnector(Connector newConnector) {
+		if (newConnector != connector) {
+			NotificationChain msgs = null;
+			if (connector != null)
+				msgs = ((InternalEObject)connector).eInverseRemove(this, RtscPackage.CONNECTOR__ENDPOINTS, Connector.class, msgs);
+			if (newConnector != null)
+				msgs = ((InternalEObject)newConnector).eInverseAdd(this, RtscPackage.CONNECTOR__ENDPOINTS, Connector.class, msgs);
+			msgs = basicSetConnector(newConnector, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.PORT__CONNECTOR, newConnector, newConnector));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -162,6 +234,10 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 				if (incomingBuffer != null)
 					msgs = ((InternalEObject)incomingBuffer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RtscPackage.PORT__INCOMING_BUFFER, null, msgs);
 				return basicSetIncomingBuffer((MessageBuffer)otherEnd, msgs);
+			case RtscPackage.PORT__CONNECTOR:
+				if (connector != null)
+					msgs = ((InternalEObject)connector).eInverseRemove(this, RtscPackage.CONNECTOR__ENDPOINTS, Connector.class, msgs);
+				return basicSetConnector((Connector)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -176,6 +252,8 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 		switch (featureID) {
 			case RtscPackage.PORT__INCOMING_BUFFER:
 				return basicSetIncomingBuffer(null, msgs);
+			case RtscPackage.PORT__CONNECTOR:
+				return basicSetConnector(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -193,6 +271,9 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 				return basicGetBehaviour();
 			case RtscPackage.PORT__INCOMING_BUFFER:
 				return getIncomingBuffer();
+			case RtscPackage.PORT__CONNECTOR:
+				if (resolve) return getConnector();
+				return basicGetConnector();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,6 +291,9 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 				return;
 			case RtscPackage.PORT__INCOMING_BUFFER:
 				setIncomingBuffer((MessageBuffer)newValue);
+				return;
+			case RtscPackage.PORT__CONNECTOR:
+				setConnector((Connector)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,6 +313,9 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 			case RtscPackage.PORT__INCOMING_BUFFER:
 				setIncomingBuffer((MessageBuffer)null);
 				return;
+			case RtscPackage.PORT__CONNECTOR:
+				setConnector((Connector)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -245,6 +332,8 @@ public class PortImpl extends BehavioralElementImpl implements Port {
 				return behaviour != null;
 			case RtscPackage.PORT__INCOMING_BUFFER:
 				return incomingBuffer != null;
+			case RtscPackage.PORT__CONNECTOR:
+				return connector != null;
 		}
 		return super.eIsSet(featureID);
 	}

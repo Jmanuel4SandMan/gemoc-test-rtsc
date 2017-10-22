@@ -553,13 +553,22 @@ public interface RtscPackage extends EPackage {
 	int VARIABLE__STATECHART = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__INITIAL_VALUE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Runtime Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__RUNTIME_VALUE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int VARIABLE__RUNTIME_VALUE = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -568,7 +577,7 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int VARIABLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.ClockImpl <em>Clock</em>}' class.
@@ -599,13 +608,22 @@ public interface RtscPackage extends EPackage {
 	int CLOCK__STATECHART = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>UClock</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOCK__UCLOCK = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Clock</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOCK_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CLOCK_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.PortImpl <em>Port</em>}' class.
@@ -691,13 +709,22 @@ public interface RtscPackage extends EPackage {
 	int MESSAGE_BUFFER__TYPES = 1;
 
 	/**
+	 * The feature id for the '<em><b>All Messages</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_BUFFER__ALL_MESSAGES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Message Buffer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_BUFFER_FEATURE_COUNT = 2;
+	int MESSAGE_BUFFER_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.ConnectorImpl <em>Connector</em>}' class.
@@ -904,14 +931,24 @@ public interface RtscPackage extends EPackage {
 	int MESSAGE_TYPE_REPOSITORY_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '<em>Iterable</em>' data type.
+	 * The meta object id for the '<em>Federation</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.Iterable
-	 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getIterable()
+	 * @see org.muml.udbm.Federation
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getFederation()
 	 * @generated
 	 */
-	int ITERABLE = 19;
+	int FEDERATION = 19;
+
+	/**
+	 * The meta object id for the '<em>UDBM Clock</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.udbm.UDBMClock
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getUDBMClock()
+	 * @generated
+	 */
+	int UDBM_CLOCK = 20;
 
 
 	/**
@@ -1323,6 +1360,17 @@ public interface RtscPackage extends EPackage {
 	EReference getVariable_Statechart();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Value</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Variable#getInitialValue()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_InitialValue();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getRuntimeValue <em>Runtime Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1353,6 +1401,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClock_Statechart();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.xsrtsc.xsrtsc.rtsc.Clock#getUClock <em>UClock</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>UClock</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Clock#getUClock()
+	 * @see #getClock()
+	 * @generated
+	 */
+	EAttribute getClock_UClock();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.xsrtsc.xsrtsc.rtsc.Port <em>Port</em>}'.
@@ -1417,6 +1476,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageBuffer_Types();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getAllMessages <em>All Messages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Messages</em>'.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getAllMessages()
+	 * @see #getMessageBuffer()
+	 * @generated
+	 */
+	EReference getMessageBuffer_AllMessages();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.xsrtsc.xsrtsc.rtsc.Connector <em>Connector</em>}'.
@@ -1567,15 +1637,26 @@ public interface RtscPackage extends EPackage {
 	EReference getMessageTypeRepository_MessageTypes();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.Iterable <em>Iterable</em>}'.
+	 * Returns the meta object for data type '{@link org.muml.udbm.Federation <em>Federation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Iterable</em>'.
-	 * @see java.lang.Iterable
-	 * @model instanceClass="java.lang.Iterable"
+	 * @return the meta object for data type '<em>Federation</em>'.
+	 * @see org.muml.udbm.Federation
+	 * @model instanceClass="org.muml.udbm.Federation"
 	 * @generated
 	 */
-	EDataType getIterable();
+	EDataType getFederation();
+
+	/**
+	 * Returns the meta object for data type '{@link org.muml.udbm.UDBMClock <em>UDBM Clock</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>UDBM Clock</em>'.
+	 * @see org.muml.udbm.UDBMClock
+	 * @model instanceClass="org.muml.udbm.UDBMClock"
+	 * @generated
+	 */
+	EDataType getUDBMClock();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1924,6 +2005,14 @@ public interface RtscPackage extends EPackage {
 		EReference VARIABLE__STATECHART = eINSTANCE.getVariable_Statechart();
 
 		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__INITIAL_VALUE = eINSTANCE.getVariable_InitialValue();
+
+		/**
 		 * The meta object literal for the '<em><b>Runtime Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1948,6 +2037,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLOCK__STATECHART = eINSTANCE.getClock_Statechart();
+
+		/**
+		 * The meta object literal for the '<em><b>UClock</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOCK__UCLOCK = eINSTANCE.getClock_UClock();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.PortImpl <em>Port</em>}' class.
@@ -2000,6 +2097,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_BUFFER__TYPES = eINSTANCE.getMessageBuffer_Types();
+
+		/**
+		 * The meta object literal for the '<em><b>All Messages</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_BUFFER__ALL_MESSAGES = eINSTANCE.getMessageBuffer_AllMessages();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.xsrtsc.xsrtsc.rtsc.impl.ConnectorImpl <em>Connector</em>}' class.
@@ -2126,14 +2231,24 @@ public interface RtscPackage extends EPackage {
 		EReference MESSAGE_TYPE_REPOSITORY__MESSAGE_TYPES = eINSTANCE.getMessageTypeRepository_MessageTypes();
 
 		/**
-		 * The meta object literal for the '<em>Iterable</em>' data type.
+		 * The meta object literal for the '<em>Federation</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.Iterable
-		 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getIterable()
+		 * @see org.muml.udbm.Federation
+		 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getFederation()
 		 * @generated
 		 */
-		EDataType ITERABLE = eINSTANCE.getIterable();
+		EDataType FEDERATION = eINSTANCE.getFederation();
+
+		/**
+		 * The meta object literal for the '<em>UDBM Clock</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.udbm.UDBMClock
+		 * @see org.muml.xsrtsc.xsrtsc.rtsc.impl.RtscPackageImpl#getUDBMClock()
+		 * @generated
+		 */
+		EDataType UDBM_CLOCK = eINSTANCE.getUDBMClock();
 
 	}
 

@@ -2,8 +2,6 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
-import java.lang.Iterable;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -12,6 +10,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.muml.udbm.Federation;
+import org.muml.udbm.UDBMClock;
 
 import org.muml.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint;
@@ -104,8 +105,10 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case RtscPackage.ITERABLE:
-				return createIterableFromString(eDataType, initialValue);
+			case RtscPackage.FEDERATION:
+				return createFederationFromString(eDataType, initialValue);
+			case RtscPackage.UDBM_CLOCK:
+				return createUDBMClockFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -119,8 +122,10 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case RtscPackage.ITERABLE:
-				return convertIterableToString(eDataType, instanceValue);
+			case RtscPackage.FEDERATION:
+				return convertFederationToString(eDataType, instanceValue);
+			case RtscPackage.UDBM_CLOCK:
+				return convertUDBMClockToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -291,8 +296,8 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Iterable createIterableFromString(EDataType eDataType, String initialValue) {
-		return (Iterable)super.createFromString(eDataType, initialValue);
+	public Federation createFederationFromString(EDataType eDataType, String initialValue) {
+		return (Federation)super.createFromString(eDataType, initialValue);
 	}
 
 	/**
@@ -300,7 +305,25 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertIterableToString(EDataType eDataType, Object instanceValue) {
+	public String convertFederationToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UDBMClock createUDBMClockFromString(EDataType eDataType, String initialValue) {
+		return (UDBMClock)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUDBMClockToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

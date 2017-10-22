@@ -26,6 +26,7 @@ public interface Connector extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Endpoints</b></em>' reference list.
 	 * The list contents are of type {@link org.muml.rtsc.Port}.
+	 * It is bidirectional and its opposite is '{@link org.muml.rtsc.Port#getConnector <em>Connector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Endpoints</em>' reference list isn't clear,
@@ -34,7 +35,8 @@ public interface Connector extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Endpoints</em>' reference list.
 	 * @see org.muml.rtsc.RtscPackage#getConnector_Endpoints()
-	 * @model lower="2" upper="2"
+	 * @see org.muml.rtsc.Port#getConnector
+	 * @model opposite="connector" lower="2" upper="2"
 	 * @generated
 	 */
 	EList<Port> getEndpoints();

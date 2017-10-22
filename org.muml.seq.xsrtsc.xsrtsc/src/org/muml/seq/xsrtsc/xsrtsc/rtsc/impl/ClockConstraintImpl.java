@@ -14,6 +14,8 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockConstraint;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
 
+import org.muml.udbm.Federation;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Clock Constraint</b></em>'.
@@ -142,7 +144,7 @@ public class ClockConstraintImpl extends EObjectImpl implements ClockConstraint 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean evaluate() {
+	public boolean evaluate(Federation checkFederation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -153,7 +155,7 @@ public class ClockConstraintImpl extends EObjectImpl implements ClockConstraint 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void apply() {
+	public void apply(Federation federation) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

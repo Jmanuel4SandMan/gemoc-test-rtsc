@@ -27,36 +27,84 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GdvxcLWCEeev3pbaDttLkQ" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_GdvxcbWCEeev3pbaDttLkQ" type="Sirius" element="_Gc-8cLWCEeev3pbaDttLkQ" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_GeMdYLWCEeev3pbaDttLkQ" type="2002" element="_Gc-8c7WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GezhYLWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Ge1WkLWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_GeMdYLWCEeev3pbaDttLkQ" type="2003" element="_3_gdILdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GezhYLWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_Ge1WkLWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4DgMULdsEeedmsvR2uP_tQ" type="3010" element="_4B_wcLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4DgMUbdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4DgMUrdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_Ge1WkbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Ge1WkrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GeMdYbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GeMdYrWCEeev3pbaDttLkQ" x="330" y="132"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GeMdYrWCEeev3pbaDttLkQ" x="360" y="48" width="177" height="123"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Ge_uoLWCEeev3pbaDttLkQ" type="2002" element="_Gc-8dbWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GfAVsLWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_GfA8wLWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_Ge_uoLWCEeev3pbaDttLkQ" type="2003" element="_4BxuALdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GfAVsLWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GfA8wLWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4DnhELdsEeedmsvR2uP_tQ" type="3010" element="_4CJhcLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4DnhEbdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4DnhErdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GfA8wbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfA8wrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Ge_uobWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ge_uorWCEeev3pbaDttLkQ" x="552"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ge_uorWCEeev3pbaDttLkQ" x="768" y="60" width="87" height="69"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_GfA8w7WCEeev3pbaDttLkQ" type="2002" element="_Gc-8d7WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GfBj0LWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_GfBj0bWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_GfA8w7WCEeev3pbaDttLkQ" type="2003" element="_4B0KQLdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GfBj0LWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GfBj0bWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4DovMLdsEeedmsvR2uP_tQ" type="3010" element="_4CKvkLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4DovMbdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4DovMrdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GfBj0rWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfBj07WCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GfA8xLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfA8xbWCEeev3pbaDttLkQ" x="552" y="258"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfA8xbWCEeev3pbaDttLkQ" x="552" y="270" width="87" height="72"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_GfCK4LWCEeev3pbaDttLkQ" type="2003" element="_Gc-8ebWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GfCx8LWCEeev3pbaDttLkQ" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_GfDZALWCEeev3pbaDttLkQ" type="7004">
+        <children xmi:type="notation:Node" xmi:id="_GfCK4LWCEeev3pbaDttLkQ" type="2002" element="_g1TtgLWiEeeQBueYQqz3jA">
+          <children xmi:type="notation:Node" xmi:id="_GfCx8LWCEeev3pbaDttLkQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_GfDZALWCEeev3pbaDttLkQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_g3Vt0LWiEeeQBueYQqz3jA" type="3009" element="_g1kzQLWiEeeQBueYQqz3jA">
+              <children xmi:type="notation:Node" xmi:id="_g3e3wLWiEeeQBueYQqz3jA" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_g3gF4LWiEeeQBueYQqz3jA" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_l_zccLWiEeeQBueYQqz3jA" type="3010" element="_l91tkLWiEeeQBueYQqz3jA">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_l_zccbWiEeeQBueYQqz3jA" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_l_zccrWiEeeQBueYQqz3jA"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_OAYZcLWjEeevZL3rTfnHvg" type="3010" element="_N__-8LWjEeevZL3rTfnHvg">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_OAYZcbWjEeevZL3rTfnHvg" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_OAYZcrWjEeevZL3rTfnHvg"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_g3gF4bWiEeeQBueYQqz3jA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_g3gF4rWiEeeQBueYQqz3jA"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_g3gF47WiEeeQBueYQqz3jA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_g3Vt0bWiEeeQBueYQqz3jA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g3Vt0rWiEeeQBueYQqz3jA" width="148" height="62"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_g3mMgLWiEeeQBueYQqz3jA" type="3009" element="_g1xnkLWiEeeQBueYQqz3jA">
+              <children xmi:type="notation:Node" xmi:id="_g3mMg7WiEeeQBueYQqz3jA" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_g3mzkLWiEeeQBueYQqz3jA" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_F9PM8LWkEeeaVbUWc0L6Tw" type="3010" element="_F7HGALWkEeeaVbUWc0L6Tw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_F9PM8bWkEeeaVbUWc0L6Tw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_F9PM8rWkEeeaVbUWc0L6Tw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_GyXeILWkEeeaVbUWc0L6Tw" type="3010" element="_GxvzELWkEeeaVbUWc0L6Tw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_GyXeIbWkEeeaVbUWc0L6Tw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_GyXeIrWkEeeaVbUWc0L6Tw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_g3mzkbWiEeeQBueYQqz3jA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_g3mzkrWiEeeQBueYQqz3jA"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_g3mzk7WiEeeQBueYQqz3jA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_g3mMgbWiEeeQBueYQqz3jA" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g3mMgrWiEeeQBueYQqz3jA" y="62" width="148" height="63"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GfDZAbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfDZArWCEeev3pbaDttLkQ"/>
           </children>
@@ -74,114 +122,85 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_GfI4kLWCEeev3pbaDttLkQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_GfGcUbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfGcUrWCEeev3pbaDttLkQ"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfGcUrWCEeev3pbaDttLkQ" y="40"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_GfJfoLWCEeev3pbaDttLkQ" type="3009" element="_Gc-8f7WCEeev3pbaDttLkQ">
               <children xmi:type="notation:Node" xmi:id="_GfKGsLWCEeev3pbaDttLkQ" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_GfKGsbWCEeev3pbaDttLkQ" type="7003">
-                <children xmi:type="notation:Node" xmi:id="_GfLU0LWCEeev3pbaDttLkQ" type="3010" element="_Gc-8gbWCEeev3pbaDttLkQ">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_GfLU0bWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_GfLU0rWCEeev3pbaDttLkQ"/>
+                <children xmi:type="notation:Node" xmi:id="_eqQwULdlEeeRzpSvXHUdVw" type="3010" element="_epQqwLdlEeeRzpSvXHUdVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_eqQwUbdlEeeRzpSvXHUdVw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_eqQwUrdlEeeRzpSvXHUdVw"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_GfKGsrWCEeev3pbaDttLkQ"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_GfKGs7WCEeev3pbaDttLkQ"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_GfKGtLWCEeev3pbaDttLkQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_GfJfobWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfJforWCEeev3pbaDttLkQ" y="40"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfJforWCEeev3pbaDttLkQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GfEnIrWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfEnI7WCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GfEAEbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfEAErWCEeev3pbaDttLkQ" x="168"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfEAErWCEeev3pbaDttLkQ" x="192"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_GdvxcrWCEeev3pbaDttLkQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_GfpO4LWCEeev3pbaDttLkQ" type="4001" element="_Gc-8g7WCEeev3pbaDttLkQ" source="_GeMdYLWCEeev3pbaDttLkQ" target="_Ge_uoLWCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GfrEELWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfrEEbWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfrEEbWCEeev3pbaDttLkQ" x="13" y="-41"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GfuucLWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfuucbWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfuucbWCEeev3pbaDttLkQ" x="-1" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Gfv8kLWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gfv8kbWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gfv8kbWCEeev3pbaDttLkQ" x="2" y="3"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GfpO4bWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GfpO4rWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GfpO47WCEeev3pbaDttLkQ" points="[0, 0, -195, 60]$[195, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssLWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssbWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GfpO47WCEeev3pbaDttLkQ" points="[44, 11, -252, -41]$[277, 48, -19, -4]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssLWCEeev3pbaDttLkQ" id="(0.7514285714285714,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssbWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.5970149253731343)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GgFTwLWCEeev3pbaDttLkQ" type="4001" element="_Gc-8hrWCEeev3pbaDttLkQ" source="_Ge_uoLWCEeev3pbaDttLkQ" target="_GfA8w7WCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GgF60LWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF60bWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF60bWCEeev3pbaDttLkQ" x="-18" y="-50"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgF60rWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF607WCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF607WCEeev3pbaDttLkQ" x="4" y="6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgGh4LWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgGh4bWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgGh4bWCEeev3pbaDttLkQ" x="10" y="5"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GgFTwbWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GgFTwrWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgFTw7WCEeev3pbaDttLkQ" points="[0, 0, 0, -190]$[0, 190, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8LWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8bWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgFTw7WCEeev3pbaDttLkQ" points="[-19, 18, 197, -182]$[-179, 170, 37, -30]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8LWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.5970149253731343)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8bWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.42857142857142855)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GgHI8rWCEeev3pbaDttLkQ" type="4001" element="_Gc-8ibWCEeev3pbaDttLkQ" source="_GfA8w7WCEeev3pbaDttLkQ" target="_GeMdYLWCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GgHwALWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwAbWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwAbWCEeev3pbaDttLkQ" x="7" y="-56"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgHwArWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwA7WCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwA7WCEeev3pbaDttLkQ" x="8" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgHwBLWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwBbWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwBbWCEeev3pbaDttLkQ" x="11" y="9"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GgHI87WCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GgHI9LWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgHI9bWCEeev3pbaDttLkQ" points="[0, 0, 195, 60]$[-195, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXELWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXEbWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgHI9bWCEeev3pbaDttLkQ" points="[-19, -19, 61, 103]$[-149, -149, -69, -27]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXELWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.42857142857142855)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXEbWCEeev3pbaDttLkQ" id="(0.7514285714285714,1.0743801652892562)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Gc-8c7WCEeev3pbaDttLkQ" name="State1" outgoingEdges="_Gc-8g7WCEeev3pbaDttLkQ" incomingEdges="_Gc-8ibWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Gc-8dLWCEeev3pbaDttLkQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Gc-8dbWCEeev3pbaDttLkQ" name="State2" outgoingEdges="_Gc-8hrWCEeev3pbaDttLkQ" incomingEdges="_Gc-8g7WCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Gc-8drWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Gc-8d7WCEeev3pbaDttLkQ" name="State3" outgoingEdges="_Gc-8ibWCEeev3pbaDttLkQ" incomingEdges="_Gc-8hrWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Gc-8eLWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Gc-8ebWCEeev3pbaDttLkQ" name="Overview: rtsc1">
-      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
-      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Gc-8erWCEeev3pbaDttLkQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Gc-8e7WCEeev3pbaDttLkQ" name="MessageBuffer" childrenPresentation="VerticalStack">
       <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
       <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Gc-8fLWCEeev3pbaDttLkQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@style"/>
       </ownedStyle>
@@ -201,17 +220,17 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Gc-8gbWCEeev3pbaDttLkQ" name="type2">
-          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Gc-8grWCEeev3pbaDttLkQ" labelPosition="node">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_epQqwLdlEeeRzpSvXHUdVw" name="okayy">
+          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.1"/>
+          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.1"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_epQqwbdlEeeRzpSvXHUdVw" labelPosition="node">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8g7WCEeev3pbaDttLkQ" name="State1_to_State2&#xA;" sourceNode="_Gc-8c7WCEeev3pbaDttLkQ" targetNode="_Gc-8dbWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8g7WCEeev3pbaDttLkQ" name="State1_to_State2&#xA;&#xA;[c0>=5]&#xA;/&#xA;whaat!&#xA;" sourceNode="_3_gdILdsEeedmsvR2uP_tQ" targetNode="_4BxuALdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.0"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Gc-8hLWCEeev3pbaDttLkQ" size="2">
@@ -220,7 +239,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8hrWCEeev3pbaDttLkQ" name="State2_to_State3&#xA;" sourceNode="_Gc-8dbWCEeev3pbaDttLkQ" targetNode="_Gc-8d7WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8hrWCEeev3pbaDttLkQ" name="State2_to_State3&#xA;&#xA;okayy?" sourceNode="_4BxuALdsEeedmsvR2uP_tQ" targetNode="_4B0KQLdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.1"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Gc-8h7WCEeev3pbaDttLkQ" size="2">
@@ -229,7 +248,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8ibWCEeev3pbaDttLkQ" name="State3_to_State1&#xA;" sourceNode="_Gc-8d7WCEeev3pbaDttLkQ" targetNode="_Gc-8c7WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Gc-8ibWCEeev3pbaDttLkQ" name="State3_to_State1&#xA;&#xA;/&#xA;yeaeeah!&#xA;" sourceNode="_4B0KQLdsEeedmsvR2uP_tQ" targetNode="_3_gdILdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.2"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Gc-8irWCEeev3pbaDttLkQ" size="2">
@@ -237,6 +256,119 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Gc-8i7WCEeev3pbaDttLkQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_g1TtgLWiEeeQBueYQqz3jA" name="Overview: lil" childrenPresentation="VerticalStack">
+      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_g1abMLWiEeeQBueYQqz3jA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_g1kzQLWiEeeQBueYQqz3jA" name="Clocks">
+        <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+        <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_g1laULWiEeeQBueYQqz3jA" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_l91tkLWiEeeQBueYQqz3jA" name="c0">
+          <target xmi:type="rtsc:Clock" href="My.rtsc#//@statecharts.0/@clocks.0"/>
+          <semanticElements xmi:type="rtsc:Clock" href="My.rtsc#//@statecharts.0/@clocks.0"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_l92UoLWiEeeQBueYQqz3jA" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@subNodeMappings[name='Clock']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@subNodeMappings[name='Clock']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_N__-8LWjEeevZL3rTfnHvg" name="c2">
+          <target xmi:type="rtsc:Clock" href="My.rtsc#//@statecharts.0/@clocks.1"/>
+          <semanticElements xmi:type="rtsc:Clock" href="My.rtsc#//@statecharts.0/@clocks.1"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_N__-8bWjEeevZL3rTfnHvg" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@subNodeMappings[name='Clock']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@subNodeMappings[name='Clock']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_g1xnkLWiEeeQBueYQqz3jA" name="Variables">
+        <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+        <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_g1yOoLWiEeeQBueYQqz3jA" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_F7HGALWkEeeaVbUWc0L6Tw" name="v1 := get">
+          <target xmi:type="rtsc:Variable" href="My.rtsc#//@statecharts.0/@variables.0"/>
+          <semanticElements xmi:type="rtsc:Variable" href="My.rtsc#//@statecharts.0/@variables.0"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_F7JiQLWkEeeaVbUWc0L6Tw" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@subNodeMappings[name='Variable']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@subNodeMappings[name='Variable']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GxvzELWkEeeaVbUWc0L6Tw" name="v2 := crunk">
+          <target xmi:type="rtsc:Variable" href="My.rtsc#//@statecharts.0/@variables.1"/>
+          <semanticElements xmi:type="rtsc:Variable" href="My.rtsc#//@statecharts.0/@variables.1"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_GxwaILWkEeeaVbUWc0L6Tw" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@subNodeMappings[name='Variable']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@subNodeMappings[name='Variable']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3_gdILdsEeedmsvR2uP_tQ" name="State1" outgoingEdges="_Gc-8g7WCEeev3pbaDttLkQ" incomingEdges="_Gc-8ibWCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4BuDoLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4B_wcLdsEeedmsvR2uP_tQ" name="Entry: {&#xA;c0.reset();&#xA;}">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4CITULdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4BxuALdsEeedmsvR2uP_tQ" name="State2" outgoingEdges="_Gc-8hrWCEeev3pbaDttLkQ" incomingEdges="_Gc-8g7WCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4By8ILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4CJhcLdsEeedmsvR2uP_tQ">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.1"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4CKIgLdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4B0KQLdsEeedmsvR2uP_tQ" name="State3" outgoingEdges="_Gc-8ibWCEeev3pbaDttLkQ" incomingEdges="_Gc-8hrWCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4B0xULdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4CKvkLdsEeedmsvR2uP_tQ">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4CLWoLdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_Gc-8jLWCEeev3pbaDttLkQ"/>
@@ -250,36 +382,68 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GhXGILWCEeev3pbaDttLkQ" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_GhXtMLWCEeev3pbaDttLkQ" type="Sirius" element="_GhWfELWCEeev3pbaDttLkQ" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_GhYUQLWCEeev3pbaDttLkQ" type="2002" element="_GhWfE7WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GhY7ULWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_GhZiYLWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_GhYUQLWCEeev3pbaDttLkQ" type="2003" element="_4MGusLdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GhY7ULWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GhZiYLWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4Mmd8LdsEeedmsvR2uP_tQ" type="3010" element="_4MMOQLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4Mmd8bdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4Mmd8rdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GhZiYbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GhZiYrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GhYUQbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhYUQrWCEeev3pbaDttLkQ" x="330" y="132"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhYUQrWCEeev3pbaDttLkQ" x="336" y="7" width="81" height="85"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_GhZiY7WCEeev3pbaDttLkQ" type="2002" element="_GhWfFbWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GhaJcLWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_GhawgLWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_GhZiY7WCEeev3pbaDttLkQ" type="2003" element="_4MIj4LdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GhaJcLWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GhawgLWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4MnFALdsEeedmsvR2uP_tQ" type="3010" element="_4MNcYLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4MnFAbdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4MnFArdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GhawgbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GhawgrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GhZiZLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhZiZbWCEeev3pbaDttLkQ" x="552"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhZiZbWCEeev3pbaDttLkQ" x="702" y="4" width="99" height="92"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Ghawg7WCEeev3pbaDttLkQ" type="2002" element="_GhWfF7WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GhbXkLWCEeev3pbaDttLkQ" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Ghb-oLWCEeev3pbaDttLkQ" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_Ghawg7WCEeev3pbaDttLkQ" type="2003" element="_4MKZELdsEeedmsvR2uP_tQ">
+          <children xmi:type="notation:Node" xmi:id="_GhbXkLWCEeev3pbaDttLkQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_Ghb-oLWCEeev3pbaDttLkQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_4MnFA7dsEeedmsvR2uP_tQ" type="3010" element="_4MOqgLdsEeedmsvR2uP_tQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_4MnFBLdsEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_4MnFBbdsEeedmsvR2uP_tQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_Ghb-obWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Ghb-orWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GhawhLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhawhbWCEeev3pbaDttLkQ" x="552" y="258"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhawhbWCEeev3pbaDttLkQ" x="516" y="204" width="117" height="93"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Ghb-o7WCEeev3pbaDttLkQ" type="2003" element="_GhWfGbWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_GhdMwLWCEeev3pbaDttLkQ" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_GhdMwbWCEeev3pbaDttLkQ" type="7004">
+        <children xmi:type="notation:Node" xmi:id="_Ghb-o7WCEeev3pbaDttLkQ" type="2002" element="_81snULZsEeemJ4Cy8s0DYw">
+          <children xmi:type="notation:Node" xmi:id="_GhdMwLWCEeev3pbaDttLkQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_GhdMwbWCEeev3pbaDttLkQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_811KMLZsEeemJ4Cy8s0DYw" type="3009" element="_81t1cLZsEeemJ4Cy8s0DYw">
+              <children xmi:type="notation:Node" xmi:id="_811KM7ZsEeemJ4Cy8s0DYw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_811KNLZsEeemJ4Cy8s0DYw" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_811KNbZsEeemJ4Cy8s0DYw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_811KNrZsEeemJ4Cy8s0DYw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_811KN7ZsEeemJ4Cy8s0DYw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_811KMbZsEeemJ4Cy8s0DYw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_811KMrZsEeemJ4Cy8s0DYw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_811xQLZsEeemJ4Cy8s0DYw" type="3009" element="_81t1crZsEeemJ4Cy8s0DYw">
+              <children xmi:type="notation:Node" xmi:id="_811xQ7ZsEeemJ4Cy8s0DYw" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_811xRLZsEeemJ4Cy8s0DYw" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_811xRbZsEeemJ4Cy8s0DYw"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_811xRrZsEeemJ4Cy8s0DYw"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_811xR7ZsEeemJ4Cy8s0DYw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_811xQbZsEeemJ4Cy8s0DYw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_811xQrZsEeemJ4Cy8s0DYw" y="40"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_GhdMwrWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GhdMw7WCEeev3pbaDttLkQ"/>
           </children>
@@ -297,21 +461,25 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_GhgQE7WCEeev3pbaDttLkQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_GhfB8bWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhfB8rWCEeev3pbaDttLkQ"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhfB8rWCEeev3pbaDttLkQ" y="40"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Ghg3ILWCEeev3pbaDttLkQ" type="3009" element="_GhWfH7WCEeev3pbaDttLkQ">
               <children xmi:type="notation:Node" xmi:id="_GhheMLWCEeev3pbaDttLkQ" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_GhheMbWCEeev3pbaDttLkQ" type="7003">
-                <children xmi:type="notation:Node" xmi:id="_GhiFQLWCEeev3pbaDttLkQ" type="3010" element="_GhWfIbWCEeev3pbaDttLkQ">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_GhiFQbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_GhiFQrWCEeev3pbaDttLkQ"/>
+                <children xmi:type="notation:Node" xmi:id="_gyJC0LdlEeeRzpSvXHUdVw" type="3010" element="_gw_zULdlEeeRzpSvXHUdVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_gyJC0bdlEeeRzpSvXHUdVw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_gyJC0rdlEeeRzpSvXHUdVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_BdoH8LduEeedmsvR2uP_tQ" type="3010" element="_Bb63wLduEeedmsvR2uP_tQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_BdoH8bduEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_BdoH8rduEeedmsvR2uP_tQ"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_GhheMrWCEeev3pbaDttLkQ"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_GhheM7WCEeev3pbaDttLkQ"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_GhheNLWCEeev3pbaDttLkQ"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Ghg3IbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghg3IrWCEeev3pbaDttLkQ" y="40"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghg3IrWCEeev3pbaDttLkQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_Ghea4bWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Ghea4rWCEeev3pbaDttLkQ"/>
@@ -322,89 +490,54 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_GhXtMbWCEeev3pbaDttLkQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_GhjTYLWCEeev3pbaDttLkQ" type="4001" element="_GhWfI7WCEeev3pbaDttLkQ" source="_GhYUQLWCEeev3pbaDttLkQ" target="_GhZiY7WCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_Ghj6cLWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6cbWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6cbWCEeev3pbaDttLkQ" x="-5" y="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghj6crWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6c7WCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6c7WCEeev3pbaDttLkQ" x="9" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghj6dLWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6dbWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghj6dbWCEeev3pbaDttLkQ" x="8" y="6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GhjTYbWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GhjTYrWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhjTY7WCEeev3pbaDttLkQ" points="[0, 0, -195, 60]$[195, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhlvoLWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhlvobWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhjTY7WCEeev3pbaDttLkQ" points="[57, 9, -306, -28]$[344, 35, -19, -2]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhlvoLWCEeev3pbaDttLkQ" id="(0.27848101265822783,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhlvobWCEeev3pbaDttLkQ" id="(0.1958762886597938,0.4444444444444444)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GhlvorWCEeev3pbaDttLkQ" type="4001" element="_GhWfJrWCEeev3pbaDttLkQ" source="_GhZiY7WCEeev3pbaDttLkQ" target="_Ghawg7WCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GhmWsLWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhmWsbWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhmWsbWCEeev3pbaDttLkQ" x="-22" y="-41"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghm9wLWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghm9wbWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghm9wbWCEeev3pbaDttLkQ" x="12" y="9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghm9wrWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghm9w7WCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghm9w7WCEeev3pbaDttLkQ" x="7" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Ghlvo7WCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GhlvpLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhlvpbWCEeev3pbaDttLkQ" points="[0, 0, 0, -190]$[0, 190, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ghnk0LWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ghnk0bWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhlvpbWCEeev3pbaDttLkQ" points="[-19, 21, 167, -181]$[-144, 160, 42, -42]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ghnk0LWCEeev3pbaDttLkQ" id="(0.1958762886597938,0.4444444444444444)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ghnk0bWCEeev3pbaDttLkQ" id="(0.16521739130434782,0.46153846153846156)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GhoL4LWCEeev3pbaDttLkQ" type="4001" element="_GhWfKbWCEeev3pbaDttLkQ" source="_Ghawg7WCEeev3pbaDttLkQ" target="_GhYUQLWCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GhoL5LWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhoL5bWCEeev3pbaDttLkQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GhoL5bWCEeev3pbaDttLkQ" x="20" y="-45"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghoy8LWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghoy8bWCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghoy8bWCEeev3pbaDttLkQ" x="9" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ghoy8rWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghoy87WCEeev3pbaDttLkQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ghoy87WCEeev3pbaDttLkQ" x="8" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GhoL4bWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GhoL4rWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhoL47WCEeev3pbaDttLkQ" points="[0, 0, 195, 60]$[-195, -60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhpaALWCEeev3pbaDttLkQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhpaAbWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GhoL47WCEeev3pbaDttLkQ" points="[-19, -20, 158, 173]$[-144, -156, 33, 37]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhpaALWCEeev3pbaDttLkQ" id="(0.16521739130434782,0.46153846153846156)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GhpaAbWCEeev3pbaDttLkQ" id="(0.27848101265822783,0.5542168674698795)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_GhWfE7WCEeev3pbaDttLkQ" name="State1" outgoingEdges="_GhWfI7WCEeev3pbaDttLkQ" incomingEdges="_GhWfKbWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_GhWfFLWCEeev3pbaDttLkQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_GhWfFbWCEeev3pbaDttLkQ" name="State2" outgoingEdges="_GhWfJrWCEeev3pbaDttLkQ" incomingEdges="_GhWfI7WCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_GhWfFrWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_GhWfF7WCEeev3pbaDttLkQ" name="State3" outgoingEdges="_GhWfKbWCEeev3pbaDttLkQ" incomingEdges="_GhWfJrWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
-      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_GhWfGLWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_GhWfGbWCEeev3pbaDttLkQ" name="Overview: rtsc2">
-      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
-      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_GhWfGrWCEeev3pbaDttLkQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_GhWfG7WCEeev3pbaDttLkQ" name="MessageBuffer" childrenPresentation="VerticalStack">
       <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
       <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
@@ -427,17 +560,25 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GhWfIbWCEeev3pbaDttLkQ" name="type2">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_gw_zULdlEeeRzpSvXHUdVw" name="yeaeeah">
+          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.2"/>
+          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.2"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_gw_zUbdlEeeRzpSvXHUdVw" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Bb63wLduEeedmsvR2uP_tQ" name="whaat">
           <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
           <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_GhWfIrWCEeev3pbaDttLkQ" labelPosition="node">
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Bb7e0LduEeedmsvR2uP_tQ" labelPosition="node">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfI7WCEeev3pbaDttLkQ" name="State1_to_State2&#xA;" sourceNode="_GhWfE7WCEeev3pbaDttLkQ" targetNode="_GhWfFbWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfI7WCEeev3pbaDttLkQ" name="State1_to_State2&#xA;&#xA;/&#xA;okayy!&#xA;" sourceNode="_4MGusLdsEeedmsvR2uP_tQ" targetNode="_4MIj4LdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.0"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_GhWfJLWCEeev3pbaDttLkQ" size="2">
@@ -446,7 +587,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfJrWCEeev3pbaDttLkQ" name="State2_to_State3&#xA;" sourceNode="_GhWfFbWCEeev3pbaDttLkQ" targetNode="_GhWfF7WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfJrWCEeev3pbaDttLkQ" name="State2_to_State3&#xA;&#xA;yeaeeah?" sourceNode="_4MIj4LdsEeedmsvR2uP_tQ" targetNode="_4MKZELdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.1"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_GhWfJ7WCEeev3pbaDttLkQ" size="2">
@@ -455,7 +596,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfKbWCEeev3pbaDttLkQ" name="State3_to_State1&#xA;" sourceNode="_GhWfF7WCEeev3pbaDttLkQ" targetNode="_GhWfE7WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_GhWfKbWCEeev3pbaDttLkQ" name="State3_to_State1&#xA;&#xA;whaat?" sourceNode="_4MKZELdsEeedmsvR2uP_tQ" targetNode="_4MGusLdsEeedmsvR2uP_tQ">
       <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.2"/>
       <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.1/@transitions.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_GhWfKrWCEeev3pbaDttLkQ" size="2">
@@ -463,6 +604,87 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_GhWfK7WCEeev3pbaDttLkQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_81snULZsEeemJ4Cy8s0DYw" name="Overview: jon" childrenPresentation="VerticalStack">
+      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_81tOYLZsEeemJ4Cy8s0DYw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_81t1cLZsEeemJ4Cy8s0DYw" name="Clocks">
+        <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+        <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_81t1cbZsEeemJ4Cy8s0DYw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Clocks']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_81t1crZsEeemJ4Cy8s0DYw" name="Variables">
+        <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+        <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_81t1c7ZsEeemJ4Cy8s0DYw" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='Overview']/@subContainerMappings[name='Variables']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4MGusLdsEeedmsvR2uP_tQ" name="State1" outgoingEdges="_GhWfI7WCEeev3pbaDttLkQ" incomingEdges="_GhWfKbWCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MHVwLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4MMOQLdsEeedmsvR2uP_tQ">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.0"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4MM1ULdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4MIj4LdsEeedmsvR2uP_tQ" name="State2" outgoingEdges="_GhWfJrWCEeev3pbaDttLkQ" incomingEdges="_GhWfI7WCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MJK8LdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4MNcYLdsEeedmsvR2uP_tQ">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.1"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4MODcLdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4MKZELdsEeedmsvR2uP_tQ" name="State3" outgoingEdges="_GhWfKbWCEeev3pbaDttLkQ" incomingEdges="_GhWfJrWCEeev3pbaDttLkQ">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MLAILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4MOqgLdsEeedmsvR2uP_tQ">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.1/@states.2"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_4MOqgbdsEeedmsvR2uP_tQ" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_GhWfLLWCEeev3pbaDttLkQ"/>
@@ -476,50 +698,6 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_PVcK4LWCEeev3pbaDttLkQ" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_PVcK4bWCEeev3pbaDttLkQ" type="Sirius" element="_PVa8wbWCEeev3pbaDttLkQ" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_PVcx8LWCEeev3pbaDttLkQ" type="2001" element="_PVa8xLWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVeAELWCEeev3pbaDttLkQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_PVeAEbWCEeev3pbaDttLkQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PViRg7WCEeev3pbaDttLkQ" type="3016" element="_PVbj0LWCEeev3pbaDttLkQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_PViRhLWCEeev3pbaDttLkQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PViRhbWCEeev3pbaDttLkQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_PVcx8bWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVcx8rWCEeev3pbaDttLkQ" x="127" y="300" width="108" height="61"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_PVfOMLWCEeev3pbaDttLkQ" type="2001" element="_PVbj0bWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVfOM7WCEeev3pbaDttLkQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_PVfONLWCEeev3pbaDttLkQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVi4kLWCEeev3pbaDttLkQ" type="3016" element="_PVbj0rWCEeev3pbaDttLkQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_PVi4kbWCEeev3pbaDttLkQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVi4krWCEeev3pbaDttLkQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_PVfOMbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVfOMrWCEeev3pbaDttLkQ" x="330" y="312" width="115" height="55"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_PVf1QLWCEeev3pbaDttLkQ" type="2001" element="_PVbj07WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVf1Q7WCEeev3pbaDttLkQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_PVf1RLWCEeev3pbaDttLkQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVjfoLWCEeev3pbaDttLkQ" type="3017" element="_PVbj1LWCEeev3pbaDttLkQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_PVjfobWCEeev3pbaDttLkQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVjforWCEeev3pbaDttLkQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_PVf1QbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVf1QrWCEeev3pbaDttLkQ" x="156" y="234" width="79" height="30"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_PVf1RbWCEeev3pbaDttLkQ" type="2001" element="_PVbj1bWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVgcULWCEeev3pbaDttLkQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_PVgcUbWCEeev3pbaDttLkQ" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVjfo7WCEeev3pbaDttLkQ" type="3017" element="_PVbj1rWCEeev3pbaDttLkQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_PVjfpLWCEeev3pbaDttLkQ" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVjfpbWCEeev3pbaDttLkQ"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_PVf1RrWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVf1R7WCEeev3pbaDttLkQ" x="336" y="234" width="103" height="30"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_PVgcUrWCEeev3pbaDttLkQ" type="2001" element="_PVbj17WCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_PVgcVbWCEeev3pbaDttLkQ" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_PVgcVrWCEeev3pbaDttLkQ" y="5"/>
@@ -531,12 +709,32 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_PVgcU7WCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVgcVLWCEeev3pbaDttLkQ" x="264" y="41" width="102" height="30"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_PVgcV7WCEeev3pbaDttLkQ" type="2003" element="_PVbj2bWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVhDYLWCEeev3pbaDttLkQ" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_PVhDYbWCEeev3pbaDttLkQ" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_PVkGsLWCEeev3pbaDttLkQ" type="3010" element="_PVbj27WCEeev3pbaDttLkQ">
-              <styles xmi:type="notation:FontStyle" xmi:id="_PVkGsbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_PVkGsrWCEeev3pbaDttLkQ"/>
+        <children xmi:type="notation:Node" xmi:id="_PVgcV7WCEeev3pbaDttLkQ" type="2002" element="_SUJIALdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_PVhDYLWCEeev3pbaDttLkQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_PVhDYbWCEeev3pbaDttLkQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_SWPZwLdAEeenOo6uGFk9xQ" type="3009" element="_SUP1sLdAEeenOo6uGFk9xQ">
+              <children xmi:type="notation:Node" xmi:id="_SWRO8LdAEeenOo6uGFk9xQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_SWR2ALdAEeenOo6uGFk9xQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_eqOUELdlEeeRzpSvXHUdVw" type="3010" element="_eoywsLdlEeeRzpSvXHUdVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_eqOUEbdlEeeRzpSvXHUdVw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_eqOUErdlEeeRzpSvXHUdVw"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_SWR2AbdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_SWR2ArdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_SWR2A7dAEeenOo6uGFk9xQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_SWPZwbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SWPZwrdAEeenOo6uGFk9xQ" width="125" height="45"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SWSdELdAEeenOo6uGFk9xQ" type="3009" element="_SURD0LdAEeenOo6uGFk9xQ">
+              <children xmi:type="notation:Node" xmi:id="_SWSdE7dAEeenOo6uGFk9xQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_SWTEILdAEeenOo6uGFk9xQ" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_SWTEIbdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_SWTEIrdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_SWTEI7dAEeenOo6uGFk9xQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_SWSdEbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SWSdErdAEeenOo6uGFk9xQ" y="45" width="125" height="40"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_PVhDYrWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_PVhDY7WCEeev3pbaDttLkQ"/>
@@ -544,179 +742,167 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_PVgcWLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVgcWbWCEeev3pbaDttLkQ" x="4" y="54"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_PVhDZLWCEeev3pbaDttLkQ" type="2003" element="_PVbj3bWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVhqcLWCEeev3pbaDttLkQ" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_PViRgLWCEeev3pbaDttLkQ" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_PVkGs7WCEeev3pbaDttLkQ" type="3010" element="_PVbj37WCEeev3pbaDttLkQ">
-              <styles xmi:type="notation:FontStyle" xmi:id="_PVkGtLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_PVkGtbWCEeev3pbaDttLkQ"/>
+        <children xmi:type="notation:Node" xmi:id="_PVhDZLWCEeev3pbaDttLkQ" type="2002" element="_SUOAgLdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_PVhqcLWCEeev3pbaDttLkQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_PViRgLWCEeev3pbaDttLkQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_SWUSQLdAEeenOo6uGFk9xQ" type="3009" element="_SU-OcLdAEeenOo6uGFk9xQ">
+              <children xmi:type="notation:Node" xmi:id="_SWU5ULdAEeenOo6uGFk9xQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_SWU5UbdAEeenOo6uGFk9xQ" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_gyH0sLdlEeeRzpSvXHUdVw" type="3010" element="_gwWTELdlEeeRzpSvXHUdVw">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_gyH0sbdlEeeRzpSvXHUdVw" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_gyH0srdlEeeRzpSvXHUdVw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Bdp9ILduEeedmsvR2uP_tQ" type="3010" element="_BddI0LduEeedmsvR2uP_tQ">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_Bdp9IbduEeedmsvR2uP_tQ" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_Bdp9IrduEeedmsvR2uP_tQ"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_SWU5UrdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_SWU5U7dAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_SWU5VLdAEeenOo6uGFk9xQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_SWUSQbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SWUSQrdAEeenOo6uGFk9xQ" width="125" height="69"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SWU5VbdAEeenOo6uGFk9xQ" type="3009" element="_SVADoLdAEeenOo6uGFk9xQ">
+              <children xmi:type="notation:Node" xmi:id="_SWVgYLdAEeenOo6uGFk9xQ" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_SWVgYbdAEeenOo6uGFk9xQ" type="7003">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_SWVgYrdAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_SWVgY7dAEeenOo6uGFk9xQ"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_SWVgZLdAEeenOo6uGFk9xQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_SWU5VrdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SWU5V7dAEeenOo6uGFk9xQ" y="69" width="125" height="40"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_PViRgbWCEeev3pbaDttLkQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_PViRgrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_PVhDZbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVhDZrWCEeev3pbaDttLkQ" x="528" y="225"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVhDZrWCEeev3pbaDttLkQ" x="594" y="96"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zrrUcLdAEeenOo6uGFk9xQ" type="2003" element="_zq8UoLdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_zrtwsLdAEeenOo6uGFk9xQ" type="3012" element="_zrCbQLdAEeenOo6uGFk9xQ">
+            <children xmi:type="notation:Node" xmi:id="_zrtws7dAEeenOo6uGFk9xQ" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_zrtwtLdAEeenOo6uGFk9xQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QmSpoLdBEeenOo6uGFk9xQ" type="3005" element="_Ql6PILdBEeenOo6uGFk9xQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_QmSpobdBEeenOo6uGFk9xQ" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QmSpordBEeenOo6uGFk9xQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_zrtwsbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrtwsrdAEeenOo6uGFk9xQ" x="30" y="-19" width="19" height="27"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_zrrUc7dAEeenOo6uGFk9xQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_zrr7gLdAEeenOo6uGFk9xQ" type="7004">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_zrr7gbdAEeenOo6uGFk9xQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_zrr7grdAEeenOo6uGFk9xQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_zrrUcbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrrUcrdAEeenOo6uGFk9xQ" x="168" y="270" width="99" height="87"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_zrsikLdAEeenOo6uGFk9xQ" type="2003" element="_zq87sLdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_zru-0LdAEeenOo6uGFk9xQ" type="3012" element="_zrDpYLdAEeenOo6uGFk9xQ">
+            <children xmi:type="notation:Node" xmi:id="_zru-07dAEeenOo6uGFk9xQ" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_zru-1LdAEeenOo6uGFk9xQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QmTQsLdBEeenOo6uGFk9xQ" type="3005" element="_Ql62MLdBEeenOo6uGFk9xQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_QmTQsbdBEeenOo6uGFk9xQ" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QmTQsrdBEeenOo6uGFk9xQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_zru-0bdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zru-0rdAEeenOo6uGFk9xQ" x="51" y="-19" width="19" height="27"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_zrtJoLdAEeenOo6uGFk9xQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_zrtJobdAEeenOo6uGFk9xQ" type="7004">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_zrtJordAEeenOo6uGFk9xQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_zrtJo7dAEeenOo6uGFk9xQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_zrsikbdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrsikrdAEeenOo6uGFk9xQ" x="414" y="270" width="123" height="93"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_PVcK4rWCEeev3pbaDttLkQ"/>
-        <edges xmi:type="notation:Edge" xmi:id="_PVktwLWCEeev3pbaDttLkQ" type="4001" element="_PVbj4bWCEeev3pbaDttLkQ" source="_PVf1QLWCEeev3pbaDttLkQ" target="_PVf1RbWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVlU0LWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVlU0bWCEeev3pbaDttLkQ" x="-7" y="-6"/>
+        <edges xmi:type="notation:Edge" xmi:id="_zrvl47dAEeenOo6uGFk9xQ" type="4001" element="_zra1wLdAEeenOo6uGFk9xQ" source="_zrtwsLdAEeenOo6uGFk9xQ" target="_zru-0LdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_zrwM8LdAEeenOo6uGFk9xQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrwM8bdAEeenOo6uGFk9xQ" y="-2"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVlU0rWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVlU07WCEeev3pbaDttLkQ" x="5" y="3"/>
+          <children xmi:type="notation:Node" xmi:id="_zrwM8rdAEeenOo6uGFk9xQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrwM87dAEeenOo6uGFk9xQ" x="-7" y="-5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVlU1LWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVlU1bWCEeev3pbaDttLkQ" x="4" y="5"/>
+          <children xmi:type="notation:Node" xmi:id="_zrwM9LdAEeenOo6uGFk9xQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrwM9bdAEeenOo6uGFk9xQ" x="-11" y="-4"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVktwbWCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVktwrWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVktw7WCEeev3pbaDttLkQ" points="[64, 7, -116, -23]$[165, 27, -15, -3]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVlU1rWCEeev3pbaDttLkQ" id="(0.189873417721519,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVlU17WCEeev3pbaDttLkQ" id="(0.14563106796116504,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zrvl5LdAEeenOo6uGFk9xQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zrvl5bdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrvl5rdAEeenOo6uGFk9xQ" points="[10, -1, -262, 4]$[258, -7, -14, -2]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrwM9rdAEeenOo6uGFk9xQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrwM97dAEeenOo6uGFk9xQ" id="(0.7794117647058824,0.32608695652173914)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVlU2LWCEeev3pbaDttLkQ" type="4001" element="_PVbj5LWCEeev3pbaDttLkQ" source="_PVf1QLWCEeev3pbaDttLkQ" target="_PVcx8LWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVlU3LWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVlU3bWCEeev3pbaDttLkQ" x="9" y="3"/>
+        <edges xmi:type="notation:Edge" xmi:id="_zrwM-LdAEeenOo6uGFk9xQ" type="4001" element="_zrhjcLdAEeenOo6uGFk9xQ" source="_PVgcUrWCEeev3pbaDttLkQ" target="_zrtwsLdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_zrwM_LdAEeenOo6uGFk9xQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrwM_bdAEeenOo6uGFk9xQ" x="5" y="-6"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVl74LWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVl74bWCEeev3pbaDttLkQ" x="-9" y="-2"/>
+          <children xmi:type="notation:Node" xmi:id="_zrw0ALdAEeenOo6uGFk9xQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrw0AbdAEeenOo6uGFk9xQ" x="-7" y="12"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVl74rWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVl747WCEeev3pbaDttLkQ" x="-9" y="-2"/>
+          <children xmi:type="notation:Node" xmi:id="_zrw0ArdAEeenOo6uGFk9xQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrw0A7dAEeenOo6uGFk9xQ" x="-8" y="11"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVlU2bWCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVlU2rWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVlU27WCEeev3pbaDttLkQ" points="[0, 0, 29, -96]$[-20, 66, 9, -30]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVl75LWCEeev3pbaDttLkQ" id="(0.189873417721519,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVl75bWCEeev3pbaDttLkQ" id="(0.1388888888888889,0.4918032786885246)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zrwM-bdAEeenOo6uGFk9xQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zrwM-rdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrwM-7dAEeenOo6uGFk9xQ" points="[-13, 15, 95, -193]$[-102, 195, 6, -13]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrw0BLdAEeenOo6uGFk9xQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrw0BbdAEeenOo6uGFk9xQ" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVl75rWCEeev3pbaDttLkQ" type="4001" element="_PVbj57WCEeev3pbaDttLkQ" source="_PVf1RbWCEeev3pbaDttLkQ" target="_PVfOMLWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVl76rWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVl767WCEeev3pbaDttLkQ" x="6" y="6"/>
+        <edges xmi:type="notation:Edge" xmi:id="_zrw0BrdAEeenOo6uGFk9xQ" type="4001" element="_zriKgLdAEeenOo6uGFk9xQ" source="_PVgcUrWCEeev3pbaDttLkQ" target="_zru-0LdAEeenOo6uGFk9xQ">
+          <children xmi:type="notation:Node" xmi:id="_zrw0CrdAEeenOo6uGFk9xQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrw0C7dAEeenOo6uGFk9xQ" x="-3" y="7"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVl77LWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVl77bWCEeev3pbaDttLkQ" x="-6" y="-5"/>
+          <children xmi:type="notation:Node" xmi:id="_zrw0DLdAEeenOo6uGFk9xQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrw0DbdAEeenOo6uGFk9xQ" x="-20" y="-3"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVl77rWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVl777WCEeev3pbaDttLkQ" x="-8" y="-3"/>
+          <children xmi:type="notation:Node" xmi:id="_zrw0DrdAEeenOo6uGFk9xQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrw0D7dAEeenOo6uGFk9xQ" x="-16" y="-2"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVl757WCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVl76LWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVl76bWCEeev3pbaDttLkQ" points="[-3, 30, 3, -78]$[-6, 78, 0, -30]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVmi8LWCEeev3pbaDttLkQ" id="(0.14563106796116504,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVmi8bWCEeev3pbaDttLkQ" id="(0.13043478260869565,0.5454545454545454)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zrw0B7dAEeenOo6uGFk9xQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zrw0CLdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrw0CbdAEeenOo6uGFk9xQ" points="[15, 15, -149, -188]$[157, 195, -7, -8]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrxbELdAEeenOo6uGFk9xQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrxbEbdAEeenOo6uGFk9xQ" id="(0.7794117647058824,0.32608695652173914)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVmi8rWCEeev3pbaDttLkQ" type="4001" element="_PVbj6rWCEeev3pbaDttLkQ" source="_PVgcUrWCEeev3pbaDttLkQ" target="_PVf1QLWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVmi9rWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVmi97WCEeev3pbaDttLkQ" x="10" y="5"/>
+        <edges xmi:type="notation:Edge" xmi:id="_zrxbErdAEeenOo6uGFk9xQ" type="4001" element="_zrnDALdAEeenOo6uGFk9xQ" source="_zrtwsLdAEeenOo6uGFk9xQ" target="_PVgcV7WCEeev3pbaDttLkQ">
+          <children xmi:type="notation:Node" xmi:id="_zrxbFrdAEeenOo6uGFk9xQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrxbF7dAEeenOo6uGFk9xQ" x="16" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVmi-LWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVmi-bWCEeev3pbaDttLkQ" x="-11" y="-2"/>
+          <children xmi:type="notation:Node" xmi:id="_zrxbGLdAEeenOo6uGFk9xQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrxbGbdAEeenOo6uGFk9xQ" x="-9" y="-8"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVmi-rWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVmi-7WCEeev3pbaDttLkQ" x="-15" y="-1"/>
+          <children xmi:type="notation:Node" xmi:id="_zrxbGrdAEeenOo6uGFk9xQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zrxbG7dAEeenOo6uGFk9xQ" x="-5" y="-5"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVmi87WCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVmi9LWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVmi9bWCEeev3pbaDttLkQ" points="[-15, 28, 93, -195]$[-102, 193, 6, -30]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVmi_LWCEeev3pbaDttLkQ" id="(0.14705882352941177,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVmi_bWCEeev3pbaDttLkQ" id="(0.189873417721519,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zrxbE7dAEeenOo6uGFk9xQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zrxbFLdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrxbFbdAEeenOo6uGFk9xQ" points="[-9, -7, 131, 89]$[-140, -96, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrxbHLdAEeenOo6uGFk9xQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zrxbHbdAEeenOo6uGFk9xQ" id="(0.49612403100775193,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVmi_rWCEeev3pbaDttLkQ" type="4001" element="_PVbj7bWCEeev3pbaDttLkQ" source="_PVgcUrWCEeev3pbaDttLkQ" target="_PVf1RbWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVmjArWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVmjA7WCEeev3pbaDttLkQ" x="-19" y="11"/>
+        <edges xmi:type="notation:Edge" xmi:id="_zrxbHrdAEeenOo6uGFk9xQ" type="4001" element="_zrnqErdAEeenOo6uGFk9xQ" source="_zru-0LdAEeenOo6uGFk9xQ" target="_PVhDZLWCEeev3pbaDttLkQ">
+          <children xmi:type="notation:Node" xmi:id="_zryCILdAEeenOo6uGFk9xQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zryCIbdAEeenOo6uGFk9xQ" x="4" y="-11"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVnKALWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnKAbWCEeev3pbaDttLkQ" x="5" y="-8"/>
+          <children xmi:type="notation:Node" xmi:id="_zryCIrdAEeenOo6uGFk9xQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zryCI7dAEeenOo6uGFk9xQ" x="-7" y="4"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_PVnKArWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnKA7WCEeev3pbaDttLkQ" x="8" y="-7"/>
+          <children xmi:type="notation:Node" xmi:id="_zryCJLdAEeenOo6uGFk9xQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zryCJbdAEeenOo6uGFk9xQ" x="-10" y="3"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVmi_7WCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVmjALWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVmjAbWCEeev3pbaDttLkQ" points="[10, 30, -62, -193]$[62, 193, -10, -30]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVnKBLWCEeev3pbaDttLkQ" id="(0.14705882352941177,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVnKBbWCEeev3pbaDttLkQ" id="(0.14563106796116504,1.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVnKBrWCEeev3pbaDttLkQ" type="4001" element="_PVbj8LWCEeev3pbaDttLkQ" source="_PVf1QLWCEeev3pbaDttLkQ" target="_PVgcV7WCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVnKCrWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnKC7WCEeev3pbaDttLkQ" x="2" y="-9"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVnxELWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnxEbWCEeev3pbaDttLkQ" x="4" y="8"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVnxErWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnxE7WCEeev3pbaDttLkQ" y="9"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVnKB7WCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVnKCLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVnKCbWCEeev3pbaDttLkQ" points="[0, 0, 105, 133]$[-105, -133, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVnxFLWCEeev3pbaDttLkQ" id="(0.189873417721519,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVnxFbWCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_PVnxFrWCEeev3pbaDttLkQ" type="4001" element="_PVbj87WCEeev3pbaDttLkQ" source="_PVf1RbWCEeev3pbaDttLkQ" target="_PVhDZLWCEeev3pbaDttLkQ">
-          <children xmi:type="notation:Node" xmi:id="_PVnxGrWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnxG7WCEeev3pbaDttLkQ" x="-8" y="3"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVnxHLWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVnxHbWCEeev3pbaDttLkQ" x="1" y="-4"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_PVoYILWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PVoYIbWCEeev3pbaDttLkQ" x="4" y="-5"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PVnxF7WCEeev3pbaDttLkQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_PVnxGLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PVnxGbWCEeev3pbaDttLkQ" points="[88, 12, -151, -26]$[177, 25, -62, -13]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVoYIrWCEeev3pbaDttLkQ" id="(0.14563106796116504,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PVoYI7WCEeev3pbaDttLkQ" id="(0.5,1.0)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_zrxbH7dAEeenOo6uGFk9xQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_zrxbILdAEeenOo6uGFk9xQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zrxbIbdAEeenOo6uGFk9xQ" points="[5, -2, -173, 23]$[115, -36, -63, -11]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zryCJrdAEeenOo6uGFk9xQ" id="(0.7794117647058824,0.32608695652173914)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zryCJ7dAEeenOo6uGFk9xQ" id="(0.49612403100775193,1.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVa8xLWCEeev3pbaDttLkQ" name="rtsc1" incomingEdges="_PVbj5LWCEeev3pbaDttLkQ" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
-      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_PVbj0LWCEeev3pbaDttLkQ" labelPosition="node">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVbj0bWCEeev3pbaDttLkQ" name="rtsc2" incomingEdges="_PVbj57WCEeev3pbaDttLkQ" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
-      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_PVbj0rWCEeev3pbaDttLkQ" labelPosition="node">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='RealtimeStatechart']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVbj07WCEeev3pbaDttLkQ" name="port1" outgoingEdges="_PVbj4bWCEeev3pbaDttLkQ _PVbj5LWCEeev3pbaDttLkQ _PVbj8LWCEeev3pbaDttLkQ" incomingEdges="_PVbj6rWCEeev3pbaDttLkQ" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
-      <semanticElements xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_PVbj1LWCEeev3pbaDttLkQ" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVbj1bWCEeev3pbaDttLkQ" name="port2" outgoingEdges="_PVbj57WCEeev3pbaDttLkQ _PVbj87WCEeev3pbaDttLkQ" incomingEdges="_PVbj4bWCEeev3pbaDttLkQ _PVbj7bWCEeev3pbaDttLkQ" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
-      <semanticElements xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Lozenge" xmi:id="_PVbj1rWCEeev3pbaDttLkQ" labelPosition="node" color="255,255,255">
-        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Port']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVbj17WCEeev3pbaDttLkQ" name="prot1" outgoingEdges="_PVbj6rWCEeev3pbaDttLkQ _PVbj7bWCEeev3pbaDttLkQ" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_PVbj17WCEeev3pbaDttLkQ" name="lil'jon" outgoingEdges="_zrhjcLdAEeenOo6uGFk9xQ _zriKgLdAEeenOo6uGFk9xQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="rtsc:CoordinationProtocol" href="My.rtsc#//@protocol.0"/>
       <semanticElements xmi:type="rtsc:CoordinationProtocol" href="My.rtsc#//@protocol.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -727,105 +913,169 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@nodeMappings[name='Protocol']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_PVbj2bWCEeev3pbaDttLkQ" name="port1:MessageBuffer" incomingEdges="_PVbj8LWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_SUJIALdAEeenOo6uGFk9xQ" name="port1:MessageBuffer" incomingEdges="_zrnDALdAEeenOo6uGFk9xQ" childrenPresentation="VerticalStack">
       <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
       <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PVbj2rWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SUMLULdAEeenOo6uGFk9xQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PVbj27WCEeev3pbaDttLkQ" name="type2">
-        <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-        <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_PVbj3LWCEeev3pbaDttLkQ" labelPosition="node">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subNodeMappings[name='type']/@style"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_SUP1sLdAEeenOo6uGFk9xQ" name="MessageTypes">
+        <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
+        <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SUP1sbdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subNodeMappings[name='type']"/>
-      </ownedElements>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_eoywsLdlEeeRzpSvXHUdVw" name="okayy">
+          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.1"/>
+          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.1"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_eoywsbdlEeeRzpSvXHUdVw" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_SURD0LdAEeenOo6uGFk9xQ" name="RuntimeMessages">
+        <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
+        <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.0/@behaviouralElement/@incomingBuffer"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SURq4LdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Messages']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Messages']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_PVbj3bWCEeev3pbaDttLkQ" name="port2:MessageBuffer" incomingEdges="_PVbj87WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_SUOAgLdAEeenOo6uGFk9xQ" name="port2:MessageBuffer" incomingEdges="_zrnqErdAEeenOo6uGFk9xQ" childrenPresentation="VerticalStack">
       <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
       <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PVbj3rWCEeev3pbaDttLkQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SUOAgbdAEeenOo6uGFk9xQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PVbj37WCEeev3pbaDttLkQ" name="type2">
-        <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-        <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_PVbj4LWCEeev3pbaDttLkQ" labelPosition="node">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subNodeMappings[name='type']/@style"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_SU-OcLdAEeenOo6uGFk9xQ" name="MessageTypes">
+        <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
+        <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SU-OcbdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subNodeMappings[name='type']"/>
-      </ownedElements>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_gwWTELdlEeeRzpSvXHUdVw" name="yeaeeah">
+          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.2"/>
+          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.2"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_gwW6ILdlEeeRzpSvXHUdVw" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BddI0LduEeedmsvR2uP_tQ" name="whaat">
+          <target xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
+          <semanticElements xmi:type="rtsc:MessageType" href="My.rtsc#//@messageTypeRepo/@messageTypes.0"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BddI0bduEeedmsvR2uP_tQ" labelPosition="node">
+            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Types']/@subNodeMappings[name='type']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_SVADoLdAEeenOo6uGFk9xQ" name="RuntimeMessages">
+        <target xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
+        <semanticElements xmi:type="rtsc:MessageBuffer" href="My.rtsc#//@statecharts.1/@behaviouralElement/@incomingBuffer"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SVADobdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Messages']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='MessageBuffer']/@subContainerMappings[name='Messages']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj4bWCEeev3pbaDttLkQ" sourceNode="_PVbj07WCEeev3pbaDttLkQ" targetNode="_PVbj1bWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zq8UoLdAEeenOo6uGFk9xQ" name="lil">
+      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.0"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_zrCbQLdAEeenOo6uGFk9xQ" name="port1" outgoingEdges="_zra1wLdAEeenOo6uGFk9xQ _zrnDALdAEeenOo6uGFk9xQ" incomingEdges="_zrhjcLdAEeenOo6uGFk9xQ" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
+        <semanticElements xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_Ql6PILdBEeenOo6uGFk9xQ" showIcon="false" workspacePath="/org.muml.rtsc.design/icons/event_small.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_zq8UobdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zq87sLdAEeenOo6uGFk9xQ" name="jon">
+      <target xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+      <semanticElements xmi:type="rtsc:Realtimestatechart" href="My.rtsc#//@statecharts.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_zrDpYLdAEeenOo6uGFk9xQ" name="port2" outgoingEdges="_zrnqErdAEeenOo6uGFk9xQ" incomingEdges="_zra1wLdAEeenOo6uGFk9xQ _zriKgLdAEeenOo6uGFk9xQ" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
+        <semanticElements xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_Ql62MLdBEeenOo6uGFk9xQ" showIcon="false" workspacePath="/org.muml.rtsc.design/icons/event_small.png">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_zq87sbdAEeenOo6uGFk9xQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@containerMappings[name='RealtimeStatechart']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zra1wLdAEeenOo6uGFk9xQ" sourceNode="_zrCbQLdAEeenOo6uGFk9xQ" targetNode="_zrDpYLdAEeenOo6uGFk9xQ">
       <target xmi:type="rtsc:Connector" href="My.rtsc#//@protocol.0/@connector"/>
       <semanticElements xmi:type="rtsc:Connector" href="My.rtsc#//@protocol.0/@connector"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj4rWCEeev3pbaDttLkQ" targetArrow="NoDecoration" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zra1wbdAEeenOo6uGFk9xQ" targetArrow="NoDecoration" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='Connector']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj47WCEeev3pbaDttLkQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zra1wrdAEeenOo6uGFk9xQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='Connector']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj5LWCEeev3pbaDttLkQ" sourceNode="_PVbj07WCEeev3pbaDttLkQ" targetNode="_PVa8xLWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj5bWCEeev3pbaDttLkQ" targetArrow="NoDecoration" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portRtsc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj5rWCEeev3pbaDttLkQ"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portRtsc']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj57WCEeev3pbaDttLkQ" sourceNode="_PVbj1bWCEeev3pbaDttLkQ" targetNode="_PVbj0bWCEeev3pbaDttLkQ">
-      <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj6LWCEeev3pbaDttLkQ" targetArrow="NoDecoration" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portRtsc']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj6bWCEeev3pbaDttLkQ"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portRtsc']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj6rWCEeev3pbaDttLkQ" sourceNode="_PVbj17WCEeev3pbaDttLkQ" targetNode="_PVbj07WCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zrhjcLdAEeenOo6uGFk9xQ" sourceNode="_PVbj17WCEeev3pbaDttLkQ" targetNode="_zrCbQLdAEeenOo6uGFk9xQ">
       <target xmi:type="rtsc:CoordinationProtocol" href="My.rtsc#//@protocol.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj67WCEeev3pbaDttLkQ" lineStyle="dot" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zrhjcbdAEeenOo6uGFk9xQ" lineStyle="dot" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='protocolPorts']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj7LWCEeev3pbaDttLkQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zrhjcrdAEeenOo6uGFk9xQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='protocolPorts']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj7bWCEeev3pbaDttLkQ" sourceNode="_PVbj17WCEeev3pbaDttLkQ" targetNode="_PVbj1bWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zriKgLdAEeenOo6uGFk9xQ" sourceNode="_PVbj17WCEeev3pbaDttLkQ" targetNode="_zrDpYLdAEeenOo6uGFk9xQ">
       <target xmi:type="rtsc:CoordinationProtocol" href="My.rtsc#//@protocol.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj7rWCEeev3pbaDttLkQ" lineStyle="dot" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zriKgbdAEeenOo6uGFk9xQ" lineStyle="dot" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='protocolPorts']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj77WCEeev3pbaDttLkQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zriKgrdAEeenOo6uGFk9xQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='protocolPorts']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj8LWCEeev3pbaDttLkQ" sourceNode="_PVbj07WCEeev3pbaDttLkQ" targetNode="_PVbj2bWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zrnDALdAEeenOo6uGFk9xQ" sourceNode="_zrCbQLdAEeenOo6uGFk9xQ" targetNode="_SUJIALdAEeenOo6uGFk9xQ">
       <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.0/@behaviouralElement"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj8bWCEeev3pbaDttLkQ" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zrnqELdAEeenOo6uGFk9xQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portBuffer']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj8rWCEeev3pbaDttLkQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zrnqEbdAEeenOo6uGFk9xQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portBuffer']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_PVbj87WCEeev3pbaDttLkQ" sourceNode="_PVbj1bWCEeev3pbaDttLkQ" targetNode="_PVbj3bWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zrnqErdAEeenOo6uGFk9xQ" sourceNode="_zrDpYLdAEeenOo6uGFk9xQ" targetNode="_SUOAgLdAEeenOo6uGFk9xQ">
       <target xmi:type="rtsc:Port" href="My.rtsc#//@statecharts.1/@behaviouralElement"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_PVbj9LWCEeev3pbaDttLkQ" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zrnqE7dAEeenOo6uGFk9xQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portBuffer']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_PVbj9bWCEeev3pbaDttLkQ"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zrnqFLdAEeenOo6uGFk9xQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer/@edgeMappings[name='portBuffer']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_PVbj9rWCEeev3pbaDttLkQ"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='Protocol']/@defaultLayer"/>
-    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.muml.seq.xsrtsc.design/description/XSRTSC.odesign#//@ownedViewpoints[name='RTSC_SEQ_XRTSC_Viewpoint']/@ownedRepresentationExtensions[name='PROT_SEQ_XSRTSC']/@layers[name='Manipulation']"/>
     <target xmi:type="rtsc:CoordinationProtocol" href="My.rtsc#//@protocol.0"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

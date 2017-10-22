@@ -180,6 +180,8 @@ public class StateItemProvider extends VertexItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(RtscPackage.Literals.STATE__SUB_STATECHARTS);
+			childrenFeatures.add(RtscPackage.Literals.STATE__ENTRY_EVENTS);
+			childrenFeatures.add(RtscPackage.Literals.STATE__EXIT_EVENTS);
 		}
 		return childrenFeatures;
 	}
@@ -241,6 +243,8 @@ public class StateItemProvider extends VertexItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case RtscPackage.STATE__SUB_STATECHARTS:
+			case RtscPackage.STATE__ENTRY_EVENTS:
+			case RtscPackage.STATE__EXIT_EVENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -262,6 +266,59 @@ public class StateItemProvider extends VertexItemProvider {
 			(createChildParameter
 				(RtscPackage.Literals.STATE__SUB_STATECHARTS,
 				 RtscFactory.eINSTANCE.createRealtimestatechart()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__ENTRY_EVENTS,
+				 RtscFactory.eINSTANCE.createMessageEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__ENTRY_EVENTS,
+				 RtscFactory.eINSTANCE.createClockResetEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__ENTRY_EVENTS,
+				 RtscFactory.eINSTANCE.createVariableAssignmentEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__EXIT_EVENTS,
+				 RtscFactory.eINSTANCE.createMessageEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__EXIT_EVENTS,
+				 RtscFactory.eINSTANCE.createClockResetEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.STATE__EXIT_EVENTS,
+				 RtscFactory.eINSTANCE.createVariableAssignmentEvent()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == RtscPackage.Literals.STATE__ENTRY_EVENTS ||
+			childFeature == RtscPackage.Literals.STATE__EXIT_EVENTS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

@@ -15,7 +15,6 @@ import org.muml.rtsc.State
 import org.muml.rtsc.Transition
 import org.muml.rtsc.Variable
 import org.muml.rtsc.Vertex
-import org.muml.rtsc.k3dsa.timekeeper.TimeKeeper
 
 import static extension org.muml.rtsc.k3dsa.GuardAspect.*
 import static extension org.muml.rtsc.k3dsa.StateAspect.*
@@ -24,6 +23,9 @@ import static extension org.muml.rtsc.k3dsa.VariableAspect.*
 import static extension org.muml.rtsc.k3dsa.VertexAspect.*
 import static extension org.muml.rtsc.k3dsa.MessageBufferAspect.*
 import static extension org.muml.rtsc.k3dsa.RealtimestatechartAspect.*
+import static extension org.muml.rtsc.k3dsa.ClockAspect.*
+import static extension org.muml.rtsc.k3dsa.ClockConstraintAspect.*
+import static extension org.muml.rtsc.k3dsa.EventAspect.*
 import org.muml.rtsc.Port
 import org.muml.rtsc.MessageBuffer
 import org.muml.rtsc.Message
@@ -34,6 +36,20 @@ import java.util.HashMap
 import java.util.Map
 import org.muml.rtsc.CoordinationProtocol
 import org.eclipse.emf.common.util.BasicEList
+import org.muml.rtsc.Clock
+import org.muml.udbm.UDBMClock
+import org.muml.udbm.Federation
+import org.muml.udbm.FederationFactory
+import org.muml.udbm.java.JavaFederationFactory
+import java.util.HashSet
+import org.muml.udbm.SimpleClockConstraint
+import org.muml.udbm.clockconstraint.RelationalOperator
+import org.muml.rtsc.Event
+import org.muml.rtsc.ClockResetEvent
+import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
+import org.muml.rtsc.VariableAssignmentEvent
+import org.muml.rtsc.MessageEvent
+import org.muml.rtsc.RtscFactory
 
 @Aspect(className=Behavior)
 abstract class BehaviorAspect {
@@ -45,23 +61,41 @@ abstract class BehavioralElementAspect {
 
 }
 
+@Aspect(className= Clock)
+class ClockAspect {
+	public UDBMClock uClock;
+	
+	def public void initialize(){
+		_self.uClock = new UDBMClock(_self.name, _self.name)
+	}
+	
+	def public String printValue(){
+		try{
+			'['+ federation.getLowerBound(_self.uClock).toString +', '+ federation.getUpperBound(_self.uClock)+']'
+		} catch (Exception e){
+			_self.uClock.toString
+		}
+	}
+	
+	def public void reset(){
+		var resetSet = new HashSet
+		resetSet += _self.uClock
+		federation.applyResets(resetSet)
+	}
+}
+
 @Aspect(className= ClockConstraint) 
 class ClockConstraintAspect{
 
-	def public boolean evaluate(/*Federation checkFederation*/){
-		val stateChart = _self.clock.statechart
-//		val uClock = stateChart.clockMapping.get(_self.clock)
-//		val uConstraint = new SimpleClockConstraint(uClock, RelationalOperator.GreaterOrEqualOperator, _self.bound)
-//		checkFederation.and(uConstraint)
-//		return !checkFederation.empty
-	return true
+	def public boolean evaluate(Federation checkFederation){
+		val uConstraint = new SimpleClockConstraint(_self.clock.uClock, RelationalOperator.GreaterOrEqualOperator, _self.bound)
+		checkFederation.and(uConstraint)
+		return !checkFederation.empty
 	}
 	
-	def public void apply(/*Federation federation*/){
-		val stateChart = _self.clock.statechart
-//		val uClock = stateChart.clockMapping.get(_self.clock)
-//		val uConstraint = new SimpleClockConstraint(uClock, RelationalOperator.GreaterOrEqualOperator, _self.bound)
-//		federation.and(uConstraint)
+	def public void apply(Federation federation){
+		val uConstraint = new SimpleClockConstraint(_self.clock.uClock, RelationalOperator.GreaterOrEqualOperator, _self.bound)
+		federation.and(uConstraint)
 	}
 }
 
@@ -82,6 +116,9 @@ class VariableAspect {
 @Aspect(className=Realtimestatechart)
 class RealtimestatechartAspect extends BehaviorAspect {
 	public int rounds;
+	
+	public static FederationFactory ff = new JavaFederationFactory(); 
+	public static Federation federation;
 
 	@Main
 	def public void main(){
@@ -94,16 +131,22 @@ class RealtimestatechartAspect extends BehaviorAspect {
 	@Step
 	@InitializeModel
 	def public void initialize(EList<String> args){
+		val uClocks = new HashSet
+		
 		println("Initializing " + _self.name)
 		_self.initialState.active = true
-		//_self.clocks.forEach[TimeKeeper.addClock(_self.name, it.name)]
+		_self.clocks.forEach[
+			initialize
+			uClocks += uClock
+		]
+		federation = ff.createZeroFederation(uClocks)
 	}
 	
 	@Step
 	def public void step(){
 		println("Stepping " + _self.name)
 		_self.rounds = _self.rounds +1;
-//		federation.up
+		federation.up
 	}
 	
 	@Step
@@ -135,9 +178,11 @@ class StateAspect extends VertexAspect {
 	
 	def public void entry(){
 		_self.active = true
+		_self.entryEvents.forEach[execute]
 	}
 	
 	def public void exit(){
+		_self.exitEvents.forEach[execute]
 		_self.active = false
 	}
 
@@ -159,6 +204,8 @@ class TransitionAspect {
 		_self.hitCount = _self.hitCount+1
 		println("Firing "+ (_self.source as NamedElement).name  + " to " + (_self.target as NamedElement).name)
 		_self.consumeMessages
+		_self.events.forEach[execute]
+		_self.clockConstraints.forEach[apply(federation)]
 		_self.target.entry
 		return _self.target
 	}
@@ -169,9 +216,8 @@ class TransitionAspect {
 	}
 	
 	def public boolean clocksHold(){
-//		val checkFederation = federation.clone as Federation
-//		_self.clockConstraints.empty || _self.clockConstraints.forall[evaluate(checkFederation)]
-		return true
+		val checkFederation = federation.clone as Federation
+		_self.clockConstraints.empty || _self.clockConstraints.forall[evaluate(checkFederation)]
 	}
 	
 	def public boolean checkMessages(){
@@ -209,6 +255,55 @@ abstract class VertexAspect {
 
 }
 
+@Aspect(className=Event)
+abstract class EventAspect {
+	
+	def public void execute()
+		
+}
+
+@Aspect(className=ClockResetEvent) 
+class ClockResetEventAspect extends EventAspect {
+	
+	@OverrideAspectMethod
+	def public void execute(){
+		_self.clock.reset
+	}
+}
+
+@Aspect(className=VariableAssignmentEvent)
+class VariableAssignmentEventAspect extends EventAspect {
+	
+	@OverrideAspectMethod
+	def public void execute(){
+		_self.variable.runtimeValue = _self.value
+	}
+}
+
+@Aspect(className=MessageEvent)
+class MessageEventAspect extends EventAspect {
+	
+	@OverrideAspectMethod
+	def public void execute(){
+		// create message
+		val message = RtscFactory.eINSTANCE.createMessage();
+		message.type = _self.messageType;
+		
+		//get own port
+		val t = _self.eContainer as Transition
+		val bh = t.statechart.behaviouralElement
+		if (bh != null && bh instanceof Port){
+			val port = bh as Port
+			val other = port.connector.endpoints.findFirst[it != port]
+			val targetBuffer = other.incomingBuffer;
+			targetBuffer.addMessage(message);
+			println(message.type.name + "!")
+		}
+	}
+}
+
+
+
 @Aspect(className=MessageBuffer)
 abstract class MessageBufferAspect {
 	
@@ -245,10 +340,10 @@ abstract class MessageBufferAspect {
 @Aspect(className=CoordinationProtocol)
 class CoordinationProtocolAspect {
 	
-	
 	@Main
 	def public void main(){
 		val stateCharts = _self.ports.map[behavior as Realtimestatechart]
+		
 		while (true){
 			stateCharts.forEach[sequentialStep]
 		}
@@ -259,6 +354,19 @@ class CoordinationProtocolAspect {
 	@InitializeModel
 	def public void initialize(EList<String> arguments){
 		println("Initializing ")
-		_self.ports.map[behavior as Realtimestatechart].forEach[initialize(arguments)]
+		val uClocks = new HashSet
+		
+		println("Initializing " + _self.name)
+		val stateCharts = _self.ports.map[behavior as Realtimestatechart]
+		
+		stateCharts.forEach[
+			println("Initializing " + _self.name)
+			it.initialState.active = true
+			it.clocks.forEach[
+				initialize
+				uClocks += uClock
+			]
+		]
+		federation = ff.createZeroFederation(uClocks)
 	}
 }

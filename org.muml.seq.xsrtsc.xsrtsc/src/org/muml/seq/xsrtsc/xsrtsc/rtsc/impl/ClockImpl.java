@@ -16,6 +16,8 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
 
+import org.muml.udbm.UDBMClock;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Clock</b></em>'.
@@ -25,11 +27,32 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
  * </p>
  * <ul>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.ClockImpl#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.ClockImpl#getUClock <em>UClock</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ClockImpl extends NamedElementImpl implements Clock {
+	/**
+	 * The default value of the '{@link #getUClock() <em>UClock</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUClock()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final UDBMClock UCLOCK_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUClock() <em>UClock</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUClock()
+	 * @generated
+	 * @ordered
+	 */
+	protected UDBMClock uClock = UCLOCK_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,6 +118,60 @@ public class ClockImpl extends NamedElementImpl implements Clock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public UDBMClock getUClock() {
+		return uClock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUClock(UDBMClock newUClock) {
+		UDBMClock oldUClock = uClock;
+		uClock = newUClock;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.CLOCK__UCLOCK, oldUClock, uClock));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initialize() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String printValue() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void reset() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -144,6 +221,8 @@ public class ClockImpl extends NamedElementImpl implements Clock {
 		switch (featureID) {
 			case RtscPackage.CLOCK__STATECHART:
 				return getStatechart();
+			case RtscPackage.CLOCK__UCLOCK:
+				return getUClock();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +237,9 @@ public class ClockImpl extends NamedElementImpl implements Clock {
 		switch (featureID) {
 			case RtscPackage.CLOCK__STATECHART:
 				setStatechart((Realtimestatechart)newValue);
+				return;
+			case RtscPackage.CLOCK__UCLOCK:
+				setUClock((UDBMClock)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,6 +256,9 @@ public class ClockImpl extends NamedElementImpl implements Clock {
 			case RtscPackage.CLOCK__STATECHART:
 				setStatechart((Realtimestatechart)null);
 				return;
+			case RtscPackage.CLOCK__UCLOCK:
+				setUClock(UCLOCK_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -188,8 +273,26 @@ public class ClockImpl extends NamedElementImpl implements Clock {
 		switch (featureID) {
 			case RtscPackage.CLOCK__STATECHART:
 				return getStatechart() != null;
+			case RtscPackage.CLOCK__UCLOCK:
+				return UCLOCK_EDEFAULT == null ? uClock != null : !UCLOCK_EDEFAULT.equals(uClock);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (uClock: ");
+		result.append(uClock);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ClockImpl

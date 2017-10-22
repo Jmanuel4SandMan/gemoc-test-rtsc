@@ -1,25 +1,22 @@
 package org.muml.seq.xsrtsc.design.services;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.stream.Collectors;
 
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.resource.Resource;
+import org.muml.seq.xsrtsc.xsrtsc.aspects.ClockAspect;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockResetEvent;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Event;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Message;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageBuffer;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageType;
-import org.muml.seq.xsrtsc.xsrtsc.rtsc.Port;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscFactory;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Transition;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Variable;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent;
 
 /** RTSC services.
  * 
@@ -71,6 +68,10 @@ public class XRTSCServices {
 				return tm.getName()+"?";
 			}).collect(Collectors.joining(" ")));
 		}
+		if (!transition.getEvents().isEmpty()){
+			res.append("\n/\n");
+			res.append(getLabel(transition.getEvents()));
+		}
 		return res.toString();
 	}
 	
@@ -93,5 +94,69 @@ public class XRTSCServices {
 			buffer.addMessage(message);
 		}
 	}
+	
+	public String getLabel(Clock clock){
+		try {
+			return clock.getName()+": "+ClockAspect.printValue(clock);
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return clock.getName();
+	}
+	
+	public String getLabel(Variable variable){
+		return variable.getName()+ " = " +variable.getRuntimeValue();
+	}
+	
+	public String getEventsLabel(State state) {
+		StringBuilder builder = new StringBuilder();
+		if (!state.getEntryEvents().isEmpty()) {
+			builder.append("Entry: {\n");
+			builder.append(getLabel(state.getEntryEvents()));
+			builder.append("}");
+		}
+		if (!state.getExitEvents().isEmpty()) {
+			if (!state.getExitEvents().isEmpty()) {
+				builder.append("\n");
+			}
+			builder.append("Exit: {\n");
+			builder.append(getLabel(state.getExitEvents()));
+			builder.append("}");
+		}
+		return builder.toString();
+	}
+	
+	public String getLabel(EList<Event> events) {
+		StringBuilder builder = new StringBuilder();
+		events.forEach(e -> {
+			builder.append(getLabel(e));
+			builder.append("\n");
+		});
+		return builder.toString();
+	}
+	
+	public String getLabel(Event e) {
+		if (e instanceof ClockResetEvent) {
+			return getLabel((ClockResetEvent) e);
+		} else if (e instanceof VariableAssignmentEvent) {
+			return getLabel((VariableAssignmentEvent) e);
+		}else if (e instanceof MessageEvent) {
+			return getLabel((MessageEvent) e);
+		}
+		return e.toString();
+	}
+
+	public String getLabel(ClockResetEvent e) {
+		return e.getClock().getName() + ".reset();";
+	}
+
+	public String getLabel(VariableAssignmentEvent e) {
+		return e.getVariable().getName() + " := " + e.getValue();
+	}
+	
+	public String getLabel(MessageEvent e) {
+		return e.getMessageType().getName() + "!";
+	}
+
 
 }

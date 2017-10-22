@@ -50,6 +50,7 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addTriggerMessagePropertyDescriptor(object);
 			addHitCountPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -100,6 +101,28 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Trigger Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTriggerMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transition_triggerMessage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transition_triggerMessage_feature", "_UI_Transition_type"),
+				 RtscPackage.Literals.TRANSITION__TRIGGER_MESSAGE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Hit Count feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135,7 +158,6 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(RtscPackage.Literals.TRANSITION__GUARDS);
 			childrenFeatures.add(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS);
-			childrenFeatures.add(RtscPackage.Literals.TRANSITION__TRIGGER_MESSAGE);
 		}
 		return childrenFeatures;
 	}
@@ -196,7 +218,6 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 				return;
 			case RtscPackage.TRANSITION__GUARDS:
 			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
-			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -223,11 +244,6 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS,
 				 RtscFactory.eINSTANCE.createClockConstraint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(RtscPackage.Literals.TRANSITION__TRIGGER_MESSAGE,
-				 RtscFactory.eINSTANCE.createMessageType()));
 	}
 
 }

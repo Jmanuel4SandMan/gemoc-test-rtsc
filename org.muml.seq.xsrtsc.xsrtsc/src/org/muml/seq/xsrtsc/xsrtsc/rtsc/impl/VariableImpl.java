@@ -25,12 +25,33 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Variable;
  * </p>
  * <ul>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.VariableImpl#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.VariableImpl#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.VariableImpl#getRuntimeValue <em>Runtime Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VariableImpl extends NamedElementImpl implements Variable {
+	/**
+	 * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INITIAL_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String initialValue = INITIAL_VALUE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getRuntimeValue() <em>Runtime Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -116,6 +137,27 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getInitialValue() {
+		return initialValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialValue(String newInitialValue) {
+		String oldInitialValue = initialValue;
+		initialValue = newInitialValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.VARIABLE__INITIAL_VALUE, oldInitialValue, initialValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getRuntimeValue() {
 		return runtimeValue;
 	}
@@ -186,6 +228,8 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				return getStatechart();
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				return getInitialValue();
 			case RtscPackage.VARIABLE__RUNTIME_VALUE:
 				return getRuntimeValue();
 		}
@@ -202,6 +246,9 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				setStatechart((Realtimestatechart)newValue);
+				return;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				setInitialValue((String)newValue);
 				return;
 			case RtscPackage.VARIABLE__RUNTIME_VALUE:
 				setRuntimeValue((String)newValue);
@@ -221,6 +268,9 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 			case RtscPackage.VARIABLE__STATECHART:
 				setStatechart((Realtimestatechart)null);
 				return;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				setInitialValue(INITIAL_VALUE_EDEFAULT);
+				return;
 			case RtscPackage.VARIABLE__RUNTIME_VALUE:
 				setRuntimeValue(RUNTIME_VALUE_EDEFAULT);
 				return;
@@ -238,6 +288,8 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				return getStatechart() != null;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				return INITIAL_VALUE_EDEFAULT == null ? initialValue != null : !INITIAL_VALUE_EDEFAULT.equals(initialValue);
 			case RtscPackage.VARIABLE__RUNTIME_VALUE:
 				return RUNTIME_VALUE_EDEFAULT == null ? runtimeValue != null : !RUNTIME_VALUE_EDEFAULT.equals(runtimeValue);
 		}
@@ -254,7 +306,9 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (runtimeValue: ");
+		result.append(" (initialValue: ");
+		result.append(initialValue);
+		result.append(", runtimeValue: ");
 		result.append(runtimeValue);
 		result.append(')');
 		return result.toString();

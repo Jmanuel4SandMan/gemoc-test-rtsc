@@ -1,6 +1,12 @@
 package org.muml.xsrtsc
 	
-language XSRTSC inherits org.muml.rtsc.RTSC {
+external language RTSC {
+	syntax "platform:/resource/org.muml.rtsc.model/model/rtsc.ecore"
+
+}
+	
+	
+language XSRTSC inherits RTSC {
 	with org.muml.rtsc.k3dsa.*
 	ecl "/org.muml.xsrtsc.dse/ecl/XSRTSC.ecl"
 }

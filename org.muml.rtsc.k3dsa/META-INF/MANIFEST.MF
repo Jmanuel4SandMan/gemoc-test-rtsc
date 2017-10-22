@@ -1,5 +1,5 @@
 Bundle-SymbolicName: org.muml.rtsc.k3dsa;singleton:=true
-Export-Package: org.muml.rtsc.k3dsa,org.muml.rtsc.k3dsa.timekeeper
+Export-Package: org.muml.rtsc.k3dsa
 Bundle-Name: org.muml.rtsc.k3dsa
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
@@ -11,8 +11,8 @@ Require-Bundle: fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version
  org.eclipse.emf.ecore;bundle-version="2.8.0";visibility:=reexport,
  org.eclipse.emf.common;bundle-version="2.8.0";visibility:=reexport,
  org.muml.rtsc.model;bundle-version="0.0.0";visibility:=private,
- org.muml.udbm,
- org.muml.udbm.java
+ org.muml.udbm;visibility:=reexport,
+ org.muml.udbm.java;visibility:=reexport
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Manifest-Version: 1.0

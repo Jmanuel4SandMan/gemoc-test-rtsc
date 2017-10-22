@@ -4,13 +4,17 @@ package org.muml.seq.xsrtsc.xsrtsc.rtsc.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Connector;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Port;
@@ -66,9 +70,38 @@ public class ConnectorImpl extends EObjectImpl implements Connector {
 	 */
 	public EList<Port> getEndpoints() {
 		if (endpoints == null) {
-			endpoints = new EObjectResolvingEList<Port>(Port.class, this, RtscPackage.CONNECTOR__ENDPOINTS);
+			endpoints = new EObjectWithInverseResolvingEList<Port>(Port.class, this, RtscPackage.CONNECTOR__ENDPOINTS, RtscPackage.PORT__CONNECTOR);
 		}
 		return endpoints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RtscPackage.CONNECTOR__ENDPOINTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEndpoints()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case RtscPackage.CONNECTOR__ENDPOINTS:
+				return ((InternalEList<?>)getEndpoints()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

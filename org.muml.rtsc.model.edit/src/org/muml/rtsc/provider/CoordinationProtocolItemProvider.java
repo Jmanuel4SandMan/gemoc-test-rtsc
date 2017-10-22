@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -24,8 +25,7 @@ import org.muml.rtsc.RtscPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CoordinationProtocolItemProvider 
-	extends NamedElementItemProvider {
+public class CoordinationProtocolItemProvider extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

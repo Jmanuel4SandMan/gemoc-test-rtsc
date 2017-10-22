@@ -13,6 +13,7 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
  * </p>
  * <ul>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getRuntimeValue <em>Runtime Value</em>}</li>
  * </ul>
  *
@@ -48,6 +49,32 @@ public interface Variable extends NamedElement {
 	 * @generated
 	 */
 	void setStatechart(Realtimestatechart value);
+
+	/**
+	 * Returns the value of the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Value</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Value</em>' attribute.
+	 * @see #setInitialValue(String)
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getVariable_InitialValue()
+	 * @model
+	 * @generated
+	 */
+	String getInitialValue();
+
+	/**
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Variable#getInitialValue <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Value</em>' attribute.
+	 * @see #getInitialValue()
+	 * @generated
+	 */
+	void setInitialValue(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Runtime Value</b></em>' attribute.

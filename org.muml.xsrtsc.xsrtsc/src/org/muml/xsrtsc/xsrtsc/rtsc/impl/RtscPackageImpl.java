@@ -2,8 +2,6 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc.impl;
 
-import java.lang.Iterable;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,6 +10,9 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.muml.udbm.Federation;
+import org.muml.udbm.UDBMClock;
 
 import org.muml.xsrtsc.xsrtsc.rtsc.Behavior;
 import org.muml.xsrtsc.xsrtsc.rtsc.BehavioralElement;
@@ -179,7 +180,14 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType iterableEDataType = null;
+	private EDataType federationEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType udbmClockEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -589,8 +597,17 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVariable_RuntimeValue() {
+	public EAttribute getVariable_InitialValue() {
 		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_RuntimeValue() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -609,6 +626,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 */
 	public EReference getClock_Statechart() {
 		return (EReference)clockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClock_UClock() {
+		return (EAttribute)clockEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -663,6 +689,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 */
 	public EReference getMessageBuffer_Types() {
 		return (EReference)messageBufferEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageBuffer_AllMessages() {
+		return (EReference)messageBufferEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -796,8 +831,17 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getIterable() {
-		return iterableEDataType;
+	public EDataType getFederation() {
+		return federationEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getUDBMClock() {
+		return udbmClockEDataType;
 	}
 
 	/**
@@ -875,10 +919,12 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__STATECHART);
+		createEAttribute(variableEClass, VARIABLE__INITIAL_VALUE);
 		createEAttribute(variableEClass, VARIABLE__RUNTIME_VALUE);
 
 		clockEClass = createEClass(CLOCK);
 		createEReference(clockEClass, CLOCK__STATECHART);
+		createEAttribute(clockEClass, CLOCK__UCLOCK);
 
 		portEClass = createEClass(PORT);
 		createEReference(portEClass, PORT__BEHAVIOUR);
@@ -887,6 +933,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		messageBufferEClass = createEClass(MESSAGE_BUFFER);
 		createEReference(messageBufferEClass, MESSAGE_BUFFER__PORT);
 		createEReference(messageBufferEClass, MESSAGE_BUFFER__TYPES);
+		createEReference(messageBufferEClass, MESSAGE_BUFFER__ALL_MESSAGES);
 
 		connectorEClass = createEClass(CONNECTOR);
 		createEReference(connectorEClass, CONNECTOR__ENDPOINTS);
@@ -909,7 +956,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(messageTypeRepositoryEClass, MESSAGE_TYPE_REPOSITORY__MESSAGE_TYPES);
 
 		// Create data types
-		iterableEDataType = createEDataType(ITERABLE);
+		federationEDataType = createEDataType(FEDERATION);
+		udbmClockEDataType = createEDataType(UDBM_CLOCK);
 	}
 
 	/**
@@ -1025,16 +1073,24 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getClockConstraint_Clock(), this.getClock(), null, "clock", null, 1, 1, ClockConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClockConstraint_Bound(), ecorePackage.getEInt(), "bound", "0", 1, 1, ClockConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		addEOperation(clockConstraintEClass, ecorePackage.getEBoolean(), "evaluate", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(clockConstraintEClass, ecorePackage.getEBoolean(), "evaluate", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFederation(), "checkFederation", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(clockConstraintEClass, null, "apply", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(clockConstraintEClass, null, "apply", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFederation(), "federation", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Variables(), "statechart", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_InitialValue(), ecorePackage.getEString(), "initialValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_RuntimeValue(), ecorePackage.getEString(), "runtimeValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(clockEClass, Clock.class, "Clock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClock_Statechart(), this.getRealtimestatechart(), this.getRealtimestatechart_Clocks(), "statechart", null, 1, 1, Clock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClock_UClock(), this.getUDBMClock(), "uClock", null, 0, 1, Clock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(clockEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(clockEClass, ecorePackage.getEString(), "printValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPort_Behaviour(), this.getBehavior(), null, "behaviour", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1043,11 +1099,10 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEClass(messageBufferEClass, MessageBuffer.class, "MessageBuffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageBuffer_Port(), this.getPort(), this.getPort_IncomingBuffer(), "port", null, 1, 1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageBuffer_Types(), this.getMessageType(), null, "types", null, 1, -1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageBuffer_AllMessages(), this.getMessage(), null, "allMessages", null, 0, -1, MessageBuffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(messageBufferEClass, this.getMessage(), "getMessage", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMessageType(), "type", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(messageBufferEClass, this.getIterable(), "getAllMessages", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(messageBufferEClass, ecorePackage.getEBoolean(), "hasMessage", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMessageType(), "type", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1081,7 +1136,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getMessageTypeRepository_MessageTypes(), this.getMessageType(), null, "messageTypes", null, 0, -1, MessageTypeRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
-		initEDataType(iterableEDataType, Iterable.class, "Iterable", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(federationEDataType, Federation.class, "Federation", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(udbmClockEDataType, UDBMClock.class, "UDBMClock", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1195,6 +1251,21 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (clockEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (clockEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getClock_UClock(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (messageBufferEClass.getEOperations().get(0), 
 		   source, 
 		   new String[] {
@@ -1210,7 +1281,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (messageBufferEClass.getEOperations().get(3), 
+		  (getMessageBuffer_AllMessages(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1225,7 +1296,12 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (iterableEDataType, 
+		  (federationEDataType, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (udbmClockEDataType, 
 		   source, 
 		   new String[] {
 		   });

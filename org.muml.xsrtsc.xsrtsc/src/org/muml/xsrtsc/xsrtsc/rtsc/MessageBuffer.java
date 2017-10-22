@@ -2,8 +2,6 @@
  */
 package org.muml.xsrtsc.xsrtsc.rtsc;
 
-import java.lang.Iterable;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getPort <em>Port</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getTypes <em>Types</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer#getAllMessages <em>All Messages</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getMessageBuffer()
@@ -71,20 +70,28 @@ public interface MessageBuffer extends EObject {
 	EList<MessageType> getTypes();
 
 	/**
+	 * Returns the value of the '<em><b>All Messages</b></em>' reference list.
+	 * The list contents are of type {@link org.muml.xsrtsc.xsrtsc.rtsc.Message}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>All Messages</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>All Messages</em>' reference list.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getMessageBuffer_AllMessages()
+	 * @model
+	 * @generated
+	 */
+	EList<Message> getAllMessages();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
 	Message getMessage(MessageType type);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.muml.xsrtsc.xsrtsc.rtsc.Iterable"
-	 * @generated
-	 */
-	Iterable getAllMessages();
 
 	/**
 	 * <!-- begin-user-doc -->

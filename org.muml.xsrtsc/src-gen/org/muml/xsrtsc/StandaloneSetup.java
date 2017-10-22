@@ -17,6 +17,10 @@ public class StandaloneSetup {
   
   public void doEMFRegistration() {
     EPackage.Registry.INSTANCE.put(
+    	org.muml.rtsc.RtscPackage.eNS_URI,
+    	org.muml.rtsc.RtscPackage.eINSTANCE
+    );
+    EPackage.Registry.INSTANCE.put(
     	org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage.eNS_URI,
     	org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage.eINSTANCE
     );
@@ -32,19 +36,33 @@ public class StandaloneSetup {
   }
   
   public void doAdaptersRegistration() {
+    MelangeRegistry.LanguageDescriptor rTSC = new MelangeRegistryImpl.LanguageDescriptorImpl(
+    	"org.muml.xsrtsc.RTSC", "", "http://www.muml.org/rtsc", "org.muml.xsrtsc.RTSCMT"
+    );
+    MelangeRegistry.INSTANCE.getLanguageMap().put(
+    	"org.muml.xsrtsc.RTSC",
+    	rTSC
+    );
     MelangeRegistry.LanguageDescriptor xSRTSC = new MelangeRegistryImpl.LanguageDescriptorImpl(
     	"org.muml.xsrtsc.XSRTSC", "", "http://org.muml.xsrtsc.xsrtsc/rtsc/", "org.muml.xsrtsc.XSRTSCMT"
     );
-    xSRTSC.addAdapter("org.muml.rtsc.RTSCMT", org.muml.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter.class);
+    xSRTSC.addAdapter("org.muml.xsrtsc.RTSCMT", org.muml.xsrtsc.xsrtsc.adapters.rtscmt.XSRTSCAdapter.class);
     xSRTSC.addAdapter("org.muml.xsrtsc.XSRTSCMT", org.muml.xsrtsc.xsrtsc.adapters.xsrtscmt.XSRTSCAdapter.class);
     MelangeRegistry.INSTANCE.getLanguageMap().put(
     	"org.muml.xsrtsc.XSRTSC",
     	xSRTSC
     );
+    MelangeRegistry.ModelTypeDescriptor rTSCMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
+    	"org.muml.xsrtsc.RTSCMT", "", "http://org.muml.xsrtsc.rtscmt/"
+    );
+    MelangeRegistry.INSTANCE.getModelTypeMap().put(
+    	"org.muml.xsrtsc.RTSCMT",
+    	rTSCMT
+    );
     MelangeRegistry.ModelTypeDescriptor xSRTSCMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
     	"org.muml.xsrtsc.XSRTSCMT", "", "http://org.muml.xsrtsc.xsrtscmt/"
     );
-    xSRTSCMT.addSuperType("org.muml.rtsc.RTSCMT");
+    xSRTSCMT.addSuperType("org.muml.xsrtsc.RTSCMT");
     MelangeRegistry.INSTANCE.getModelTypeMap().put(
     	"org.muml.xsrtsc.XSRTSCMT",
     	xSRTSCMT

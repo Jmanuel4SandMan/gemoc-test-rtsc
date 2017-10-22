@@ -3,8 +3,9 @@ package org.muml.udbm;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class UDBMClock
+public class UDBMClock 
 {
+	
 	/**
 	 * @param id
 	 * @param name

@@ -48,6 +48,7 @@ public class PortItemProvider extends BehavioralElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addBehaviourPropertyDescriptor(object);
+			addConnectorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,6 +67,28 @@ public class PortItemProvider extends BehavioralElementItemProvider {
 				 getString("_UI_Port_behaviour_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Port_behaviour_feature", "_UI_Port_type"),
 				 RtscPackage.Literals.PORT__BEHAVIOUR,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Connector feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConnectorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Port_connector_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Port_connector_feature", "_UI_Port_type"),
+				 RtscPackage.Literals.PORT__CONNECTOR,
 				 true,
 				 false,
 				 true,

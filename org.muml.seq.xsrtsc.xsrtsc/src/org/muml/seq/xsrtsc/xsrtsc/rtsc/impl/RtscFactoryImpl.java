@@ -3,6 +3,7 @@
 package org.muml.seq.xsrtsc.xsrtsc.rtsc.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -12,11 +13,13 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockConstraint;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockResetEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Connector;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.CoordinationProtocol;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Guard;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Message;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageBuffer;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageType;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageTypeRepository;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Port;
@@ -26,7 +29,11 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Transition;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Variable;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Vertex;
+
+import org.muml.udbm.Federation;
+import org.muml.udbm.UDBMClock;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,8 +95,45 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.MESSAGE: return createMessage();
 			case RtscPackage.SYSTEM: return createSystem();
 			case RtscPackage.MESSAGE_TYPE_REPOSITORY: return createMessageTypeRepository();
+			case RtscPackage.MESSAGE_EVENT: return createMessageEvent();
+			case RtscPackage.CLOCK_RESET_EVENT: return createClockResetEvent();
+			case RtscPackage.VARIABLE_ASSIGNMENT_EVENT: return createVariableAssignmentEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case RtscPackage.FEDERATION:
+				return createFederationFromString(eDataType, initialValue);
+			case RtscPackage.UDBM_CLOCK:
+				return createUDBMClockFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case RtscPackage.FEDERATION:
+				return convertFederationToString(eDataType, instanceValue);
+			case RtscPackage.UDBM_CLOCK:
+				return convertUDBMClockToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -251,6 +295,72 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	public MessageTypeRepository createMessageTypeRepository() {
 		MessageTypeRepositoryImpl messageTypeRepository = new MessageTypeRepositoryImpl();
 		return messageTypeRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageEvent createMessageEvent() {
+		MessageEventImpl messageEvent = new MessageEventImpl();
+		return messageEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClockResetEvent createClockResetEvent() {
+		ClockResetEventImpl clockResetEvent = new ClockResetEventImpl();
+		return clockResetEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableAssignmentEvent createVariableAssignmentEvent() {
+		VariableAssignmentEventImpl variableAssignmentEvent = new VariableAssignmentEventImpl();
+		return variableAssignmentEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Federation createFederationFromString(EDataType eDataType, String initialValue) {
+		return (Federation)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFederationToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UDBMClock createUDBMClockFromString(EDataType eDataType, String initialValue) {
+		return (UDBMClock)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUDBMClockToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

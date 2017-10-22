@@ -157,6 +157,33 @@ public interface RtscFactory extends EFactory {
 	MessageTypeRepository createMessageTypeRepository();
 
 	/**
+	 * Returns a new object of class '<em>Message Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message Event</em>'.
+	 * @generated
+	 */
+	MessageEvent createMessageEvent();
+
+	/**
+	 * Returns a new object of class '<em>Clock Reset Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Clock Reset Event</em>'.
+	 * @generated
+	 */
+	ClockResetEvent createClockResetEvent();
+
+	/**
+	 * Returns a new object of class '<em>Variable Assignment Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable Assignment Event</em>'.
+	 * @generated
+	 */
+	VariableAssignmentEvent createVariableAssignmentEvent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

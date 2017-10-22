@@ -417,6 +417,75 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.MessageEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageEventItemProvider messageEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.MessageEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageEventAdapter() {
+		if (messageEventItemProvider == null) {
+			messageEventItemProvider = new MessageEventItemProvider(this);
+		}
+
+		return messageEventItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.ClockResetEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ClockResetEventItemProvider clockResetEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.ClockResetEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createClockResetEventAdapter() {
+		if (clockResetEventItemProvider == null) {
+			clockResetEventItemProvider = new ClockResetEventItemProvider(this);
+		}
+
+		return clockResetEventItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.muml.rtsc.VariableAssignmentEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableAssignmentEventItemProvider variableAssignmentEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.muml.rtsc.VariableAssignmentEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableAssignmentEventAdapter() {
+		if (variableAssignmentEventItemProvider == null) {
+			variableAssignmentEventItemProvider = new VariableAssignmentEventItemProvider(this);
+		}
+
+		return variableAssignmentEventItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +599,9 @@ public class RtscItemProviderAdapterFactory extends RtscAdapterFactory implement
 		if (messageItemProvider != null) messageItemProvider.dispose();
 		if (systemItemProvider != null) systemItemProvider.dispose();
 		if (messageTypeRepositoryItemProvider != null) messageTypeRepositoryItemProvider.dispose();
+		if (messageEventItemProvider != null) messageEventItemProvider.dispose();
+		if (clockResetEventItemProvider != null) clockResetEventItemProvider.dispose();
+		if (variableAssignmentEventItemProvider != null) variableAssignmentEventItemProvider.dispose();
 	}
 
 }

@@ -134,6 +134,7 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(RtscPackage.Literals.TRANSITION__GUARDS);
 			childrenFeatures.add(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS);
+			childrenFeatures.add(RtscPackage.Literals.TRANSITION__EVENTS);
 		}
 		return childrenFeatures;
 	}
@@ -191,6 +192,7 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 		switch (notification.getFeatureID(Transition.class)) {
 			case RtscPackage.TRANSITION__GUARDS:
 			case RtscPackage.TRANSITION__CLOCK_CONSTRAINTS:
+			case RtscPackage.TRANSITION__EVENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -217,6 +219,21 @@ public class TransitionItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(RtscPackage.Literals.TRANSITION__CLOCK_CONSTRAINTS,
 				 RtscFactory.eINSTANCE.createClockConstraint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.TRANSITION__EVENTS,
+				 RtscFactory.eINSTANCE.createMessageEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.TRANSITION__EVENTS,
+				 RtscFactory.eINSTANCE.createClockResetEvent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(RtscPackage.Literals.TRANSITION__EVENTS,
+				 RtscFactory.eINSTANCE.createVariableAssignmentEvent()));
 	}
 
 }

@@ -3,6 +3,12 @@
   <foreignModel>platform:/resource/org.muml.seq.xsrtsc.xsrtsc/model/XSRTSC.ecore</foreignModel>
   <genPackages prefix="Rtsc" basePackage="org.muml.seq.xsrtsc.xsrtsc" disposableProviderFactory="true" fileExtensions="xsrtsc">
     <ecorePackage href="XSRTSC.ecore#/"/>
+    <genDataTypes>
+      <ecoreDataType href="XSRTSC.ecore#//Federation"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="XSRTSC.ecore#//UDBMClock"/>
+    </genDataTypes>
     <genClasses image="false">
       <ecoreClass href="XSRTSC.ecore#//Behavior"/>
       <genFeatures property="None" children="true" createChild="true">
@@ -71,6 +77,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//State/outgoingTransitions"/>
       </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//State/entryEvents"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//State/exitEvents"/>
+      </genFeatures>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//State/entry"/>
       </genOperations>
@@ -97,6 +109,9 @@
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Transition/triggerMessage"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Transition/events"/>
       </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Transition/hitCount"/>
@@ -154,15 +169,24 @@
       </genFeatures>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//ClockConstraint/evaluate"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSC.ecore#//ClockConstraint/evaluate/checkFederation"/>
+        </genParameters>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//ClockConstraint/apply"/>
+        <genParameters>
+          <ecoreParameter href="XSRTSC.ecore#//ClockConstraint/apply/federation"/>
+        </genParameters>
       </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSC.ecore#//Variable"/>
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Variable/statechart"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Variable/initialValue"/>
       </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Variable/runtimeValue"/>
@@ -173,6 +197,18 @@
       <genFeatures property="None" notify="false" createChild="false">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Clock/statechart"/>
       </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Clock/uClock"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//Clock/initialize"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//Clock/printValue"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//Clock/reset"/>
+      </genOperations>
     </genClasses>
     <genClasses>
       <ecoreClass href="XSRTSC.ecore#//Port"/>
@@ -181,6 +217,9 @@
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Port/incomingBuffer"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Port/connector"/>
       </genFeatures>
     </genClasses>
     <genClasses>
@@ -263,6 +302,42 @@
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//MessageTypeRepository/messageTypes"/>
       </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XSRTSC.ecore#//Event"/>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//Event/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSC.ecore#//MessageEvent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//MessageEvent/messageType"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//MessageEvent/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSC.ecore#//ClockResetEvent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//ClockResetEvent/clock"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//ClockResetEvent/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XSRTSC.ecore#//VariableAssignmentEvent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//VariableAssignmentEvent/variable"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//VariableAssignmentEvent/value"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//VariableAssignmentEvent/execute"/>
+      </genOperations>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

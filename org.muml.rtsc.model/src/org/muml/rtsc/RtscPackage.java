@@ -369,13 +369,31 @@ public interface RtscPackage extends EPackage {
 	int STATE__OUTGOING_TRANSITIONS = VERTEX_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Entry Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ENTRY_EVENTS = VERTEX_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Exit Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__EXIT_EVENTS = VERTEX_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = VERTEX_FEATURE_COUNT + 7;
+	int STATE_FEATURE_COUNT = VERTEX_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -460,13 +478,22 @@ public interface RtscPackage extends EPackage {
 	int TRANSITION__TRIGGER_MESSAGE = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__EVENTS = NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -598,13 +625,22 @@ public interface RtscPackage extends EPackage {
 	int VARIABLE__STATECHART = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__INITIAL_VALUE = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int VARIABLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -708,13 +744,22 @@ public interface RtscPackage extends EPackage {
 	int PORT__INCOMING_BUFFER = BEHAVIORAL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Connector</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT__CONNECTOR = BEHAVIORAL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Port</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORT_FEATURE_COUNT = BEHAVIORAL_ELEMENT_FEATURE_COUNT + 2;
+	int PORT_FEATURE_COUNT = BEHAVIORAL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Port</em>' class.
@@ -1031,6 +1076,155 @@ public interface RtscPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.EventImpl <em>Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.EventImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getEvent()
+	 * @generated
+	 */
+	int EVENT = 19;
+
+	/**
+	 * The number of structural features of the '<em>Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.MessageEventImpl <em>Message Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.MessageEventImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getMessageEvent()
+	 * @generated
+	 */
+	int MESSAGE_EVENT = 20;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_EVENT__MESSAGE_TYPE = EVENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Message Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_EVENT_FEATURE_COUNT = EVENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Message Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_EVENT_OPERATION_COUNT = EVENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.ClockResetEventImpl <em>Clock Reset Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.ClockResetEventImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getClockResetEvent()
+	 * @generated
+	 */
+	int CLOCK_RESET_EVENT = 21;
+
+	/**
+	 * The feature id for the '<em><b>Clock</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOCK_RESET_EVENT__CLOCK = EVENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Clock Reset Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOCK_RESET_EVENT_FEATURE_COUNT = EVENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Clock Reset Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOCK_RESET_EVENT_OPERATION_COUNT = EVENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.muml.rtsc.impl.VariableAssignmentEventImpl <em>Variable Assignment Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.muml.rtsc.impl.VariableAssignmentEventImpl
+	 * @see org.muml.rtsc.impl.RtscPackageImpl#getVariableAssignmentEvent()
+	 * @generated
+	 */
+	int VARIABLE_ASSIGNMENT_EVENT = 22;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ASSIGNMENT_EVENT__VARIABLE = EVENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ASSIGNMENT_EVENT__VALUE = EVENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Variable Assignment Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ASSIGNMENT_EVENT_FEATURE_COUNT = EVENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Variable Assignment Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ASSIGNMENT_EVENT_OPERATION_COUNT = EVENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.Behavior <em>Behavior</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1214,6 +1408,28 @@ public interface RtscPackage extends EPackage {
 	EReference getState_OutgoingTransitions();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.rtsc.State#getEntryEvents <em>Entry Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entry Events</em>'.
+	 * @see org.muml.rtsc.State#getEntryEvents()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_EntryEvents();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.rtsc.State#getExitEvents <em>Exit Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Exit Events</em>'.
+	 * @see org.muml.rtsc.State#getExitEvents()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_ExitEvents();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1288,6 +1504,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTransition_TriggerMessage();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.muml.rtsc.Transition#getEvents <em>Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Events</em>'.
+	 * @see org.muml.rtsc.Transition#getEvents()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Events();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.NamedElement <em>Named Element</em>}'.
@@ -1406,6 +1633,17 @@ public interface RtscPackage extends EPackage {
 	EReference getVariable_Statechart();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.muml.rtsc.Variable#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Value</em>'.
+	 * @see org.muml.rtsc.Variable#getInitialValue()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_InitialValue();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.Clock <em>Clock</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1457,6 +1695,17 @@ public interface RtscPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPort_IncomingBuffer();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.rtsc.Port#getConnector <em>Connector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connector</em>'.
+	 * @see org.muml.rtsc.Port#getConnector()
+	 * @see #getPort()
+	 * @generated
+	 */
+	EReference getPort_Connector();
 
 	/**
 	 * Returns the meta object for class '{@link org.muml.rtsc.MessageBuffer <em>Message Buffer</em>}'.
@@ -1639,6 +1888,90 @@ public interface RtscPackage extends EPackage {
 	EReference getMessageTypeRepository_MessageTypes();
 
 	/**
+	 * Returns the meta object for class '{@link org.muml.rtsc.Event <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Event</em>'.
+	 * @see org.muml.rtsc.Event
+	 * @generated
+	 */
+	EClass getEvent();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.rtsc.MessageEvent <em>Message Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message Event</em>'.
+	 * @see org.muml.rtsc.MessageEvent
+	 * @generated
+	 */
+	EClass getMessageEvent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.rtsc.MessageEvent#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see org.muml.rtsc.MessageEvent#getMessageType()
+	 * @see #getMessageEvent()
+	 * @generated
+	 */
+	EReference getMessageEvent_MessageType();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.rtsc.ClockResetEvent <em>Clock Reset Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Clock Reset Event</em>'.
+	 * @see org.muml.rtsc.ClockResetEvent
+	 * @generated
+	 */
+	EClass getClockResetEvent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.rtsc.ClockResetEvent#getClock <em>Clock</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Clock</em>'.
+	 * @see org.muml.rtsc.ClockResetEvent#getClock()
+	 * @see #getClockResetEvent()
+	 * @generated
+	 */
+	EReference getClockResetEvent_Clock();
+
+	/**
+	 * Returns the meta object for class '{@link org.muml.rtsc.VariableAssignmentEvent <em>Variable Assignment Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable Assignment Event</em>'.
+	 * @see org.muml.rtsc.VariableAssignmentEvent
+	 * @generated
+	 */
+	EClass getVariableAssignmentEvent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.muml.rtsc.VariableAssignmentEvent#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see org.muml.rtsc.VariableAssignmentEvent#getVariable()
+	 * @see #getVariableAssignmentEvent()
+	 * @generated
+	 */
+	EReference getVariableAssignmentEvent_Variable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.muml.rtsc.VariableAssignmentEvent#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.muml.rtsc.VariableAssignmentEvent#getValue()
+	 * @see #getVariableAssignmentEvent()
+	 * @generated
+	 */
+	EAttribute getVariableAssignmentEvent_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1806,6 +2139,22 @@ public interface RtscPackage extends EPackage {
 		EReference STATE__OUTGOING_TRANSITIONS = eINSTANCE.getState_OutgoingTransitions();
 
 		/**
+		 * The meta object literal for the '<em><b>Entry Events</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__ENTRY_EVENTS = eINSTANCE.getState_EntryEvents();
+
+		/**
+		 * The meta object literal for the '<em><b>Exit Events</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__EXIT_EVENTS = eINSTANCE.getState_ExitEvents();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.rtsc.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1862,6 +2211,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__TRIGGER_MESSAGE = eINSTANCE.getTransition_TriggerMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Events</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__EVENTS = eINSTANCE.getTransition_Events();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.rtsc.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -1962,6 +2319,14 @@ public interface RtscPackage extends EPackage {
 		EReference VARIABLE__STATECHART = eINSTANCE.getVariable_Statechart();
 
 		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__INITIAL_VALUE = eINSTANCE.getVariable_InitialValue();
+
+		/**
 		 * The meta object literal for the '{@link org.muml.rtsc.impl.ClockImpl <em>Clock</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2004,6 +2369,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PORT__INCOMING_BUFFER = eINSTANCE.getPort_IncomingBuffer();
+
+		/**
+		 * The meta object literal for the '<em><b>Connector</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PORT__CONNECTOR = eINSTANCE.getPort_Connector();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.rtsc.impl.MessageBufferImpl <em>Message Buffer</em>}' class.
@@ -2154,6 +2527,78 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_TYPE_REPOSITORY__MESSAGE_TYPES = eINSTANCE.getMessageTypeRepository_MessageTypes();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.rtsc.impl.EventImpl <em>Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.rtsc.impl.EventImpl
+		 * @see org.muml.rtsc.impl.RtscPackageImpl#getEvent()
+		 * @generated
+		 */
+		EClass EVENT = eINSTANCE.getEvent();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.rtsc.impl.MessageEventImpl <em>Message Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.rtsc.impl.MessageEventImpl
+		 * @see org.muml.rtsc.impl.RtscPackageImpl#getMessageEvent()
+		 * @generated
+		 */
+		EClass MESSAGE_EVENT = eINSTANCE.getMessageEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_EVENT__MESSAGE_TYPE = eINSTANCE.getMessageEvent_MessageType();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.rtsc.impl.ClockResetEventImpl <em>Clock Reset Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.rtsc.impl.ClockResetEventImpl
+		 * @see org.muml.rtsc.impl.RtscPackageImpl#getClockResetEvent()
+		 * @generated
+		 */
+		EClass CLOCK_RESET_EVENT = eINSTANCE.getClockResetEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Clock</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOCK_RESET_EVENT__CLOCK = eINSTANCE.getClockResetEvent_Clock();
+
+		/**
+		 * The meta object literal for the '{@link org.muml.rtsc.impl.VariableAssignmentEventImpl <em>Variable Assignment Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.muml.rtsc.impl.VariableAssignmentEventImpl
+		 * @see org.muml.rtsc.impl.RtscPackageImpl#getVariableAssignmentEvent()
+		 * @generated
+		 */
+		EClass VARIABLE_ASSIGNMENT_EVENT = eINSTANCE.getVariableAssignmentEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_ASSIGNMENT_EVENT__VARIABLE = eINSTANCE.getVariableAssignmentEvent_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE_ASSIGNMENT_EVENT__VALUE = eINSTANCE.getVariableAssignmentEvent_Value();
 
 	}
 

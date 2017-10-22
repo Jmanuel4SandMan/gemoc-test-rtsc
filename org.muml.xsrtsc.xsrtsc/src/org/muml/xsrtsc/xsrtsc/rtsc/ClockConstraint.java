@@ -4,6 +4,8 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.muml.udbm.Federation;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Clock Constraint</b></em>'.
@@ -78,17 +80,17 @@ public interface ClockConstraint extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model checkFederationDataType="org.muml.xsrtsc.xsrtsc.rtsc.Federation"
 	 * @generated
 	 */
-	boolean evaluate();
+	boolean evaluate(Federation checkFederation);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @model federationDataType="org.muml.xsrtsc.xsrtsc.rtsc.Federation"
 	 * @generated
 	 */
-	void apply();
+	void apply(Federation federation);
 
 } // ClockConstraint

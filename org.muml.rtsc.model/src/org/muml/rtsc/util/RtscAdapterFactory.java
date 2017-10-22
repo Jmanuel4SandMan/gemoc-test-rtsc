@@ -13,11 +13,14 @@ import org.muml.rtsc.Behavior;
 import org.muml.rtsc.BehavioralElement;
 import org.muml.rtsc.Clock;
 import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.ClockResetEvent;
 import org.muml.rtsc.Connector;
 import org.muml.rtsc.CoordinationProtocol;
+import org.muml.rtsc.Event;
 import org.muml.rtsc.Guard;
 import org.muml.rtsc.Message;
 import org.muml.rtsc.MessageBuffer;
+import org.muml.rtsc.MessageEvent;
 import org.muml.rtsc.MessageType;
 import org.muml.rtsc.MessageTypeRepository;
 import org.muml.rtsc.NamedElement;
@@ -27,6 +30,7 @@ import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.State;
 import org.muml.rtsc.Transition;
 import org.muml.rtsc.Variable;
+import org.muml.rtsc.VariableAssignmentEvent;
 import org.muml.rtsc.Vertex;
 
 /**
@@ -160,6 +164,22 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMessageTypeRepository(MessageTypeRepository object) {
 				return createMessageTypeRepositoryAdapter();
+			}
+			@Override
+			public Adapter caseEvent(Event object) {
+				return createEventAdapter();
+			}
+			@Override
+			public Adapter caseMessageEvent(MessageEvent object) {
+				return createMessageEventAdapter();
+			}
+			@Override
+			public Adapter caseClockResetEvent(ClockResetEvent object) {
+				return createClockResetEventAdapter();
+			}
+			@Override
+			public Adapter caseVariableAssignmentEvent(VariableAssignmentEvent object) {
+				return createVariableAssignmentEventAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -444,6 +464,62 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMessageTypeRepositoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.rtsc.Event <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.rtsc.Event
+	 * @generated
+	 */
+	public Adapter createEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.rtsc.MessageEvent <em>Message Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.rtsc.MessageEvent
+	 * @generated
+	 */
+	public Adapter createMessageEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.rtsc.ClockResetEvent <em>Clock Reset Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.rtsc.ClockResetEvent
+	 * @generated
+	 */
+	public Adapter createClockResetEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.rtsc.VariableAssignmentEvent <em>Variable Assignment Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.rtsc.VariableAssignmentEvent
+	 * @generated
+	 */
+	public Adapter createVariableAssignmentEventAdapter() {
 		return null;
 	}
 

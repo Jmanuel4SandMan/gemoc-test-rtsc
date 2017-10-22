@@ -2,6 +2,7 @@
  */
 package org.muml.seq.xsrtsc.xsrtsc.rtsc;
 
+import org.muml.udbm.UDBMClock;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,7 @@ package org.muml.seq.xsrtsc.xsrtsc.rtsc;
  * </p>
  * <ul>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock#getUClock <em>UClock</em>}</li>
  * </ul>
  *
  * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage#getClock()
@@ -47,5 +49,55 @@ public interface Clock extends NamedElement {
 	 * @generated
 	 */
 	void setStatechart(Realtimestatechart value);
+
+	/**
+	 * Returns the value of the '<em><b>UClock</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>UClock</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>UClock</em>' attribute.
+	 * @see #setUClock(UDBMClock)
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage#getClock_UClock()
+	 * @model unique="false" dataType="org.muml.seq.xsrtsc.xsrtsc.rtsc.UDBMClock"
+	 * @generated
+	 */
+	UDBMClock getUClock();
+
+	/**
+	 * Sets the value of the '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock#getUClock <em>UClock</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>UClock</em>' attribute.
+	 * @see #getUClock()
+	 * @generated
+	 */
+	void setUClock(UDBMClock value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void initialize();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String printValue();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void reset();
 
 } // Clock

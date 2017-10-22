@@ -13,11 +13,14 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Behavior;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.BehavioralElement;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockConstraint;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockResetEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Connector;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.CoordinationProtocol;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Event;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Guard;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Message;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageBuffer;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageType;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageTypeRepository;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.NamedElement;
@@ -27,6 +30,7 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Transition;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Variable;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Vertex;
 
 /**
@@ -160,6 +164,22 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMessageTypeRepository(MessageTypeRepository object) {
 				return createMessageTypeRepositoryAdapter();
+			}
+			@Override
+			public Adapter caseEvent(Event object) {
+				return createEventAdapter();
+			}
+			@Override
+			public Adapter caseMessageEvent(MessageEvent object) {
+				return createMessageEventAdapter();
+			}
+			@Override
+			public Adapter caseClockResetEvent(ClockResetEvent object) {
+				return createClockResetEventAdapter();
+			}
+			@Override
+			public Adapter caseVariableAssignmentEvent(VariableAssignmentEvent object) {
+				return createVariableAssignmentEventAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -444,6 +464,62 @@ public class RtscAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMessageTypeRepositoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Event <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.Event
+	 * @generated
+	 */
+	public Adapter createEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageEvent <em>Message Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageEvent
+	 * @generated
+	 */
+	public Adapter createMessageEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockResetEvent <em>Clock Reset Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockResetEvent
+	 * @generated
+	 */
+	public Adapter createClockResetEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent <em>Variable Assignment Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent
+	 * @generated
+	 */
+	public Adapter createVariableAssignmentEventAdapter() {
 		return null;
 	}
 

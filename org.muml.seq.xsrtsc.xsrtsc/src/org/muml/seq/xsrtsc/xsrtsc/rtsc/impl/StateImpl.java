@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Event;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.NamedElement;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage;
@@ -40,6 +41,8 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Transition;
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl#getOwningRTSC <em>Owning RTSC</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl#getIncomingTransitions <em>Incoming Transitions</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl#getOutgoingTransitions <em>Outgoing Transitions</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl#getEntryEvents <em>Entry Events</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl#getExitEvents <em>Exit Events</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,6 +137,26 @@ public class StateImpl extends VertexImpl implements State {
 	 * @ordered
 	 */
 	protected EList<Transition> outgoingTransitions;
+
+	/**
+	 * The cached value of the '{@link #getEntryEvents() <em>Entry Events</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEntryEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> entryEvents;
+
+	/**
+	 * The cached value of the '{@link #getExitEvents() <em>Exit Events</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExitEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> exitEvents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -299,6 +322,30 @@ public class StateImpl extends VertexImpl implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Event> getEntryEvents() {
+		if (entryEvents == null) {
+			entryEvents = new EObjectContainmentEList<Event>(Event.class, this, RtscPackage.STATE__ENTRY_EVENTS);
+		}
+		return entryEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Event> getExitEvents() {
+		if (exitEvents == null) {
+			exitEvents = new EObjectContainmentEList<Event>(Event.class, this, RtscPackage.STATE__EXIT_EVENTS);
+		}
+		return exitEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void entry() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -353,6 +400,10 @@ public class StateImpl extends VertexImpl implements State {
 				return ((InternalEList<?>)getIncomingTransitions()).basicRemove(otherEnd, msgs);
 			case RtscPackage.STATE__OUTGOING_TRANSITIONS:
 				return ((InternalEList<?>)getOutgoingTransitions()).basicRemove(otherEnd, msgs);
+			case RtscPackage.STATE__ENTRY_EVENTS:
+				return ((InternalEList<?>)getEntryEvents()).basicRemove(otherEnd, msgs);
+			case RtscPackage.STATE__EXIT_EVENTS:
+				return ((InternalEList<?>)getExitEvents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -393,6 +444,10 @@ public class StateImpl extends VertexImpl implements State {
 				return getIncomingTransitions();
 			case RtscPackage.STATE__OUTGOING_TRANSITIONS:
 				return getOutgoingTransitions();
+			case RtscPackage.STATE__ENTRY_EVENTS:
+				return getEntryEvents();
+			case RtscPackage.STATE__EXIT_EVENTS:
+				return getExitEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -430,6 +485,14 @@ public class StateImpl extends VertexImpl implements State {
 				getOutgoingTransitions().clear();
 				getOutgoingTransitions().addAll((Collection<? extends Transition>)newValue);
 				return;
+			case RtscPackage.STATE__ENTRY_EVENTS:
+				getEntryEvents().clear();
+				getEntryEvents().addAll((Collection<? extends Event>)newValue);
+				return;
+			case RtscPackage.STATE__EXIT_EVENTS:
+				getExitEvents().clear();
+				getExitEvents().addAll((Collection<? extends Event>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -463,6 +526,12 @@ public class StateImpl extends VertexImpl implements State {
 			case RtscPackage.STATE__OUTGOING_TRANSITIONS:
 				getOutgoingTransitions().clear();
 				return;
+			case RtscPackage.STATE__ENTRY_EVENTS:
+				getEntryEvents().clear();
+				return;
+			case RtscPackage.STATE__EXIT_EVENTS:
+				getExitEvents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -489,6 +558,10 @@ public class StateImpl extends VertexImpl implements State {
 				return incomingTransitions != null && !incomingTransitions.isEmpty();
 			case RtscPackage.STATE__OUTGOING_TRANSITIONS:
 				return outgoingTransitions != null && !outgoingTransitions.isEmpty();
+			case RtscPackage.STATE__ENTRY_EVENTS:
+				return entryEvents != null && !entryEvents.isEmpty();
+			case RtscPackage.STATE__EXIT_EVENTS:
+				return exitEvents != null && !exitEvents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

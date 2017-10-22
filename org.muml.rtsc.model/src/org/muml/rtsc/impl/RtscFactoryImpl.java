@@ -12,11 +12,13 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import org.muml.rtsc.Clock;
 import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.ClockResetEvent;
 import org.muml.rtsc.Connector;
 import org.muml.rtsc.CoordinationProtocol;
 import org.muml.rtsc.Guard;
 import org.muml.rtsc.Message;
 import org.muml.rtsc.MessageBuffer;
+import org.muml.rtsc.MessageEvent;
 import org.muml.rtsc.MessageType;
 import org.muml.rtsc.MessageTypeRepository;
 import org.muml.rtsc.Port;
@@ -26,6 +28,7 @@ import org.muml.rtsc.RtscPackage;
 import org.muml.rtsc.State;
 import org.muml.rtsc.Transition;
 import org.muml.rtsc.Variable;
+import org.muml.rtsc.VariableAssignmentEvent;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,6 +89,9 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 			case RtscPackage.MESSAGE: return createMessage();
 			case RtscPackage.SYSTEM: return createSystem();
 			case RtscPackage.MESSAGE_TYPE_REPOSITORY: return createMessageTypeRepository();
+			case RtscPackage.MESSAGE_EVENT: return createMessageEvent();
+			case RtscPackage.CLOCK_RESET_EVENT: return createClockResetEvent();
+			case RtscPackage.VARIABLE_ASSIGNMENT_EVENT: return createVariableAssignmentEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -239,6 +245,36 @@ public class RtscFactoryImpl extends EFactoryImpl implements RtscFactory {
 	public MessageTypeRepository createMessageTypeRepository() {
 		MessageTypeRepositoryImpl messageTypeRepository = new MessageTypeRepositoryImpl();
 		return messageTypeRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageEvent createMessageEvent() {
+		MessageEventImpl messageEvent = new MessageEventImpl();
+		return messageEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClockResetEvent createClockResetEvent() {
+		ClockResetEventImpl clockResetEvent = new ClockResetEventImpl();
+		return clockResetEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableAssignmentEvent createVariableAssignmentEvent() {
+		VariableAssignmentEventImpl variableAssignmentEvent = new VariableAssignmentEventImpl();
+		return variableAssignmentEvent;
 	}
 
 	/**

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.muml.rtsc.ClockConstraint;
+import org.muml.rtsc.Event;
 import org.muml.rtsc.Guard;
 import org.muml.rtsc.MessageType;
 import org.muml.rtsc.Realtimestatechart;
@@ -41,6 +42,7 @@ import org.muml.rtsc.Transition;
  *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getClockConstraints <em>Clock Constraints</em>}</li>
  *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getStatechart <em>Statechart</em>}</li>
  *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getTriggerMessage <em>Trigger Message</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.TransitionImpl#getEvents <em>Events</em>}</li>
  * </ul>
  *
  * @generated
@@ -95,6 +97,16 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * @ordered
 	 */
 	protected EList<MessageType> triggerMessage;
+
+	/**
+	 * The cached value of the '{@link #getEvents() <em>Events</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> events;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -317,6 +329,18 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Event> getEvents() {
+		if (events == null) {
+			events = new EObjectContainmentEList<Event>(Event.class, this, RtscPackage.TRANSITION__EVENTS);
+		}
+		return events;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -354,6 +378,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return ((InternalEList<?>)getClockConstraints()).basicRemove(otherEnd, msgs);
 			case RtscPackage.TRANSITION__STATECHART:
 				return basicSetStatechart(null, msgs);
+			case RtscPackage.TRANSITION__EVENTS:
+				return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -394,6 +420,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getStatechart();
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				return getTriggerMessage();
+			case RtscPackage.TRANSITION__EVENTS:
+				return getEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -428,6 +456,10 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				getTriggerMessage().clear();
 				getTriggerMessage().addAll((Collection<? extends MessageType>)newValue);
 				return;
+			case RtscPackage.TRANSITION__EVENTS:
+				getEvents().clear();
+				getEvents().addAll((Collection<? extends Event>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -458,6 +490,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				getTriggerMessage().clear();
 				return;
+			case RtscPackage.TRANSITION__EVENTS:
+				getEvents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -482,6 +517,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getStatechart() != null;
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				return triggerMessage != null && !triggerMessage.isEmpty();
+			case RtscPackage.TRANSITION__EVENTS:
+				return events != null && !events.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

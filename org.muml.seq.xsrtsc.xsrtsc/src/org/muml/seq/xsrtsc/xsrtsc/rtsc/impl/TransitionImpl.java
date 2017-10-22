@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.ClockConstraint;
+import org.muml.seq.xsrtsc.xsrtsc.rtsc.Event;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Guard;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.MessageType;
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart;
@@ -42,6 +43,7 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Vertex;
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getClockConstraints <em>Clock Constraints</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getStatechart <em>Statechart</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getTriggerMessage <em>Trigger Message</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getEvents <em>Events</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.TransitionImpl#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
@@ -97,6 +99,16 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * @ordered
 	 */
 	protected EList<MessageType> triggerMessage;
+
+	/**
+	 * The cached value of the '{@link #getEvents() <em>Events</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> events;
 
 	/**
 	 * The default value of the '{@link #getHitCount() <em>Hit Count</em>}' attribute.
@@ -339,6 +351,18 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Event> getEvents() {
+		if (events == null) {
+			events = new EObjectContainmentEList<Event>(Event.class, this, RtscPackage.TRANSITION__EVENTS);
+		}
+		return events;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public int getHitCount() {
 		return hitCount;
 	}
@@ -463,6 +487,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return ((InternalEList<?>)getClockConstraints()).basicRemove(otherEnd, msgs);
 			case RtscPackage.TRANSITION__STATECHART:
 				return basicSetStatechart(null, msgs);
+			case RtscPackage.TRANSITION__EVENTS:
+				return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -503,6 +529,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getStatechart();
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				return getTriggerMessage();
+			case RtscPackage.TRANSITION__EVENTS:
+				return getEvents();
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				return getHitCount();
 		}
@@ -539,6 +567,10 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				getTriggerMessage().clear();
 				getTriggerMessage().addAll((Collection<? extends MessageType>)newValue);
 				return;
+			case RtscPackage.TRANSITION__EVENTS:
+				getEvents().clear();
+				getEvents().addAll((Collection<? extends Event>)newValue);
+				return;
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				setHitCount((Integer)newValue);
 				return;
@@ -572,6 +604,9 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				getTriggerMessage().clear();
 				return;
+			case RtscPackage.TRANSITION__EVENTS:
+				getEvents().clear();
+				return;
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				setHitCount(HIT_COUNT_EDEFAULT);
 				return;
@@ -599,6 +634,8 @@ public class TransitionImpl extends NamedElementImpl implements Transition {
 				return getStatechart() != null;
 			case RtscPackage.TRANSITION__TRIGGER_MESSAGE:
 				return triggerMessage != null && !triggerMessage.isEmpty();
+			case RtscPackage.TRANSITION__EVENTS:
+				return events != null && !events.isEmpty();
 			case RtscPackage.TRANSITION__HIT_COUNT:
 				return hitCount != HIT_COUNT_EDEFAULT;
 		}

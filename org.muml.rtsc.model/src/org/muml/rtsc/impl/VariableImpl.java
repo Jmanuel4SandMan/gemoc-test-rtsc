@@ -25,11 +25,31 @@ import org.muml.rtsc.Variable;
  * </p>
  * <ul>
  *   <li>{@link org.muml.rtsc.impl.VariableImpl#getStatechart <em>Statechart</em>}</li>
+ *   <li>{@link org.muml.rtsc.impl.VariableImpl#getInitialValue <em>Initial Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VariableImpl extends NamedElementImpl implements Variable {
+	/**
+	 * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INITIAL_VALUE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String initialValue = INITIAL_VALUE_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,6 +115,27 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getInitialValue() {
+		return initialValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialValue(String newInitialValue) {
+		String oldInitialValue = initialValue;
+		initialValue = newInitialValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RtscPackage.VARIABLE__INITIAL_VALUE, oldInitialValue, initialValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -144,6 +185,8 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				return getStatechart();
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				return getInitialValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +201,9 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				setStatechart((Realtimestatechart)newValue);
+				return;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				setInitialValue((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,6 +220,9 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 			case RtscPackage.VARIABLE__STATECHART:
 				setStatechart((Realtimestatechart)null);
 				return;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				setInitialValue(INITIAL_VALUE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -188,8 +237,26 @@ public class VariableImpl extends NamedElementImpl implements Variable {
 		switch (featureID) {
 			case RtscPackage.VARIABLE__STATECHART:
 				return getStatechart() != null;
+			case RtscPackage.VARIABLE__INITIAL_VALUE:
+				return INITIAL_VALUE_EDEFAULT == null ? initialValue != null : !INITIAL_VALUE_EDEFAULT.equals(initialValue);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (initialValue: ");
+		result.append(initialValue);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VariableImpl

@@ -109,9 +109,11 @@
     <eOperations name="evaluate">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="checkFederation" eType="//Federation"/>
     </eOperations>
     <eOperations name="apply">
       <eAnnotations source="aspect"/>
+      <eParameters name="federation" eType="//Federation"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clock" lowerBound="1" eType="//Clock"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bound" lowerBound="1" defaultValueLiteral="0">
@@ -120,13 +122,26 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/variables"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtimeValue" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Clock" eSuperTypes="//NamedElement">
+    <eOperations name="initialize">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eOperations name="printValue">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/clocks"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uClock" unique="false" eType="//UDBMClock">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Port" eSuperTypes="//BehavioralElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="behaviour" eType="//Behavior"/>
@@ -136,9 +151,6 @@
     <eOperations name="getMessage" eType="//Message">
       <eAnnotations source="aspect"/>
       <eParameters name="type" eType="//MessageType"/>
-    </eOperations>
-    <eOperations name="getAllMessages" eType="//Iterable">
-      <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="hasMessage">
       <eAnnotations source="aspect"/>
@@ -151,6 +163,9 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="//Port" eOpposite="//Port/incomingBuffer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="types" lowerBound="1" upperBound="-1" eType="//MessageType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allMessages" unique="false" upperBound="-1" eType="//Message">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port"/>
@@ -180,7 +195,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="MessageTypeRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1" eType="//MessageType" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="Iterable" instanceClassName="java.lang.Iterable">
+  <eClassifiers xsi:type="ecore:EDataType" name="Federation" instanceClassName="org.muml.udbm.Federation">
+    <eAnnotations source="aspect"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="UDBMClock" instanceClassName="org.muml.udbm.UDBMClock">
     <eAnnotations source="aspect"/>
   </eClassifiers>
 </ecore:EPackage>
