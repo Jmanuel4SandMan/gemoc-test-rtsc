@@ -41,6 +41,9 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XSRTSC.ecore#//Realtimestatechart/rounds"/>
       </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XSRTSC.ecore#//Realtimestatechart/activeTransitions"/>
+      </genFeatures>
       <genOperations>
         <ecoreOperation href="XSRTSC.ecore#//Realtimestatechart/main"/>
       </genOperations>
@@ -274,6 +277,9 @@
         <genParameters>
           <ecoreParameter href="XSRTSC.ecore#//CoordinationProtocol/initialize/arguments"/>
         </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XSRTSC.ecore#//CoordinationProtocol/step"/>
       </genOperations>
     </genClasses>
     <genClasses>

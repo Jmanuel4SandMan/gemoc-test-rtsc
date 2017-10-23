@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getClockConstraints <em>Clock Constraints</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getStatechart <em>Statechart</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getTriggerMessage <em>Trigger Message</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getEvents <em>Events</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Transition#getHitCount <em>Hit Count</em>}</li>
  * </ul>
  *
@@ -158,6 +159,22 @@ public interface Transition extends NamedElement {
 	 * @generated
 	 */
 	EList<MessageType> getTriggerMessage();
+
+	/**
+	 * Returns the value of the '<em><b>Events</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.xsrtsc.xsrtsc.rtsc.Event}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Events</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Events</em>' containment reference list.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getTransition_Events()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Event> getEvents();
 
 	/**
 	 * Returns the value of the '<em><b>Hit Count</b></em>' attribute.

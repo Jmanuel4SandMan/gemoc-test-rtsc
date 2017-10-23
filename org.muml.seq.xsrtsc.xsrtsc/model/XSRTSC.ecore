@@ -31,6 +31,9 @@
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeTransitions" unique="false" upperBound="-1" eType="//Transition">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="//Vertex //NamedElement">
     <eOperations name="entry">
@@ -186,6 +189,9 @@
       <eParameters name="arguments" upperBound="-1">
         <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eParameters>
+    </eOperations>
+    <eOperations name="step">
+      <eAnnotations source="aspect"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ports" lowerBound="2" upperBound="2" eType="//Port"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connector" lowerBound="1" eType="//Connector" containment="true"/>

@@ -80,4 +80,12 @@ public interface CoordinationProtocol extends NamedElement {
 	 */
 	void initialize(EList<String> arguments);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void step();
+
 } // CoordinationProtocol

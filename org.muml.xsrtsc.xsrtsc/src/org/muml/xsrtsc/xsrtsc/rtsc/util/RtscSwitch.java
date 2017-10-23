@@ -11,11 +11,14 @@ import org.muml.xsrtsc.xsrtsc.rtsc.Behavior;
 import org.muml.xsrtsc.xsrtsc.rtsc.BehavioralElement;
 import org.muml.xsrtsc.xsrtsc.rtsc.Clock;
 import org.muml.xsrtsc.xsrtsc.rtsc.ClockConstraint;
+import org.muml.xsrtsc.xsrtsc.rtsc.ClockResetEvent;
 import org.muml.xsrtsc.xsrtsc.rtsc.Connector;
 import org.muml.xsrtsc.xsrtsc.rtsc.CoordinationProtocol;
+import org.muml.xsrtsc.xsrtsc.rtsc.Event;
 import org.muml.xsrtsc.xsrtsc.rtsc.Guard;
 import org.muml.xsrtsc.xsrtsc.rtsc.Message;
 import org.muml.xsrtsc.xsrtsc.rtsc.MessageBuffer;
+import org.muml.xsrtsc.xsrtsc.rtsc.MessageEvent;
 import org.muml.xsrtsc.xsrtsc.rtsc.MessageType;
 import org.muml.xsrtsc.xsrtsc.rtsc.MessageTypeRepository;
 import org.muml.xsrtsc.xsrtsc.rtsc.NamedElement;
@@ -25,6 +28,7 @@ import org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage;
 import org.muml.xsrtsc.xsrtsc.rtsc.State;
 import org.muml.xsrtsc.xsrtsc.rtsc.Transition;
 import org.muml.xsrtsc.xsrtsc.rtsc.Variable;
+import org.muml.xsrtsc.xsrtsc.rtsc.VariableAssignmentEvent;
 import org.muml.xsrtsc.xsrtsc.rtsc.Vertex;
 
 /**
@@ -207,6 +211,33 @@ public class RtscSwitch<T> extends Switch<T> {
 			case RtscPackage.MESSAGE_TYPE_REPOSITORY: {
 				MessageTypeRepository messageTypeRepository = (MessageTypeRepository)theEObject;
 				T result = caseMessageTypeRepository(messageTypeRepository);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.EVENT: {
+				Event event = (Event)theEObject;
+				T result = caseEvent(event);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.MESSAGE_EVENT: {
+				MessageEvent messageEvent = (MessageEvent)theEObject;
+				T result = caseMessageEvent(messageEvent);
+				if (result == null) result = caseEvent(messageEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.CLOCK_RESET_EVENT: {
+				ClockResetEvent clockResetEvent = (ClockResetEvent)theEObject;
+				T result = caseClockResetEvent(clockResetEvent);
+				if (result == null) result = caseEvent(clockResetEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RtscPackage.VARIABLE_ASSIGNMENT_EVENT: {
+				VariableAssignmentEvent variableAssignmentEvent = (VariableAssignmentEvent)theEObject;
+				T result = caseVariableAssignmentEvent(variableAssignmentEvent);
+				if (result == null) result = caseEvent(variableAssignmentEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -496,6 +527,66 @@ public class RtscSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMessageTypeRepository(MessageTypeRepository object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEvent(Event object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageEvent(MessageEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Clock Reset Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Clock Reset Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClockResetEvent(ClockResetEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable Assignment Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable Assignment Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariableAssignmentEvent(VariableAssignmentEvent object) {
 		return null;
 	}
 

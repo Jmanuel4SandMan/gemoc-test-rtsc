@@ -30,6 +30,17 @@
             <parameters name="type" value="[element/]"/>
             <parameters name="buffer" value="[self.eContainer()/]"/>
           </ownedTools>
+          <ownedTools xsi:type="tool_1:DoubleClickDescription" name="fireTransition" precondition="service:isActive()" forceRefresh="true">
+            <mappings xsi:type="description_1:EdgeMapping" href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ExternalJavaAction" name="fireActiveTransition" forceRefresh="true" icon="/org.muml.rtsc.design/icons/event_small.png" id="org.muml.seq.xsrtsc.design.fireTransitionAction">
+                <parameters name="transition" value="[element/]"/>
+                <parameters name="view" value="[elementView/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>
           <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Enabled breakpoint" position="WEST" decoratorPath="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint_enabled.gif" preconditionExpression="service:self.hasEnabledBreakpoint">
@@ -63,6 +74,18 @@
             <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="borderColor" value="//@userColorsPalettes[name='XRTSC%20Palette']/@entries[name='hasBeenAnimated']">
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
               <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:isCurrentState()">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="backgroundColor">
+              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:isActive()">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" referenceName="strokeColor">
+              <appliedOn href="../../org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             </featureCustomizations>
           </vsmElementCustomizations>
         </customization>

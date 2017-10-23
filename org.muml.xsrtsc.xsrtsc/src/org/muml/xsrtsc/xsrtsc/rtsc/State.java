@@ -19,6 +19,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.State#getOwningRTSC <em>Owning RTSC</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.State#getIncomingTransitions <em>Incoming Transitions</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.State#getOutgoingTransitions <em>Outgoing Transitions</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.State#getEntryEvents <em>Entry Events</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.State#getExitEvents <em>Exit Events</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getState()
@@ -157,6 +159,38 @@ public interface State extends Vertex, NamedElement {
 	 * @generated
 	 */
 	EList<Transition> getOutgoingTransitions();
+
+	/**
+	 * Returns the value of the '<em><b>Entry Events</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.xsrtsc.xsrtsc.rtsc.Event}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Entry Events</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Entry Events</em>' containment reference list.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getState_EntryEvents()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Event> getEntryEvents();
+
+	/**
+	 * Returns the value of the '<em><b>Exit Events</b></em>' containment reference list.
+	 * The list contents are of type {@link org.muml.xsrtsc.xsrtsc.rtsc.Event}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exit Events</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exit Events</em>' containment reference list.
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getState_ExitEvents()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Event> getExitEvents();
 
 	/**
 	 * <!-- begin-user-doc -->

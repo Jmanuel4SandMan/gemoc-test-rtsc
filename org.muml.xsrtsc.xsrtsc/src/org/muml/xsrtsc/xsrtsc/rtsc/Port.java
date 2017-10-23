@@ -14,6 +14,7 @@ package org.muml.xsrtsc.xsrtsc.rtsc;
  * <ul>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Port#getBehaviour <em>Behaviour</em>}</li>
  *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Port#getIncomingBuffer <em>Incoming Buffer</em>}</li>
+ *   <li>{@link org.muml.xsrtsc.xsrtsc.rtsc.Port#getConnector <em>Connector</em>}</li>
  * </ul>
  *
  * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getPort()
@@ -74,5 +75,33 @@ public interface Port extends BehavioralElement {
 	 * @generated
 	 */
 	void setIncomingBuffer(MessageBuffer value);
+
+	/**
+	 * Returns the value of the '<em><b>Connector</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.muml.xsrtsc.xsrtsc.rtsc.Connector#getEndpoints <em>Endpoints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Connector</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connector</em>' reference.
+	 * @see #setConnector(Connector)
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.RtscPackage#getPort_Connector()
+	 * @see org.muml.xsrtsc.xsrtsc.rtsc.Connector#getEndpoints
+	 * @model opposite="endpoints"
+	 * @generated
+	 */
+	Connector getConnector();
+
+	/**
+	 * Sets the value of the '{@link org.muml.xsrtsc.xsrtsc.rtsc.Port#getConnector <em>Connector</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Connector</em>' reference.
+	 * @see #getConnector()
+	 * @generated
+	 */
+	void setConnector(Connector value);
 
 } // Port

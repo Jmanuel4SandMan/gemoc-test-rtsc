@@ -2,4 +2,6 @@ package org.muml.seq.xsrtsc
 
 language XSRTSC inherits org.muml.rtsc.RTSC {
 	with org.muml.rtsc.k3dsa.*
+	with org.muml.rcp.k3dsa.CoordinationProtocolAspect
+
 }

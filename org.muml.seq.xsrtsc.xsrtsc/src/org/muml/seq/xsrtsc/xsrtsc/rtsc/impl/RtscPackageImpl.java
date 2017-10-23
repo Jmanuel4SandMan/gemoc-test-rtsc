@@ -386,6 +386,15 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRealtimestatechart_ActiveTransitions() {
+		return (EReference)realtimestatechartEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -1025,6 +1034,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__VARIABLES);
 		createEReference(realtimestatechartEClass, REALTIMESTATECHART__CLOCKS);
 		createEAttribute(realtimestatechartEClass, REALTIMESTATECHART__ROUNDS);
+		createEReference(realtimestatechartEClass, REALTIMESTATECHART__ACTIVE_TRANSITIONS);
 
 		stateEClass = createEClass(STATE);
 		createEReference(stateEClass, STATE__SUB_STATECHARTS);
@@ -1173,6 +1183,7 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		initEReference(getRealtimestatechart_Variables(), this.getVariable(), this.getVariable_Statechart(), "variables", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRealtimestatechart_Clocks(), this.getClock(), this.getClock_Statechart(), "clocks", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRealtimestatechart_Rounds(), ecorePackage.getEInt(), "rounds", null, 0, 1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRealtimestatechart_ActiveTransitions(), this.getTransition(), null, "activeTransitions", null, 0, -1, Realtimestatechart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(realtimestatechartEClass, null, "main", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1287,6 +1298,8 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		op = addEOperation(coordinationProtocolEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "arguments", 0, -1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(coordinationProtocolEClass, null, "step", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(messageTypeEClass, MessageType.class, "MessageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1362,6 +1375,11 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   });	
 		addAnnotation
 		  (getRealtimestatechart_Rounds(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getRealtimestatechart_ActiveTransitions(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1482,6 +1500,11 @@ public class RtscPackageImpl extends EPackageImpl implements RtscPackage {
 		   });	
 		addAnnotation
 		  (coordinationProtocolEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (coordinationProtocolEClass.getEOperations().get(2), 
 		   source, 
 		   new String[] {
 		   });	

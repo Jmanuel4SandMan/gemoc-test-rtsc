@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getClocks <em>Clocks</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getRounds <em>Rounds</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getActiveTransitions <em>Active Transitions</em>}</li>
  * </ul>
  *
  * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage#getRealtimestatechart()
@@ -149,6 +150,22 @@ public interface Realtimestatechart extends Behavior, NamedElement {
 	 * @generated
 	 */
 	void setRounds(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Active Transitions</b></em>' reference list.
+	 * The list contents are of type {@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Transition}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Active Transitions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Active Transitions</em>' reference list.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.RtscPackage#getRealtimestatechart_ActiveTransitions()
+	 * @model
+	 * @generated
+	 */
+	EList<Transition> getActiveTransitions();
 
 	/**
 	 * <!-- begin-user-doc -->

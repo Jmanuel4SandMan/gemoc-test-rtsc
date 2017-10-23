@@ -83,6 +83,10 @@ public class XRTSCServices {
 		}
 	}
 	
+	public boolean isActive(Transition transition){
+		return transition.getStatechart().getActiveTransitions().contains(transition);
+	}
+	
 	public void addMessage(EObject o){
 		System.out.println(o);
 		if (o instanceof MessageBuffer){

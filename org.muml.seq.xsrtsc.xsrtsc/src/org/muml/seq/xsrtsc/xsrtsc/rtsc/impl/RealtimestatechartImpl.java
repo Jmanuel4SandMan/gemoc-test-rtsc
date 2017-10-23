@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.muml.seq.xsrtsc.xsrtsc.rtsc.Clock;
@@ -40,6 +41,7 @@ import org.muml.seq.xsrtsc.xsrtsc.rtsc.Variable;
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getClocks <em>Clocks</em>}</li>
  *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getRounds <em>Rounds</em>}</li>
+ *   <li>{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.RealtimestatechartImpl#getActiveTransitions <em>Active Transitions</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,6 +136,16 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * @ordered
 	 */
 	protected int rounds = ROUNDS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getActiveTransitions() <em>Active Transitions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveTransitions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Transition> activeTransitions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -287,6 +299,18 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Transition> getActiveTransitions() {
+		if (activeTransitions == null) {
+			activeTransitions = new EObjectResolvingEList<Transition>(Transition.class, this, RtscPackage.REALTIMESTATECHART__ACTIVE_TRANSITIONS);
+		}
+		return activeTransitions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void main() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -390,6 +414,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 				return getClocks();
 			case RtscPackage.REALTIMESTATECHART__ROUNDS:
 				return getRounds();
+			case RtscPackage.REALTIMESTATECHART__ACTIVE_TRANSITIONS:
+				return getActiveTransitions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -428,6 +454,10 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__ROUNDS:
 				setRounds((Integer)newValue);
 				return;
+			case RtscPackage.REALTIMESTATECHART__ACTIVE_TRANSITIONS:
+				getActiveTransitions().clear();
+				getActiveTransitions().addAll((Collection<? extends Transition>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -461,6 +491,9 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 			case RtscPackage.REALTIMESTATECHART__ROUNDS:
 				setRounds(ROUNDS_EDEFAULT);
 				return;
+			case RtscPackage.REALTIMESTATECHART__ACTIVE_TRANSITIONS:
+				getActiveTransitions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -487,6 +520,8 @@ public class RealtimestatechartImpl extends BehaviorImpl implements Realtimestat
 				return clocks != null && !clocks.isEmpty();
 			case RtscPackage.REALTIMESTATECHART__ROUNDS:
 				return rounds != ROUNDS_EDEFAULT;
+			case RtscPackage.REALTIMESTATECHART__ACTIVE_TRANSITIONS:
+				return activeTransitions != null && !activeTransitions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

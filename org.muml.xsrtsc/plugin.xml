@@ -5,10 +5,13 @@
       <XDSML_Definition_Customization fileExtensions="rtsc, xsrtsc"/>
     </XDSML_Definition>
   </extension>
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <!-- @generated XSRTSCMT -->
-    <package class="org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage" genModel="model-gen/XSRTSCMT.genmodel" uri="http://org.muml.xsrtsc.xsrtscmt/rtsc/"/>
-  </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated XSRTSCMT -->
+      <package
+            uri="http://org.muml.xsrtsc.xsrtscmt/rtsc/"
+            class="org.muml.xsrtsc.xsrtscmt.rtsc.RtscPackage"
+            genModel="model-gen/XSRTSCMT.genmodel"/>
+   </extension>
   <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
     <XDSML_Definition codeExecutor_class="xsrtsc.xdsml.api.impl.XSRTSCCodeExecutor" modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.muml.xsrtsc.XSRTSC" solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.muml.xsrtsc.dse/qvto-gen/modeling/XSRTSC.qvto" xdsmlFilePath="/org.muml.xsrtsc/src/org/muml/xsrtsc/language/XSRTSC.melange"/>
   </extension>

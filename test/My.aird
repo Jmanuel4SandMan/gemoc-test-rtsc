@@ -51,7 +51,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfA8wrWCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Ge_uobWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ge_uorWCEeev3pbaDttLkQ" x="768" y="60" width="87" height="69"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ge_uorWCEeev3pbaDttLkQ" x="942" y="30" width="87" height="69"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_GfA8w7WCEeev3pbaDttLkQ" type="2003" element="_4B0KQLdsEeedmsvR2uP_tQ">
           <children xmi:type="notation:Node" xmi:id="_GfBj0LWCEeev3pbaDttLkQ" type="5007"/>
@@ -64,7 +64,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GfBj07WCEeev3pbaDttLkQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GfA8xLWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfA8xbWCEeev3pbaDttLkQ" x="552" y="270" width="87" height="72"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfA8xbWCEeev3pbaDttLkQ" x="732" y="402" width="87" height="72"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_GfCK4LWCEeev3pbaDttLkQ" type="2002" element="_g1TtgLWiEeeQBueYQqz3jA">
           <children xmi:type="notation:Node" xmi:id="_GfCx8LWCEeev3pbaDttLkQ" type="5006"/>
@@ -144,54 +144,99 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GfEAEbWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfEAErWCEeev3pbaDttLkQ" x="192"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_Oz5BMLfsEeejVvMAR5XB6Q" type="2003" element="_Ov4q8LfsEeejVvMAR5XB6Q">
+          <children xmi:type="notation:Node" xmi:id="_O0AV8LfsEeejVvMAR5XB6Q" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_O0A9ALfsEeejVvMAR5XB6Q" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_O0DZQLfsEeejVvMAR5XB6Q" type="3010" element="_OxSZILfsEeejVvMAR5XB6Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_O0DZQbfsEeejVvMAR5XB6Q" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_O0DZQrfsEeejVvMAR5XB6Q"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_O0A9AbfsEeejVvMAR5XB6Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_O0A9ArfsEeejVvMAR5XB6Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Oz5BMbfsEeejVvMAR5XB6Q" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Oz5BMrfsEeejVvMAR5XB6Q" x="702" y="126" width="112" height="68"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_GdvxcrWCEeev3pbaDttLkQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_GfpO4LWCEeev3pbaDttLkQ" type="4001" element="_Gc-8g7WCEeev3pbaDttLkQ" source="_GeMdYLWCEeev3pbaDttLkQ" target="_Ge_uoLWCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GfrEELWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfrEEbWCEeev3pbaDttLkQ" x="13" y="-41"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfrEEbWCEeev3pbaDttLkQ" x="28" y="-41"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GfuucLWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfuucbWCEeev3pbaDttLkQ" x="-1" y="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GfuucbWCEeev3pbaDttLkQ" x="-5" y="2"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Gfv8kLWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gfv8kbWCEeev3pbaDttLkQ" x="2" y="3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gfv8kbWCEeev3pbaDttLkQ" y="3"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GfpO4bWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GfpO4rWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GfpO47WCEeev3pbaDttLkQ" points="[44, 11, -252, -41]$[277, 48, -19, -4]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GfpO47WCEeev3pbaDttLkQ" points="[44, 4, -426, -18]$[451, 21, -19, -1]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssLWCEeev3pbaDttLkQ" id="(0.7514285714285714,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgEssbWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.5970149253731343)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GgFTwLWCEeev3pbaDttLkQ" type="4001" element="_Gc-8hrWCEeev3pbaDttLkQ" source="_Ge_uoLWCEeev3pbaDttLkQ" target="_GfA8w7WCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GgF60LWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF60bWCEeev3pbaDttLkQ" x="-18" y="-50"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF60bWCEeev3pbaDttLkQ" x="28" y="-30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgF60rWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF607WCEeev3pbaDttLkQ" x="4" y="6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgF607WCEeev3pbaDttLkQ" x="-7" y="6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgGh4LWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgGh4bWCEeev3pbaDttLkQ" x="10" y="5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgGh4bWCEeev3pbaDttLkQ" x="5" y="5"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GgFTwbWCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GgFTwrWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgFTw7WCEeev3pbaDttLkQ" points="[-19, 18, 197, -182]$[-179, 170, 37, -30]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgFTw7WCEeev3pbaDttLkQ" points="[-17, 27, 193, -335]$[-203, 332, 7, -30]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8LWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.5970149253731343)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgHI8bWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.42857142857142855)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GgHI8rWCEeev3pbaDttLkQ" type="4001" element="_Gc-8ibWCEeev3pbaDttLkQ" source="_GfA8w7WCEeev3pbaDttLkQ" target="_GeMdYLWCEeev3pbaDttLkQ">
           <children xmi:type="notation:Node" xmi:id="_GgHwALWCEeev3pbaDttLkQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwAbWCEeev3pbaDttLkQ" x="7" y="-56"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwAbWCEeev3pbaDttLkQ" x="40" y="-48"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgHwArWCEeev3pbaDttLkQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwA7WCEeev3pbaDttLkQ" x="8" y="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwA7WCEeev3pbaDttLkQ" x="22" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GgHwBLWCEeev3pbaDttLkQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwBbWCEeev3pbaDttLkQ" x="11" y="9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GgHwBbWCEeev3pbaDttLkQ" x="28" y="6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GgHI87WCEeev3pbaDttLkQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GgHI9LWCEeev3pbaDttLkQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgHI9bWCEeev3pbaDttLkQ" points="[-19, -19, 61, 103]$[-149, -149, -69, -27]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GgHI9bWCEeev3pbaDttLkQ" points="[-19, -19, 241, 235]$[-277, -263, -17, -9]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXELWCEeev3pbaDttLkQ" id="(0.2235294117647059,0.42857142857142855)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GgIXEbWCEeev3pbaDttLkQ" id="(0.7514285714285714,1.0743801652892562)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_S1jf0LfsEeejVvMAR5XB6Q" type="4001" element="_SyGjMLfsEeejVvMAR5XB6Q" source="_GeMdYLWCEeev3pbaDttLkQ" target="_Oz5BMLfsEeejVvMAR5XB6Q">
+          <children xmi:type="notation:Node" xmi:id="_S1kt8LfsEeejVvMAR5XB6Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S1kt8bfsEeejVvMAR5XB6Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S1l8ELfsEeejVvMAR5XB6Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S1l8EbfsEeejVvMAR5XB6Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S1mjILfsEeejVvMAR5XB6Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S1mjIbfsEeejVvMAR5XB6Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_S1jf0bfsEeejVvMAR5XB6Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_S1jf0rfsEeejVvMAR5XB6Q" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S1jf07fsEeejVvMAR5XB6Q" points="[0, 0, -335, -56]$[335, 56, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S1nKMLfsEeejVvMAR5XB6Q" id="(1.0,0.2975206611570248)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S1nKMbfsEeejVvMAR5XB6Q" id="(0.7636363636363637,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_TVyfELfsEeejVvMAR5XB6Q" type="4001" element="_TUSqQLfsEeejVvMAR5XB6Q" source="_Oz5BMLfsEeejVvMAR5XB6Q" target="_GfA8w7WCEeev3pbaDttLkQ">
+          <children xmi:type="notation:Node" xmi:id="_TVyfFLfsEeejVvMAR5XB6Q" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TVyfFbfsEeejVvMAR5XB6Q" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TVzGILfsEeejVvMAR5XB6Q" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TVzGIbfsEeejVvMAR5XB6Q" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TVzGIrfsEeejVvMAR5XB6Q" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TVzGI7fsEeejVvMAR5XB6Q" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_TVyfEbfsEeejVvMAR5XB6Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_TVyfErfsEeejVvMAR5XB6Q" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TVyfE7fsEeejVvMAR5XB6Q" points="[0, 0, 0, -280]$[0, 280, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TVzGJLfsEeejVvMAR5XB6Q" id="(0.5,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TVzGJbfsEeejVvMAR5XB6Q" id="(0.29411764705882354,0.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -313,13 +358,13 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3_gdILdsEeedmsvR2uP_tQ" name="State1" outgoingEdges="_Gc-8g7WCEeev3pbaDttLkQ" incomingEdges="_Gc-8ibWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_3_gdILdsEeedmsvR2uP_tQ" name="State1" outgoingEdges="_Gc-8g7WCEeev3pbaDttLkQ _SyGjMLfsEeejVvMAR5XB6Q" incomingEdges="_Gc-8ibWCEeev3pbaDttLkQ">
       <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
       <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4BuDoLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4BuDoLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -338,7 +383,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4By8ILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4By8ILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -351,13 +396,13 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4B0KQLdsEeedmsvR2uP_tQ" name="State3" outgoingEdges="_Gc-8ibWCEeev3pbaDttLkQ" incomingEdges="_Gc-8hrWCEeev3pbaDttLkQ">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4B0KQLdsEeedmsvR2uP_tQ" name="State3" outgoingEdges="_Gc-8ibWCEeev3pbaDttLkQ" incomingEdges="_Gc-8hrWCEeev3pbaDttLkQ _TUSqQLfsEeejVvMAR5XB6Q">
       <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
       <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4B0xULdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4B0xULdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -369,6 +414,43 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
       </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Ov4q8LfsEeejVvMAR5XB6Q" name="State4" outgoingEdges="_TUSqQLfsEeejVvMAR5XB6Q" incomingEdges="_SyGjMLfsEeejVvMAR5XB6Q">
+      <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.3"/>
+      <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Ov-xkLfsEeejVvMAR5XB6Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_OxSZILfsEeejVvMAR5XB6Q">
+        <target xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.3"/>
+        <semanticElements xmi:type="rtsc:State" href="My.rtsc#//@statecharts.0/@states.3"/>
+        <ownedStyle xmi:type="diagram:Note" xmi:id="_OxTAMLfsEeejVvMAR5XB6Q" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:NoteDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@subNodeMappings[name='events']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_SyGjMLfsEeejVvMAR5XB6Q" name="State1_to_State4&#xA;" sourceNode="_3_gdILdsEeedmsvR2uP_tQ" targetNode="_Ov4q8LfsEeejVvMAR5XB6Q">
+      <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.3"/>
+      <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_SyHKQLfsEeejVvMAR5XB6Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_SyHKQbfsEeejVvMAR5XB6Q" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_TUSqQLfsEeejVvMAR5XB6Q" name="State4_to_State3&#xA;" sourceNode="_Ov4q8LfsEeejVvMAR5XB6Q" targetNode="_4B0KQLdsEeedmsvR2uP_tQ">
+      <target xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.4"/>
+      <semanticElements xmi:type="rtsc:Transition" href="My.rtsc#//@statecharts.0/@transitions.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_TUTRULfsEeejVvMAR5XB6Q" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_TUTRUbfsEeejVvMAR5XB6Q" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_Gc-8jLWCEeev3pbaDttLkQ"/>
@@ -635,7 +717,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MHVwLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MHVwLdsEeedmsvR2uP_tQ" showIcon="false" borderSize="4" borderSizeComputationExpression="4" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -654,7 +736,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MJK8LdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MJK8LdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>
@@ -673,7 +755,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MLAILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="204,242,166">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4MLAILdsEeedmsvR2uP_tQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.muml.rtsc.design/description/rtsc.odesign#//@ownedViewpoints[name='RTSC_ViewPoint']/@ownedRepresentations[name='RTSC']/@defaultLayer/@containerMappings[name='State']"/>

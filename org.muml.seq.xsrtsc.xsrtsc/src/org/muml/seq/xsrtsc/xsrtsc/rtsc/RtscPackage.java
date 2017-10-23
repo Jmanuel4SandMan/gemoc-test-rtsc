@@ -232,13 +232,22 @@ public interface RtscPackage extends EPackage {
 	int REALTIMESTATECHART__ROUNDS = BEHAVIOR_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Active Transitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REALTIMESTATECHART__ACTIVE_TRANSITIONS = BEHAVIOR_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Realtimestatechart</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REALTIMESTATECHART_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 7;
+	int REALTIMESTATECHART_FEATURE_COUNT = BEHAVIOR_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.VertexImpl <em>Vertex</em>}' class.
@@ -1218,6 +1227,17 @@ public interface RtscPackage extends EPackage {
 	EAttribute getRealtimestatechart_Rounds();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getActiveTransitions <em>Active Transitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Active Transitions</em>'.
+	 * @see org.muml.seq.xsrtsc.xsrtsc.rtsc.Realtimestatechart#getActiveTransitions()
+	 * @see #getRealtimestatechart()
+	 * @generated
+	 */
+	EReference getRealtimestatechart_ActiveTransitions();
+
+	/**
 	 * Returns the meta object for class '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2049,6 +2069,14 @@ public interface RtscPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REALTIMESTATECHART__ROUNDS = eINSTANCE.getRealtimestatechart_Rounds();
+
+		/**
+		 * The meta object literal for the '<em><b>Active Transitions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REALTIMESTATECHART__ACTIVE_TRANSITIONS = eINSTANCE.getRealtimestatechart_ActiveTransitions();
 
 		/**
 		 * The meta object literal for the '{@link org.muml.seq.xsrtsc.xsrtsc.rtsc.impl.StateImpl <em>State</em>}' class.

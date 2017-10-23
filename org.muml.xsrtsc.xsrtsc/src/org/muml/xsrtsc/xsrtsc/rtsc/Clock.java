@@ -92,4 +92,12 @@ public interface Clock extends NamedElement {
 	 */
 	String printValue();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void reset();
+
 } // Clock

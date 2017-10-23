@@ -12,11 +12,14 @@
     <transitions name="State3_to_State1" source="//@statecharts.0/@states.2" target="//@statecharts.0/@states.0">
       <events xsi:type="rtsc:MessageEvent" messageType="//@messageTypeRepo/@messageTypes.2"/>
     </transitions>
-    <states name="State1" incomingTransitions="//@statecharts.0/@transitions.2" outgoingTransitions="//@statecharts.0/@transitions.0">
+    <transitions name="State1_to_State4" source="//@statecharts.0/@states.0" target="//@statecharts.0/@states.3"/>
+    <transitions name="State4_to_State3" source="//@statecharts.0/@states.3" target="//@statecharts.0/@states.2"/>
+    <states name="State1" incomingTransitions="//@statecharts.0/@transitions.2" outgoingTransitions="//@statecharts.0/@transitions.0 //@statecharts.0/@transitions.3">
       <entryEvents xsi:type="rtsc:ClockResetEvent" clock="//@statecharts.0/@clocks.0"/>
     </states>
     <states name="State2" incomingTransitions="//@statecharts.0/@transitions.0" outgoingTransitions="//@statecharts.0/@transitions.1"/>
-    <states name="State3" incomingTransitions="//@statecharts.0/@transitions.1" outgoingTransitions="//@statecharts.0/@transitions.2"/>
+    <states name="State3" incomingTransitions="//@statecharts.0/@transitions.1 //@statecharts.0/@transitions.4" outgoingTransitions="//@statecharts.0/@transitions.2"/>
+    <states name="State4" incomingTransitions="//@statecharts.0/@transitions.3" outgoingTransitions="//@statecharts.0/@transitions.4"/>
     <variables name="v1" initialValue="get"/>
     <variables name="v2" initialValue="crunk"/>
     <clocks name="c0"/>

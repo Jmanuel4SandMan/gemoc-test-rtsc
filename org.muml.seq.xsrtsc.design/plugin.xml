@@ -13,5 +13,9 @@
            actionClass="org.muml.seq.xsrtsc.design.AddMessageAction"
            id="org.muml.seq.xsrtsc.design.addMessageAction">
      </javaActions>
+     <javaActions
+           actionClass="org.muml.seq.xsrtsc.design.FireTransitionAction"
+           id="org.muml.seq.xsrtsc.design.fireTransitionAction">
+     </javaActions>
   </extension>
 </plugin>

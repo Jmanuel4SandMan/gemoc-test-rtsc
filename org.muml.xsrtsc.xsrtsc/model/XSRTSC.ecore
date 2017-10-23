@@ -49,6 +49,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="owningRTSC" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/states"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingTransitions" upperBound="-1" eType="//Transition" eOpposite="//Transition/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingTransitions" upperBound="-1" eType="//Transition" eOpposite="//Transition/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entryEvents" upperBound="-1" eType="//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exitEvents" upperBound="-1" eType="//Event" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="//NamedElement">
     <eOperations name="canFire">
@@ -79,6 +81,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="clockConstraints" upperBound="-1" eType="//ClockConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/transitions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="triggerMessage" upperBound="-1" eType="//MessageType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1" eType="//Event" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hitCount" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -138,6 +141,9 @@
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
+    <eOperations name="reset">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statechart" lowerBound="1" eType="//Realtimestatechart" eOpposite="//Realtimestatechart/clocks"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uClock" unique="false" eType="//UDBMClock">
       <eAnnotations source="aspect"/>
@@ -146,6 +152,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Port" eSuperTypes="//BehavioralElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="behaviour" eType="//Behavior"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingBuffer" eType="//MessageBuffer" containment="true" eOpposite="//MessageBuffer/port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" eType="//Connector" eOpposite="//Connector/endpoints"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageBuffer">
     <eOperations name="getMessage" eType="//Message">
@@ -168,7 +175,7 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endpoints" lowerBound="2" upperBound="2" eType="//Port" eOpposite="//Port/connector"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CoordinationProtocol" eSuperTypes="//NamedElement">
     <eOperations name="main">
@@ -194,6 +201,32 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageTypeRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1" eType="//MessageType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" abstract="true">
+    <eOperations name="execute">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageEvent" eSuperTypes="//Event">
+    <eOperations name="execute">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" lowerBound="1" eType="//MessageType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClockResetEvent" eSuperTypes="//Event">
+    <eOperations name="execute">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clock" lowerBound="1" eType="//Clock"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableAssignmentEvent" eSuperTypes="//Event">
+    <eOperations name="execute">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1" eType="//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="Federation" instanceClassName="org.muml.udbm.Federation">
     <eAnnotations source="aspect"/>

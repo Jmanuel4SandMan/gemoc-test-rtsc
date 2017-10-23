@@ -23,6 +23,7 @@ import static extension org.muml.rtsc.k3dsa.VariableAspect.*
 import static extension org.muml.rtsc.k3dsa.VertexAspect.*
 import static extension org.muml.rtsc.k3dsa.MessageBufferAspect.*
 import static extension org.muml.rtsc.k3dsa.RealtimestatechartAspect.*
+import static extension org.muml.rtsc.k3dsa.SystemAspect.*
 import static extension org.muml.rtsc.k3dsa.ClockAspect.*
 import static extension org.muml.rtsc.k3dsa.ClockConstraintAspect.*
 import static extension org.muml.rtsc.k3dsa.EventAspect.*
@@ -50,6 +51,8 @@ import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import org.muml.rtsc.VariableAssignmentEvent
 import org.muml.rtsc.MessageEvent
 import org.muml.rtsc.RtscFactory
+import java.util.Random
+import org.muml.rtsc.k3dsa.SystemAspect.ResolutionStrategy
 
 @Aspect(className=Behavior)
 abstract class BehaviorAspect {
@@ -70,11 +73,14 @@ class ClockAspect {
 	}
 	
 	def public String printValue(){
-		try{
-			'['+ federation.getLowerBound(_self.uClock).toString +', '+ federation.getUpperBound(_self.uClock)+']'
-		} catch (Exception e){
-			_self.uClock.toString
+		if (_self.uClock != null && federation != null){
+			try{
+				return '['+ federation.getLowerBound(_self.uClock).toString +', '+ federation.getUpperBound(_self.uClock)+']'
+			} catch (Exception e){
+				
+			}
 		}
+		return _self.toString
 	}
 	
 	def public void reset(){
@@ -113,33 +119,56 @@ class VariableAspect {
 	
 }
 
+
+
+@Aspect(className=org.muml.rtsc.System)
+class SystemAspect {
+	
+	public enum ResolutionStrategy {
+		USER, RANDOM, FIRST
+	}
+	
+	public static FederationFactory ff = new JavaFederationFactory(); 
+	public static Federation federation;
+	public static ResolutionStrategy strategy = ResolutionStrategy.USER
+	
+}
+
 @Aspect(className=Realtimestatechart)
 class RealtimestatechartAspect extends BehaviorAspect {
 	public int rounds;
 	
-	public static FederationFactory ff = new JavaFederationFactory(); 
-	public static Federation federation;
-
+	public EList<Transition> activeTransitions = new BasicEList
+	
 	@Main
 	def public void main(){
 		while (true)
 		{
-			_self.sequentialStep();
+			_self.sequentialStep(); 
 		}
 	}
 	
 	@Step
 	@InitializeModel
 	def public void initialize(EList<String> args){
+		var strategySelection = args.findFirst[it.startsWith("strategy=")]
+		if (strategySelection != null){
+			strategySelection = strategySelection.split("=").get(1)
+			strategy = ResolutionStrategy.valueOf(strategySelection);
+		}
 		val uClocks = new HashSet
-		
+		_self.initialize(uClocks)	
+		federation = ff.createZeroFederation(uClocks)
+	}
+		 
+	
+	def public void initialize(HashSet<UDBMClock> uClocks){
 		println("Initializing " + _self.name)
 		_self.initialState.active = true
 		_self.clocks.forEach[
 			initialize
 			uClocks += uClock
 		]
-		federation = ff.createZeroFederation(uClocks)
 	}
 	
 	@Step
@@ -152,7 +181,30 @@ class RealtimestatechartAspect extends BehaviorAspect {
 	@Step
 	def public void sequentialStep(){
 		_self.step
-		_self.transitions.findFirst[canFire]?.fire()
+		if (_self.activeTransitions.empty){
+			_self.activeTransitions += _self.transitions.filter[canFire]
+			if (_self.activeTransitions.size > 1)
+				switch (strategy){
+					case RANDOM: {
+						val r = new Random().nextInt(_self.activeTransitions.size)
+						val t = _self.activeTransitions.get(r);
+						_self.activeTransitions.removeIf(t0 | t0 != t)
+					}
+					case FIRST: {
+						val t = _self.activeTransitions.get(0);
+						_self.activeTransitions.removeIf(t0 | t0 != t)
+					}
+					default:{
+						//let user select transition
+					}
+				}
+		}
+		//only fire if transition is choice is deterministic
+		if (_self.activeTransitions.size == 1){
+			_self.activeTransitions.get(0).fire
+			_self.activeTransitions.clear
+		} 
+		
 	}
 	
 	/*
@@ -334,39 +386,5 @@ abstract class MessageBufferAspect {
 		}
 		_self.messages.get(message.type) += message
 		_self.allMessages += message
-	}
-}
-
-@Aspect(className=CoordinationProtocol)
-class CoordinationProtocolAspect {
-	
-	@Main
-	def public void main(){
-		val stateCharts = _self.ports.map[behavior as Realtimestatechart]
-		
-		while (true){
-			stateCharts.forEach[sequentialStep]
-		}
-	}
-	
-	
-	@Step
-	@InitializeModel
-	def public void initialize(EList<String> arguments){
-		println("Initializing ")
-		val uClocks = new HashSet
-		
-		println("Initializing " + _self.name)
-		val stateCharts = _self.ports.map[behavior as Realtimestatechart]
-		
-		stateCharts.forEach[
-			println("Initializing " + _self.name)
-			it.initialState.active = true
-			it.clocks.forEach[
-				initialize
-				uClocks += uClock
-			]
-		]
-		federation = ff.createZeroFederation(uClocks)
 	}
 }
